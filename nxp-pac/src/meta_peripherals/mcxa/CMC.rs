@@ -1,7 +1,8 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (2fd28c5 2026-04-02))"]
-#[doc = "CMC."]
+#![allow(non_upper_case_globals)]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (859f02b 2026-04-15))"]
+#[doc = "Core Mode Controller."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cmc {
     ptr: *mut u8,
@@ -21,6 +22,11 @@ impl Cmc {
     #[inline(always)]
     pub const fn verid(self) -> crate::pac::common::Reg<Verid, crate::pac::common::R> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+    }
+    #[doc = "Parameter."]
+    #[inline(always)]
+    pub const fn param(self) -> crate::pac::common::Reg<u32, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
     #[doc = "Clock Control."]
     #[inline(always)]
@@ -82,10 +88,25 @@ impl Cmc {
     pub const fn fm0(self) -> crate::pac::common::Reg<Fm0, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xb0usize) as _) }
     }
+    #[doc = "SRAM Shut Down Register."]
+    #[inline(always)]
+    pub const fn sramdis0(self) -> crate::pac::common::Reg<Sramdis0, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xc0usize) as _) }
+    }
+    #[doc = "SRAM Deep Sleep Register."]
+    #[inline(always)]
+    pub const fn sramret0(self) -> crate::pac::common::Reg<Sramret0, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xd0usize) as _) }
+    }
     #[doc = "Flash Control."]
     #[inline(always)]
     pub const fn flashcr(self) -> crate::pac::common::Reg<Flashcr, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xe0usize) as _) }
+    }
+    #[doc = "BootROM Status Register."]
+    #[inline(always)]
+    pub const fn bsr(self) -> crate::pac::common::Reg<Bsr, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0100usize) as _) }
     }
     #[doc = "Core Control."]
     #[inline(always)]
@@ -97,6 +118,51 @@ impl Cmc {
     pub const fn dbgctl(self) -> crate::pac::common::Reg<Dbgctl, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0120usize) as _) }
     }
+    #[doc = "Unlock Register."]
+    #[inline(always)]
+    pub const fn unlock(self) -> crate::pac::common::Reg<Unlock, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0200usize) as _) }
+    }
+    #[doc = "Test Register."]
+    #[inline(always)]
+    pub const fn test(self) -> crate::pac::common::Reg<Test, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0204usize) as _) }
+    }
+}
+#[doc = "BootROM Status Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Bsr(pub u32);
+impl Bsr {
+    #[doc = "Provides status information written by the BootROM."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn stat(&self) -> u32 {
+        let val = (self.0 >> 0usize) & 0xffff_ffff;
+        val as u32
+    }
+    #[doc = "Provides status information written by the BootROM."]
+    #[inline(always)]
+    pub const fn set_stat(&mut self, val: u32) {
+        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+    }
+}
+impl Default for Bsr {
+    #[inline(always)]
+    fn default() -> Bsr {
+        Bsr(0)
+    }
+}
+impl core::fmt::Debug for Bsr {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Bsr").field("stat", &self.stat()).finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Bsr {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Bsr {{ stat: {=u32:?} }}", self.stat())
+    }
 }
 #[doc = "Clock Control."]
 #[repr(transparent)]
@@ -106,13 +172,13 @@ impl Ckctrl {
     #[doc = "Clocking Mode."]
     #[must_use]
     #[inline(always)]
-    pub const fn ckmode(&self) -> CkctrlCkmode {
+    pub const fn ckmode(&self) -> Ckmode {
         let val = (self.0 >> 0usize) & 0x0f;
-        CkctrlCkmode::from_bits(val as u8)
+        Ckmode::from_bits(val as u8)
     }
     #[doc = "Clocking Mode."]
     #[inline(always)]
-    pub const fn set_ckmode(&mut self, val: CkctrlCkmode) {
+    pub const fn set_ckmode(&mut self, val: Ckmode) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
     #[doc = "Lock."]
@@ -161,13 +227,13 @@ impl Ckstat {
     #[doc = "Low Power Status."]
     #[must_use]
     #[inline(always)]
-    pub const fn ckmode(&self) -> CkstatCkmode {
+    pub const fn ckmode(&self) -> Ckmode {
         let val = (self.0 >> 0usize) & 0x0f;
-        CkstatCkmode::from_bits(val as u8)
+        Ckmode::from_bits(val as u8)
     }
     #[doc = "Low Power Status."]
     #[inline(always)]
-    pub const fn set_ckmode(&mut self, val: CkstatCkmode) {
+    pub const fn set_ckmode(&mut self, val: Ckmode) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
     #[doc = "Wake-up Source."]
@@ -442,14 +508,14 @@ impl defmt::Format for Gpmctrl {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mr0(pub u32);
 impl Mr0 {
-    #[doc = "In System Programming Mode."]
+    #[doc = "Boot Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn ispmode_n(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "In System Programming Mode."]
+    #[doc = "Boot Configuration."]
     #[inline(always)]
     pub const fn set_ispmode_n(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -635,6 +701,220 @@ impl defmt::Format for Rpc {
         )
     }
 }
+#[doc = "SRAM Shut Down Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Sramdis0(pub u32);
+impl Sramdis0 {
+    #[doc = "Shut Down Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn dis(&self, n: usize) -> bool {
+        assert!(n < 32usize);
+        let offs = 0usize + n * 1usize;
+        let val = (self.0 >> offs) & 0x01;
+        val != 0
+    }
+    #[doc = "Shut Down Enable."]
+    #[inline(always)]
+    pub const fn set_dis(&mut self, n: usize, val: bool) {
+        assert!(n < 32usize);
+        let offs = 0usize + n * 1usize;
+        self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
+    }
+}
+impl Default for Sramdis0 {
+    #[inline(always)]
+    fn default() -> Sramdis0 {
+        Sramdis0(0)
+    }
+}
+impl core::fmt::Debug for Sramdis0 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Sramdis0")
+            .field("dis[0]", &self.dis(0usize))
+            .field("dis[1]", &self.dis(1usize))
+            .field("dis[2]", &self.dis(2usize))
+            .field("dis[3]", &self.dis(3usize))
+            .field("dis[4]", &self.dis(4usize))
+            .field("dis[5]", &self.dis(5usize))
+            .field("dis[6]", &self.dis(6usize))
+            .field("dis[7]", &self.dis(7usize))
+            .field("dis[8]", &self.dis(8usize))
+            .field("dis[9]", &self.dis(9usize))
+            .field("dis[10]", &self.dis(10usize))
+            .field("dis[11]", &self.dis(11usize))
+            .field("dis[12]", &self.dis(12usize))
+            .field("dis[13]", &self.dis(13usize))
+            .field("dis[14]", &self.dis(14usize))
+            .field("dis[15]", &self.dis(15usize))
+            .field("dis[16]", &self.dis(16usize))
+            .field("dis[17]", &self.dis(17usize))
+            .field("dis[18]", &self.dis(18usize))
+            .field("dis[19]", &self.dis(19usize))
+            .field("dis[20]", &self.dis(20usize))
+            .field("dis[21]", &self.dis(21usize))
+            .field("dis[22]", &self.dis(22usize))
+            .field("dis[23]", &self.dis(23usize))
+            .field("dis[24]", &self.dis(24usize))
+            .field("dis[25]", &self.dis(25usize))
+            .field("dis[26]", &self.dis(26usize))
+            .field("dis[27]", &self.dis(27usize))
+            .field("dis[28]", &self.dis(28usize))
+            .field("dis[29]", &self.dis(29usize))
+            .field("dis[30]", &self.dis(30usize))
+            .field("dis[31]", &self.dis(31usize))
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Sramdis0 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Sramdis0 {{ dis[0]: {=bool:?}, dis[1]: {=bool:?}, dis[2]: {=bool:?}, dis[3]: {=bool:?}, dis[4]: {=bool:?}, dis[5]: {=bool:?}, dis[6]: {=bool:?}, dis[7]: {=bool:?}, dis[8]: {=bool:?}, dis[9]: {=bool:?}, dis[10]: {=bool:?}, dis[11]: {=bool:?}, dis[12]: {=bool:?}, dis[13]: {=bool:?}, dis[14]: {=bool:?}, dis[15]: {=bool:?}, dis[16]: {=bool:?}, dis[17]: {=bool:?}, dis[18]: {=bool:?}, dis[19]: {=bool:?}, dis[20]: {=bool:?}, dis[21]: {=bool:?}, dis[22]: {=bool:?}, dis[23]: {=bool:?}, dis[24]: {=bool:?}, dis[25]: {=bool:?}, dis[26]: {=bool:?}, dis[27]: {=bool:?}, dis[28]: {=bool:?}, dis[29]: {=bool:?}, dis[30]: {=bool:?}, dis[31]: {=bool:?} }}",
+            self.dis(0usize),
+            self.dis(1usize),
+            self.dis(2usize),
+            self.dis(3usize),
+            self.dis(4usize),
+            self.dis(5usize),
+            self.dis(6usize),
+            self.dis(7usize),
+            self.dis(8usize),
+            self.dis(9usize),
+            self.dis(10usize),
+            self.dis(11usize),
+            self.dis(12usize),
+            self.dis(13usize),
+            self.dis(14usize),
+            self.dis(15usize),
+            self.dis(16usize),
+            self.dis(17usize),
+            self.dis(18usize),
+            self.dis(19usize),
+            self.dis(20usize),
+            self.dis(21usize),
+            self.dis(22usize),
+            self.dis(23usize),
+            self.dis(24usize),
+            self.dis(25usize),
+            self.dis(26usize),
+            self.dis(27usize),
+            self.dis(28usize),
+            self.dis(29usize),
+            self.dis(30usize),
+            self.dis(31usize)
+        )
+    }
+}
+#[doc = "SRAM Deep Sleep Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Sramret0(pub u32);
+impl Sramret0 {
+    #[doc = "Deep Sleep Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ret(&self, n: usize) -> bool {
+        assert!(n < 32usize);
+        let offs = 0usize + n * 1usize;
+        let val = (self.0 >> offs) & 0x01;
+        val != 0
+    }
+    #[doc = "Deep Sleep Enable."]
+    #[inline(always)]
+    pub const fn set_ret(&mut self, n: usize, val: bool) {
+        assert!(n < 32usize);
+        let offs = 0usize + n * 1usize;
+        self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
+    }
+}
+impl Default for Sramret0 {
+    #[inline(always)]
+    fn default() -> Sramret0 {
+        Sramret0(0)
+    }
+}
+impl core::fmt::Debug for Sramret0 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Sramret0")
+            .field("ret[0]", &self.ret(0usize))
+            .field("ret[1]", &self.ret(1usize))
+            .field("ret[2]", &self.ret(2usize))
+            .field("ret[3]", &self.ret(3usize))
+            .field("ret[4]", &self.ret(4usize))
+            .field("ret[5]", &self.ret(5usize))
+            .field("ret[6]", &self.ret(6usize))
+            .field("ret[7]", &self.ret(7usize))
+            .field("ret[8]", &self.ret(8usize))
+            .field("ret[9]", &self.ret(9usize))
+            .field("ret[10]", &self.ret(10usize))
+            .field("ret[11]", &self.ret(11usize))
+            .field("ret[12]", &self.ret(12usize))
+            .field("ret[13]", &self.ret(13usize))
+            .field("ret[14]", &self.ret(14usize))
+            .field("ret[15]", &self.ret(15usize))
+            .field("ret[16]", &self.ret(16usize))
+            .field("ret[17]", &self.ret(17usize))
+            .field("ret[18]", &self.ret(18usize))
+            .field("ret[19]", &self.ret(19usize))
+            .field("ret[20]", &self.ret(20usize))
+            .field("ret[21]", &self.ret(21usize))
+            .field("ret[22]", &self.ret(22usize))
+            .field("ret[23]", &self.ret(23usize))
+            .field("ret[24]", &self.ret(24usize))
+            .field("ret[25]", &self.ret(25usize))
+            .field("ret[26]", &self.ret(26usize))
+            .field("ret[27]", &self.ret(27usize))
+            .field("ret[28]", &self.ret(28usize))
+            .field("ret[29]", &self.ret(29usize))
+            .field("ret[30]", &self.ret(30usize))
+            .field("ret[31]", &self.ret(31usize))
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Sramret0 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Sramret0 {{ ret[0]: {=bool:?}, ret[1]: {=bool:?}, ret[2]: {=bool:?}, ret[3]: {=bool:?}, ret[4]: {=bool:?}, ret[5]: {=bool:?}, ret[6]: {=bool:?}, ret[7]: {=bool:?}, ret[8]: {=bool:?}, ret[9]: {=bool:?}, ret[10]: {=bool:?}, ret[11]: {=bool:?}, ret[12]: {=bool:?}, ret[13]: {=bool:?}, ret[14]: {=bool:?}, ret[15]: {=bool:?}, ret[16]: {=bool:?}, ret[17]: {=bool:?}, ret[18]: {=bool:?}, ret[19]: {=bool:?}, ret[20]: {=bool:?}, ret[21]: {=bool:?}, ret[22]: {=bool:?}, ret[23]: {=bool:?}, ret[24]: {=bool:?}, ret[25]: {=bool:?}, ret[26]: {=bool:?}, ret[27]: {=bool:?}, ret[28]: {=bool:?}, ret[29]: {=bool:?}, ret[30]: {=bool:?}, ret[31]: {=bool:?} }}",
+            self.ret(0usize),
+            self.ret(1usize),
+            self.ret(2usize),
+            self.ret(3usize),
+            self.ret(4usize),
+            self.ret(5usize),
+            self.ret(6usize),
+            self.ret(7usize),
+            self.ret(8usize),
+            self.ret(9usize),
+            self.ret(10usize),
+            self.ret(11usize),
+            self.ret(12usize),
+            self.ret(13usize),
+            self.ret(14usize),
+            self.ret(15usize),
+            self.ret(16usize),
+            self.ret(17usize),
+            self.ret(18usize),
+            self.ret(19usize),
+            self.ret(20usize),
+            self.ret(21usize),
+            self.ret(22usize),
+            self.ret(23usize),
+            self.ret(24usize),
+            self.ret(25usize),
+            self.ret(26usize),
+            self.ret(27usize),
+            self.ret(28usize),
+            self.ret(29usize),
+            self.ret(30usize),
+            self.ret(31usize)
+        )
+    }
+}
 #[doc = "System Reset Interrupt Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -688,16 +968,16 @@ impl Srie {
     pub const fn set_scg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "Windowed Watchdog 0 Reset."]
+    #[doc = "Watchdog 0 Reset."]
     #[must_use]
     #[inline(always)]
-    pub const fn wwdt0(&self) -> bool {
+    pub const fn wdog0(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "Windowed Watchdog 0 Reset."]
+    #[doc = "Watchdog 0 Reset."]
     #[inline(always)]
-    pub const fn set_wwdt0(&mut self, val: bool) {
+    pub const fn set_wdog0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
     #[doc = "Software Reset."]
@@ -723,6 +1003,18 @@ impl Srie {
     #[inline(always)]
     pub const fn set_lockup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
+    }
+    #[doc = "Watchdog 1 Reset."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn wdog1(&self) -> bool {
+        let val = (self.0 >> 25usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Watchdog 1 Reset."]
+    #[inline(always)]
+    pub const fn set_wdog1(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
     #[doc = "Code Watchdog 0 Reset."]
     #[must_use]
@@ -762,9 +1054,10 @@ impl core::fmt::Debug for Srie {
             .field("dap", &self.dap())
             .field("lpack", &self.lpack())
             .field("scg", &self.scg())
-            .field("wwdt0", &self.wwdt0())
+            .field("wdog0", &self.wdog0())
             .field("sw", &self.sw())
             .field("lockup", &self.lockup())
+            .field("wdog1", &self.wdog1())
             .field("cdog0", &self.cdog0())
             .field("cdog1", &self.cdog1())
             .finish()
@@ -775,14 +1068,15 @@ impl defmt::Format for Srie {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Srie {{ pin: {=bool:?}, dap: {=bool:?}, lpack: {=bool:?}, scg: {=bool:?}, wwdt0: {=bool:?}, sw: {=bool:?}, lockup: {=bool:?}, cdog0: {=bool:?}, cdog1: {=bool:?} }}",
+            "Srie {{ pin: {=bool:?}, dap: {=bool:?}, lpack: {=bool:?}, scg: {=bool:?}, wdog0: {=bool:?}, sw: {=bool:?}, lockup: {=bool:?}, wdog1: {=bool:?}, cdog0: {=bool:?}, cdog1: {=bool:?} }}",
             self.pin(),
             self.dap(),
             self.lpack(),
             self.scg(),
-            self.wwdt0(),
+            self.wdog0(),
             self.sw(),
             self.lockup(),
+            self.wdog1(),
             self.cdog0(),
             self.cdog1()
         )
@@ -829,16 +1123,16 @@ impl Srif {
     pub const fn set_lpack(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "Windowed Watchdog 0 Reset."]
+    #[doc = "Watchdog 0 Reset."]
     #[must_use]
     #[inline(always)]
-    pub const fn wwdt0(&self) -> bool {
+    pub const fn wdog0(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "Windowed Watchdog 0 Reset."]
+    #[doc = "Watchdog 0 Reset."]
     #[inline(always)]
-    pub const fn set_wwdt0(&mut self, val: bool) {
+    pub const fn set_wdog0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
     #[doc = "Software Reset."]
@@ -864,6 +1158,18 @@ impl Srif {
     #[inline(always)]
     pub const fn set_lockup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
+    }
+    #[doc = "Watchdog 1 Reset."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn wdog1(&self) -> bool {
+        let val = (self.0 >> 25usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Watchdog 1 Reset."]
+    #[inline(always)]
+    pub const fn set_wdog1(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
     #[doc = "Code Watchdog 0 Reset."]
     #[must_use]
@@ -902,9 +1208,10 @@ impl core::fmt::Debug for Srif {
             .field("pin", &self.pin())
             .field("dap", &self.dap())
             .field("lpack", &self.lpack())
-            .field("wwdt0", &self.wwdt0())
+            .field("wdog0", &self.wdog0())
             .field("sw", &self.sw())
             .field("lockup", &self.lockup())
+            .field("wdog1", &self.wdog1())
             .field("cdog0", &self.cdog0())
             .field("cdog1", &self.cdog1())
             .finish()
@@ -915,13 +1222,14 @@ impl defmt::Format for Srif {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Srif {{ pin: {=bool:?}, dap: {=bool:?}, lpack: {=bool:?}, wwdt0: {=bool:?}, sw: {=bool:?}, lockup: {=bool:?}, cdog0: {=bool:?}, cdog1: {=bool:?} }}",
+            "Srif {{ pin: {=bool:?}, dap: {=bool:?}, lpack: {=bool:?}, wdog0: {=bool:?}, sw: {=bool:?}, lockup: {=bool:?}, wdog1: {=bool:?}, cdog0: {=bool:?}, cdog1: {=bool:?} }}",
             self.pin(),
             self.dap(),
             self.lpack(),
-            self.wwdt0(),
+            self.wdog0(),
             self.sw(),
             self.lockup(),
+            self.wdog1(),
             self.cdog0(),
             self.cdog1()
         )
@@ -956,17 +1264,29 @@ impl Srs {
     pub const fn set_por(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Voltage Detect Reset."]
+    #[doc = "Low Voltage Detect Reset."]
     #[must_use]
     #[inline(always)]
-    pub const fn vd(&self) -> bool {
+    pub const fn lvd(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Voltage Detect Reset."]
+    #[doc = "Low Voltage Detect Reset."]
     #[inline(always)]
-    pub const fn set_vd(&mut self, val: bool) {
+    pub const fn set_lvd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
+    }
+    #[doc = "High Voltage Detect Reset."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn hvd(&self) -> bool {
+        let val = (self.0 >> 3usize) & 0x01;
+        val != 0
+    }
+    #[doc = "High Voltage Detect Reset."]
+    #[inline(always)]
+    pub const fn set_hvd(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
     #[doc = "Warm Reset."]
     #[must_use]
@@ -1052,16 +1372,16 @@ impl Srs {
     pub const fn set_scg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "Windowed Watchdog 0 Reset."]
+    #[doc = "Watchdog 0 Reset."]
     #[must_use]
     #[inline(always)]
-    pub const fn wwdt0(&self) -> bool {
+    pub const fn wdog0(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "Windowed Watchdog 0 Reset."]
+    #[doc = "Watchdog 0 Reset."]
     #[inline(always)]
-    pub const fn set_wwdt0(&mut self, val: bool) {
+    pub const fn set_wdog0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
     #[doc = "Software Reset."]
@@ -1087,6 +1407,18 @@ impl Srs {
     #[inline(always)]
     pub const fn set_lockup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
+    }
+    #[doc = "Watchdog 1 Reset."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn wdog1(&self) -> bool {
+        let val = (self.0 >> 25usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Watchdog 1 Reset."]
+    #[inline(always)]
+    pub const fn set_wdog1(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
     #[doc = "Code Watchdog 0 Reset."]
     #[must_use]
@@ -1124,6 +1456,18 @@ impl Srs {
     pub const fn set_jtag(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
+    #[doc = "Security Violation Reset."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn secvio(&self) -> bool {
+        let val = (self.0 >> 30usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Security Violation Reset."]
+    #[inline(always)]
+    pub const fn set_secvio(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
+    }
     #[doc = "Tamper Reset."]
     #[must_use]
     #[inline(always)]
@@ -1148,7 +1492,8 @@ impl core::fmt::Debug for Srs {
         f.debug_struct("Srs")
             .field("wakeup", &self.wakeup())
             .field("por", &self.por())
-            .field("vd", &self.vd())
+            .field("lvd", &self.lvd())
+            .field("hvd", &self.hvd())
             .field("warm", &self.warm())
             .field("fatal", &self.fatal())
             .field("pin", &self.pin())
@@ -1156,12 +1501,14 @@ impl core::fmt::Debug for Srs {
             .field("rstack", &self.rstack())
             .field("lpack", &self.lpack())
             .field("scg", &self.scg())
-            .field("wwdt0", &self.wwdt0())
+            .field("wdog0", &self.wdog0())
             .field("sw", &self.sw())
             .field("lockup", &self.lockup())
+            .field("wdog1", &self.wdog1())
             .field("cdog0", &self.cdog0())
             .field("cdog1", &self.cdog1())
             .field("jtag", &self.jtag())
+            .field("secvio", &self.secvio())
             .field("tamper", &self.tamper())
             .finish()
     }
@@ -1171,10 +1518,11 @@ impl defmt::Format for Srs {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Srs {{ wakeup: {=bool:?}, por: {=bool:?}, vd: {=bool:?}, warm: {=bool:?}, fatal: {=bool:?}, pin: {=bool:?}, dap: {=bool:?}, rstack: {=bool:?}, lpack: {=bool:?}, scg: {=bool:?}, wwdt0: {=bool:?}, sw: {=bool:?}, lockup: {=bool:?}, cdog0: {=bool:?}, cdog1: {=bool:?}, jtag: {=bool:?}, tamper: {=bool:?} }}",
+            "Srs {{ wakeup: {=bool:?}, por: {=bool:?}, lvd: {=bool:?}, hvd: {=bool:?}, warm: {=bool:?}, fatal: {=bool:?}, pin: {=bool:?}, dap: {=bool:?}, rstack: {=bool:?}, lpack: {=bool:?}, scg: {=bool:?}, wdog0: {=bool:?}, sw: {=bool:?}, lockup: {=bool:?}, wdog1: {=bool:?}, cdog0: {=bool:?}, cdog1: {=bool:?}, jtag: {=bool:?}, secvio: {=bool:?}, tamper: {=bool:?} }}",
             self.wakeup(),
             self.por(),
-            self.vd(),
+            self.lvd(),
+            self.hvd(),
             self.warm(),
             self.fatal(),
             self.pin(),
@@ -1182,12 +1530,14 @@ impl defmt::Format for Srs {
             self.rstack(),
             self.lpack(),
             self.scg(),
-            self.wwdt0(),
+            self.wdog0(),
             self.sw(),
             self.lockup(),
+            self.wdog1(),
             self.cdog0(),
             self.cdog1(),
             self.jtag(),
+            self.secvio(),
             self.tamper()
         )
     }
@@ -1221,17 +1571,29 @@ impl Ssrs {
     pub const fn set_por(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Voltage Detect Reset."]
+    #[doc = "Low Voltage Detect Reset."]
     #[must_use]
     #[inline(always)]
-    pub const fn vd(&self) -> bool {
+    pub const fn lvd(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Voltage Detect Reset."]
+    #[doc = "Low Voltage Detect Reset."]
     #[inline(always)]
-    pub const fn set_vd(&mut self, val: bool) {
+    pub const fn set_lvd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
+    }
+    #[doc = "High Voltage Detect Reset."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn hvd(&self) -> bool {
+        let val = (self.0 >> 3usize) & 0x01;
+        val != 0
+    }
+    #[doc = "High Voltage Detect Reset."]
+    #[inline(always)]
+    pub const fn set_hvd(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
     #[doc = "Warm Reset."]
     #[must_use]
@@ -1317,16 +1679,16 @@ impl Ssrs {
     pub const fn set_scg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "Windowed Watchdog 0 Reset."]
+    #[doc = "Watchdog 0 Reset."]
     #[must_use]
     #[inline(always)]
-    pub const fn wwdt0(&self) -> bool {
+    pub const fn wdog0(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "Windowed Watchdog 0 Reset."]
+    #[doc = "Watchdog 0 Reset."]
     #[inline(always)]
-    pub const fn set_wwdt0(&mut self, val: bool) {
+    pub const fn set_wdog0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
     #[doc = "Software Reset."]
@@ -1352,6 +1714,18 @@ impl Ssrs {
     #[inline(always)]
     pub const fn set_lockup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
+    }
+    #[doc = "Watchdog 1 Reset."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn wdog1(&self) -> bool {
+        let val = (self.0 >> 25usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Watchdog 1 Reset."]
+    #[inline(always)]
+    pub const fn set_wdog1(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
     #[doc = "Code Watchdog 0 Reset."]
     #[must_use]
@@ -1389,6 +1763,18 @@ impl Ssrs {
     pub const fn set_jtag(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
+    #[doc = "Security Violation Reset."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn secvio(&self) -> bool {
+        let val = (self.0 >> 30usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Security Violation Reset."]
+    #[inline(always)]
+    pub const fn set_secvio(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
+    }
     #[doc = "Tamper Reset."]
     #[must_use]
     #[inline(always)]
@@ -1413,7 +1799,8 @@ impl core::fmt::Debug for Ssrs {
         f.debug_struct("Ssrs")
             .field("wakeup", &self.wakeup())
             .field("por", &self.por())
-            .field("vd", &self.vd())
+            .field("lvd", &self.lvd())
+            .field("hvd", &self.hvd())
             .field("warm", &self.warm())
             .field("fatal", &self.fatal())
             .field("pin", &self.pin())
@@ -1421,12 +1808,14 @@ impl core::fmt::Debug for Ssrs {
             .field("rstack", &self.rstack())
             .field("lpack", &self.lpack())
             .field("scg", &self.scg())
-            .field("wwdt0", &self.wwdt0())
+            .field("wdog0", &self.wdog0())
             .field("sw", &self.sw())
             .field("lockup", &self.lockup())
+            .field("wdog1", &self.wdog1())
             .field("cdog0", &self.cdog0())
             .field("cdog1", &self.cdog1())
             .field("jtag", &self.jtag())
+            .field("secvio", &self.secvio())
             .field("tamper", &self.tamper())
             .finish()
     }
@@ -1436,10 +1825,11 @@ impl defmt::Format for Ssrs {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Ssrs {{ wakeup: {=bool:?}, por: {=bool:?}, vd: {=bool:?}, warm: {=bool:?}, fatal: {=bool:?}, pin: {=bool:?}, dap: {=bool:?}, rstack: {=bool:?}, lpack: {=bool:?}, scg: {=bool:?}, wwdt0: {=bool:?}, sw: {=bool:?}, lockup: {=bool:?}, cdog0: {=bool:?}, cdog1: {=bool:?}, jtag: {=bool:?}, tamper: {=bool:?} }}",
+            "Ssrs {{ wakeup: {=bool:?}, por: {=bool:?}, lvd: {=bool:?}, hvd: {=bool:?}, warm: {=bool:?}, fatal: {=bool:?}, pin: {=bool:?}, dap: {=bool:?}, rstack: {=bool:?}, lpack: {=bool:?}, scg: {=bool:?}, wdog0: {=bool:?}, sw: {=bool:?}, lockup: {=bool:?}, wdog1: {=bool:?}, cdog0: {=bool:?}, cdog1: {=bool:?}, jtag: {=bool:?}, secvio: {=bool:?}, tamper: {=bool:?} }}",
             self.wakeup(),
             self.por(),
-            self.vd(),
+            self.lvd(),
+            self.hvd(),
             self.warm(),
             self.fatal(),
             self.pin(),
@@ -1447,13 +1837,107 @@ impl defmt::Format for Ssrs {
             self.rstack(),
             self.lpack(),
             self.scg(),
-            self.wwdt0(),
+            self.wdog0(),
             self.sw(),
             self.lockup(),
+            self.wdog1(),
             self.cdog0(),
             self.cdog1(),
             self.jtag(),
+            self.secvio(),
             self.tamper()
+        )
+    }
+}
+#[doc = "Test Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Test(pub u32);
+impl Test {
+    #[doc = "Observe."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn observe(&self) -> Observe {
+        let val = (self.0 >> 0usize) & 0x0f;
+        Observe::from_bits(val as u8)
+    }
+    #[doc = "Observe."]
+    #[inline(always)]
+    pub const fn set_observe(&mut self, val: Observe) {
+        self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
+    }
+}
+impl Default for Test {
+    #[inline(always)]
+    fn default() -> Test {
+        Test(0)
+    }
+}
+impl core::fmt::Debug for Test {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Test")
+            .field("observe", &self.observe())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Test {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Test {{ observe: {:?} }}", self.observe())
+    }
+}
+#[doc = "Unlock Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Unlock(pub u32);
+impl Unlock {
+    #[doc = "Allow Writes."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn alwr(&self) -> bool {
+        let val = (self.0 >> 0usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Allow Writes."]
+    #[inline(always)]
+    pub const fn set_alwr(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
+    }
+    #[doc = "Value."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn value(&self) -> u16 {
+        let val = (self.0 >> 16usize) & 0xffff;
+        val as u16
+    }
+    #[doc = "Value."]
+    #[inline(always)]
+    pub const fn set_value(&mut self, val: u16) {
+        self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
+    }
+}
+impl Default for Unlock {
+    #[inline(always)]
+    fn default() -> Unlock {
+        Unlock(0)
+    }
+}
+impl core::fmt::Debug for Unlock {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Unlock")
+            .field("alwr", &self.alwr())
+            .field("value", &self.value())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Unlock {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Unlock {{ alwr: {=bool:?}, value: {=u16:?} }}",
+            self.alwr(),
+            self.value()
         )
     }
 }
@@ -1529,17 +2013,19 @@ impl defmt::Format for Verid {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum CkctrlCkmode {
+pub enum Ckmode {
     #[doc = "Core clock is on."]
-    CKMODE0000 = 0x0,
+    Ckmode0000 = 0x0,
     #[doc = "Core clock is off."]
-    CKMODE0001 = 0x01,
+    Ckmode0001 = 0x01,
     _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
+    #[doc = "Core and platform clocks are off."]
+    Ckmode0011 = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
+    #[doc = "Core, platform, and peripheral clocks are off, but no change in Low-Power mode."]
+    Ckmode0111 = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
     _RESERVED_a = 0x0a,
@@ -1548,11 +2034,11 @@ pub enum CkctrlCkmode {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     #[doc = "Core, platform, and peripheral clocks are off, and core enters Low-Power mode."]
-    CKMODE1111 = 0x0f,
+    Ckmode1111 = 0x0f,
 }
-impl CkctrlCkmode {
+impl Ckmode {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> CkctrlCkmode {
+    pub const fn from_bits(val: u8) -> Ckmode {
         unsafe { core::mem::transmute(val & 0x0f) }
     }
     #[inline(always)]
@@ -1560,32 +2046,38 @@ impl CkctrlCkmode {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for CkctrlCkmode {
+impl From<u8> for Ckmode {
     #[inline(always)]
-    fn from(val: u8) -> CkctrlCkmode {
-        CkctrlCkmode::from_bits(val)
+    fn from(val: u8) -> Ckmode {
+        Ckmode::from_bits(val)
     }
 }
-impl From<CkctrlCkmode> for u8 {
+impl From<Ckmode> for u8 {
     #[inline(always)]
-    fn from(val: CkctrlCkmode) -> u8 {
-        CkctrlCkmode::to_bits(val)
+    fn from(val: Ckmode) -> u8 {
+        Ckmode::to_bits(val)
     }
 }
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum CkstatCkmode {
-    #[doc = "Core clock is on."]
-    CKMODE0000 = 0x0,
-    #[doc = "Core clock is off."]
-    CKMODE0001 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
+pub enum Observe {
+    #[doc = "Core Active (not sleeping, halted or in reset)."]
+    Test0 = 0x0,
+    #[doc = "Core clock gated."]
+    Test1 = 0x01,
+    #[doc = "Bus master clock gated."]
+    Test10 = 0x02,
+    #[doc = "Bus slave clock gated."]
+    Test11 = 0x03,
+    #[doc = "Peripherals clock gated."]
+    Test100 = 0x04,
+    #[doc = "Flash clock gated."]
+    Test101 = 0x05,
+    #[doc = "All clocks gated."]
+    Test110 = 0x06,
+    #[doc = "CMC clock gated."]
+    Test111 = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
     _RESERVED_a = 0x0a,
@@ -1593,12 +2085,11 @@ pub enum CkstatCkmode {
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "Core, platform, and peripheral clocks are off, and core enters Low-Power mode."]
-    CKMODE1111 = 0x0f,
+    _RESERVED_f = 0x0f,
 }
-impl CkstatCkmode {
+impl Observe {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> CkstatCkmode {
+    pub const fn from_bits(val: u8) -> Observe {
         unsafe { core::mem::transmute(val & 0x0f) }
     }
     #[inline(always)]
@@ -1606,33 +2097,34 @@ impl CkstatCkmode {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for CkstatCkmode {
+impl From<u8> for Observe {
     #[inline(always)]
-    fn from(val: u8) -> CkstatCkmode {
-        CkstatCkmode::from_bits(val)
+    fn from(val: u8) -> Observe {
+        Observe::from_bits(val)
     }
 }
-impl From<CkstatCkmode> for u8 {
+impl From<Observe> for u8 {
     #[inline(always)]
-    fn from(val: CkstatCkmode) -> u8 {
-        CkstatCkmode::to_bits(val)
+    fn from(val: Observe) -> u8 {
+        Observe::to_bits(val)
     }
 }
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PmctrlmainLpmode {
-    #[doc = "Active/Sleep."]
-    LPMODE0000 = 0x0,
-    #[doc = "Deep Sleep."]
-    LPMODE0001 = 0x01,
+    #[doc = "Active."]
+    Lpmode0000 = 0x0,
+    #[doc = "Sleep."]
+    Lpmode0001 = 0x01,
     _RESERVED_2 = 0x02,
-    #[doc = "Power Down."]
-    LPMODE0011 = 0x03,
+    #[doc = "Deep Sleep."]
+    Lpmode0011 = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
+    #[doc = "Power Down."]
+    Lpmode0111 = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
     _RESERVED_a = 0x0a,
@@ -1641,7 +2133,7 @@ pub enum PmctrlmainLpmode {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     #[doc = "Deep-Power Down."]
-    LPMODE1111 = 0x0f,
+    Lpmode1111 = 0x0f,
 }
 impl PmctrlmainLpmode {
     #[inline(always)]
@@ -1670,37 +2162,37 @@ impl From<PmctrlmainLpmode> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PmprotLpmode {
     #[doc = "Not allowed."]
-    DISABLED = 0x0,
+    Disabled = 0x0,
     #[doc = "Allowed."]
-    EN = 0x01,
+    En = 0x01,
     #[doc = "Allowed."]
-    EN1 = 0x02,
+    En1 = 0x02,
     #[doc = "Allowed."]
-    EN2 = 0x03,
+    En2 = 0x03,
     #[doc = "Allowed."]
-    EN3 = 0x04,
+    En3 = 0x04,
     #[doc = "Allowed."]
-    EN4 = 0x05,
+    En4 = 0x05,
     #[doc = "Allowed."]
-    EN5 = 0x06,
+    En5 = 0x06,
     #[doc = "Allowed."]
-    EN6 = 0x07,
+    En6 = 0x07,
     #[doc = "Allowed."]
-    EN7 = 0x08,
+    En7 = 0x08,
     #[doc = "Allowed."]
-    EN8 = 0x09,
+    En8 = 0x09,
     #[doc = "Allowed."]
-    EN9 = 0x0a,
+    En9 = 0x0a,
     #[doc = "Allowed."]
-    EN10 = 0x0b,
+    En10 = 0x0b,
     #[doc = "Allowed."]
-    EN11 = 0x0c,
+    En11 = 0x0c,
     #[doc = "Allowed."]
-    EN12 = 0x0d,
+    En12 = 0x0d,
     #[doc = "Allowed."]
-    EN13 = 0x0e,
+    En13 = 0x0e,
     #[doc = "Allowed."]
-    EN14 = 0x0f,
+    En14 = 0x0f,
 }
 impl PmprotLpmode {
     #[inline(always)]

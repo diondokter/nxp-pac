@@ -1,7 +1,8 @@
 transforms:
   - !MergeEnums
-    from: inputmux0::(.+)(\d+)(TrigTrigin|InputInp|TrigInp|Inp)$
+    from: inputmux0::(.+)(\d+)(TrigTrigin|TrigInp|trigInp|InputInp|Inp)
     to: inputmux0::$1$3
+    skip_unmergeable: true
 
   - !MergeEnums
     from: inputmux0::TrigIn(\d+)Val
@@ -16,7 +17,7 @@ transforms:
     to: inputmux0::Qdc${2}Inp
 
   - !MergeFieldsets
-    from: inputmux0::([^\d]+|Lpi2c)(\d+)(Trig|Input|)$
+    from: inputmux0::(Lpi2c|Lpuart|Lpspi|Cmp|Adc|Dac)(\d*)(Trig|Input|)$
     to: inputmux0::$1$3
 
   - !MergeFieldsets

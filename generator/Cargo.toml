@@ -26,4 +26,4 @@ inflections = "1.1"
 itertools = "0.14"
 regex = "1.12"
 
-chiptool = { git = "https://github.com/embassy-rs/chiptool.git", rev = "be1bff3e9e1b27b090e69bd9ac753c66fdcce678" }
+chiptool = { git = "https://github.com/embassy-rs/chiptool.git", rev = "859f02b7c3408f52c37065de6f1ad1b1bcb0c94a" }

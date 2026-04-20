@@ -1159,486 +1159,486 @@ fieldset/Swcout:
 enum/Fauto:
   bit_size: 4
   variants:
-  - name: MANUAL
+  - name: Manual
     description: Manual fault clearing. PWM outputs disabled by this fault are not enabled until FSTS[FFLAGx] is clear at the start of a half cycle or full cycle depending on the states of FSTS[FHALF] and FSTS[FFULL]. If neither FFULL nor FHALF is set, then the fault condition cannot be cleared. This is further controlled by FCTRL[FSAFE].
     value: 0
-  - name: AUTOMATIC
+  - name: Automatic
     description: Automatic fault clearing. PWM outputs disabled by this fault are enabled when FSTS[FFPINx] is clear at the start of a half cycle or full cycle depending on the states of FSTS[FHALF] and FSTS[FFULL] without regard to the state of FSTS[FFLAGx]. If neither FFULL nor FHALF is set, then the fault condition cannot be cleared.
     value: 1
 enum/Fflag:
   bit_size: 4
   variants:
-  - name: NO_FLAG
+  - name: NoFlag
     description: No fault on the FAULTx pin.
     value: 0
-  - name: FLAG
+  - name: Flag
     description: Fault on the FAULTx pin.
     value: 1
 enum/Ffull:
   bit_size: 4
   variants:
-  - name: PWM_OUTPUTS_NOT_REENABLED
+  - name: PwmOutputsNotReenabled
     description: PWM outputs are not re-enabled at the start of a full cycle.
     value: 0
-  - name: PWM_OUTPUTS_REENABLED
+  - name: PwmOutputsReenabled
     description: PWM outputs are re-enabled at the start of a full cycle.
     value: 1
 enum/Fhalf:
   bit_size: 4
   variants:
-  - name: PWM_OUTPUTS_NOT_REENABLED
+  - name: PwmOutputsNotReenabled
     description: PWM outputs are not re-enabled at the start of a half cycle.
     value: 0
-  - name: PWM_OUTPUTS_REENABLED
+  - name: PwmOutputsReenabled
     description: PWM outputs are re-enabled at the start of a half cycle (as defined by VAL0).
     value: 1
 enum/Fie:
   bit_size: 4
   variants:
-  - name: DISABLED
+  - name: Disabled
     description: FAULTx CPU interrupt requests disabled.
     value: 0
-  - name: ENABLED
+  - name: Enabled
     description: FAULTx CPU interrupt requests enabled.
     value: 1
 enum/Flvl:
   bit_size: 4
   variants:
-  - name: LOGIC_0
+  - name: Logic0
     description: A logic 0 on the fault input indicates a fault condition.
     value: 0
-  - name: LOGIC_1
+  - name: Logic1
     description: A logic 1 on the fault input indicates a fault condition.
     value: 1
 enum/Fsafe:
   bit_size: 4
   variants:
-  - name: NORMAL
+  - name: Normal
     description: Normal mode. PWM outputs disabled by this fault are not enabled until FSTS[FFLAGx] is clear at the start of a half cycle or full cycle depending on the states of FSTS[FHALF] and FSTS[FFULL] without regard to the state of FSTS[FFPINx]. If neither FHALF nor FFULL is set, then the fault condition cannot be cleared. The PWM outputs disabled by this fault input will not be re-enabled until the actual FAULTx input signal de-asserts since the fault input will combinationally disable the PWM outputs (as programmed in DISMAPn).
     value: 0
-  - name: SAFE
+  - name: Safe
     description: Safe mode. PWM outputs disabled by this fault are not enabled until FSTS[FFLAGx] is clear and FSTS[FFPINx] is clear at the start of a half cycle or full cycle depending on the states of FSTS[FHALF] and FSTS[FFULL]. If neither FHLAF nor FFULL is set, then the fault condition cannot be cleared.
     value: 1
 enum/Ipol:
   bit_size: 4
   variants:
-  - name: PWM23
+  - name: Pwm23
     description: PWM23 is used to generate complementary PWM pair in the corresponding submodule.
     value: 0
-  - name: PWM45
+  - name: Pwm45
     description: PWM45 is used to generate complementary PWM pair in the corresponding submodule.
     value: 1
 enum/Ldok:
   bit_size: 4
   variants:
-  - name: DISABLED
+  - name: Disabled
     description: Do not load new values.
     value: 0
-  - name: ENABLED
+  - name: Enabled
     description: Load prescaler, modulus, and PWM values of the corresponding submodule.
     value: 1
 enum/Nocomb:
   bit_size: 4
   variants:
-  - name: ENABLED
+  - name: Enabled
     description: There is a combinational link from the fault inputs to the PWM outputs. The fault inputs are combined with the filtered and latched fault signals to disable the PWM outputs.
     value: 0
-  - name: DISABLED
+  - name: Disabled
     description: The direct combinational path from the fault inputs to the PWM outputs is disabled and the filtered and latched fault signals are used to disable the PWM outputs.
     value: 1
 enum/Run:
   bit_size: 4
   variants:
-  - name: DISABLED
+  - name: Disabled
     description: PWM counter is stopped, but PWM outputs hold the current state.
     value: 0
-  - name: ENABLED
+  - name: Enabled
     description: PWM counter is started in the corresponding submodule.
     value: 1
 enum/SmcaptctrlxEdgx:
   bit_size: 2
   variants:
-  - name: DISABLED
+  - name: Disabled
     description: Disabled.
     value: 0
-  - name: FALLING_EDGE
+  - name: FallingEdge
     description: Capture falling edges.
     value: 1
-  - name: RISING_EDGE
+  - name: RisingEdge
     description: Capture rising edges.
     value: 2
-  - name: ANY_EDGE
+  - name: AnyEdge
     description: Capture any edge.
     value: 3
 enum/SmcaptctrlxInpSelx:
   bit_size: 1
   variants:
-  - name: PWM_X
+  - name: PwmX
     description: Raw PWM_X input signal selected as source.
     value: 0
-  - name: EDGE_COUNTER
+  - name: EdgeCounter
     description: Edge Counter.
     value: 1
 enum/SmcaptctrlxOneshotx:
   bit_size: 1
   variants:
-  - name: FREE_RUNNING
+  - name: FreeRunning
     description: Free Running.
     value: 0
-  - name: ONE_SHOT
+  - name: OneShot
     description: One Shot.
     value: 1
 enum/SmctrlClkSel:
   bit_size: 2
   variants:
-  - name: IPBUS
+  - name: Ipbus
     description: The IPBus clock is used as the clock for the local prescaler and counter.
     value: 0
-  - name: EXT_CLK
+  - name: ExtClk
     description: EXT_CLK is used as the clock for the local prescaler and counter.
     value: 1
-  - name: AUX_CLK
+  - name: AuxClk
     description: Submodule 0's clock (AUX_CLK) is used as the source clock for the local prescaler and counter. This setting should not be used in submodule 0 as it forces the clock to logic 0.
     value: 2
 enum/SmctrlCompmode:
   bit_size: 1
   variants:
-  - name: EQUAL_TO
+  - name: EqualTo
     description: The VAL* registers and the PWM counter are compared using an "equal to" method. This means that PWM edges are only produced when the counter is equal to one of the VAL* register values. This implies that a PWM_A output that is high at the end of a period maintains this state until a match with VAL3 clears the output in the following period.
     value: 0
-  - name: EQUAL_TO_OR_GREATER_THAN
+  - name: EqualToOrGreaterThan
     description: The VAL* registers and the PWM counter are compared using an "equal to or greater than" method. This means that PWM edges are produced when the counter is equal to or greater than one of the VAL* register values. This implies that a PWM_A output that is high at the end of a period could go low at the start of the next period if the starting counter value is greater than (but not necessarily equal to) the new VAL3 value.
     value: 1
 enum/SmctrlForceSel:
   bit_size: 3
   variants:
-  - name: LOCAL
+  - name: Local
     description: The local force signal, CTRL2[FORCE], from this submodule is used to force updates.
     value: 0
-  - name: MASTER
+  - name: Master
     description: The master force signal from submodule 0 is used to force updates. This setting should not be used in submodule 0 as it holds the FORCE OUTPUT signal to logic 0.
     value: 1
-  - name: LOCAL_RELOAD
+  - name: LocalReload
     description: The local reload signal from this submodule is used to force updates without regard to the state of LDOK.
     value: 2
-  - name: MASTER_RELOAD
+  - name: MasterReload
     description: The master reload signal from submodule0 is used to force updates if LDOK is set. This setting should not be used in submodule0 as it holds the FORCE OUTPUT signal to logic 0.
     value: 3
-  - name: LOCAL_SYNC
+  - name: LocalSync
     description: The local sync signal from this submodule is used to force updates.
     value: 4
-  - name: MASTER_SYNC
+  - name: MasterSync
     description: The master sync signal from submodule0 is used to force updates. This setting should not be used in submodule0 as it holds the FORCE OUTPUT signal to logic 0.
     value: 5
-  - name: EXT_FORCE
+  - name: ExtForce
     description: The external force signal, EXT_FORCE, from outside the PWM module causes updates.
     value: 6
-  - name: EXT_SYNC
+  - name: ExtSync
     description: The external sync signal, EXT_SYNC, from outside the PWM module causes updates.
     value: 7
 enum/SmctrlIndep:
   bit_size: 1
   variants:
-  - name: COMPLEMENTARY
+  - name: Complementary
     description: PWM_A and PWM_B form a complementary PWM pair.
     value: 0
-  - name: INDEPENDENT
+  - name: Independent
     description: PWM_A and PWM_B outputs are independent PWMs.
     value: 1
 enum/SmctrlInitSel:
   bit_size: 2
   variants:
-  - name: PWM_X
+  - name: PwmX
     description: Local sync (PWM_X) causes initialization.
     value: 0
-  - name: MASTER_RELOAD
+  - name: MasterReload
     description: Master reload from submodule 0 causes initialization. This setting should not be used in submodule 0 as it forces the INIT signal to logic 0. The submodule counter will only re-initialize when a master reload occurs.
     value: 1
-  - name: MASTER_SYNC
+  - name: MasterSync
     description: Master sync from submodule 0 causes initialization. This setting should not be used in submodule 0 as it forces the INIT signal to logic 0.
     value: 2
-  - name: EXT_SYNC
+  - name: ExtSync
     description: EXT_SYNC causes initialization.
     value: 3
 enum/SmctrlLdfq:
   bit_size: 4
   variants:
-  - name: EVERYPWM
+  - name: Everypwm
     description: Every PWM opportunity.
     value: 0
-  - name: EVERY2PWM
+  - name: Every2pwm
     description: Every 2 PWM opportunities.
     value: 1
-  - name: EVERY3PWM
+  - name: Every3pwm
     description: Every 3 PWM opportunities.
     value: 2
-  - name: EVERY4PWM
+  - name: Every4pwm
     description: Every 4 PWM opportunities.
     value: 3
-  - name: EVERY5PWM
+  - name: Every5pwm
     description: Every 5 PWM opportunities.
     value: 4
-  - name: EVERY6PWM
+  - name: Every6pwm
     description: Every 6 PWM opportunities.
     value: 5
-  - name: EVERY7PWM
+  - name: Every7pwm
     description: Every 7 PWM opportunities.
     value: 6
-  - name: EVERY8PWM
+  - name: Every8pwm
     description: Every 8 PWM opportunities.
     value: 7
-  - name: EVERY9PWM
+  - name: Every9pwm
     description: Every 9 PWM opportunities.
     value: 8
-  - name: EVERY10PWM
+  - name: Every10pwm
     description: Every 10 PWM opportunities.
     value: 9
-  - name: EVERY11PWM
+  - name: Every11pwm
     description: Every 11 PWM opportunities.
     value: 10
-  - name: EVERY12PWM
+  - name: Every12pwm
     description: Every 12 PWM opportunities.
     value: 11
-  - name: EVERY13PWM
+  - name: Every13pwm
     description: Every 13 PWM opportunities.
     value: 12
-  - name: EVERY14PWM
+  - name: Every14pwm
     description: Every 14 PWM opportunities.
     value: 13
-  - name: EVERY15PWM
+  - name: Every15pwm
     description: Every 15 PWM opportunities.
     value: 14
-  - name: EVERY16PWM
+  - name: Every16pwm
     description: Every 16 PWM opportunities.
     value: 15
 enum/SmctrlLdmod:
   bit_size: 1
   variants:
-  - name: NEXT_PWM_RELOAD
+  - name: NextPwmReload
     description: Buffered registers of this submodule are loaded and take effect at the next PWM reload if MCTRL[LDOK] is set.
     value: 0
-  - name: MTCTRL_LDOK_SET
+  - name: MtctrlLdokSet
     description: Buffered registers of this submodule are loaded and take effect immediately upon MCTRL[LDOK] being set. In this case, it is not necessary to set CTRL[FULL] or CTRL[HALF].
     value: 1
 enum/SmctrlPrsc:
   bit_size: 3
   variants:
-  - name: ONE
+  - name: One
     description: Prescaler 1.
     value: 0
-  - name: TWO
+  - name: Two
     description: Prescaler 2.
     value: 1
-  - name: FOUR
+  - name: Four
     description: Prescaler 4.
     value: 2
-  - name: EIGHT
+  - name: Eight
     description: Prescaler 8.
     value: 3
-  - name: SIXTEEN
+  - name: Sixteen
     description: Prescaler 16.
     value: 4
-  - name: THIRTYTWO
+  - name: Thirtytwo
     description: Prescaler 32.
     value: 5
-  - name: SIXTYFOUR
+  - name: Sixtyfour
     description: Prescaler 64.
     value: 6
-  - name: HUNDREDTWENTYEIGHT
+  - name: Hundredtwentyeight
     description: Prescaler 128.
     value: 7
 enum/SmctrlReloadSel:
   bit_size: 1
   variants:
-  - name: LOCAL
+  - name: Local
     description: The local RELOAD signal is used to reload registers.
     value: 0
-  - name: MASTER
+  - name: Master
     description: The master RELOAD signal (from submodule 0) is used to reload registers. This setting should not be used in submodule 0 as it forces the RELOAD signal to logic 0.
     value: 1
 enum/SmdmaenCaptde:
   bit_size: 2
   variants:
-  - name: DISABLED
+  - name: Disabled
     description: Read DMA requests disabled.
     value: 0
-  - name: EXCEEDFIFO
+  - name: Exceedfifo
     description: Exceeding a FIFO watermark sets the DMA read request. This requires at least one of DMAEN[CA1DE], DMAEN[CA0DE], DMAEN[CB1DE], DMAEN[CB0DE], DMAEN[CX1DE], or DMAEN[CX0DE] to be set to determine which watermark(s) the DMA request is sensitive.
     value: 1
-  - name: LOCAL_SYNC
+  - name: LocalSync
     description: A local synchronization (VAL1 matches counter) sets the read DMA request.
     value: 2
-  - name: LOCAL_RELOAD
+  - name: LocalReload
     description: A local reload (STS[RF] being set) sets the read DMA request.
     value: 3
 enum/SmdmaenFand:
   bit_size: 1
   variants:
-  - name: OR
+  - name: Or
     description: Selected FIFO watermarks are OR'ed together.
     value: 0
-  - name: AND
+  - name: And
     description: Selected FIFO watermarks are AND'ed together.
     value: 1
 enum/SmintenCmpie:
   bit_size: 6
   variants:
-  - name: DISABLED
+  - name: Disabled
     description: The corresponding STS[CMPF] bit will not cause an interrupt request.
     value: 0
-  - name: ENABLED
+  - name: Enabled
     description: The corresponding STS[CMPF] bit will cause an interrupt request.
     value: 1
 enum/SmoctrlPwmafs:
   bit_size: 2
   variants:
-  - name: LOGIC_0
+  - name: Logic0
     description: Output is forced to logic 0 state prior to consideration of output polarity control.
     value: 0
-  - name: LOGIC_1
+  - name: Logic1
     description: Output is forced to logic 1 state prior to consideration of output polarity control.
     value: 1
-  - name: TRISTATED_2
+  - name: Tristated2
     description: Output is put in a high-impedance state.
     value: 2
-  - name: TRISTATED_3
+  - name: Tristated3
     description: Output is put in a high-impedance state.
     value: 3
 enum/SmoctrlPwmbfs:
   bit_size: 2
   variants:
-  - name: LOGIC_0
+  - name: Logic0
     description: Output is forced to logic 0 state prior to consideration of output polarity control.
     value: 0
-  - name: LOGIC_1
+  - name: Logic1
     description: Output is forced to logic 1 state prior to consideration of output polarity control.
     value: 1
-  - name: TRISTATED_2
+  - name: Tristated2
     description: Output is put in a high-impedance state.
     value: 2
-  - name: TRISTATED_3
+  - name: Tristated3
     description: Output is put in a high-impedance state.
     value: 3
 enum/SmoctrlPwmxfs:
   bit_size: 2
   variants:
-  - name: LOGIC_0
+  - name: Logic0
     description: Output is forced to logic 0 state prior to consideration of output polarity control.
     value: 0
-  - name: LOGIC_1
+  - name: Logic1
     description: Output is forced to logic 1 state prior to consideration of output polarity control.
     value: 1
-  - name: TRISTATED_2
+  - name: Tristated2
     description: Output is put in a high-impedance state.
     value: 2
-  - name: TRISTATED_3
+  - name: Tristated3
     description: Output is put in a high-impedance state.
     value: 3
 enum/Smout:
   bit_size: 1
   variants:
-  - name: LOGIC_0
+  - name: Logic0
     description: A logic 0 is supplied to the deadtime generator of submodule 0 instead of PWM23.
     value: 0
-  - name: LOGIC_1
+  - name: Logic1
     description: A logic 1 is supplied to the deadtime generator of submodule 0 instead of PWM23.
     value: 1
 enum/Smsel23:
   bit_size: 2
   variants:
-  - name: PWM
+  - name: pwm
     description: Generated SM0PWM23 signal used by the deadtime logic.
     value: 0
-  - name: INVERTED_PWM
+  - name: Invertedpwm
     description: Inverted generated SM0PWM23 signal used by the deadtime logic.
     value: 1
-  - name: OUT
+  - name: out
     description: SWCOUT[SM0OUT23] used by the deadtime logic.
     value: 2
-  - name: PWM_EXTA
+  - name: PwmExta
     description: PWM0_EXTA signal used by the deadtime logic.
     value: 3
 enum/Smsel45:
   bit_size: 2
   variants:
-  - name: PWM
+  - name: pwm
     description: Generated SM0PWM45 signal used by the deadtime logic.
     value: 0
-  - name: INVERTED_PWM
+  - name: Invertedpwm
     description: Inverted generated SM0PWM45 signal used by the deadtime logic.
     value: 1
-  - name: OUT
+  - name: out
     description: SWCOUT[SM0OUT45] used by the deadtime logic.
     value: 2
 enum/SmstsCmpf:
   bit_size: 6
   variants:
-  - name: NO_EVENT
+  - name: NoEvent
     description: No compare event has occurred for a particular VALx value.
     value: 0
-  - name: EVENT
+  - name: Event
     description: A compare event has occurred for a particular VALx value.
     value: 1
 enum/SmtctrlOutTrigEn:
   bit_size: 6
   variants:
-  - name: VAL0
+  - name: Val0
     description: PWM_OUT_TRIG0 will set when the counter value matches the VAL0 value.
     value: 1
 enum/SmtctrlPwaot:
   bit_size: 1
   variants:
-  - name: PWM_OUT_TRIG0_SIGNAL
+  - name: PwmOutTrig0Signal
     description: Route the PWM_OUT_TRIG0 signal to PWM_MUX_TRIG0 port.
     value: 0
-  - name: PWMA_OUTPUT
+  - name: PwmaOutput
     description: Route the PWM_A output to the PWM_MUX_TRIG0 port.
     value: 1
 enum/SmtctrlPwbot:
   bit_size: 1
   variants:
-  - name: PWM_OUT_TRIG1_SIGNAL
+  - name: PwmOutTrig1Signal
     description: Route the PWM_OUT_TRIG1 signal to PWM_MUX_TRIG1 port.
     value: 0
-  - name: PWMB_OUTPUT
+  - name: PwmbOutput
     description: Route the PWM_B output to the PWM_MUX_TRIG1 port.
     value: 1
 enum/SmtctrlTrgfrq:
   bit_size: 1
   variants:
-  - name: EVERYPWM
+  - name: Everypwm
     description: Trigger outputs are generated during every PWM period even if the PWM is not reloaded every period due to CTRL[LDFQ] being non-zero.
     value: 0
-  - name: FINALPWM
+  - name: Finalpwm
     description: Trigger outputs are generated only during the final PWM period prior to a reload opportunity when the PWM is not reloaded every period due to CTRL[LDFQ] being non-zero.
     value: 1
 enum/StretchCntPrsc:
   bit_size: 2
   variants:
-  - name: DISABLED
+  - name: Disabled
     description: Stretch count is zero, no stretch.
     value: 0
-  - name: ENABLED
+  - name: Enabled
     description: Stretch mux0_trig/mux1_trig/out0_trig/out1_trig/pwma_trig/pwmb_trig for 2 IPBus clock period.
     value: 1
-  - name: DISABLED_LOCKED
+  - name: DisabledLocked
     description: Stretch mux0_trig/mux1_trig/out0_trig/out1_trig/pwma_trig/pwmb_trig for 4 IPBus clock period.
     value: 2
-  - name: ENABLED_LOCKED
+  - name: EnabledLocked
     description: Stretch mux0_trig/mux1_trig/out0_trig/out1_trig/pwma_trig/pwmb_trig for 8 IPBus clock period.
     value: 3
 enum/Wrprot:
   bit_size: 2
   variants:
-  - name: DISABLED
+  - name: Disabled
     description: Write protection off (default).
     value: 0
-  - name: ENABLED
+  - name: Enabled
     description: Write protection on.
     value: 1
-  - name: DISABLED_LOCKED
+  - name: DisabledLocked
     description: Write protection off and locked until chip reset.
     value: 2
-  - name: ENABLED_LOCKED
+  - name: EnabledLocked
     description: Write protection on and locked until chip reset.
     value: 3

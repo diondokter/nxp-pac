@@ -9,5 +9,6 @@ transforms:
   - !AddEnumVariants
     enum: spc0::Vsm
     variants:
-      - { name: SRAM1V0, value: 1, description: "SRAM configured for 1.0V" }
-      - { name: SRAM1V2, value: 3, description: "SRAM configured for 1.2V" }
+      - { name: Sram1v0, value: 1, description: "SRAM configured for 1.0V" }
+      - { name: Sram1v1, value: 2, description: "SRAM configured for 1.1V" }
+      - { name: Sram1v2, value: 3, description: "SRAM configured for 1.2V" }

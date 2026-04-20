@@ -49,43 +49,13 @@ fieldset/Ctrl:
     bit_offset: 30
     bit_size: 2
     enum: Tot
-fieldset/Data:
-  description: Data.
-  fields:
-  - name: ll
-    description: Lower Part of Low Byte.
-    bit_offset: 0
-    bit_size: 8
-  - name: lu
-    description: Upper Part of Low Byte.
-    bit_offset: 8
-    bit_size: 8
-  - name: hl
-    description: Lower Part of High Byte.
-    bit_offset: 16
-    bit_size: 8
-  - name: hu
-    description: Upper Part of High Byte.
-    bit_offset: 24
-    bit_size: 8
-fieldset/Gpoly:
-  description: Polynomial.
-  fields:
-  - name: low
-    description: Low Half-Word.
-    bit_offset: 0
-    bit_size: 16
-  - name: high
-    description: High Half-Word.
-    bit_offset: 16
-    bit_size: 16
 enum/Fxor:
   bit_size: 1
   variants:
-  - name: NOXOR
+  - name: Noxor
     description: Disables XOR on reading data.
     value: 0
-  - name: INVERT
+  - name: Invert
     description: Inverts or complements the read value of the CRC Data.
     value: 1
 enum/Tcrc:
@@ -100,39 +70,39 @@ enum/Tcrc:
 enum/Tot:
   bit_size: 2
   variants:
-  - name: NOTRNPS
+  - name: Notrnps
     description: No transposition.
     value: 0
-  - name: BTS_TRNPS
+  - name: BtsTrnps
     description: Bits in bytes are transposed, but bytes are not transposed.
     value: 1
-  - name: BYTS_BTS_TRNPS
+  - name: BytsBtsTrnps
     description: Both bits in bytes and bytes are transposed.
     value: 2
-  - name: BYTS_TRNPS
+  - name: BytsTrnps
     description: Only bytes are transposed, no bits in a byte are transposed.
     value: 3
 enum/Totr:
   bit_size: 2
   variants:
-  - name: NOTRNPS
+  - name: Notrnps
     description: No transposition.
     value: 0
-  - name: BTS_TRNPS
+  - name: BtsTrnps
     description: Bits in bytes are transposed, but bytes are not transposed.
     value: 1
-  - name: BYTS_BTS_TRNPS
+  - name: BytsBtsTrnps
     description: Both bits in bytes and bytes are transposed.
     value: 2
-  - name: BYTS_TRNPS
+  - name: BytsTrnps
     description: Only bytes are transposed, no bits in a byte are transposed.
     value: 3
 enum/Was:
   bit_size: 1
   variants:
-  - name: DATA
+  - name: Data
     description: Data values.
     value: 0
-  - name: SEED
+  - name: Seed
     description: Seed values.
     value: 1

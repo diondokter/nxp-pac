@@ -1,1643 +1,1643 @@
-block/SGI:
+block/Sgi:
   description: no description available.
   items:
-  - name: SGI_DATIN0A
+  - name: sgi_datin0a
     description: Input Data register 0 - Word-3.
     byte_offset: 512
-    fieldset: SGI_DATIN0A
-  - name: SGI_DATIN0B
+    fieldset: SgiDatin0a
+  - name: sgi_datin0b
     description: Input Data register 0 - Word-2.
     byte_offset: 516
-    fieldset: SGI_DATIN0B
-  - name: SGI_DATIN0C
+    fieldset: SgiDatin0b
+  - name: sgi_datin0c
     description: Input Data register 0 - Word-1.
     byte_offset: 520
-    fieldset: SGI_DATIN0C
-  - name: SGI_DATIN0D
+    fieldset: SgiDatin0c
+  - name: sgi_datin0d
     description: Input Data register 0 - Word-0.
     byte_offset: 524
-    fieldset: SGI_DATIN0D
-  - name: SGI_DATIN1A
+    fieldset: SgiDatin0d
+  - name: sgi_datin1a
     description: Input Data register 1 - Word-3.
     byte_offset: 528
-    fieldset: SGI_DATIN1A
-  - name: SGI_DATIN1B
+    fieldset: SgiDatin1a
+  - name: sgi_datin1b
     description: Input Data register 1 - Word-2.
     byte_offset: 532
-    fieldset: SGI_DATIN1B
-  - name: SGI_DATIN1C
+    fieldset: SgiDatin1b
+  - name: sgi_datin1c
     description: Input Data register 1 - Word-1.
     byte_offset: 536
-    fieldset: SGI_DATIN1C
-  - name: SGI_DATIN1D
+    fieldset: SgiDatin1c
+  - name: sgi_datin1d
     description: Input Data register 1 - Word-0.
     byte_offset: 540
-    fieldset: SGI_DATIN1D
-  - name: SGI_DATIN2A
+    fieldset: SgiDatin1d
+  - name: sgi_datin2a
     description: Input Data register 2 - Word-3.
     byte_offset: 544
-    fieldset: SGI_DATIN2A
-  - name: SGI_DATIN2B
+    fieldset: SgiDatin2a
+  - name: sgi_datin2b
     description: Input Data register 2 - Word-2.
     byte_offset: 548
-    fieldset: SGI_DATIN2B
-  - name: SGI_DATIN2C
+    fieldset: SgiDatin2b
+  - name: sgi_datin2c
     description: Input Data register 2 - Word-1.
     byte_offset: 552
-    fieldset: SGI_DATIN2C
-  - name: SGI_DATIN2D
+    fieldset: SgiDatin2c
+  - name: sgi_datin2d
     description: Input Data register 2 - Word-0.
     byte_offset: 556
-    fieldset: SGI_DATIN2D
-  - name: SGI_DATIN3A
+    fieldset: SgiDatin2d
+  - name: sgi_datin3a
     description: Input Data register 3 - Word-3.
     byte_offset: 560
-    fieldset: SGI_DATIN3A
-  - name: SGI_DATIN3B
+    fieldset: SgiDatin3a
+  - name: sgi_datin3b
     description: Input Data register 3 - Word-2.
     byte_offset: 564
-    fieldset: SGI_DATIN3B
-  - name: SGI_DATIN3C
+    fieldset: SgiDatin3b
+  - name: sgi_datin3c
     description: Input Data register 3 - Word-1.
     byte_offset: 568
-    fieldset: SGI_DATIN3C
-  - name: SGI_DATIN3D
+    fieldset: SgiDatin3c
+  - name: sgi_datin3d
     description: Input Data register 3 - Word-0.
     byte_offset: 572
-    fieldset: SGI_DATIN3D
-  - name: SGI_KEY0A
+    fieldset: SgiDatin3d
+  - name: sgi_key0a
     description: Input Key register 0 - Word-3.
     byte_offset: 576
-    fieldset: SGI_KEY0A
-  - name: SGI_KEY0B
+    fieldset: SgiKey0a
+  - name: sgi_key0b
     description: Input Key register 0 - Word-2.
     byte_offset: 580
-    fieldset: SGI_KEY0B
-  - name: SGI_KEY0C
+    fieldset: SgiKey0b
+  - name: sgi_key0c
     description: Input Key register 0 - Word-1.
     byte_offset: 584
-    fieldset: SGI_KEY0C
-  - name: SGI_KEY0D
+    fieldset: SgiKey0c
+  - name: sgi_key0d
     description: Input Key register 0 - Word-0.
     byte_offset: 588
-    fieldset: SGI_KEY0D
-  - name: SGI_KEY1A
+    fieldset: SgiKey0d
+  - name: sgi_key1a
     description: Input Key register 1 - Word-3.
     byte_offset: 592
-    fieldset: SGI_KEY1A
-  - name: SGI_KEY1B
+    fieldset: SgiKey1a
+  - name: sgi_key1b
     description: Input Key register 1 - Word-2.
     byte_offset: 596
-    fieldset: SGI_KEY1B
-  - name: SGI_KEY1C
+    fieldset: SgiKey1b
+  - name: sgi_key1c
     description: Input Key register 1 - Word-1.
     byte_offset: 600
-    fieldset: SGI_KEY1C
-  - name: SGI_KEY1D
+    fieldset: SgiKey1c
+  - name: sgi_key1d
     description: Input Key register 1 - Word-0.
     byte_offset: 604
-    fieldset: SGI_KEY1D
-  - name: SGI_KEY2A
+    fieldset: SgiKey1d
+  - name: sgi_key2a
     description: Input Key register 2 - Word-3.
     byte_offset: 608
-    fieldset: SGI_KEY2A
-  - name: SGI_KEY2B
+    fieldset: SgiKey2a
+  - name: sgi_key2b
     description: Input Key register 2 - Word-2.
     byte_offset: 612
-    fieldset: SGI_KEY2B
-  - name: SGI_KEY2C
+    fieldset: SgiKey2b
+  - name: sgi_key2c
     description: Input Key register 2 - Word-1.
     byte_offset: 616
-    fieldset: SGI_KEY2C
-  - name: SGI_KEY2D
+    fieldset: SgiKey2c
+  - name: sgi_key2d
     description: Input Key register 2 - Word-0.
     byte_offset: 620
-    fieldset: SGI_KEY2D
-  - name: SGI_KEY3A
+    fieldset: SgiKey2d
+  - name: sgi_key3a
     description: Input Key register 3 - Word-3.
     byte_offset: 624
-    fieldset: SGI_KEY3A
-  - name: SGI_KEY3B
+    fieldset: SgiKey3a
+  - name: sgi_key3b
     description: Input Key register 3 - Word-2.
     byte_offset: 628
-    fieldset: SGI_KEY3B
-  - name: SGI_KEY3C
+    fieldset: SgiKey3b
+  - name: sgi_key3c
     description: Input Key register 3 - Word-1.
     byte_offset: 632
-    fieldset: SGI_KEY3C
-  - name: SGI_KEY3D
+    fieldset: SgiKey3c
+  - name: sgi_key3d
     description: Input Key register 3 - Word-0.
     byte_offset: 636
-    fieldset: SGI_KEY3D
-  - name: SGI_KEY4A
+    fieldset: SgiKey3d
+  - name: sgi_key4a
     description: Input Key register 4 - Word-3.
     byte_offset: 640
-    fieldset: SGI_KEY4A
-  - name: SGI_KEY4B
+    fieldset: SgiKey4a
+  - name: sgi_key4b
     description: Input Key register 4 - Word-2.
     byte_offset: 644
-    fieldset: SGI_KEY4B
-  - name: SGI_KEY4C
+    fieldset: SgiKey4b
+  - name: sgi_key4c
     description: Input Key register 4 - Word-1.
     byte_offset: 648
-    fieldset: SGI_KEY4C
-  - name: SGI_KEY4D
+    fieldset: SgiKey4c
+  - name: sgi_key4d
     description: Input Key register 4 - Word-0.
     byte_offset: 652
-    fieldset: SGI_KEY4D
-  - name: SGI_KEY5A
+    fieldset: SgiKey4d
+  - name: sgi_key5a
     description: Input Key register 5 - Word-3.
     byte_offset: 656
-    fieldset: SGI_KEY5A
-  - name: SGI_KEY5B
+    fieldset: SgiKey5a
+  - name: sgi_key5b
     description: Input Key register 5 - Word-2.
     byte_offset: 660
-    fieldset: SGI_KEY5B
-  - name: SGI_KEY5C
+    fieldset: SgiKey5b
+  - name: sgi_key5c
     description: Input Key register 5 - Word-1.
     byte_offset: 664
-    fieldset: SGI_KEY5C
-  - name: SGI_KEY5D
+    fieldset: SgiKey5c
+  - name: sgi_key5d
     description: Input Key register 5 - Word-0.
     byte_offset: 668
-    fieldset: SGI_KEY5D
-  - name: SGI_KEY6A
+    fieldset: SgiKey5d
+  - name: sgi_key6a
     description: Input Key register 6 - Word-3.
     byte_offset: 672
-    fieldset: SGI_KEY6A
-  - name: SGI_KEY6B
+    fieldset: SgiKey6a
+  - name: sgi_key6b
     description: Input Key register 6 - Word-2.
     byte_offset: 676
-    fieldset: SGI_KEY6B
-  - name: SGI_KEY6C
+    fieldset: SgiKey6b
+  - name: sgi_key6c
     description: Input Key register 6 - Word-1.
     byte_offset: 680
-    fieldset: SGI_KEY6C
-  - name: SGI_KEY6D
+    fieldset: SgiKey6c
+  - name: sgi_key6d
     description: Input Key register 6 - Word-0.
     byte_offset: 684
-    fieldset: SGI_KEY6D
-  - name: SGI_KEY7A
+    fieldset: SgiKey6d
+  - name: sgi_key7a
     description: Input Key register 7 - Word-3.
     byte_offset: 688
-    fieldset: SGI_KEY7A
-  - name: SGI_KEY7B
+    fieldset: SgiKey7a
+  - name: sgi_key7b
     description: Input Key register 7 - Word-2.
     byte_offset: 692
-    fieldset: SGI_KEY7B
-  - name: SGI_KEY7C
+    fieldset: SgiKey7b
+  - name: sgi_key7c
     description: Input Key register 7 - Word-1.
     byte_offset: 696
-    fieldset: SGI_KEY7C
-  - name: SGI_KEY7D
+    fieldset: SgiKey7c
+  - name: sgi_key7d
     description: Input Key register 7 - Word-0.
     byte_offset: 700
-    fieldset: SGI_KEY7D
-  - name: SGI_DATOUTA
+    fieldset: SgiKey7d
+  - name: sgi_datouta
     description: Output Data register - Word-3.
     byte_offset: 704
-    fieldset: SGI_DATOUTA
-  - name: SGI_DATOUTB
+    fieldset: SgiDatouta
+  - name: sgi_datoutb
     description: Output Data register - Word-2.
     byte_offset: 708
-    fieldset: SGI_DATOUTB
-  - name: SGI_DATOUTC
+    fieldset: SgiDatoutb
+  - name: sgi_datoutc
     description: Output Data register - Word-1.
     byte_offset: 712
-    fieldset: SGI_DATOUTC
-  - name: SGI_DATOUTD
+    fieldset: SgiDatoutc
+  - name: sgi_datoutd
     description: Output Data register - Word-0.
     byte_offset: 716
-    fieldset: SGI_DATOUTD
-  - name: SGI_STATUS
+    fieldset: SgiDatoutd
+  - name: sgi_status
     description: Status register.
     byte_offset: 3072
-    fieldset: SGI_STATUS
-  - name: SGI_COUNT
+    fieldset: SgiStatus
+  - name: sgi_count
     description: Calculation counter.
     byte_offset: 3076
-    fieldset: SGI_COUNT
-  - name: SGI_KEYCHK
+    fieldset: SgiCount
+  - name: sgi_keychk
     description: Key checksum register.
     byte_offset: 3080
-    fieldset: SGI_KEYCHK
-  - name: SGI_CTRL
+    fieldset: SgiKeychk
+  - name: sgi_ctrl
     description: SGI Control register.
     byte_offset: 3328
-    fieldset: SGI_CTRL
-  - name: SGI_CTRL2
+    fieldset: SgiCtrl
+  - name: sgi_ctrl2
     description: SGI Control register 2.
     byte_offset: 3332
-    fieldset: SGI_CTRL2
-  - name: SGI_DUMMY_CTRL
+    fieldset: SgiCtrl2
+  - name: sgi_dummy_ctrl
     description: Configuration of dummy controls.
     byte_offset: 3336
-    fieldset: SGI_DUMMY_CTRL
-  - name: SGI_SFRSEED
+    fieldset: SgiDummyCtrl
+  - name: sgi_sfrseed
     description: SFRSEED register for SFRMASK feature.
     byte_offset: 3344
-    fieldset: SGI_SFRSEED
-  - name: SGI_SHA2_CTRL
+    fieldset: SgiSfrseed
+  - name: sgi_sha2_ctrl
     description: SHA Control Register.
     byte_offset: 3348
-    fieldset: SGI_SHA2_CTRL
-  - name: SGI_SHA_FIFO
+    fieldset: SgiSha2Ctrl
+  - name: sgi_sha_fifo
     description: SHA FIFO lower-bank low.
     byte_offset: 3352
-    fieldset: SGI_SHA_FIFO
-  - name: SGI_CONFIG
+    fieldset: SgiShaFifo
+  - name: sgi_config
     description: SHA Configuration Reg.
     byte_offset: 3356
     access: Read
-    fieldset: SGI_CONFIG
-  - name: SGI_CONFIG2
+    fieldset: SgiConfig
+  - name: sgi_config2
     description: SHA Configuration 2 Reg.
     byte_offset: 3360
     access: Read
-    fieldset: SGI_CONFIG2
-  - name: SGI_AUTO_MODE
+    fieldset: SgiConfig2
+  - name: sgi_auto_mode
     description: SGI Auto Mode Control register.
     byte_offset: 3364
-    fieldset: SGI_AUTO_MODE
-  - name: SGI_AUTO_DMA_CTRL
+    fieldset: SgiAutoMode
+  - name: sgi_auto_dma_ctrl
     description: SGI Auto Mode Control register.
     byte_offset: 3368
-    fieldset: SGI_AUTO_DMA_CTRL
-  - name: SGI_PRNG_SW_SEED
+    fieldset: SgiAutoDmaCtrl
+  - name: sgi_prng_sw_seed
     description: SGI internal PRNG SW seeding register.
     byte_offset: 3376
-    fieldset: SGI_PRNG_SW_SEED
-  - name: SGI_KEY_CTRL
+    fieldset: SgiPrngSwSeed
+  - name: sgi_key_ctrl
     description: SGI Key Control SFR.
     byte_offset: 3392
-    fieldset: SGI_KEY_CTRL
-  - name: SGI_KEY_WRAP
+    fieldset: SgiKeyCtrl
+  - name: sgi_key_wrap
     description: Wrapped key read SFR.
     byte_offset: 3408
     access: Read
-    fieldset: SGI_KEY_WRAP
-  - name: SGI_VERSION
+    fieldset: SgiKeyWrap
+  - name: sgi_version
     description: SGI Version.
     byte_offset: 3848
     access: Read
-    fieldset: SGI_VERSION
-  - name: SGI_ACCESS_ERR
+    fieldset: SgiVersion
+  - name: sgi_access_err
     description: Access Error.
     byte_offset: 4032
-    fieldset: SGI_ACCESS_ERR
-  - name: SGI_ACCESS_ERR_CLR
+    fieldset: SgiAccessErr
+  - name: sgi_access_err_clr
     description: Clear Access Error.
     byte_offset: 4036
-    fieldset: SGI_ACCESS_ERR_CLR
-  - name: SGI_INT_STATUS
+    fieldset: SgiAccessErrClr
+  - name: sgi_int_status
     description: Interrupt status.
     byte_offset: 4064
     access: Read
-    fieldset: SGI_INT_STATUS
-  - name: SGI_INT_ENABLE
+    fieldset: SgiIntStatus
+  - name: sgi_int_enable
     description: Interrupt enable.
     byte_offset: 4068
-    fieldset: SGI_INT_ENABLE
-  - name: SGI_INT_STATUS_CLR
+    fieldset: SgiIntEnable
+  - name: sgi_int_status_clr
     description: Interrupt status clear.
     byte_offset: 4072
-    fieldset: SGI_INT_STATUS_CLR
-  - name: SGI_INT_STATUS_SET
+    fieldset: SgiIntStatusClr
+  - name: sgi_int_status_set
     description: Interrupt status set.
     byte_offset: 4076
-    fieldset: SGI_INT_STATUS_SET
-  - name: SGI_MODULE_ID
+    fieldset: SgiIntStatusSet
+  - name: sgi_module_id
     description: Module ID.
     byte_offset: 4092
     access: Read
-    fieldset: SGI_MODULE_ID
-fieldset/SGI_ACCESS_ERR:
+    fieldset: SgiModuleId
+fieldset/SgiAccessErr:
   description: Access Error.
   fields:
-  - name: APB_NOTAV
+  - name: apb_notav
     description: 'APB Error: address not available.'
     bit_offset: 0
     bit_size: 1
-  - name: APB_WRGMD
+  - name: apb_wrgmd
     description: 'APB Error: Wrong access mode.'
     bit_offset: 1
     bit_size: 1
-  - name: APB_MASTER
+  - name: apb_master
     description: APB Master that triggered first APB error (APB_WRGMD or APB_NOTAV).
     bit_offset: 4
     bit_size: 4
-fieldset/SGI_ACCESS_ERR_CLR:
+fieldset/SgiAccessErrClr:
   description: Clear Access Error.
   fields:
-  - name: ERR_CLR
+  - name: err_clr
     description: Write to reset SGI_ACCESS_ERR SFR.
     bit_offset: 0
     bit_size: 1
-fieldset/SGI_AUTO_DMA_CTRL:
+fieldset/SgiAutoDmaCtrl:
   description: SGI Auto Mode Control register.
   fields:
-  - name: IFE
+  - name: ife
     description: Input FIFO DMA Enable.
     bit_offset: 0
     bit_size: 1
-  - name: OFE
+  - name: ofe
     description: Ouput FIFO DMA Enable.
     bit_offset: 8
     bit_size: 1
-fieldset/SGI_AUTO_MODE:
+fieldset/SgiAutoMode:
   description: SGI Auto Mode Control register.
   fields:
-  - name: AUTO_MODE_EN
+  - name: auto_mode_en
     description: auto_start_en.
     bit_offset: 0
     bit_size: 1
-  - name: AUTO_MODE_STOP
+  - name: auto_mode_stop
     description: auto_mode_stop.
     bit_offset: 1
     bit_size: 1
-  - name: INCR_MODE
+  - name: incr_mode
     description: CTR increment mode.
     bit_offset: 4
     bit_size: 2
-    enum: INCR_MODE
-  - name: CMD
+    enum: IncrMode
+  - name: cmd
     description: Auto mode of operation.
     bit_offset: 8
     bit_size: 8
-    enum: CMD
-fieldset/SGI_CONFIG:
+    enum: Cmd
+fieldset/SgiConfig:
   description: SHA Configuration Reg.
   fields:
-  - name: ROW
+  - name: row
     description: SGI Diversified for 'ROW'.
     bit_offset: 0
     bit_size: 1
-  - name: CHINA
+  - name: china
     description: SGI Diversified for 'CHINA'.
     bit_offset: 1
     bit_size: 1
-  - name: CC
+  - name: cc
     description: SGI Diversified for 'CC'.
     bit_offset: 2
     bit_size: 1
-  - name: HAS_AES
+  - name: has_aes
     description: HAS AES.
     bit_offset: 3
     bit_size: 1
-  - name: HAS_DES
+  - name: has_des
     description: HAS DES.
     bit_offset: 4
     bit_size: 1
-  - name: HAS_SHA
+  - name: has_sha
     description: HAS SHA.
     bit_offset: 5
     bit_size: 1
-  - name: HAS_MOVEM
+  - name: has_movem
     description: HAS MOVEM.
     bit_offset: 6
     bit_size: 1
-  - name: HAS_CMAC
+  - name: has_cmac
     description: HAS CMAC.
     bit_offset: 7
     bit_size: 1
-  - name: HAS_GFMUL
+  - name: has_gfmul
     description: HAS GFMUL.
     bit_offset: 8
     bit_size: 1
-  - name: INTERNAL_PRNG
+  - name: internal_prng
     description: HAS INTERNAL PRNG.
     bit_offset: 9
     bit_size: 1
-  - name: KEY_DIGEST
+  - name: key_digest
     description: HAS KEY DIGEST.
     bit_offset: 10
     bit_size: 1
-  - name: COUNT_SIZE
+  - name: count_size
     description: 0 - COUNT=16, 1 - COUNT=32.
     bit_offset: 11
     bit_size: 1
-  - name: FA
+  - name: fa
     description: HAS FA protection.
     bit_offset: 13
     bit_size: 1
-  - name: BUS_WIDTH
+  - name: bus_width
     description: 0 - BUS_WIDTH=16, 1 - BUS_WIDTH=32.
     bit_offset: 15
     bit_size: 1
-  - name: NUM_DATIN
+  - name: num_datin
     description: NUMBER OF DATIN REGBANKS.
     bit_offset: 16
     bit_size: 2
-  - name: NUM_KEY
+  - name: num_key
     description: NUMBER OR KEY REGBANKS.
     bit_offset: 18
     bit_size: 3
-  - name: EDC
+  - name: edc
     description: DATIN to KERNEL End-to-end EDC is enabled.
     bit_offset: 21
     bit_size: 1
-  - name: SHA_256_ONLY
+  - name: sha_256_only
     description: HAS SHA-256 ONLY.
     bit_offset: 24
     bit_size: 1
-  - name: SPB_SUPPORT
+  - name: spb_support
     description: ID_CFG_SGI_SPB_SUPPORT is set.
     bit_offset: 25
     bit_size: 1
-  - name: SPB_MASKING
+  - name: spb_masking
     description: ID_CFG_SGI_SPB_MASKING is set.
     bit_offset: 26
     bit_size: 1
-  - name: SFR_SW_MASK
+  - name: sfr_sw_mask
     description: ID_CFG_SGI_USE_SFR_SW_MASK is set.
     bit_offset: 27
     bit_size: 1
-fieldset/SGI_CONFIG2:
+fieldset/SgiConfig2:
   description: SHA Configuration 2 Reg.
   fields:
-  - name: AES_USED
+  - name: aes_used
     description: no description available.
     bit_offset: 0
     bit_size: 4
-    enum: AES_USED
-  - name: AES_NUM_SBOXES
+    enum: AesUsed
+  - name: aes_num_sboxes
     description: Number of AES sboxes.
     bit_offset: 4
     bit_size: 5
-  - name: AES_KEYSIZE
+  - name: aes_keysize
     description: Indicates which AES key size has been selected.
     bit_offset: 9
     bit_size: 2
-    enum: AES_KEYSIZE
-  - name: DES_USED
+    enum: AesKeysize
+  - name: des_used
     description: no description available.
     bit_offset: 16
     bit_size: 4
-    enum: DES_USED
-  - name: DES_NUM_SBOXES
+    enum: DesUsed
+  - name: des_num_sboxes
     description: Number of DES sboxes.
     bit_offset: 20
     bit_size: 5
-fieldset/SGI_COUNT:
+fieldset/SgiCount:
   description: Calculation counter.
   fields:
-  - name: COUNT
+  - name: count
     description: Calculation counter, incremented with each calculation start.
     bit_offset: 0
     bit_size: 16
-fieldset/SGI_CTRL:
+fieldset/SgiCtrl:
   description: SGI Control register.
   fields:
-  - name: START
+  - name: start
     description: Start crypto operation.
     bit_offset: 0
     bit_size: 1
-    enum: START
-  - name: DECRYPT
+    enum: Start
+  - name: decrypt
     description: Sets Cipher direction(AES and DES).
     bit_offset: 1
     bit_size: 1
-    enum: DECRYPT
-  - name: AESKEYSZ
+    enum: Decrypt
+  - name: aeskeysz
     description: Sets AES key size.
     bit_offset: 2
     bit_size: 2
-    enum: AESKEYSZ
-  - name: CRYPTO_OP
+    enum: Aeskeysz
+  - name: crypto_op
     description: Sets 'Crypto Operation' type.
     bit_offset: 4
     bit_size: 3
-    enum: CRYPTO_OP
-  - name: INSEL
+    enum: CryptoOp
+  - name: insel
     description: no description available.
     bit_offset: 7
     bit_size: 4
-    enum: INSEL
-  - name: OUTSEL
+    enum: Insel
+  - name: outsel
     description: no description available.
     bit_offset: 11
     bit_size: 3
-    enum: OUTSEL
-  - name: DATOUT_RES
+    enum: Outsel
+  - name: datout_res
     description: Kernels data out options.
     bit_offset: 14
     bit_size: 2
-    enum: DATOUT_RES
-  - name: AES_EN
+    enum: DatoutRes
+  - name: aes_en
     description: AES Kernel Enable.
     bit_offset: 16
     bit_size: 1
-  - name: DES_EN
+  - name: des_en
     description: DES Kernel Enable.
     bit_offset: 17
     bit_size: 1
-  - name: GCM_EN
+  - name: gcm_en
     description: GFMUL Kernel Enable.
     bit_offset: 18
     bit_size: 1
-  - name: PRNG_EN
+  - name: prng_en
     description: PRNG Enable (only if SGI has internal PRNG).
     bit_offset: 19
     bit_size: 1
-  - name: INKEYSEL
+  - name: inkeysel
     description: Input key selection.
     bit_offset: 20
     bit_size: 5
-  - name: TDESKEY
+  - name: tdeskey
     description: Triple-DES Key Configuration.
     bit_offset: 25
     bit_size: 1
-    enum: TDESKEY
-  - name: AES_NO_KL
+    enum: Tdeskey
+  - name: aes_no_kl
     description: AES No decryption key scheduleThis bit is only supported for select configurations of the SGI.
     bit_offset: 26
     bit_size: 1
-    enum: AES_NO_KL
-  - name: AES_SEL
+    enum: AesNoKl
+  - name: aes_sel
     description: AES Dual Selection.
     bit_offset: 27
     bit_size: 1
-    enum: AES_SEL
-fieldset/SGI_CTRL2:
+    enum: AesSel
+fieldset/SgiCtrl2:
   description: SGI Control register 2.
   fields:
-  - name: FLUSH
+  - name: flush
     description: Start Full SGI Flush.
     bit_offset: 0
     bit_size: 1
-    enum: FLUSH
-  - name: KEY_FLUSH
+    enum: Flush
+  - name: key_flush
     description: Start KEY register-bank Flush.
     bit_offset: 1
     bit_size: 1
-    enum: KEY_FLUSH
-  - name: DATIN_FLUSH
+    enum: KeyFlush
+  - name: datin_flush
     description: Start DATIN register-bank Flush.
     bit_offset: 2
     bit_size: 1
-    enum: DATIN_FLUSH
-  - name: INCR
+    enum: DatinFlush
+  - name: incr
     description: Increment(Triggered by SFR write).
     bit_offset: 3
     bit_size: 1
-  - name: XORWR
+  - name: xorwr
     description: Write-XOR control.
     bit_offset: 4
     bit_size: 1
-  - name: FLUSHWR
+  - name: flushwr
     description: Flush Write control.
     bit_offset: 5
     bit_size: 1
-  - name: INCR_CIN
+  - name: incr_cin
     description: Increment Carry-In control.
     bit_offset: 6
     bit_size: 1
-    enum: INCR_CIN
-  - name: SMASKEN
+    enum: IncrCin
+  - name: smasken
     description: SFRMASK Enable.
     bit_offset: 8
     bit_size: 1
-  - name: SMASKSTEP
+  - name: smaskstep
     description: SFRSEED increment control.
     bit_offset: 9
     bit_size: 1
-    enum: SMASKSTEP
-  - name: SMASKSW
+    enum: Smaskstep
+  - name: smasksw
     description: SFRMASK MASK control.
     bit_offset: 10
     bit_size: 1
-    enum: SMASKSW
-  - name: MOVEM
+    enum: Smasksw
+  - name: movem
     description: 4-bit optional input for MOVEM feature.
     bit_offset: 12
     bit_size: 4
-  - name: KEYRES
+  - name: keyres
     description: Selects key registers to be updated when rkey=1.
     bit_offset: 16
     bit_size: 5
-  - name: RKEY
+  - name: rkey
     description: Crypto result location.
     bit_offset: 21
     bit_size: 1
-    enum: RKEY
-  - name: BYTES_ORDER
+    enum: Rkey
+  - name: bytes_order
     description: Byte order of regbank read/write data.
     bit_offset: 22
     bit_size: 1
-    enum: BYTES_ORDER
-  - name: GCM_INXOR
+    enum: BytesOrder
+  - name: gcm_inxor
     description: GCM INXOR.
     bit_offset: 23
     bit_size: 1
-fieldset/SGI_DATIN0A:
+fieldset/SgiDatin0a:
   description: Input Data register 0 - Word-3.
   fields:
-  - name: DATIN0A
+  - name: datin0a
     description: Input Data register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_DATIN0B:
+fieldset/SgiDatin0b:
   description: Input Data register 0 - Word-2.
   fields:
-  - name: DATIN0B
+  - name: datin0b
     description: Input Data register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_DATIN0C:
+fieldset/SgiDatin0c:
   description: Input Data register 0 - Word-1.
   fields:
-  - name: DATIN0C
+  - name: datin0c
     description: Input Data register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_DATIN0D:
+fieldset/SgiDatin0d:
   description: Input Data register 0 - Word-0.
   fields:
-  - name: DATIN0D
+  - name: datin0d
     description: Input Data register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_DATIN1A:
+fieldset/SgiDatin1a:
   description: Input Data register 1 - Word-3.
   fields:
-  - name: DATIN1A
+  - name: datin1a
     description: Input Data register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_DATIN1B:
+fieldset/SgiDatin1b:
   description: Input Data register 1 - Word-2.
   fields:
-  - name: DATIN1B
+  - name: datin1b
     description: Input Data register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_DATIN1C:
+fieldset/SgiDatin1c:
   description: Input Data register 1 - Word-1.
   fields:
-  - name: DATIN1C
+  - name: datin1c
     description: Input Data register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_DATIN1D:
+fieldset/SgiDatin1d:
   description: Input Data register 1 - Word-0.
   fields:
-  - name: DATIN1D
+  - name: datin1d
     description: Input Data register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_DATIN2A:
+fieldset/SgiDatin2a:
   description: Input Data register 2 - Word-3.
   fields:
-  - name: DATIN2A
+  - name: datin2a
     description: Input Data register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_DATIN2B:
+fieldset/SgiDatin2b:
   description: Input Data register 2 - Word-2.
   fields:
-  - name: DATIN2B
+  - name: datin2b
     description: Input Data register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_DATIN2C:
+fieldset/SgiDatin2c:
   description: Input Data register 2 - Word-1.
   fields:
-  - name: DATIN2C
+  - name: datin2c
     description: Input Data register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_DATIN2D:
+fieldset/SgiDatin2d:
   description: Input Data register 2 - Word-0.
   fields:
-  - name: DATIN2D
+  - name: datin2d
     description: Input Data register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_DATIN3A:
+fieldset/SgiDatin3a:
   description: Input Data register 3 - Word-3.
   fields:
-  - name: DATIN3A
+  - name: datin3a
     description: Input Data register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_DATIN3B:
+fieldset/SgiDatin3b:
   description: Input Data register 3 - Word-2.
   fields:
-  - name: DATIN3B
+  - name: datin3b
     description: Input Data register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_DATIN3C:
+fieldset/SgiDatin3c:
   description: Input Data register 3 - Word-1.
   fields:
-  - name: DATIN3C
+  - name: datin3c
     description: Input Data register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_DATIN3D:
+fieldset/SgiDatin3d:
   description: Input Data register 3 - Word-0.
   fields:
-  - name: DATIN3D
+  - name: datin3d
     description: Input Data register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_DATOUTA:
+fieldset/SgiDatouta:
   description: Output Data register - Word-3.
   fields:
-  - name: DATOUTA
+  - name: datouta
     description: Output Data register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_DATOUTB:
+fieldset/SgiDatoutb:
   description: Output Data register - Word-2.
   fields:
-  - name: DATOUTB
+  - name: datoutb
     description: Output Data register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_DATOUTC:
+fieldset/SgiDatoutc:
   description: Output Data register - Word-1.
   fields:
-  - name: DATOUTC
+  - name: datoutc
     description: Output Data register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_DATOUTD:
+fieldset/SgiDatoutd:
   description: Output Data register - Word-0.
   fields:
-  - name: DATOUTD
+  - name: datoutd
     description: Output Data register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_DUMMY_CTRL:
+fieldset/SgiDummyCtrl:
   description: Configuration of dummy controls.
   fields:
-  - name: DDCTRL
+  - name: ddctrl
     description: DES dummy controlPlease refer to the relevant kernel document for details on dummy ctrl.
     bit_offset: 0
     bit_size: 10
-  - name: ADCTRL
+  - name: adctrl
     description: AES dummy controlPlease refer to the relevant kernel document for details on dummy ctrl.
     bit_offset: 16
     bit_size: 10
-fieldset/SGI_INT_ENABLE:
+fieldset/SgiIntEnable:
   description: Interrupt enable.
   fields:
-  - name: INT_EN
+  - name: int_en
     description: Interrupt enable bit.
     bit_offset: 0
     bit_size: 1
-fieldset/SGI_INT_STATUS:
+fieldset/SgiIntStatus:
   description: Interrupt status.
   fields:
-  - name: INT_PDONE
+  - name: int_pdone
     description: 'Interrupt status flag: INT_PDONE is set independent from the interrupt enable SGI_INT_ENABLE.'
     bit_offset: 0
     bit_size: 1
-fieldset/SGI_INT_STATUS_CLR:
+fieldset/SgiIntStatusClr:
   description: Interrupt status clear.
   fields:
-  - name: INT_CLR
+  - name: int_clr
     description: Write to clear interrupt status flag (SGI_INT_STATUS.INT_PDONE=0).
     bit_offset: 0
     bit_size: 1
-fieldset/SGI_INT_STATUS_SET:
+fieldset/SgiIntStatusSet:
   description: Interrupt status set.
   fields:
-  - name: INT_SET
+  - name: int_set
     description: Write to set interrupt status flag (SGI_INT_STATUS.INT_PDONE=1) to trigger a SGI interrupt via software, e.g. for debug purposes.
     bit_offset: 0
     bit_size: 1
-fieldset/SGI_KEY0A:
+fieldset/SgiKey0a:
   description: Input Key register 0 - Word-3.
   fields:
-  - name: KEY0A
+  - name: key0a
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY0B:
+fieldset/SgiKey0b:
   description: Input Key register 0 - Word-2.
   fields:
-  - name: KEY0B
+  - name: key0b
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY0C:
+fieldset/SgiKey0c:
   description: Input Key register 0 - Word-1.
   fields:
-  - name: KEY0C
+  - name: key0c
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY0D:
+fieldset/SgiKey0d:
   description: Input Key register 0 - Word-0.
   fields:
-  - name: KEY0D
+  - name: key0d
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY1A:
+fieldset/SgiKey1a:
   description: Input Key register 1 - Word-3.
   fields:
-  - name: KEY1A
+  - name: key1a
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY1B:
+fieldset/SgiKey1b:
   description: Input Key register 1 - Word-2.
   fields:
-  - name: KEY1B
+  - name: key1b
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY1C:
+fieldset/SgiKey1c:
   description: Input Key register 1 - Word-1.
   fields:
-  - name: KEY1C
+  - name: key1c
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY1D:
+fieldset/SgiKey1d:
   description: Input Key register 1 - Word-0.
   fields:
-  - name: KEY1D
+  - name: key1d
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY2A:
+fieldset/SgiKey2a:
   description: Input Key register 2 - Word-3.
   fields:
-  - name: KEY2A
+  - name: key2a
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY2B:
+fieldset/SgiKey2b:
   description: Input Key register 2 - Word-2.
   fields:
-  - name: KEY2B
+  - name: key2b
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY2C:
+fieldset/SgiKey2c:
   description: Input Key register 2 - Word-1.
   fields:
-  - name: KEY2C
+  - name: key2c
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY2D:
+fieldset/SgiKey2d:
   description: Input Key register 2 - Word-0.
   fields:
-  - name: KEY2D
+  - name: key2d
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY3A:
+fieldset/SgiKey3a:
   description: Input Key register 3 - Word-3.
   fields:
-  - name: KEY3A
+  - name: key3a
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY3B:
+fieldset/SgiKey3b:
   description: Input Key register 3 - Word-2.
   fields:
-  - name: KEY3B
+  - name: key3b
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY3C:
+fieldset/SgiKey3c:
   description: Input Key register 3 - Word-1.
   fields:
-  - name: KEY3C
+  - name: key3c
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY3D:
+fieldset/SgiKey3d:
   description: Input Key register 3 - Word-0.
   fields:
-  - name: KEY3D
+  - name: key3d
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY4A:
+fieldset/SgiKey4a:
   description: Input Key register 4 - Word-3.
   fields:
-  - name: KEY4A
+  - name: key4a
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY4B:
+fieldset/SgiKey4b:
   description: Input Key register 4 - Word-2.
   fields:
-  - name: KEY4B
+  - name: key4b
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY4C:
+fieldset/SgiKey4c:
   description: Input Key register 4 - Word-1.
   fields:
-  - name: KEY4C
+  - name: key4c
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY4D:
+fieldset/SgiKey4d:
   description: Input Key register 4 - Word-0.
   fields:
-  - name: KEY4D
+  - name: key4d
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY5A:
+fieldset/SgiKey5a:
   description: Input Key register 5 - Word-3.
   fields:
-  - name: KEY5A
+  - name: key5a
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY5B:
+fieldset/SgiKey5b:
   description: Input Key register 5 - Word-2.
   fields:
-  - name: KEY5B
+  - name: key5b
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY5C:
+fieldset/SgiKey5c:
   description: Input Key register 5 - Word-1.
   fields:
-  - name: KEY5C
+  - name: key5c
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY5D:
+fieldset/SgiKey5d:
   description: Input Key register 5 - Word-0.
   fields:
-  - name: KEY5D
+  - name: key5d
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY6A:
+fieldset/SgiKey6a:
   description: Input Key register 6 - Word-3.
   fields:
-  - name: KEY6A
+  - name: key6a
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY6B:
+fieldset/SgiKey6b:
   description: Input Key register 6 - Word-2.
   fields:
-  - name: KEY6B
+  - name: key6b
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY6C:
+fieldset/SgiKey6c:
   description: Input Key register 6 - Word-1.
   fields:
-  - name: KEY6C
+  - name: key6c
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY6D:
+fieldset/SgiKey6d:
   description: Input Key register 6 - Word-0.
   fields:
-  - name: KEY6D
+  - name: key6d
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY7A:
+fieldset/SgiKey7a:
   description: Input Key register 7 - Word-3.
   fields:
-  - name: KEY7A
+  - name: key7a
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY7B:
+fieldset/SgiKey7b:
   description: Input Key register 7 - Word-2.
   fields:
-  - name: KEY7B
+  - name: key7b
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY7C:
+fieldset/SgiKey7c:
   description: Input Key register 7 - Word-1.
   fields:
-  - name: KEY7C
+  - name: key7c
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY7D:
+fieldset/SgiKey7d:
   description: Input Key register 7 - Word-0.
   fields:
-  - name: KEY7D
+  - name: key7d
     description: Input Key register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEYCHK:
-  description: Key checksum register.
-  fields:
-  - name: KEYCHKSUM
-    description: Key checksum (32-bit).
-    bit_offset: 0
-    bit_size: 32
-fieldset/SGI_KEY_CTRL:
+fieldset/SgiKeyCtrl:
   description: SGI Key Control SFR.
   fields:
-  - name: KEY_WO
+  - name: key_wo
     description: SGI Key control register(1-bit per KEY SFR) 1'b0 - Key SFR is readable 1'b1 - Key SFR is not-readable(write-only).
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_KEY_WRAP:
+fieldset/SgiKeyWrap:
   description: Wrapped key read SFR.
   fields:
-  - name: KW_DATA
+  - name: kw_data
     description: Field contains wrapped key, auto-updated by HW for each word.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_MODULE_ID:
+fieldset/SgiKeychk:
+  description: Key checksum register.
+  fields:
+  - name: keychksum
+    description: Key checksum (32-bit).
+    bit_offset: 0
+    bit_size: 32
+fieldset/SgiModuleId:
   description: Module ID.
   fields:
-  - name: PLACEHOLDER
+  - name: placeholder
     description: Module ID.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_PRNG_SW_SEED:
+fieldset/SgiPrngSwSeed:
   description: SGI internal PRNG SW seeding register.
   fields:
-  - name: SEED
+  - name: seed
     description: 32-bits SEED field. A write to the SEED field will seed the internal PRNG.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_SFRSEED:
+fieldset/SgiSfrseed:
   description: SFRSEED register for SFRMASK feature.
   fields:
-  - name: SFRSEED
+  - name: sfrseed
     description: Seed/mask used for sw level masking.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_SHA2_CTRL:
+fieldset/SgiSha2Ctrl:
   description: SHA Control Register.
   fields:
-  - name: SHA2_EN
+  - name: sha2_en
     description: SHA enable.
     bit_offset: 0
     bit_size: 1
-  - name: SHA2_MODE
+  - name: sha2_mode
     description: SHA mode normal or automatic.
     bit_offset: 1
     bit_size: 1
-    enum: SHA2_MODE
-  - name: SHA2_SIZE
+    enum: Sha2Mode
+  - name: sha2_size
     description: Indicates SHA size.
     bit_offset: 2
     bit_size: 2
-    enum: SHA2_SIZE
-  - name: SHA2_LOW_LIM
+    enum: Sha2Size
+  - name: sha2_low_lim
     description: SHA FIFO low limit.
     bit_offset: 4
     bit_size: 4
-  - name: SHA2_HIGH_LIM
+  - name: sha2_high_lim
     description: SHA FIFO high limit.
     bit_offset: 8
     bit_size: 4
-  - name: SHA2_COUNT_EN
+  - name: sha2_count_en
     description: SHA Calculation counter enable.
     bit_offset: 12
     bit_size: 1
-    enum: SHA2_COUNT_EN
-  - name: HASH_RELOAD
+    enum: Sha2CountEn
+  - name: hash_reload
     description: SHA HASH reload.
     bit_offset: 13
     bit_size: 1
-  - name: SHA2_STOP
+  - name: sha2_stop
     description: STOP SHA AUTO mode.
     bit_offset: 14
     bit_size: 1
-    enum: SHA2_STOP
-  - name: NO_AUTO_INIT
+    enum: Sha2Stop
+  - name: no_auto_init
     description: SHA no automatic HASH initialisation.
     bit_offset: 15
     bit_size: 1
-    enum: NO_AUTO_INIT
-fieldset/SGI_SHA_FIFO:
+    enum: NoAutoInit
+fieldset/SgiShaFifo:
   description: SHA FIFO lower-bank low.
   fields:
-  - name: FIFO
+  - name: fifo
     description: SHA FIFO register.
     bit_offset: 0
     bit_size: 32
-fieldset/SGI_STATUS:
+fieldset/SgiStatus:
   description: Status register.
   fields:
-  - name: BUSY
+  - name: busy
     description: Combined busy flag that remains high until end of calculation.
     bit_offset: 0
     bit_size: 1
-  - name: OFLOW
+  - name: oflow
     description: Overflow in INCR operation flag.
     bit_offset: 1
     bit_size: 1
-  - name: PRNG_RDY
+  - name: prng_rdy
     description: prng is ready after boot-up-phase.
     bit_offset: 2
     bit_size: 1
-  - name: ERROR
+  - name: error
     description: Error detected.
     bit_offset: 3
     bit_size: 3
-    enum: ERROR
-  - name: SHA2_BUSY
+    enum: Error
+  - name: sha2_busy
     description: SHA2 is busy.
     bit_offset: 6
     bit_size: 1
-  - name: IRQ
+  - name: irq
     description: interrupt detected.
     bit_offset: 7
     bit_size: 1
-  - name: SHA_FIFO_FULL
+  - name: sha_fifo_full
     description: SHA FIFO is full(operates in SHA AUTO mode).
     bit_offset: 8
     bit_size: 1
-  - name: SHA_FIFO_LEVEL
+  - name: sha_fifo_level
     description: SHA FIFO level.
     bit_offset: 9
     bit_size: 6
-  - name: SHA_ERROR
+  - name: sha_error
     description: SHA ERROR.
     bit_offset: 15
     bit_size: 1
-  - name: KEY_READ_ERR
+  - name: key_read_err
     description: KEY SFR READ ERROR, sticky, cleared only with reset or flush.
     bit_offset: 16
     bit_size: 1
-  - name: KEY_UNWRAP_ERR
+  - name: key_unwrap_err
     description: KEY UNWRAP ERROR , sticky, cleared only with reset or flush.
     bit_offset: 17
     bit_size: 1
-fieldset/SGI_VERSION:
+fieldset/SgiVersion:
   description: SGI Version.
   fields:
-  - name: Z
+  - name: z
     description: Extended revision number in X.Y1Y2.Z, e.g. 1.20.3.
     bit_offset: 0
     bit_size: 4
-  - name: Y2
+  - name: y2
     description: Minor revision number 2 in X.Y1Y2.Z, e.g. 1.20.3.
     bit_offset: 4
     bit_size: 4
-  - name: Y1
+  - name: y1
     description: Minor revision number 1 in X.Y1Y2.Z, e.g. 1.20.3.
     bit_offset: 8
     bit_size: 4
-  - name: X
+  - name: x
     description: Major revision number in X.Y1Y2.Z, e.g. 1.20.3.
     bit_offset: 12
     bit_size: 4
-  - name: MILESTONE
+  - name: milestone
     description: Release milestone.
     bit_offset: 16
     bit_size: 2
-    enum: MILESTONE
-enum/AESKEYSZ:
+    enum: Milestone
+enum/AesKeysize:
   bit_size: 2
   variants:
-  - name: aes_128
-    description: AES-128.
-    value: 0
-  - name: aes_192
-    description: AES-192.
-    value: 1
-  - name: aes_256
-    description: AES-256.
-    value: 2
-  - name: rfu
-    description: RFU (defaults to AES-128).
-    value: 3
-enum/AES_KEYSIZE:
-  bit_size: 2
-  variants:
-  - name: aes_128_only
+  - name: Aes128Only
     description: 128 0nly.
     value: 0
-  - name: aes_192_only
+  - name: Aes192Only
     description: 192 only.
     value: 1
-  - name: aes_256_only
+  - name: Aes256Only
     description: 256 only.
     value: 2
-  - name: all_keysize
+  - name: AllKeysize
     description: All key sizes.
     value: 3
-enum/AES_NO_KL:
+enum/AesNoKl:
   bit_size: 1
   variants:
-  - name: new
+  - name: New
     description: new AES key will be loaded.
     value: 0
-  - name: no
+  - name: No
     description: No AES key will be loaded, and previously loaded key will be used.
     value: 1
-enum/AES_SEL:
+enum/AesSel:
   bit_size: 1
   variants:
-  - name: first_aes
+  - name: FirstAes
     description: First AES selected.
     value: 0
-  - name: second_aes
+  - name: SecondAes
     description: Second AES selected (when enabled).
     value: 1
-enum/AES_USED:
+enum/AesUsed:
   bit_size: 4
   variants:
-  - name: apollo
+  - name: Apollo
     description: Apollo.
     value: 0
-  - name: aegis
+  - name: Aegis
     description: Aegis.
     value: 1
-  - name: ayna
+  - name: Ayna
     description: Ayna.
     value: 2
-  - name: athenium
+  - name: Athenium
     description: Athenium.
     value: 3
-  - name: ajax
+  - name: Ajax
     description: Ajax.
     value: 4
-  - name: aegis_hs
+  - name: AegisHs
     description: Aegis_hs.
     value: 5
-  - name: athenium_hs
+  - name: AtheniumHs
     description: Athenium_hs.
     value: 6
-  - name: ate
+  - name: Ate
     description: ATE.
     value: 7
-  - name: atom
+  - name: Atom
     description: ATOM.
     value: 8
-  - name: asterix
+  - name: Asterix
     description: Asterix.
     value: 9
-  - name: rfu_10
+  - name: Rfu10
     description: RFU.
     value: 10
-  - name: rfu_11
+  - name: Rfu11
     description: RFU.
     value: 11
-  - name: rfu_12
+  - name: Rfu12
     description: RFU.
     value: 12
-  - name: rfu_13
+  - name: Rfu13
     description: RFU.
     value: 13
-  - name: rfu_14
+  - name: Rfu14
     description: RFU.
     value: 14
-  - name: rfu_15
+  - name: Rfu15
     description: RFU.
     value: 15
-enum/BYTES_ORDER:
+enum/Aeskeysz:
+  bit_size: 2
+  variants:
+  - name: Aes128
+    description: AES-128.
+    value: 0
+  - name: Aes192
+    description: AES-192.
+    value: 1
+  - name: Aes256
+    description: AES-256.
+    value: 2
+  - name: Rfu
+    description: RFU (defaults to AES-128).
+    value: 3
+enum/BytesOrder:
   bit_size: 1
   variants:
-  - name: normal_order
+  - name: NormalOrder
     description: Normal.
     value: 0
-  - name: swapped_order
+  - name: SwappedOrder
     description: Swapped.
     value: 1
-enum/CMD:
+enum/Cmd:
   bit_size: 8
   variants:
-  - name: ecb
+  - name: Ecb
     description: ECB mode.
     value: 0
-  - name: ctr
+  - name: Ctr
     description: CTR mode.
     value: 1
-  - name: cbc
+  - name: Cbc
     description: CBC mode.
     value: 2
-  - name: cbcmac
+  - name: Cbcmac
     description: CBCMAC mode.
     value: 3
-  - name: wrap_128_bit
+  - name: Wrap128Bit
     description: Key Wrap/Unwrap (128 bit key data).
     value: 16
-  - name: wrap_256_bit
+  - name: Wrap256Bit
     description: Key Wrap/Unwrap (256 bit key data).
     value: 17
-enum/CRYPTO_OP:
+enum/CryptoOp:
   bit_size: 3
   variants:
-  - name: aes
+  - name: Aes
     description: AES.
     value: 0
-  - name: des
+  - name: Des
     description: DES (If Included).
     value: 1
-  - name: tdes
+  - name: Tdes
     description: TDES (If Included).
     value: 2
-  - name: gfmul
+  - name: Gfmul
     description: GFMUL(If Included).
     value: 3
-  - name: sha
+  - name: Sha
     description: SHA2 (If Included).
     value: 4
-  - name: cmac
+  - name: Cmac
     description: CMAC (If Included).
     value: 5
-  - name: others_6
+  - name: Others6
     description: others - RFU (Defaults to 1st available OP).
     value: 6
-  - name: others_7
+  - name: Others7
     description: others - RFU (Defaults to 1st available OP).
     value: 7
-enum/DATIN_FLUSH:
+enum/DatinFlush:
   bit_size: 1
   variants:
-  - name: no_effect
+  - name: NoEffect
     description: Clr has no effect.
     value: 0
-  - name: flush
+  - name: Flush
     description: Set to start flush.
     value: 1
-enum/DATOUT_RES:
+enum/DatoutRes:
   bit_size: 2
   variants:
-  - name: end_up
+  - name: EndUp
     description: END_UP.
     value: 0
-  - name: start_up
+  - name: StartUp
     description: START_UP.
     value: 1
-  - name: trigger_up
+  - name: TriggerUp
     description: TRIGGER_UP.
     value: 2
-  - name: no_up
+  - name: NoUp
     description: NO_UP.
     value: 3
-enum/DECRYPT:
+enum/Decrypt:
   bit_size: 1
   variants:
-  - name: enc
+  - name: Enc
     description: Encryption.
     value: 0
-  - name: dec
+  - name: Dec
     description: Decryption.
     value: 1
-enum/DES_USED:
+enum/DesUsed:
   bit_size: 4
   variants:
-  - name: dakar
+  - name: Dakar
     description: Dakar.
     value: 0
-  - name: danube
+  - name: Danube
     description: Danube.
     value: 1
-  - name: depicta
+  - name: Depicta
     description: Depicta.
     value: 2
-  - name: digi
+  - name: Digi
     description: Digi.
     value: 3
-  - name: date
+  - name: Date
     description: Date.
     value: 4
-  - name: desert
+  - name: Desert
     description: Desert.
     value: 5
-  - name: rfu_6
+  - name: Rfu6
     description: RFU.
     value: 6
-  - name: rfu_7
+  - name: Rfu7
     description: RFU.
     value: 7
-  - name: rfu_8
+  - name: Rfu8
     description: RFU.
     value: 8
-  - name: rfu_9
+  - name: Rfu9
     description: RFU.
     value: 9
-enum/ERROR:
+enum/Error:
   bit_size: 3
   variants:
-  - name: error
+  - name: Error
     description: ERROR (all values other than 0x05 indicate ERROR).
     value: 0
-  - name: no_error
+  - name: NoError
     description: NO_ERROR.
     value: 5
-enum/FLUSH:
+enum/Flush:
   bit_size: 1
   variants:
-  - name: no_effect
+  - name: NoEffect
     description: Clr has no effect.
     value: 0
-  - name: flush
+  - name: Flush
     description: Set to start flush.
     value: 1
-enum/INCR_CIN:
+enum/IncrCin:
   bit_size: 1
   variants:
-  - name: incr_one
+  - name: IncrOne
     description: Carry-In for INCR is 1.
     value: 0
-  - name: incr_previous
+  - name: IncrPrevious
     description: Carry-In for INCR is overflow from previous INCR operation.
     value: 1
-enum/INCR_MODE:
+enum/IncrMode:
   bit_size: 2
   variants:
-  - name: incr_mode_32
+  - name: IncrMode32
     description: 2**32 increment mode.
     value: 0
-  - name: incr_mode_64
+  - name: IncrMode64
     description: 2**64 increment mode.
     value: 1
-  - name: incr_mode_96
+  - name: IncrMode96
     description: 2**96 increment mode.
     value: 2
-  - name: incr_mode_128
+  - name: IncrMode128
     description: 2**128 increment mode.
     value: 3
-enum/INSEL:
+enum/Insel:
   bit_size: 4
   variants:
-  - name: datin0
+  - name: Datin0
     description: DATIN[0].
     value: 0
-  - name: datin1
+  - name: Datin1
     description: DATIN[1]*.
     value: 1
-  - name: datin2
+  - name: Datin2
     description: DATIN[2]*.
     value: 2
-  - name: datin3
+  - name: Datin3
     description: DATIN[3]*.
     value: 3
-  - name: datin0_datout
+  - name: Datin0Datout
     description: DATIN[0] ^ DATOUT.
     value: 4
-  - name: datin1_datout
+  - name: Datin1Datout
     description: DATIN[1] ^ DATOUT*.
     value: 5
-  - name: datin2_datout
+  - name: Datin2Datout
     description: DATIN[2] ^ DATOUT*.
     value: 6
-  - name: datin3_datout
+  - name: Datin3Datout
     description: DATIN[3] ^ DATOUT*.
     value: 7
-  - name: datout
+  - name: Datout
     description: DATOUT.
     value: 8
-  - name: others_9
+  - name: Others9
     description: others - DATIN[0] * - only if DATIN[num] exists, else [0].
     value: 9
-enum/KEY_FLUSH:
+enum/KeyFlush:
   bit_size: 1
   variants:
-  - name: no_effect
+  - name: NoEffect
     description: Clr has no effect.
     value: 0
-  - name: flush
+  - name: Flush
     description: Set to start flush.
     value: 1
-enum/MILESTONE:
+enum/Milestone:
   bit_size: 2
   variants:
-  - name: PREL
+  - name: Prel
     description: PREL.
     value: 0
-  - name: BR
+  - name: Br
     description: BR.
     value: 1
-  - name: SI
+  - name: Si
     description: SI.
     value: 2
-  - name: GO
+  - name: Go
     description: GO.
     value: 3
-enum/NO_AUTO_INIT:
+enum/NoAutoInit:
   bit_size: 1
   variants:
-  - name: sha_init
+  - name: ShaInit
     description: SHA automatic HASH initialisation.
     value: 0
-  - name: no_sha_init
+  - name: NoShaInit
     description: No SHA automatic HASH initialisation.
     value: 1
-enum/OUTSEL:
+enum/Outsel:
   bit_size: 3
   variants:
-  - name: datout_ker_res
+  - name: DatoutKerRes
     description: DATOUT = 'Kernel Res'.
     value: 0
-  - name: datout_datin0
+  - name: DatoutDatin0
     description: DATOUT = 'Kernel Res' ^ DATIN[0].
     value: 1
-  - name: datout_datin1
+  - name: DatoutDatin1
     description: DATOUT = 'Kernel Res' ^ DATIN[1]*.
     value: 2
-  - name: datout_datin2
+  - name: DatoutDatin2
     description: DATOUT = 'Kernel Res' ^ DATIN[2]*.
     value: 3
-  - name: datout_datin3
+  - name: DatoutDatin3
     description: DATOUT = 'Kernel Res' ^DATIN[3]*.
     value: 4
-  - name: others_5
+  - name: Others5
     description: others - DATOUT = 'Kernel Res' * - only if DATIN[num] exists, else [0].
     value: 5
-  - name: others_6
+  - name: Others6
     description: others - DATOUT = 'Kernel Res' * - only if DATIN[num] exists, else [0].
     value: 6
-  - name: others_7
+  - name: Others7
     description: others - DATOUT = 'Kernel Res' * - only if DATIN[num] exists, else [0].
     value: 7
-enum/RKEY:
+enum/Rkey:
   bit_size: 1
   variants:
-  - name: datout
+  - name: Datout
     description: DATOUT register bank.
     value: 0
-  - name: key
+  - name: Key
     description: KEY register bank.
     value: 1
-enum/SHA2_COUNT_EN:
+enum/Sha2CountEn:
   bit_size: 1
   variants:
-  - name: count
+  - name: Count
     description: SHA operation DOES NOT increment COUNT.
     value: 0
-  - name: no_count
+  - name: NoCount
     description: SHA operation DOES increment count.
     value: 1
-enum/SHA2_MODE:
+enum/Sha2Mode:
   bit_size: 1
   variants:
-  - name: normal
+  - name: Normal
     description: SHA NORM Mode.
     value: 0
-  - name: auto
+  - name: Auto
     description: SHA AUTO Mode.
     value: 1
-enum/SHA2_SIZE:
+enum/Sha2Size:
   bit_size: 2
   variants:
-  - name: sha_224
+  - name: Sha224
     description: SHA-224.
     value: 0
-  - name: sha_256
+  - name: Sha256
     description: SHA-256.
     value: 1
-  - name: sha_384
+  - name: Sha384
     description: SHA-384(or SHA-224 if SHA-256 only).
     value: 2
-  - name: sha_512
+  - name: Sha512
     description: SHA-512 (or SHA-256 if SHA-256 only).
     value: 3
-enum/SHA2_STOP:
+enum/Sha2Stop:
   bit_size: 1
   variants:
-  - name: running
+  - name: Running
     description: Keep running.
     value: 0
-  - name: stop
+  - name: Stop
     description: Stop auto mode.
     value: 1
-enum/SMASKSTEP:
+enum/Smaskstep:
   bit_size: 1
   variants:
-  - name: regbank
+  - name: Regbank
     description: SFRSEED increments every regbank access.
     value: 0
-  - name: regbank_and_plus
+  - name: RegbankAndPlus
     description: SFRSEED increments every regbank access PLUS when SFRSEED in read.
     value: 1
-enum/SMASKSW:
+enum/Smasksw:
   bit_size: 1
   variants:
-  - name: hw
+  - name: Hw
     description: SFR MASK output directly controlled by HW mask generator.
     value: 0
-  - name: sw
+  - name: Sw
     description: SFR MASK output directly controlled by SW.
     value: 1
-enum/START:
+enum/Start:
   bit_size: 1
   variants:
-  - name: no_effect
+  - name: NoEffect
     description: Clr has no effect.
     value: 0
-  - name: start_op
+  - name: StartOp
     description: Set to start operation.
     value: 1
-enum/TDESKEY:
+enum/Tdeskey:
   bit_size: 1
   variants:
-  - name: two_key
+  - name: TwoKey
     description: 2-key TDES.
     value: 0
-  - name: three_key
+  - name: ThreeKey
     description: 3-key TDES.
     value: 1

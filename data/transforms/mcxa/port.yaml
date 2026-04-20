@@ -6,12 +6,62 @@ transforms:
     to: port::Pcr
 
   - !ModifyRegisters
-    blocks: port\d+::Port(\d+)
+    blocks: port\d+::Port\d*
     registers: pcr\d+
     fieldset: port::Pcr
 
   - !DeleteFieldsets
     from: port\d+::Pcr\d+
+
+  # Merge all Mux into the most capable variant of it with bitsize = 4.
+  # In the HAL we will enforce this constraint, but for the PAC this only makes the types more complex.
+  - !DeleteEnums
+    from: port\d+::Pcr(\d+)Mux
+    bit_size: 1
+  - !DeleteEnums
+    from: port\d+::Pcr(\d+)Mux
+    bit_size: 2
+  - !DeleteEnums
+    from: port\d+::Pcr(\d+)Mux
+    bit_size: 3
+  - !MergeEnums
+    from: port\d+::Pcr(\d+)Mux
+    to: port::Mux
+
+  - !DeleteEnumVariants
+    enum: port::Mux
+    from: .*
+
+  - !AddEnumVariants
+    enum: port::Mux
+    variants:
+      - { name: Mux0, value: 0 }
+      - { name: Mux1, value: 1 }
+      - { name: Mux2, value: 2 }
+      - { name: Mux3, value: 3 }
+      - { name: Mux4, value: 4 }
+      - { name: Mux5, value: 5 }
+      - { name: Mux6, value: 6 }
+      - { name: Mux7, value: 7 }
+      - { name: Mux8, value: 8 }
+      - { name: Mux9, value: 9 }
+      - { name: Mux10, value: 10 }
+      - { name: Mux11, value: 11 }
+      - { name: Mux12, value: 12 }
+      - { name: Mux13, value: 13 }
+
+  - !MergeEnums
+    from: port\d+::(.+)
+    to: port::$1
+
+  - !MergeFieldsets
+    from: port\d+::(.+)
+    to: port::$1
+
+  # For now, delete half-supported drive-strength
+  - !DeleteRegisters
+    block: port\d+::Port\d*
+    from: calib\d+
 
   # Roughly merge all port blocks together.
   - !MergeBlocks
@@ -29,38 +79,6 @@ transforms:
     from: port::Port0
     to: port::Port
     type: Block
-
-  # Merge all Mux into the most capable variant of it with bitsize = 4.
-  # Pcr 0, 1 and 7 have a smaller Mux set for ports 0 and 4.
-  # In the HAL we will enforce this constraint, but for the PAC this only makes the types more complex.
-  - !DeleteEnums
-    from: port::Pcr(\d+)Mux
-    bit_size: 3
-  - !MergeEnums
-    from: port::Pcr(\d+)Mux
-    to: port::Mux
-
-  - !DeleteEnumVariants
-    enum: port::Mux
-    from: .*
-
-  - !AddEnumVariants
-    enum: port::Mux
-    variants:
-      - { name: MUX0, value: 0 }
-      - { name: MUX1, value: 1 }
-      - { name: MUX2, value: 2 }
-      - { name: MUX3, value: 3 }
-      - { name: MUX4, value: 4 }
-      - { name: MUX5, value: 5 }
-      - { name: MUX6, value: 6 }
-      - { name: MUX7, value: 7 }
-      - { name: MUX8, value: 8 }
-      - { name: MUX9, value: 9 }
-      - { name: MUX10, value: 10 }
-      - { name: MUX11, value: 11 }
-      - { name: MUX12, value: 12 }
-      - { name: MUX13, value: 13 }
 
   - !MergeEnums
     from: port::Gpwe\d+
@@ -80,10 +98,6 @@ transforms:
   - !MergeEnums
     from: port::Pcr(\d+)(.+)
     to: port::$2
-
-  - !MergeFieldsets
-    from: port::Pcr(\d+)
-    to: port::Pcr
 
   - !MakeRegisterArray
     blocks: port::Port

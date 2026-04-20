@@ -73,7 +73,7 @@ block/Spc:
   - name: coreldo_cfg
     description: LDO_CORE Configuration.
     byte_offset: 768
-    fieldset: CoreldoCfg
+    access: Read
 fieldset/ActiveCfg:
   description: Active Power Mode Configuration.
   fields:
@@ -123,13 +123,6 @@ fieldset/ActiveVdelay:
     description: Active Voltage Delay.
     bit_offset: 0
     bit_size: 16
-fieldset/CoreldoCfg:
-  description: LDO_CORE Configuration.
-  fields:
-  - name: coreldo_spare0
-    description: CORELDO SPARE0.
-    bit_offset: 16
-    bit_size: 1
 fieldset/EvdCfg:
   description: External Voltage Domain Configuration.
   fields:
@@ -364,213 +357,216 @@ fieldset/Verid:
 enum/ActiveCfgBgmode:
   bit_size: 2
   variants:
-  - name: BGMODE0
+  - name: Bgmode0
     description: Bandgap disabled.
     value: 0
-  - name: BGMODE01
+  - name: Bgmode01
     description: Bandgap enabled, buffer disabled.
     value: 1
-  - name: BGMODE10
+  - name: Bgmode10
     description: Bandgap enabled, buffer enabled.
     value: 2
 enum/ActiveCfgCoreldoVddDs:
   bit_size: 1
   variants:
-  - name: LOW
+  - name: Low
     description: Low.
     value: 0
-  - name: NORMAL
+  - name: Normal
     description: Normal.
     value: 1
 enum/ActiveCfgCoreldoVddLvl:
   bit_size: 2
   variants:
-  - name: MID
+  - name: Mid
     description: Regulate to mid voltage (1.0 V).
     value: 1
-  - name: NORMAL
+  - name: Normal
     description: Regulate to normal voltage (1.1 V).
     value: 2
-  - name: OVER
+  - name: Over
     description: Regulate to overdrive voltage (1.15 V).
     value: 3
 enum/CorevddLvdf:
   bit_size: 1
   variants:
-  - name: EVENT_NO
+  - name: EventNo
     description: Event not detected.
     value: 0
-  - name: EVENT_YES
+  - name: EventYes
     description: Event detected.
     value: 1
 enum/Feature:
   bit_size: 16
   variants:
-  - name: STANDARD
+  - name: Standard
     description: Standard features.
     value: 0
 enum/LpCfgBgmode:
   bit_size: 2
   variants:
-  - name: BGMODE0
+  - name: Bgmode0
     description: Bandgap disabled.
     value: 0
-  - name: BGMODE01
+  - name: Bgmode01
     description: Bandgap enabled, buffer disabled.
     value: 1
-  - name: BGMODE10
+  - name: Bgmode10
     description: Bandgap enabled, buffer enabled.
     value: 2
 enum/LpCfgCoreldoVddDs:
   bit_size: 1
   variants:
-  - name: LOW
+  - name: Low
     description: Low.
     value: 0
-  - name: NORMAL
+  - name: Normal
     description: Normal.
     value: 1
 enum/LpCfgCoreldoVddLvl:
   bit_size: 2
   variants:
-  - name: MID
+  - name: Mid
     description: Mid voltage (1.0 V).
     value: 1
-  - name: NORMAL
+  - name: Normal
     description: Normal voltage (1.1 V).
     value: 2
-  - name: OVER
+  - name: Over
     description: Overdrive voltage (1.15 V).
     value: 3
 enum/LpMode:
   bit_size: 4
   variants:
-  - name: MODE0
+  - name: Mode0
     description: SLEEP with system clock running.
     value: 0
-  - name: MODE1
+  - name: Mode1
     description: DSLEEP with system clock off.
     value: 1
-  - name: MODE2
+  - name: Mode2
     description: PDOWN with system clock off.
     value: 2
-  - name: MODE8
+  - name: Mode8
     description: DPDOWN with system clock off.
     value: 8
 enum/Lpreqov:
   bit_size: 2
   variants:
-  - name: FORCE_NO
+  - name: ForceNo
     description: Not forced.
     value: 0
-  - name: FORCE_LOW
+  - name: ForceLow
     description: Forced low (ignore LPREQPOL settings).
     value: 2
-  - name: FORCE_HIGH
+  - name: ForceHigh
     description: Forced high (ignore LPREQPOL settings).
     value: 3
 enum/Lpreqpol:
   bit_size: 1
   variants:
-  - name: HIGH
+  - name: High
     description: High.
     value: 0
-  - name: LOW
+  - name: Low
     description: Low.
     value: 1
 enum/PdLpReq:
   bit_size: 1
   variants:
-  - name: REQ_NO
+  - name: ReqNo
     description: Did not request.
     value: 0
-  - name: REQ_YES
+  - name: ReqYes
     description: Requested.
     value: 1
 enum/PwrReqStatus:
   bit_size: 1
   variants:
-  - name: REQ_NO
+  - name: ReqNo
     description: Did not request.
     value: 0
-  - name: REQ_YES
+  - name: ReqYes
     description: Requested.
     value: 1
 enum/SpcLpMode:
   bit_size: 4
   variants:
-  - name: MODE0
+  - name: Mode0
     description: Sleep mode with system clock running.
     value: 0
-  - name: MODE1
+  - name: Mode1
     description: DSLEEP with system clock off.
     value: 1
-  - name: MODE2
+  - name: Mode2
     description: PDOWN with system clock off.
     value: 2
-  - name: MODE8
+  - name: Mode8
     description: DPDOWN with system clock off.
     value: 8
 enum/SpcLpReq:
   bit_size: 1
   variants:
-  - name: ACTIVE
+  - name: Active
     description: SPC is in Active mode; the ACTIVE_CFG register has control.
     value: 0
-  - name: LOW_POWER
+  - name: LowPower
     description: All power domains requested low-power mode; SPC entered a low-power state; power-mode configuration based on the LP_CFG register.
     value: 1
 enum/SysvddHvdf:
   bit_size: 1
   variants:
-  - name: EVENT_NO
+  - name: EventNo
     description: Event not detected.
     value: 0
-  - name: EVENT_YES
+  - name: EventYes
     description: Event detected.
     value: 1
 enum/SysvddLvdf:
   bit_size: 1
   variants:
-  - name: EVENT_NO
+  - name: EventNo
     description: Event not detected.
     value: 0
-  - name: EVENT_YES
+  - name: EventYes
     description: Event detected.
     value: 1
 enum/VdCoreCfgLock:
   bit_size: 1
   variants:
-  - name: ALLOW
+  - name: Allow
     description: Allow.
     value: 0
-  - name: DENY
+  - name: Deny
     description: Deny.
     value: 1
 enum/VdSysCfgLock:
   bit_size: 1
   variants:
-  - name: ALLOW
+  - name: Allow
     description: Allow.
     value: 0
-  - name: DENY
+  - name: Deny
     description: Deny.
     value: 1
 enum/VddVdDisable:
   bit_size: 1
   variants:
-  - name: ENABLE
+  - name: Enable
     description: Enable.
     value: 0
-  - name: DISABLE
+  - name: Disable
     description: Disable.
     value: 1
 enum/Vsm:
   bit_size: 2
   variants:
-  - name: SRAM1V0
+  - name: Sram1v0
     description: SRAM configured for 1.0V
     value: 1
-  - name: SRAM1V2
+  - name: Sram1v1
+    description: SRAM configured for 1.1V
+    value: 2
+  - name: Sram1v2
     description: SRAM configured for 1.2V
     value: 3

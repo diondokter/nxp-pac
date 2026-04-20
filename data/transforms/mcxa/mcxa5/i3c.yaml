@@ -1,14 +1,20 @@
 transforms:
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: mconfig
-    fieldset: i3c::Mconfig
+  # Pick I3C Type variant (I3C1 has extra Variant:3 BT)
+  - !ModifyFieldsEnum
+    fieldset: i3c1::Mctrl
+    field: type_
+    enum: i3c::Type
 
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: mconfig_ext
-    fieldset: i3c::MconfigExt
+  # Delete unused Type enum
+  - !Delete
+    from: i3c1::Type
+    type: Enum
 
+  - !MergeEnums
+    from: i3c1?::(.*)
+    to: i3c::$1
+
+  # Select (less capable) I3C (without 1) variants
   - !ModifyRegisters
     blocks: i3c1::I3c1
     registers: sconfig
@@ -16,78 +22,8 @@ transforms:
 
   - !ModifyRegisters
     blocks: i3c1::I3c1
-    registers: sstatus
-    fieldset: i3c::Sstatus
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: sctrl
-    fieldset: i3c::Sctrl
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: sintset
-    fieldset: i3c::Sintset
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: sintclr
-    fieldset: i3c::Sintclr
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: sintmasked
-    fieldset: i3c::Sintmasked
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: serrwarn
-    fieldset: i3c::Serrwarn
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: sdmactrl
-    fieldset: i3c::Sdmactrl
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: sdatactrl
-    fieldset: i3c::Sdatactrl
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: swdatab
-    fieldset: i3c::Swdatab
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: swdatabe
-    fieldset: i3c::Swdatabe
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: swdatah
-    fieldset: i3c::Swdatah
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: swdatahe
-    fieldset: i3c::Swdatahe
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: srdatab
-    fieldset: i3c::Srdatab
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: srdatah
-    fieldset: i3c::Srdatah
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: swdatab1
-    fieldset: i3c::Swdatab1
+    registers: merrwarn
+    fieldset: i3c::Merrwarn
 
   - !ModifyRegisters
     blocks: i3c1::I3c1
@@ -101,193 +37,13 @@ transforms:
 
   - !ModifyRegisters
     blocks: i3c1::I3c1
-    registers: smaxlimits
-    fieldset: i3c::Smaxlimits
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: sidpartno
-    fieldset: i3c::Sidpartno
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: sidext
-    fieldset: i3c::Sidext
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: svendorid
-    fieldset: i3c::Svendorid
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: stcclock
-    fieldset: i3c::Stcclock
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: smsgmapaddr
-    fieldset: i3c::Smsgmapaddr
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: mctrl
-    fieldset: i3c::Mctrl
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: mstatus
-    fieldset: i3c::Mstatus
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: mibirules
-    fieldset: i3c::Mibirules
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: mintset
-    fieldset: i3c::Mintset
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: mintclr
-    fieldset: i3c::Mintclr
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: mintmasked
-    fieldset: i3c::Mintmasked
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: merrwarn
-    fieldset: i3c::Merrwarn
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: mdmactrl
-    fieldset: i3c::Mdmactrl
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: mwdatab
-    fieldset: i3c::Mwdatab
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: mwdatabe
-    fieldset: i3c::Mwdatabe
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: mwdatah
-    fieldset: i3c::Mwdatah
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: mwdatahe
-    fieldset: i3c::Mwdatahe
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: mrdatab
-    fieldset: i3c::Mrdatab
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: mrdatah
-    fieldset: i3c::Mrdatah
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: mwdatab1
-    fieldset: i3c::Mwdatab1
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: mdatactrl
-    fieldset: i3c::Mdatactrl
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: mwmsg_sdr_control
-    fieldset: i3c::MwmsgSdrControl
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: mwmsg_sdr_data
-    fieldset: i3c::MwmsgSdrData
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: mrmsg_sdr
-    fieldset: i3c::MrmsgSdr
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: mrmsg_ddr
-    fieldset: i3c::MrmsgDdr
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: mwmsg_ddr_control
-    fieldset: i3c::MwmsgDdrControl
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: mwmsg_ddr_control2
-    fieldset: i3c::MwmsgDdrControl2
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: mwmsg_ddr_data
-    fieldset: i3c::MwmsgDdrData
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: mdynaddr
-    fieldset: i3c::Mdynaddr
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: smapctrl0
-    fieldset: i3c::Smapctrl0
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: smapctrl1
-    fieldset: i3c::Smapctrl1
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: ibiext1
-    fieldset: i3c::Ibiext1
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: ibiext2
-    fieldset: i3c::Ibiext2
-
-  - !ModifyRegisters
-    blocks: i3c1::I3c1
-    registers: sid
-    fieldset: i3c::Sid
-
-  - !MergeBlocks
-    from: i3c1::I3c1
-    to: i3c::I3c
-    main: i3c::I3c
+    registers: serrwarn
+    fieldset: i3c::Serrwarn
 
   - !Delete
-    from: i3c1::(.+)
-    type: All
+    from: i3c1::(Merrwarn|Sconfig|Scapabilities|Scapabilities2|Serrwarn)
 
-  - !DeleteEnums
-    from: i3c::Mintclr(.+)
+  - !MergeFieldsets
+    from: i3c1?::(.*)
+    to: i3c::$1
 
-  - !DeleteEnums
-    from: i3c::(.+)Flush(f|t)b
-
-  - !DeleteEnums
-    from: i3c::Mstatus(Txnotfull|Rxpend)

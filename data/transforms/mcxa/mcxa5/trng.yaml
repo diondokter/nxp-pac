@@ -1,0 +1,24 @@
+transforms:
+  - !AddFields
+    fieldset: trng0::IntMask
+    fields:
+      - name: intg_flt
+        description: Mask the INTG_FLT interrupt
+        bit_offset: 3
+        bit_size: 1
+
+  - !AddFields
+    fieldset: trng0::IntCtrl
+    fields:
+      - name: intg_flt
+        description: Clear the INTG_FLT interrupt
+        bit_offset: 3
+        bit_size: 1
+
+  - !AddFields
+    fieldset: trng0::IntStatus
+    fields:
+      - name: intg_flt
+        description: Integrity Fault. An internal fault has occurred.
+        bit_offset: 3
+        bit_size: 1

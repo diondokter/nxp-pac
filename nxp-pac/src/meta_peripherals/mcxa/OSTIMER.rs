@@ -1,6 +1,7 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (2fd28c5 2026-04-02))"]
+#![allow(non_upper_case_globals)]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (859f02b 2026-04-15))"]
 #[doc = "OS Event Timer."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ostimer {
@@ -334,18 +335,6 @@ impl OseventCtrl {
     pub const fn set_match_wr_rdy(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Debug Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn debug_en(&self) -> bool {
-        let val = (self.0 >> 3usize) & 0x01;
-        val != 0
-    }
-    #[doc = "Debug Enable."]
-    #[inline(always)]
-    pub const fn set_debug_en(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
-    }
 }
 impl Default for OseventCtrl {
     #[inline(always)]
@@ -359,7 +348,6 @@ impl core::fmt::Debug for OseventCtrl {
             .field("ostimer_intrflag", &self.ostimer_intrflag())
             .field("ostimer_intena", &self.ostimer_intena())
             .field("match_wr_rdy", &self.match_wr_rdy())
-            .field("debug_en", &self.debug_en())
             .finish()
     }
 }
@@ -368,11 +356,10 @@ impl defmt::Format for OseventCtrl {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "OseventCtrl {{ ostimer_intrflag: {=bool:?}, ostimer_intena: {=bool:?}, match_wr_rdy: {=bool:?}, debug_en: {=bool:?} }}",
+            "OseventCtrl {{ ostimer_intrflag: {=bool:?}, ostimer_intena: {=bool:?}, match_wr_rdy: {=bool:?} }}",
             self.ostimer_intrflag(),
             self.ostimer_intena(),
-            self.match_wr_rdy(),
-            self.debug_en()
+            self.match_wr_rdy()
         )
     }
 }

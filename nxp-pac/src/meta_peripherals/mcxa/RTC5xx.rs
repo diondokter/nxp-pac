@@ -1,6 +1,7 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (2fd28c5 2026-04-02))"]
+#![allow(non_upper_case_globals)]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (859f02b 2026-04-15))"]
 #[doc = "Real Time Clock."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rtc {
@@ -82,12 +83,12 @@ impl Rtc {
     pub const fn ier(self) -> crate::pac::common::Reg<Ier, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x16usize) as _) }
     }
-    #[doc = "Sub Second Alarm."]
+    #[doc = "Minutes Count Down Timer."]
     #[inline(always)]
-    pub const fn alm_subseconds(
+    pub const fn cntdwn_timer(
         self,
-    ) -> crate::pac::common::Reg<AlmSubseconds, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x1eusize) as _) }
+    ) -> crate::pac::common::Reg<CntdwnTimer, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x18usize) as _) }
     }
     #[doc = "Daylight Saving Hour."]
     #[inline(always)]
@@ -108,6 +109,59 @@ impl Rtc {
     #[inline(always)]
     pub const fn compen(self) -> crate::pac::common::Reg<Compen, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x28usize) as _) }
+    }
+    #[doc = "Tamper Queue Status and Control."]
+    #[inline(always)]
+    pub const fn tamper_qscr(self) -> crate::pac::common::Reg<TamperQscr, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x2eusize) as _) }
+    }
+    #[doc = "Tamper Time Stamp Year."]
+    #[inline(always)]
+    pub const fn ttsr_year(self) -> crate::pac::common::Reg<TtsrYear, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x30usize) as _) }
+    }
+    #[doc = "Tamper Status and Control."]
+    #[inline(always)]
+    pub const fn tamper_scr(self) -> crate::pac::common::Reg<TamperScr, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x32usize) as _) }
+    }
+    #[doc = "Tamper 01 Filter Configuration."]
+    #[inline(always)]
+    pub const fn filter01_cfg(
+        self,
+    ) -> crate::pac::common::Reg<Filter01Cfg, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x34usize) as _) }
+    }
+    #[doc = "Tamper 23 Filter Configuration."]
+    #[inline(always)]
+    pub const fn filter23_cfg(
+        self,
+    ) -> crate::pac::common::Reg<Filter23Cfg, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x36usize) as _) }
+    }
+    #[doc = "Tamper 05 Filter Configuration."]
+    #[inline(always)]
+    pub const fn filter45_cfg(
+        self,
+    ) -> crate::pac::common::Reg<Filter45Cfg, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x38usize) as _) }
+    }
+    #[doc = "Tamper 67 Filter Configuration."]
+    #[inline(always)]
+    pub const fn filter67_cfg(
+        self,
+    ) -> crate::pac::common::Reg<Filter67Cfg, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x3ausize) as _) }
+    }
+    #[doc = "Tamper Queue."]
+    #[inline(always)]
+    pub const fn tamper_queue(self) -> crate::pac::common::Reg<TamperQueue, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x40usize) as _) }
+    }
+    #[doc = "Control 2."]
+    #[inline(always)]
+    pub const fn ctrl2(self) -> crate::pac::common::Reg<Ctrl2, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x42usize) as _) }
     }
 }
 #[doc = "Days Alarm."]
@@ -271,47 +325,6 @@ impl defmt::Format for AlmSeconds {
         )
     }
 }
-#[doc = "Sub Second Alarm."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AlmSubseconds(pub u16);
-impl AlmSubseconds {
-    #[doc = "Alarm Sub Second Counter Value."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn alm_subsecs(&self) -> u16 {
-        let val = (self.0 >> 0usize) & 0xffff;
-        val as u16
-    }
-    #[doc = "Alarm Sub Second Counter Value."]
-    #[inline(always)]
-    pub const fn set_alm_subsecs(&mut self, val: u16) {
-        self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u16) & 0xffff) << 0usize);
-    }
-}
-impl Default for AlmSubseconds {
-    #[inline(always)]
-    fn default() -> AlmSubseconds {
-        AlmSubseconds(0)
-    }
-}
-impl core::fmt::Debug for AlmSubseconds {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AlmSubseconds")
-            .field("alm_subsecs", &self.alm_subsecs())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for AlmSubseconds {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "AlmSubseconds {{ alm_subsecs: {=u16:?} }}",
-            self.alm_subsecs()
-        )
-    }
-}
 #[doc = "Year and Months Alarm."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -364,6 +377,47 @@ impl defmt::Format for AlmYearmon {
             "AlmYearmon {{ alm_mon: {=u8:?}, alm_year: {=u8:?} }}",
             self.alm_mon(),
             self.alm_year()
+        )
+    }
+}
+#[doc = "Minutes Count Down Timer."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct CntdwnTimer(pub u16);
+impl CntdwnTimer {
+    #[doc = "Count Down Timer Value."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn count_down_timer(&self) -> u8 {
+        let val = (self.0 >> 0usize) & 0xff;
+        val as u8
+    }
+    #[doc = "Count Down Timer Value."]
+    #[inline(always)]
+    pub const fn set_count_down_timer(&mut self, val: u8) {
+        self.0 = (self.0 & !(0xff << 0usize)) | (((val as u16) & 0xff) << 0usize);
+    }
+}
+impl Default for CntdwnTimer {
+    #[inline(always)]
+    fn default() -> CntdwnTimer {
+        CntdwnTimer(0)
+    }
+}
+impl core::fmt::Debug for CntdwnTimer {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CntdwnTimer")
+            .field("count_down_timer", &self.count_down_timer())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for CntdwnTimer {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "CntdwnTimer {{ count_down_timer: {=u8:?} }}",
+            self.count_down_timer()
         )
     }
 }
@@ -445,18 +499,6 @@ impl Ctrl {
     pub const fn set_alm_match(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val as u16) & 0x03) << 2usize);
     }
-    #[doc = "Alarm Subseconds Match Enable Signal."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn alm_subsecs_match_en(&self) -> bool {
-        let val = (self.0 >> 5usize) & 0x01;
-        val != 0
-    }
-    #[doc = "Alarm Subseconds Match Enable Signal."]
-    #[inline(always)]
-    pub const fn set_alm_subsecs_match_en(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u16) & 0x01) << 5usize);
-    }
     #[doc = "Daylight Saving Enable."]
     #[must_use]
     #[inline(always)]
@@ -468,6 +510,18 @@ impl Ctrl {
     #[inline(always)]
     pub const fn set_dst_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u16) & 0x01) << 6usize);
+    }
+    #[doc = "BCD Mode Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn bcd_en(&self) -> BcdEn {
+        let val = (self.0 >> 7usize) & 0x01;
+        BcdEn::from_bits(val as u8)
+    }
+    #[doc = "BCD Mode Enable."]
+    #[inline(always)]
+    pub const fn set_bcd_en(&mut self, val: BcdEn) {
+        self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u16) & 0x01) << 7usize);
     }
     #[doc = "Software Reset."]
     #[must_use]
@@ -530,8 +584,8 @@ impl core::fmt::Debug for Ctrl {
             .field("fineen", &self.fineen())
             .field("comp_en", &self.comp_en())
             .field("alm_match", &self.alm_match())
-            .field("alm_subsecs_match_en", &self.alm_subsecs_match_en())
             .field("dst_en", &self.dst_en())
+            .field("bcd_en", &self.bcd_en())
             .field("swr", &self.swr())
             .field("clk_sel", &self.clk_sel())
             .field("clko_dis", &self.clko_dis())
@@ -544,16 +598,85 @@ impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Ctrl {{ fineen: {=bool:?}, comp_en: {=bool:?}, alm_match: {=u8:?}, alm_subsecs_match_en: {=bool:?}, dst_en: {=bool:?}, swr: {:?}, clk_sel: {=bool:?}, clko_dis: {=bool:?}, clkout: {=u8:?} }}",
+            "Ctrl {{ fineen: {=bool:?}, comp_en: {=bool:?}, alm_match: {=u8:?}, dst_en: {=bool:?}, bcd_en: {:?}, swr: {:?}, clk_sel: {=bool:?}, clko_dis: {=bool:?}, clkout: {=u8:?} }}",
             self.fineen(),
             self.comp_en(),
             self.alm_match(),
-            self.alm_subsecs_match_en(),
             self.dst_en(),
+            self.bcd_en(),
             self.swr(),
             self.clk_sel(),
             self.clko_dis(),
             self.clkout()
+        )
+    }
+}
+#[doc = "Control 2."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Ctrl2(pub u16);
+impl Ctrl2 {
+    #[doc = "Tamper Configuration Over."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn tamp_cfg_over(&self) -> bool {
+        let val = (self.0 >> 0usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Tamper Configuration Over."]
+    #[inline(always)]
+    pub const fn set_tamp_cfg_over(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u16) & 0x01) << 0usize);
+    }
+    #[doc = "Wakeup Status."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn wakeup_status(&self) -> WakeupStatus {
+        let val = (self.0 >> 5usize) & 0x03;
+        WakeupStatus::from_bits(val as u8)
+    }
+    #[doc = "Wakeup Status."]
+    #[inline(always)]
+    pub const fn set_wakeup_status(&mut self, val: WakeupStatus) {
+        self.0 = (self.0 & !(0x03 << 5usize)) | (((val.to_bits() as u16) & 0x03) << 5usize);
+    }
+    #[doc = "Wakeup Mode."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn wakeup_mode(&self) -> WakeupMode {
+        let val = (self.0 >> 7usize) & 0x01;
+        WakeupMode::from_bits(val as u8)
+    }
+    #[doc = "Wakeup Mode."]
+    #[inline(always)]
+    pub const fn set_wakeup_mode(&mut self, val: WakeupMode) {
+        self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u16) & 0x01) << 7usize);
+    }
+}
+impl Default for Ctrl2 {
+    #[inline(always)]
+    fn default() -> Ctrl2 {
+        Ctrl2(0)
+    }
+}
+impl core::fmt::Debug for Ctrl2 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Ctrl2")
+            .field("tamp_cfg_over", &self.tamp_cfg_over())
+            .field("wakeup_status", &self.wakeup_status())
+            .field("wakeup_mode", &self.wakeup_mode())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Ctrl2 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Ctrl2 {{ tamp_cfg_over: {=bool:?}, wakeup_status: {:?}, wakeup_mode: {:?} }}",
+            self.tamp_cfg_over(),
+            self.wakeup_status(),
+            self.wakeup_mode()
         )
     }
 }
@@ -777,6 +900,450 @@ impl defmt::Format for DstMonth {
         )
     }
 }
+#[doc = "Tamper 01 Filter Configuration."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Filter01Cfg(pub u16);
+impl Filter01Cfg {
+    #[doc = "Tamper Detect Bit 1 Filter Duration."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn fil_dur1(&self) -> FilDur1 {
+        let val = (self.0 >> 0usize) & 0x0f;
+        FilDur1::from_bits(val as u8)
+    }
+    #[doc = "Tamper Detect Bit 1 Filter Duration."]
+    #[inline(always)]
+    pub const fn set_fil_dur1(&mut self, val: FilDur1) {
+        self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u16) & 0x0f) << 0usize);
+    }
+    #[doc = "Tamper Filter 1 Clock Select."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn clk_sel1(&self) -> ClkSel1 {
+        let val = (self.0 >> 4usize) & 0x07;
+        ClkSel1::from_bits(val as u8)
+    }
+    #[doc = "Tamper Filter 1 Clock Select."]
+    #[inline(always)]
+    pub const fn set_clk_sel1(&mut self, val: ClkSel1) {
+        self.0 = (self.0 & !(0x07 << 4usize)) | (((val.to_bits() as u16) & 0x07) << 4usize);
+    }
+    #[doc = "Tamper Detect Input Bit 1 Polarity Control."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pol1(&self) -> Pol1 {
+        let val = (self.0 >> 7usize) & 0x01;
+        Pol1::from_bits(val as u8)
+    }
+    #[doc = "Tamper Detect Input Bit 1 Polarity Control."]
+    #[inline(always)]
+    pub const fn set_pol1(&mut self, val: Pol1) {
+        self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u16) & 0x01) << 7usize);
+    }
+    #[doc = "Tamper Detect Bit 0 Filter Duration."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn fil_dur0(&self) -> FilDur0 {
+        let val = (self.0 >> 8usize) & 0x0f;
+        FilDur0::from_bits(val as u8)
+    }
+    #[doc = "Tamper Detect Bit 0 Filter Duration."]
+    #[inline(always)]
+    pub const fn set_fil_dur0(&mut self, val: FilDur0) {
+        self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u16) & 0x0f) << 8usize);
+    }
+    #[doc = "Tamper Filter 0 Clock Select."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn clk_sel0(&self) -> ClkSel0 {
+        let val = (self.0 >> 12usize) & 0x07;
+        ClkSel0::from_bits(val as u8)
+    }
+    #[doc = "Tamper Filter 0 Clock Select."]
+    #[inline(always)]
+    pub const fn set_clk_sel0(&mut self, val: ClkSel0) {
+        self.0 = (self.0 & !(0x07 << 12usize)) | (((val.to_bits() as u16) & 0x07) << 12usize);
+    }
+    #[doc = "Tamper Detect Input Bit 0 Polarity Control."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pol0(&self) -> Pol0 {
+        let val = (self.0 >> 15usize) & 0x01;
+        Pol0::from_bits(val as u8)
+    }
+    #[doc = "Tamper Detect Input Bit 0 Polarity Control."]
+    #[inline(always)]
+    pub const fn set_pol0(&mut self, val: Pol0) {
+        self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u16) & 0x01) << 15usize);
+    }
+}
+impl Default for Filter01Cfg {
+    #[inline(always)]
+    fn default() -> Filter01Cfg {
+        Filter01Cfg(0)
+    }
+}
+impl core::fmt::Debug for Filter01Cfg {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Filter01Cfg")
+            .field("fil_dur1", &self.fil_dur1())
+            .field("clk_sel1", &self.clk_sel1())
+            .field("pol1", &self.pol1())
+            .field("fil_dur0", &self.fil_dur0())
+            .field("clk_sel0", &self.clk_sel0())
+            .field("pol0", &self.pol0())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Filter01Cfg {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Filter01Cfg {{ fil_dur1: {:?}, clk_sel1: {:?}, pol1: {:?}, fil_dur0: {:?}, clk_sel0: {:?}, pol0: {:?} }}",
+            self.fil_dur1(),
+            self.clk_sel1(),
+            self.pol1(),
+            self.fil_dur0(),
+            self.clk_sel0(),
+            self.pol0()
+        )
+    }
+}
+#[doc = "Tamper 23 Filter Configuration."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Filter23Cfg(pub u16);
+impl Filter23Cfg {
+    #[doc = "Tamper Detect Bit 3 Filter Duration."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn fil_dur3(&self) -> FilDur3 {
+        let val = (self.0 >> 0usize) & 0x0f;
+        FilDur3::from_bits(val as u8)
+    }
+    #[doc = "Tamper Detect Bit 3 Filter Duration."]
+    #[inline(always)]
+    pub const fn set_fil_dur3(&mut self, val: FilDur3) {
+        self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u16) & 0x0f) << 0usize);
+    }
+    #[doc = "Tamper Filter 3 Clock Select."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn clk_sel3(&self) -> ClkSel3 {
+        let val = (self.0 >> 4usize) & 0x07;
+        ClkSel3::from_bits(val as u8)
+    }
+    #[doc = "Tamper Filter 3 Clock Select."]
+    #[inline(always)]
+    pub const fn set_clk_sel3(&mut self, val: ClkSel3) {
+        self.0 = (self.0 & !(0x07 << 4usize)) | (((val.to_bits() as u16) & 0x07) << 4usize);
+    }
+    #[doc = "Tamper Detect Input Bit 3 Polarity Control."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pol3(&self) -> Pol3 {
+        let val = (self.0 >> 7usize) & 0x01;
+        Pol3::from_bits(val as u8)
+    }
+    #[doc = "Tamper Detect Input Bit 3 Polarity Control."]
+    #[inline(always)]
+    pub const fn set_pol3(&mut self, val: Pol3) {
+        self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u16) & 0x01) << 7usize);
+    }
+    #[doc = "Tamper Detect Bit 2 Filter Duration."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn fil_dur2(&self) -> FilDur2 {
+        let val = (self.0 >> 8usize) & 0x0f;
+        FilDur2::from_bits(val as u8)
+    }
+    #[doc = "Tamper Detect Bit 2 Filter Duration."]
+    #[inline(always)]
+    pub const fn set_fil_dur2(&mut self, val: FilDur2) {
+        self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u16) & 0x0f) << 8usize);
+    }
+    #[doc = "Tamper Filter 2 Clock Select."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn clk_sel2(&self) -> ClkSel2 {
+        let val = (self.0 >> 12usize) & 0x07;
+        ClkSel2::from_bits(val as u8)
+    }
+    #[doc = "Tamper Filter 2 Clock Select."]
+    #[inline(always)]
+    pub const fn set_clk_sel2(&mut self, val: ClkSel2) {
+        self.0 = (self.0 & !(0x07 << 12usize)) | (((val.to_bits() as u16) & 0x07) << 12usize);
+    }
+    #[doc = "Tamper Detect Input Bit 2 Polarity Control."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pol2(&self) -> Pol2 {
+        let val = (self.0 >> 15usize) & 0x01;
+        Pol2::from_bits(val as u8)
+    }
+    #[doc = "Tamper Detect Input Bit 2 Polarity Control."]
+    #[inline(always)]
+    pub const fn set_pol2(&mut self, val: Pol2) {
+        self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u16) & 0x01) << 15usize);
+    }
+}
+impl Default for Filter23Cfg {
+    #[inline(always)]
+    fn default() -> Filter23Cfg {
+        Filter23Cfg(0)
+    }
+}
+impl core::fmt::Debug for Filter23Cfg {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Filter23Cfg")
+            .field("fil_dur3", &self.fil_dur3())
+            .field("clk_sel3", &self.clk_sel3())
+            .field("pol3", &self.pol3())
+            .field("fil_dur2", &self.fil_dur2())
+            .field("clk_sel2", &self.clk_sel2())
+            .field("pol2", &self.pol2())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Filter23Cfg {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Filter23Cfg {{ fil_dur3: {:?}, clk_sel3: {:?}, pol3: {:?}, fil_dur2: {:?}, clk_sel2: {:?}, pol2: {:?} }}",
+            self.fil_dur3(),
+            self.clk_sel3(),
+            self.pol3(),
+            self.fil_dur2(),
+            self.clk_sel2(),
+            self.pol2()
+        )
+    }
+}
+#[doc = "Tamper 05 Filter Configuration."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Filter45Cfg(pub u16);
+impl Filter45Cfg {
+    #[doc = "Tamper Detect Bit 5 Filter Duration."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn fil_dur5(&self) -> FilDur5 {
+        let val = (self.0 >> 0usize) & 0x0f;
+        FilDur5::from_bits(val as u8)
+    }
+    #[doc = "Tamper Detect Bit 5 Filter Duration."]
+    #[inline(always)]
+    pub const fn set_fil_dur5(&mut self, val: FilDur5) {
+        self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u16) & 0x0f) << 0usize);
+    }
+    #[doc = "Tamper Filter 5 Clock Select."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn clk_sel5(&self) -> ClkSel5 {
+        let val = (self.0 >> 4usize) & 0x07;
+        ClkSel5::from_bits(val as u8)
+    }
+    #[doc = "Tamper Filter 5 Clock Select."]
+    #[inline(always)]
+    pub const fn set_clk_sel5(&mut self, val: ClkSel5) {
+        self.0 = (self.0 & !(0x07 << 4usize)) | (((val.to_bits() as u16) & 0x07) << 4usize);
+    }
+    #[doc = "Tamper Detect Input Bit 5 Polarity Control."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pol5(&self) -> Pol5 {
+        let val = (self.0 >> 7usize) & 0x01;
+        Pol5::from_bits(val as u8)
+    }
+    #[doc = "Tamper Detect Input Bit 5 Polarity Control."]
+    #[inline(always)]
+    pub const fn set_pol5(&mut self, val: Pol5) {
+        self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u16) & 0x01) << 7usize);
+    }
+    #[doc = "Tamper Detect Bit 4 Filter Duration."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn fil_dur4(&self) -> FilDur4 {
+        let val = (self.0 >> 8usize) & 0x0f;
+        FilDur4::from_bits(val as u8)
+    }
+    #[doc = "Tamper Detect Bit 4 Filter Duration."]
+    #[inline(always)]
+    pub const fn set_fil_dur4(&mut self, val: FilDur4) {
+        self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u16) & 0x0f) << 8usize);
+    }
+    #[doc = "Tamper Filter 4 Clock Select."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn clk_sel4(&self) -> ClkSel4 {
+        let val = (self.0 >> 12usize) & 0x07;
+        ClkSel4::from_bits(val as u8)
+    }
+    #[doc = "Tamper Filter 4 Clock Select."]
+    #[inline(always)]
+    pub const fn set_clk_sel4(&mut self, val: ClkSel4) {
+        self.0 = (self.0 & !(0x07 << 12usize)) | (((val.to_bits() as u16) & 0x07) << 12usize);
+    }
+    #[doc = "Tamper Detect Input Bit 4 Polarity Control."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pol4(&self) -> Pol4 {
+        let val = (self.0 >> 15usize) & 0x01;
+        Pol4::from_bits(val as u8)
+    }
+    #[doc = "Tamper Detect Input Bit 4 Polarity Control."]
+    #[inline(always)]
+    pub const fn set_pol4(&mut self, val: Pol4) {
+        self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u16) & 0x01) << 15usize);
+    }
+}
+impl Default for Filter45Cfg {
+    #[inline(always)]
+    fn default() -> Filter45Cfg {
+        Filter45Cfg(0)
+    }
+}
+impl core::fmt::Debug for Filter45Cfg {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Filter45Cfg")
+            .field("fil_dur5", &self.fil_dur5())
+            .field("clk_sel5", &self.clk_sel5())
+            .field("pol5", &self.pol5())
+            .field("fil_dur4", &self.fil_dur4())
+            .field("clk_sel4", &self.clk_sel4())
+            .field("pol4", &self.pol4())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Filter45Cfg {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Filter45Cfg {{ fil_dur5: {:?}, clk_sel5: {:?}, pol5: {:?}, fil_dur4: {:?}, clk_sel4: {:?}, pol4: {:?} }}",
+            self.fil_dur5(),
+            self.clk_sel5(),
+            self.pol5(),
+            self.fil_dur4(),
+            self.clk_sel4(),
+            self.pol4()
+        )
+    }
+}
+#[doc = "Tamper 67 Filter Configuration."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Filter67Cfg(pub u16);
+impl Filter67Cfg {
+    #[doc = "Tamper Detect Bit 7 Filter Duration."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn fil_dur7(&self) -> FilDur7 {
+        let val = (self.0 >> 0usize) & 0x0f;
+        FilDur7::from_bits(val as u8)
+    }
+    #[doc = "Tamper Detect Bit 7 Filter Duration."]
+    #[inline(always)]
+    pub const fn set_fil_dur7(&mut self, val: FilDur7) {
+        self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u16) & 0x0f) << 0usize);
+    }
+    #[doc = "Tamper Filter 7 Clock Select."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn clk_sel7(&self) -> ClkSel7 {
+        let val = (self.0 >> 4usize) & 0x07;
+        ClkSel7::from_bits(val as u8)
+    }
+    #[doc = "Tamper Filter 7 Clock Select."]
+    #[inline(always)]
+    pub const fn set_clk_sel7(&mut self, val: ClkSel7) {
+        self.0 = (self.0 & !(0x07 << 4usize)) | (((val.to_bits() as u16) & 0x07) << 4usize);
+    }
+    #[doc = "Tamper Detect Input Bit 7 Polarity Control."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pol7(&self) -> Pol7 {
+        let val = (self.0 >> 7usize) & 0x01;
+        Pol7::from_bits(val as u8)
+    }
+    #[doc = "Tamper Detect Input Bit 7 Polarity Control."]
+    #[inline(always)]
+    pub const fn set_pol7(&mut self, val: Pol7) {
+        self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u16) & 0x01) << 7usize);
+    }
+    #[doc = "Tamper Detect Bit 6 Filter Duration."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn fil_dur6(&self) -> FilDur6 {
+        let val = (self.0 >> 8usize) & 0x0f;
+        FilDur6::from_bits(val as u8)
+    }
+    #[doc = "Tamper Detect Bit 6 Filter Duration."]
+    #[inline(always)]
+    pub const fn set_fil_dur6(&mut self, val: FilDur6) {
+        self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u16) & 0x0f) << 8usize);
+    }
+    #[doc = "Tamper Filter 6 Clock Select."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn clk_sel6(&self) -> ClkSel6 {
+        let val = (self.0 >> 12usize) & 0x07;
+        ClkSel6::from_bits(val as u8)
+    }
+    #[doc = "Tamper Filter 6 Clock Select."]
+    #[inline(always)]
+    pub const fn set_clk_sel6(&mut self, val: ClkSel6) {
+        self.0 = (self.0 & !(0x07 << 12usize)) | (((val.to_bits() as u16) & 0x07) << 12usize);
+    }
+    #[doc = "Tamper Detect Input Bit 6 Polarity Control."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pol6(&self) -> Pol6 {
+        let val = (self.0 >> 15usize) & 0x01;
+        Pol6::from_bits(val as u8)
+    }
+    #[doc = "Tamper Detect Input Bit 6 Polarity Control."]
+    #[inline(always)]
+    pub const fn set_pol6(&mut self, val: Pol6) {
+        self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u16) & 0x01) << 15usize);
+    }
+}
+impl Default for Filter67Cfg {
+    #[inline(always)]
+    fn default() -> Filter67Cfg {
+        Filter67Cfg(0)
+    }
+}
+impl core::fmt::Debug for Filter67Cfg {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Filter67Cfg")
+            .field("fil_dur7", &self.fil_dur7())
+            .field("clk_sel7", &self.clk_sel7())
+            .field("pol7", &self.pol7())
+            .field("fil_dur6", &self.fil_dur6())
+            .field("clk_sel6", &self.clk_sel6())
+            .field("pol6", &self.pol6())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Filter67Cfg {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Filter67Cfg {{ fil_dur7: {:?}, clk_sel7: {:?}, pol7: {:?}, fil_dur6: {:?}, clk_sel6: {:?}, pol6: {:?} }}",
+            self.fil_dur7(),
+            self.clk_sel7(),
+            self.pol7(),
+            self.fil_dur6(),
+            self.clk_sel6(),
+            self.pol6()
+        )
+    }
+}
 #[doc = "Hours and Minutes Counters."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -837,6 +1404,30 @@ impl defmt::Format for Hourmin {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ier(pub u16);
 impl Ier {
+    #[doc = "Tamper Interrupt Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn tamper_ie(&self) -> bool {
+        let val = (self.0 >> 0usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Tamper Interrupt Enable."]
+    #[inline(always)]
+    pub const fn set_tamper_ie(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u16) & 0x01) << 0usize);
+    }
+    #[doc = "Count Down Timer Timeout Interrupt Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn cnt_dn_timeout_ie(&self) -> bool {
+        let val = (self.0 >> 1usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Count Down Timer Timeout Interrupt Enable."]
+    #[inline(always)]
+    pub const fn set_cnt_dn_timeout_ie(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u16) & 0x01) << 1usize);
+    }
     #[doc = "Alarm Interrupt Enable."]
     #[must_use]
     #[inline(always)]
@@ -1015,6 +1606,8 @@ impl Default for Ier {
 impl core::fmt::Debug for Ier {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ier")
+            .field("tamper_ie", &self.tamper_ie())
+            .field("cnt_dn_timeout_ie", &self.cnt_dn_timeout_ie())
             .field("alm_ie", &self.alm_ie())
             .field("day_ie", &self.day_ie())
             .field("hour_ie", &self.hour_ie())
@@ -1037,7 +1630,9 @@ impl defmt::Format for Ier {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Ier {{ alm_ie: {=bool:?}, day_ie: {=bool:?}, hour_ie: {=bool:?}, min_ie: {=bool:?}, ie_1hz: {=bool:?}, ie_2hz: {=bool:?}, ie_4hz: {=bool:?}, ie_8hz: {=bool:?}, ie_16hz: {=bool:?}, ie_32hz: {=bool:?}, ie_64hz: {=bool:?}, ie_128hz: {=bool:?}, ie_256hz: {=bool:?}, ie_512hz: {=bool:?} }}",
+            "Ier {{ tamper_ie: {=bool:?}, cnt_dn_timeout_ie: {=bool:?}, alm_ie: {=bool:?}, day_ie: {=bool:?}, hour_ie: {=bool:?}, min_ie: {=bool:?}, ie_1hz: {=bool:?}, ie_2hz: {=bool:?}, ie_4hz: {=bool:?}, ie_8hz: {=bool:?}, ie_16hz: {=bool:?}, ie_32hz: {=bool:?}, ie_64hz: {=bool:?}, ie_128hz: {=bool:?}, ie_256hz: {=bool:?}, ie_512hz: {=bool:?} }}",
+            self.tamper_ie(),
+            self.cnt_dn_timeout_ie(),
             self.alm_ie(),
             self.day_ie(),
             self.hour_ie(),
@@ -1060,6 +1655,30 @@ impl defmt::Format for Ier {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Isr(pub u16);
 impl Isr {
+    #[doc = "Tamper Interrupt Status."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn tamper_is(&self) -> bool {
+        let val = (self.0 >> 0usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Tamper Interrupt Status."]
+    #[inline(always)]
+    pub const fn set_tamper_is(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u16) & 0x01) << 0usize);
+    }
+    #[doc = "Count Down Timer Timeout Interrupt Status."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn cnt_dn_timeout_is(&self) -> bool {
+        let val = (self.0 >> 1usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Count Down Timer Timeout Interrupt Status."]
+    #[inline(always)]
+    pub const fn set_cnt_dn_timeout_is(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u16) & 0x01) << 1usize);
+    }
     #[doc = "Alarm Interrupt Status."]
     #[must_use]
     #[inline(always)]
@@ -1238,6 +1857,8 @@ impl Default for Isr {
 impl core::fmt::Debug for Isr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Isr")
+            .field("tamper_is", &self.tamper_is())
+            .field("cnt_dn_timeout_is", &self.cnt_dn_timeout_is())
             .field("alm_is", &self.alm_is())
             .field("day_is", &self.day_is())
             .field("hour_is", &self.hour_is())
@@ -1260,7 +1881,9 @@ impl defmt::Format for Isr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Isr {{ alm_is: {=bool:?}, day_is: {=bool:?}, hour_is: {=bool:?}, min_is: {=bool:?}, is_1hz: {=bool:?}, is_2hz: {=bool:?}, is_4hz: {=bool:?}, is_8hz: {=bool:?}, is_16hz: {=bool:?}, is_32hz: {=bool:?}, is_64hz: {=bool:?}, is_128hz: {=bool:?}, is_256hz: {=bool:?}, is_512hz: {=bool:?} }}",
+            "Isr {{ tamper_is: {=bool:?}, cnt_dn_timeout_is: {=bool:?}, alm_is: {=bool:?}, day_is: {=bool:?}, hour_is: {=bool:?}, min_is: {=bool:?}, is_1hz: {=bool:?}, is_2hz: {=bool:?}, is_4hz: {=bool:?}, is_8hz: {=bool:?}, is_16hz: {=bool:?}, is_32hz: {=bool:?}, is_64hz: {=bool:?}, is_128hz: {=bool:?}, is_256hz: {=bool:?}, is_512hz: {=bool:?} }}",
+            self.tamper_is(),
+            self.cnt_dn_timeout_is(),
             self.alm_is(),
             self.day_is(),
             self.hour_is(),
@@ -1344,6 +1967,18 @@ impl Status {
     pub const fn set_write_prot_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u16) & 0x01) << 1usize);
     }
+    #[doc = "Down Counter Invalidate Read/Write Access."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn dwn_cntr_inval_bit(&self) -> DwnCntrInvalBit {
+        let val = (self.0 >> 4usize) & 0x01;
+        DwnCntrInvalBit::from_bits(val as u8)
+    }
+    #[doc = "Down Counter Invalidate Read/Write Access."]
+    #[inline(always)]
+    pub const fn set_dwn_cntr_inval_bit(&mut self, val: DwnCntrInvalBit) {
+        self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u16) & 0x01) << 4usize);
+    }
     #[doc = "Compensation Interval."]
     #[must_use]
     #[inline(always)]
@@ -1404,6 +2039,7 @@ impl core::fmt::Debug for Status {
         f.debug_struct("Status")
             .field("inval_bit", &self.inval_bit())
             .field("write_prot_en", &self.write_prot_en())
+            .field("dwn_cntr_inval_bit", &self.dwn_cntr_inval_bit())
             .field("cmp_int", &self.cmp_int())
             .field("we", &self.we())
             .field("bus_err", &self.bus_err())
@@ -1416,14 +2052,245 @@ impl defmt::Format for Status {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Status {{ inval_bit: {=bool:?}, write_prot_en: {=bool:?}, cmp_int: {=bool:?}, we: {=u8:?}, bus_err: {:?}, cmp_done: {=bool:?} }}",
+            "Status {{ inval_bit: {=bool:?}, write_prot_en: {=bool:?}, dwn_cntr_inval_bit: {:?}, cmp_int: {=bool:?}, we: {=u8:?}, bus_err: {:?}, cmp_done: {=bool:?} }}",
             self.inval_bit(),
             self.write_prot_en(),
+            self.dwn_cntr_inval_bit(),
             self.cmp_int(),
             self.we(),
             self.bus_err(),
             self.cmp_done()
         )
+    }
+}
+#[doc = "Tamper Queue Status and Control."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct TamperQscr(pub u16);
+impl TamperQscr {
+    #[doc = "Q_FULL."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn q_full(&self) -> bool {
+        let val = (self.0 >> 0usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Q_FULL."]
+    #[inline(always)]
+    pub const fn set_q_full(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u16) & 0x01) << 0usize);
+    }
+    #[doc = "Q_FULL_INT_EN."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn q_full_int_en(&self) -> bool {
+        let val = (self.0 >> 1usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Q_FULL_INT_EN."]
+    #[inline(always)]
+    pub const fn set_q_full_int_en(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u16) & 0x01) << 1usize);
+    }
+    #[doc = "Q_CLEAR."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn q_clear(&self) -> bool {
+        let val = (self.0 >> 2usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Q_CLEAR."]
+    #[inline(always)]
+    pub const fn set_q_clear(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u16) & 0x01) << 2usize);
+    }
+    #[doc = "LFSR_CLK_SEL."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn lfsr_clk_sel(&self) -> LfsrClkSel {
+        let val = (self.0 >> 8usize) & 0x07;
+        LfsrClkSel::from_bits(val as u8)
+    }
+    #[doc = "LFSR_CLK_SEL."]
+    #[inline(always)]
+    pub const fn set_lfsr_clk_sel(&mut self, val: LfsrClkSel) {
+        self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u16) & 0x07) << 8usize);
+    }
+    #[doc = "LFSR_DURATION."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn lfsr_duration(&self) -> u8 {
+        let val = (self.0 >> 12usize) & 0x0f;
+        val as u8
+    }
+    #[doc = "LFSR_DURATION."]
+    #[inline(always)]
+    pub const fn set_lfsr_duration(&mut self, val: u8) {
+        self.0 = (self.0 & !(0x0f << 12usize)) | (((val as u16) & 0x0f) << 12usize);
+    }
+}
+impl Default for TamperQscr {
+    #[inline(always)]
+    fn default() -> TamperQscr {
+        TamperQscr(0)
+    }
+}
+impl core::fmt::Debug for TamperQscr {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TamperQscr")
+            .field("q_full", &self.q_full())
+            .field("q_full_int_en", &self.q_full_int_en())
+            .field("q_clear", &self.q_clear())
+            .field("lfsr_clk_sel", &self.lfsr_clk_sel())
+            .field("lfsr_duration", &self.lfsr_duration())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for TamperQscr {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "TamperQscr {{ q_full: {=bool:?}, q_full_int_en: {=bool:?}, q_clear: {=bool:?}, lfsr_clk_sel: {:?}, lfsr_duration: {=u8:?} }}",
+            self.q_full(),
+            self.q_full_int_en(),
+            self.q_clear(),
+            self.lfsr_clk_sel(),
+            self.lfsr_duration()
+        )
+    }
+}
+#[doc = "Tamper Queue."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct TamperQueue(pub u16);
+impl TamperQueue {
+    #[doc = "Tamper type stamp and pin number information register."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn tamper_data(&self) -> u16 {
+        let val = (self.0 >> 0usize) & 0xffff;
+        val as u16
+    }
+    #[doc = "Tamper type stamp and pin number information register."]
+    #[inline(always)]
+    pub const fn set_tamper_data(&mut self, val: u16) {
+        self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u16) & 0xffff) << 0usize);
+    }
+}
+impl Default for TamperQueue {
+    #[inline(always)]
+    fn default() -> TamperQueue {
+        TamperQueue(0)
+    }
+}
+impl core::fmt::Debug for TamperQueue {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TamperQueue")
+            .field("tamper_data", &self.tamper_data())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for TamperQueue {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "TamperQueue {{ tamper_data: {=u16:?} }}",
+            self.tamper_data()
+        )
+    }
+}
+#[doc = "Tamper Status and Control."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct TamperScr(pub u16);
+impl TamperScr {
+    #[doc = "Tamper Control."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn tmpr_en(&self) -> TmprEn {
+        let val = (self.0 >> 0usize) & 0x0f;
+        TmprEn::from_bits(val as u8)
+    }
+    #[doc = "Tamper Control."]
+    #[inline(always)]
+    pub const fn set_tmpr_en(&mut self, val: TmprEn) {
+        self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u16) & 0x0f) << 0usize);
+    }
+    #[doc = "Tamper Status."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn tmpr_sts(&self) -> TmprSts {
+        let val = (self.0 >> 8usize) & 0x0f;
+        TmprSts::from_bits(val as u8)
+    }
+    #[doc = "Tamper Status."]
+    #[inline(always)]
+    pub const fn set_tmpr_sts(&mut self, val: TmprSts) {
+        self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u16) & 0x0f) << 8usize);
+    }
+}
+impl Default for TamperScr {
+    #[inline(always)]
+    fn default() -> TamperScr {
+        TamperScr(0)
+    }
+}
+impl core::fmt::Debug for TamperScr {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TamperScr")
+            .field("tmpr_en", &self.tmpr_en())
+            .field("tmpr_sts", &self.tmpr_sts())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for TamperScr {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "TamperScr {{ tmpr_en: {:?}, tmpr_sts: {:?} }}",
+            self.tmpr_en(),
+            self.tmpr_sts()
+        )
+    }
+}
+#[doc = "Tamper Time Stamp Year."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct TtsrYear(pub u16);
+impl TtsrYear {
+    #[doc = "Year Value for Tamper Time Stamp."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ts_yrofst(&self) -> u8 {
+        let val = (self.0 >> 8usize) & 0xff;
+        val as u8
+    }
+    #[doc = "Year Value for Tamper Time Stamp."]
+    #[inline(always)]
+    pub const fn set_ts_yrofst(&mut self, val: u8) {
+        self.0 = (self.0 & !(0xff << 8usize)) | (((val as u16) & 0xff) << 8usize);
+    }
+}
+impl Default for TtsrYear {
+    #[inline(always)]
+    fn default() -> TtsrYear {
+        TtsrYear(0)
+    }
+}
+impl core::fmt::Debug for TtsrYear {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TtsrYear")
+            .field("ts_yrofst", &self.ts_yrofst())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for TtsrYear {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "TtsrYear {{ ts_yrofst: {=u8:?} }}", self.ts_yrofst())
     }
 }
 #[doc = "Year and Month Counters."]
@@ -1484,11 +2351,42 @@ impl defmt::Format for Yearmon {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum BcdEn {
+    #[doc = "Binary mode."]
+    BinaryMode = 0x0,
+    #[doc = "BCD mode."]
+    BcdMode = 0x01,
+}
+impl BcdEn {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> BcdEn {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for BcdEn {
+    #[inline(always)]
+    fn from(val: u8) -> BcdEn {
+        BcdEn::from_bits(val)
+    }
+}
+impl From<BcdEn> for u8 {
+    #[inline(always)]
+    fn from(val: BcdEn) -> u8 {
+        BcdEn::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BusErr {
     #[doc = "Read and write accesses are normal."]
-    NORMAL = 0x0,
+    Normal = 0x0,
     #[doc = "Read or write accesses occurred when STATUS\\[INVAL_BIT\\] was asserted."]
-    ASSERTED = 0x01,
+    Asserted = 0x01,
 }
 impl BusErr {
     #[inline(always)]
@@ -1515,11 +2413,1077 @@ impl From<BusErr> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum ClkSel0 {
+    #[doc = "32/16 kHz clock."]
+    Clk32khz = 0x0,
+    #[doc = "512 Hz clock."]
+    Clk512hz = 0x01,
+    #[doc = "128 Hz clock."]
+    Clk128hz = 0x02,
+    #[doc = "64 Hz clock."]
+    Clk64hz = 0x03,
+    #[doc = "16 Hz clock."]
+    Clk16hz = 0x04,
+    #[doc = "8 Hz clock."]
+    Clk8hz = 0x05,
+    #[doc = "4 Hz clock."]
+    Clk4hz = 0x06,
+    #[doc = "2 Hz clock."]
+    Clk2hz = 0x07,
+}
+impl ClkSel0 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> ClkSel0 {
+        unsafe { core::mem::transmute(val & 0x07) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for ClkSel0 {
+    #[inline(always)]
+    fn from(val: u8) -> ClkSel0 {
+        ClkSel0::from_bits(val)
+    }
+}
+impl From<ClkSel0> for u8 {
+    #[inline(always)]
+    fn from(val: ClkSel0) -> u8 {
+        ClkSel0::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum ClkSel1 {
+    #[doc = "32/16 kHz clock."]
+    Clk32khz = 0x0,
+    #[doc = "512 Hz clock."]
+    Clk512hz = 0x01,
+    #[doc = "128 Hz clock."]
+    Clk128hz = 0x02,
+    #[doc = "64 Hz clock."]
+    Clk64hz = 0x03,
+    #[doc = "16 Hz clock."]
+    Clk16hz = 0x04,
+    #[doc = "8 Hz clock."]
+    Clk8hz = 0x05,
+    #[doc = "4 Hz clock."]
+    Clk4hz = 0x06,
+    #[doc = "2 Hz clock."]
+    Clk2hz = 0x07,
+}
+impl ClkSel1 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> ClkSel1 {
+        unsafe { core::mem::transmute(val & 0x07) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for ClkSel1 {
+    #[inline(always)]
+    fn from(val: u8) -> ClkSel1 {
+        ClkSel1::from_bits(val)
+    }
+}
+impl From<ClkSel1> for u8 {
+    #[inline(always)]
+    fn from(val: ClkSel1) -> u8 {
+        ClkSel1::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum ClkSel2 {
+    #[doc = "32/16 kHz clock."]
+    Clk32khz = 0x0,
+    #[doc = "512 Hz clock."]
+    Clk512hz = 0x01,
+    #[doc = "128 Hz clock."]
+    Clk128hz = 0x02,
+    #[doc = "64 Hz clock."]
+    Clk64hz = 0x03,
+    #[doc = "16 Hz clock."]
+    Clk16hz = 0x04,
+    #[doc = "8 Hz clock."]
+    Clk8hz = 0x05,
+    #[doc = "4 Hz clock."]
+    Clk4hz = 0x06,
+    #[doc = "2 Hz clock."]
+    Clk2hz = 0x07,
+}
+impl ClkSel2 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> ClkSel2 {
+        unsafe { core::mem::transmute(val & 0x07) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for ClkSel2 {
+    #[inline(always)]
+    fn from(val: u8) -> ClkSel2 {
+        ClkSel2::from_bits(val)
+    }
+}
+impl From<ClkSel2> for u8 {
+    #[inline(always)]
+    fn from(val: ClkSel2) -> u8 {
+        ClkSel2::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum ClkSel3 {
+    #[doc = "32/16 kHz clock."]
+    Clk32khz = 0x0,
+    #[doc = "512 Hz clock."]
+    Clk512hz = 0x01,
+    #[doc = "128 Hz clock."]
+    Clk128hz = 0x02,
+    #[doc = "64 Hz clock."]
+    Clk64hz = 0x03,
+    #[doc = "16 Hz clock."]
+    Clk16hz = 0x04,
+    #[doc = "8 Hz clock."]
+    Clk8hz = 0x05,
+    #[doc = "4 Hz clock."]
+    Clk4hz = 0x06,
+    #[doc = "2 Hz clock."]
+    Clk2hz = 0x07,
+}
+impl ClkSel3 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> ClkSel3 {
+        unsafe { core::mem::transmute(val & 0x07) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for ClkSel3 {
+    #[inline(always)]
+    fn from(val: u8) -> ClkSel3 {
+        ClkSel3::from_bits(val)
+    }
+}
+impl From<ClkSel3> for u8 {
+    #[inline(always)]
+    fn from(val: ClkSel3) -> u8 {
+        ClkSel3::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum ClkSel4 {
+    #[doc = "Clock to tamper filter 4 is 32.768/16.384 kHz (Oscillator clock) Tamper filter duration is 45.5us (i.e. 1.5 clock) to 1.95ms (64 clocks) in increments of 30.5us."]
+    Clk32768khz = 0x0,
+    #[doc = "Clock to tamper filter 4 is 512 Hz Tamper filter duration is 2.85ms (i.e. 1.5 clock) to 125ms (64 clocks) in increments of 1.95ms."]
+    Clk512hz = 0x01,
+    _RESERVED_2 = 0x02,
+    _RESERVED_3 = 0x03,
+    _RESERVED_4 = 0x04,
+    _RESERVED_5 = 0x05,
+    _RESERVED_6 = 0x06,
+    _RESERVED_7 = 0x07,
+}
+impl ClkSel4 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> ClkSel4 {
+        unsafe { core::mem::transmute(val & 0x07) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for ClkSel4 {
+    #[inline(always)]
+    fn from(val: u8) -> ClkSel4 {
+        ClkSel4::from_bits(val)
+    }
+}
+impl From<ClkSel4> for u8 {
+    #[inline(always)]
+    fn from(val: ClkSel4) -> u8 {
+        ClkSel4::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum ClkSel5 {
+    #[doc = "Clock to tamper filter 5 is 32.768/16.384 kHz (Oscillator clock) Tamper filter duration is 45.5us (i.e. 1.5 clock) to 1.95ms (64 clocks) in increments of 30.5us."]
+    Clk32768khz = 0x0,
+    #[doc = "Clock to tamper filter 5 is 512 Hz Tamper filter duration is 2.85ms (i.e. 1.5 clock) to 125ms (64 clocks) in increments of 1.95ms."]
+    Clk512hz = 0x01,
+    _RESERVED_2 = 0x02,
+    _RESERVED_3 = 0x03,
+    _RESERVED_4 = 0x04,
+    _RESERVED_5 = 0x05,
+    _RESERVED_6 = 0x06,
+    _RESERVED_7 = 0x07,
+}
+impl ClkSel5 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> ClkSel5 {
+        unsafe { core::mem::transmute(val & 0x07) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for ClkSel5 {
+    #[inline(always)]
+    fn from(val: u8) -> ClkSel5 {
+        ClkSel5::from_bits(val)
+    }
+}
+impl From<ClkSel5> for u8 {
+    #[inline(always)]
+    fn from(val: ClkSel5) -> u8 {
+        ClkSel5::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum ClkSel6 {
+    #[doc = "Clock to tamper filter 6 is 32.768/16.384 kHz (Oscillator clock) Tamper filter duration is 45.5us (i.e. 1.5 clock) to 1.95ms (64 clocks) in increments of 30.5us."]
+    Clk32768khz = 0x0,
+    #[doc = "Clock to tamper filter 6 is 512 Hz Tamper filter duration is 2.85ms (i.e. 1.5 clock) to 125ms (64 clocks) in increments of 1.95ms."]
+    Clk512hz = 0x01,
+    _RESERVED_2 = 0x02,
+    _RESERVED_3 = 0x03,
+    _RESERVED_4 = 0x04,
+    _RESERVED_5 = 0x05,
+    _RESERVED_6 = 0x06,
+    _RESERVED_7 = 0x07,
+}
+impl ClkSel6 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> ClkSel6 {
+        unsafe { core::mem::transmute(val & 0x07) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for ClkSel6 {
+    #[inline(always)]
+    fn from(val: u8) -> ClkSel6 {
+        ClkSel6::from_bits(val)
+    }
+}
+impl From<ClkSel6> for u8 {
+    #[inline(always)]
+    fn from(val: ClkSel6) -> u8 {
+        ClkSel6::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum ClkSel7 {
+    #[doc = "Clock to tamper filter 7 is 32.768/16.384 kHz (Oscillator clock) Tamper filter duration is 45.5us (i.e. 1.5 clock) to 1.95ms (64 clocks) in increments of 30.5us."]
+    Clk32768khz = 0x0,
+    #[doc = "Clock to tamper filter 7 is 512 Hz Tamper filter duration is 2.85ms (i.e. 1.5 clock) to 125ms (64 clocks) in increments of 1.95ms."]
+    Clk512hz = 0x01,
+    _RESERVED_2 = 0x02,
+    _RESERVED_3 = 0x03,
+    _RESERVED_4 = 0x04,
+    _RESERVED_5 = 0x05,
+    _RESERVED_6 = 0x06,
+    _RESERVED_7 = 0x07,
+}
+impl ClkSel7 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> ClkSel7 {
+        unsafe { core::mem::transmute(val & 0x07) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for ClkSel7 {
+    #[inline(always)]
+    fn from(val: u8) -> ClkSel7 {
+        ClkSel7::from_bits(val)
+    }
+}
+impl From<ClkSel7> for u8 {
+    #[inline(always)]
+    fn from(val: ClkSel7) -> u8 {
+        ClkSel7::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum DwnCntrInvalBit {
+    #[doc = "Count down timer can be changed or read."]
+    Valid = 0x0,
+    #[doc = "Count down timer (if running) is changing value and cannot be read or written."]
+    Invalid = 0x01,
+}
+impl DwnCntrInvalBit {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> DwnCntrInvalBit {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for DwnCntrInvalBit {
+    #[inline(always)]
+    fn from(val: u8) -> DwnCntrInvalBit {
+        DwnCntrInvalBit::from_bits(val)
+    }
+}
+impl From<DwnCntrInvalBit> for u8 {
+    #[inline(always)]
+    fn from(val: DwnCntrInvalBit) -> u8 {
+        DwnCntrInvalBit::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum FilDur0 {
+    #[doc = "Filtering operation disabled."]
+    Disabled = 0x0,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled1 = 0x01,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled2 = 0x02,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled3 = 0x03,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled4 = 0x04,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled5 = 0x05,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled6 = 0x06,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled7 = 0x07,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled8 = 0x08,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled9 = 0x09,
+    _RESERVED_a = 0x0a,
+    _RESERVED_b = 0x0b,
+    _RESERVED_c = 0x0c,
+    _RESERVED_d = 0x0d,
+    _RESERVED_e = 0x0e,
+    _RESERVED_f = 0x0f,
+}
+impl FilDur0 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> FilDur0 {
+        unsafe { core::mem::transmute(val & 0x0f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for FilDur0 {
+    #[inline(always)]
+    fn from(val: u8) -> FilDur0 {
+        FilDur0::from_bits(val)
+    }
+}
+impl From<FilDur0> for u8 {
+    #[inline(always)]
+    fn from(val: FilDur0) -> u8 {
+        FilDur0::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum FilDur1 {
+    #[doc = "Filtering operation disabled."]
+    Disabled = 0x0,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    Enabled1 = 0x01,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    Enabled2 = 0x02,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    Enabled3 = 0x03,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    Enabled4 = 0x04,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    Enabled5 = 0x05,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    Enabled6 = 0x06,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    Enabled7 = 0x07,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    Enabled8 = 0x08,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    Enabled9 = 0x09,
+    _RESERVED_a = 0x0a,
+    _RESERVED_b = 0x0b,
+    _RESERVED_c = 0x0c,
+    _RESERVED_d = 0x0d,
+    _RESERVED_e = 0x0e,
+    _RESERVED_f = 0x0f,
+}
+impl FilDur1 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> FilDur1 {
+        unsafe { core::mem::transmute(val & 0x0f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for FilDur1 {
+    #[inline(always)]
+    fn from(val: u8) -> FilDur1 {
+        FilDur1::from_bits(val)
+    }
+}
+impl From<FilDur1> for u8 {
+    #[inline(always)]
+    fn from(val: FilDur1) -> u8 {
+        FilDur1::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum FilDur2 {
+    #[doc = "Filtering operation disabled."]
+    Disabled = 0x0,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled1 = 0x01,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled2 = 0x02,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled3 = 0x03,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled4 = 0x04,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled5 = 0x05,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled6 = 0x06,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled7 = 0x07,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled8 = 0x08,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled9 = 0x09,
+    _RESERVED_a = 0x0a,
+    _RESERVED_b = 0x0b,
+    _RESERVED_c = 0x0c,
+    _RESERVED_d = 0x0d,
+    _RESERVED_e = 0x0e,
+    _RESERVED_f = 0x0f,
+}
+impl FilDur2 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> FilDur2 {
+        unsafe { core::mem::transmute(val & 0x0f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for FilDur2 {
+    #[inline(always)]
+    fn from(val: u8) -> FilDur2 {
+        FilDur2::from_bits(val)
+    }
+}
+impl From<FilDur2> for u8 {
+    #[inline(always)]
+    fn from(val: FilDur2) -> u8 {
+        FilDur2::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum FilDur3 {
+    #[doc = "Filtering operation disabled."]
+    Disabled = 0x0,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled1 = 0x01,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled2 = 0x02,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled3 = 0x03,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled4 = 0x04,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled5 = 0x05,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled6 = 0x06,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled7 = 0x07,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled8 = 0x08,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled9 = 0x09,
+    _RESERVED_a = 0x0a,
+    _RESERVED_b = 0x0b,
+    _RESERVED_c = 0x0c,
+    _RESERVED_d = 0x0d,
+    _RESERVED_e = 0x0e,
+    _RESERVED_f = 0x0f,
+}
+impl FilDur3 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> FilDur3 {
+        unsafe { core::mem::transmute(val & 0x0f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for FilDur3 {
+    #[inline(always)]
+    fn from(val: u8) -> FilDur3 {
+        FilDur3::from_bits(val)
+    }
+}
+impl From<FilDur3> for u8 {
+    #[inline(always)]
+    fn from(val: FilDur3) -> u8 {
+        FilDur3::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum FilDur4 {
+    #[doc = "Filtering operation disabled."]
+    Disabled = 0x0,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled1 = 0x01,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled2 = 0x02,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled3 = 0x03,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled4 = 0x04,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled5 = 0x05,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled6 = 0x06,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled7 = 0x07,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled8 = 0x08,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled9 = 0x09,
+    _RESERVED_a = 0x0a,
+    _RESERVED_b = 0x0b,
+    _RESERVED_c = 0x0c,
+    _RESERVED_d = 0x0d,
+    _RESERVED_e = 0x0e,
+    _RESERVED_f = 0x0f,
+}
+impl FilDur4 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> FilDur4 {
+        unsafe { core::mem::transmute(val & 0x0f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for FilDur4 {
+    #[inline(always)]
+    fn from(val: u8) -> FilDur4 {
+        FilDur4::from_bits(val)
+    }
+}
+impl From<FilDur4> for u8 {
+    #[inline(always)]
+    fn from(val: FilDur4) -> u8 {
+        FilDur4::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum FilDur5 {
+    #[doc = "Filtering operation disabled."]
+    Disabled = 0x0,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled1 = 0x01,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled2 = 0x02,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled3 = 0x03,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled4 = 0x04,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled5 = 0x05,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled6 = 0x06,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled7 = 0x07,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled8 = 0x08,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled9 = 0x09,
+    _RESERVED_a = 0x0a,
+    _RESERVED_b = 0x0b,
+    _RESERVED_c = 0x0c,
+    _RESERVED_d = 0x0d,
+    _RESERVED_e = 0x0e,
+    _RESERVED_f = 0x0f,
+}
+impl FilDur5 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> FilDur5 {
+        unsafe { core::mem::transmute(val & 0x0f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for FilDur5 {
+    #[inline(always)]
+    fn from(val: u8) -> FilDur5 {
+        FilDur5::from_bits(val)
+    }
+}
+impl From<FilDur5> for u8 {
+    #[inline(always)]
+    fn from(val: FilDur5) -> u8 {
+        FilDur5::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum FilDur6 {
+    #[doc = "Filtering operation disabled."]
+    Disabled = 0x0,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled1 = 0x01,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled2 = 0x02,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled3 = 0x03,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled4 = 0x04,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled5 = 0x05,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled6 = 0x06,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled7 = 0x07,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled8 = 0x08,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled9 = 0x09,
+    _RESERVED_a = 0x0a,
+    _RESERVED_b = 0x0b,
+    _RESERVED_c = 0x0c,
+    _RESERVED_d = 0x0d,
+    _RESERVED_e = 0x0e,
+    _RESERVED_f = 0x0f,
+}
+impl FilDur6 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> FilDur6 {
+        unsafe { core::mem::transmute(val & 0x0f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for FilDur6 {
+    #[inline(always)]
+    fn from(val: u8) -> FilDur6 {
+        FilDur6::from_bits(val)
+    }
+}
+impl From<FilDur6> for u8 {
+    #[inline(always)]
+    fn from(val: FilDur6) -> u8 {
+        FilDur6::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum FilDur7 {
+    #[doc = "Filtering operation disabled."]
+    Disabled = 0x0,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled1 = 0x01,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled2 = 0x02,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled3 = 0x03,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled4 = 0x04,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled5 = 0x05,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled6 = 0x06,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled7 = 0x07,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled8 = 0x08,
+    #[doc = "Number of tamper filter clock cycles to be counted when tamper is asserted."]
+    NumberOfClkCyclesEnabled9 = 0x09,
+    _RESERVED_a = 0x0a,
+    _RESERVED_b = 0x0b,
+    _RESERVED_c = 0x0c,
+    _RESERVED_d = 0x0d,
+    _RESERVED_e = 0x0e,
+    _RESERVED_f = 0x0f,
+}
+impl FilDur7 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> FilDur7 {
+        unsafe { core::mem::transmute(val & 0x0f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for FilDur7 {
+    #[inline(always)]
+    fn from(val: u8) -> FilDur7 {
+        FilDur7::from_bits(val)
+    }
+}
+impl From<FilDur7> for u8 {
+    #[inline(always)]
+    fn from(val: FilDur7) -> u8 {
+        FilDur7::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum LfsrClkSel {
+    #[doc = "32/16 KHz."]
+    Clk3216khz = 0x0,
+    #[doc = "512 Hz."]
+    Clk512hz = 0x01,
+    #[doc = "128 Hz."]
+    Clk128hz = 0x02,
+    #[doc = "64 Hz."]
+    Clk64hz = 0x03,
+    #[doc = "16 Hz."]
+    Clk16hz = 0x04,
+    #[doc = "8 Hz."]
+    Clk8hz = 0x05,
+    #[doc = "4 Hz."]
+    Clk4hz = 0x06,
+    #[doc = "2 Hz."]
+    Clk2hz = 0x07,
+}
+impl LfsrClkSel {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> LfsrClkSel {
+        unsafe { core::mem::transmute(val & 0x07) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for LfsrClkSel {
+    #[inline(always)]
+    fn from(val: u8) -> LfsrClkSel {
+        LfsrClkSel::from_bits(val)
+    }
+}
+impl From<LfsrClkSel> for u8 {
+    #[inline(always)]
+    fn from(val: LfsrClkSel) -> u8 {
+        LfsrClkSel::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Pol0 {
+    #[doc = "Tamper detect input bit 0 is active high."]
+    ActiveHigh = 0x0,
+    #[doc = "Tamper detect input bit 0 is active low."]
+    ActiveLow = 0x01,
+}
+impl Pol0 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Pol0 {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Pol0 {
+    #[inline(always)]
+    fn from(val: u8) -> Pol0 {
+        Pol0::from_bits(val)
+    }
+}
+impl From<Pol0> for u8 {
+    #[inline(always)]
+    fn from(val: Pol0) -> u8 {
+        Pol0::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Pol1 {
+    #[doc = "Tamper detect input bit 1 is active high."]
+    ActiveHigh = 0x0,
+    #[doc = "Tamper detect input bit 1 is active low."]
+    ActiveLow = 0x01,
+}
+impl Pol1 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Pol1 {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Pol1 {
+    #[inline(always)]
+    fn from(val: u8) -> Pol1 {
+        Pol1::from_bits(val)
+    }
+}
+impl From<Pol1> for u8 {
+    #[inline(always)]
+    fn from(val: Pol1) -> u8 {
+        Pol1::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Pol2 {
+    #[doc = "Tamper detect input bit 2 is active high."]
+    ActiveHigh = 0x0,
+    #[doc = "Tamper detect input bit 2 is active low."]
+    ActiveLow = 0x01,
+}
+impl Pol2 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Pol2 {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Pol2 {
+    #[inline(always)]
+    fn from(val: u8) -> Pol2 {
+        Pol2::from_bits(val)
+    }
+}
+impl From<Pol2> for u8 {
+    #[inline(always)]
+    fn from(val: Pol2) -> u8 {
+        Pol2::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Pol3 {
+    #[doc = "Tamper detect input bit 3 is active high."]
+    ActiveHigh = 0x0,
+    #[doc = "Tamper detect input bit 3 is active low."]
+    ActiveLow = 0x01,
+}
+impl Pol3 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Pol3 {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Pol3 {
+    #[inline(always)]
+    fn from(val: u8) -> Pol3 {
+        Pol3::from_bits(val)
+    }
+}
+impl From<Pol3> for u8 {
+    #[inline(always)]
+    fn from(val: Pol3) -> u8 {
+        Pol3::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Pol4 {
+    #[doc = "Tamper detect input bit 4is active high."]
+    ActiveHigh = 0x0,
+    #[doc = "Tamper detect input bit 4 is active low."]
+    ActiveLow = 0x01,
+}
+impl Pol4 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Pol4 {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Pol4 {
+    #[inline(always)]
+    fn from(val: u8) -> Pol4 {
+        Pol4::from_bits(val)
+    }
+}
+impl From<Pol4> for u8 {
+    #[inline(always)]
+    fn from(val: Pol4) -> u8 {
+        Pol4::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Pol5 {
+    #[doc = "Tamper detect input bit 5 is active high."]
+    ActiveHigh = 0x0,
+    #[doc = "Tamper detect input bit 5 is active low."]
+    ActiveLow = 0x01,
+}
+impl Pol5 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Pol5 {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Pol5 {
+    #[inline(always)]
+    fn from(val: u8) -> Pol5 {
+        Pol5::from_bits(val)
+    }
+}
+impl From<Pol5> for u8 {
+    #[inline(always)]
+    fn from(val: Pol5) -> u8 {
+        Pol5::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Pol6 {
+    #[doc = "Tamper detect input bit 6 is active high."]
+    ActiveHigh = 0x0,
+    #[doc = "Tamper detect input bit 6 is active low."]
+    ActiveLow = 0x01,
+}
+impl Pol6 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Pol6 {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Pol6 {
+    #[inline(always)]
+    fn from(val: u8) -> Pol6 {
+        Pol6::from_bits(val)
+    }
+}
+impl From<Pol6> for u8 {
+    #[inline(always)]
+    fn from(val: Pol6) -> u8 {
+        Pol6::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Pol7 {
+    #[doc = "Tamper detect input bit 7 is active high."]
+    ActiveHigh = 0x0,
+    #[doc = "Tamper detect input bit 7 is active low."]
+    ActiveLow = 0x01,
+}
+impl Pol7 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Pol7 {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Pol7 {
+    #[inline(always)]
+    fn from(val: u8) -> Pol7 {
+        Pol7::from_bits(val)
+    }
+}
+impl From<Pol7> for u8 {
+    #[inline(always)]
+    fn from(val: Pol7) -> u8 {
+        Pol7::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swr {
     #[doc = "Software Reset cleared."]
-    CLEARED = 0x0,
+    Cleared = 0x0,
     #[doc = "Software Reset asserted."]
-    ASSERTED = 0x01,
+    Asserted = 0x01,
 }
 impl Swr {
     #[inline(always)]
@@ -1541,5 +3505,160 @@ impl From<Swr> for u8 {
     #[inline(always)]
     fn from(val: Swr) -> u8 {
         Swr::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum TmprEn {
+    #[doc = "Tamper Status reporting disabled."]
+    Disabled = 0x0,
+    #[doc = "Tamper Status reporting enabled."]
+    Enabled = 0x01,
+    _RESERVED_2 = 0x02,
+    _RESERVED_3 = 0x03,
+    _RESERVED_4 = 0x04,
+    _RESERVED_5 = 0x05,
+    _RESERVED_6 = 0x06,
+    _RESERVED_7 = 0x07,
+    _RESERVED_8 = 0x08,
+    _RESERVED_9 = 0x09,
+    _RESERVED_a = 0x0a,
+    _RESERVED_b = 0x0b,
+    _RESERVED_c = 0x0c,
+    _RESERVED_d = 0x0d,
+    _RESERVED_e = 0x0e,
+    _RESERVED_f = 0x0f,
+}
+impl TmprEn {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> TmprEn {
+        unsafe { core::mem::transmute(val & 0x0f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for TmprEn {
+    #[inline(always)]
+    fn from(val: u8) -> TmprEn {
+        TmprEn::from_bits(val)
+    }
+}
+impl From<TmprEn> for u8 {
+    #[inline(always)]
+    fn from(val: TmprEn) -> u8 {
+        TmprEn::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum TmprSts {
+    #[doc = "No Tamper Detected."]
+    NoTamper = 0x0,
+    #[doc = "Tamper Event Detected."]
+    TamperDetected = 0x01,
+    _RESERVED_2 = 0x02,
+    _RESERVED_3 = 0x03,
+    _RESERVED_4 = 0x04,
+    _RESERVED_5 = 0x05,
+    _RESERVED_6 = 0x06,
+    _RESERVED_7 = 0x07,
+    _RESERVED_8 = 0x08,
+    _RESERVED_9 = 0x09,
+    _RESERVED_a = 0x0a,
+    _RESERVED_b = 0x0b,
+    _RESERVED_c = 0x0c,
+    _RESERVED_d = 0x0d,
+    _RESERVED_e = 0x0e,
+    _RESERVED_f = 0x0f,
+}
+impl TmprSts {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> TmprSts {
+        unsafe { core::mem::transmute(val & 0x0f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for TmprSts {
+    #[inline(always)]
+    fn from(val: u8) -> TmprSts {
+        TmprSts::from_bits(val)
+    }
+}
+impl From<TmprSts> for u8 {
+    #[inline(always)]
+    fn from(val: TmprSts) -> u8 {
+        TmprSts::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum WakeupMode {
+    #[doc = "Tamper pin 0 is used as the tamper pin."]
+    TamperPin = 0x0,
+    #[doc = "Tamper pin 0 is used as a wakeup and hibernation pin."]
+    WakeupPin = 0x01,
+}
+impl WakeupMode {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> WakeupMode {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for WakeupMode {
+    #[inline(always)]
+    fn from(val: u8) -> WakeupMode {
+        WakeupMode::from_bits(val)
+    }
+}
+impl From<WakeupMode> for u8 {
+    #[inline(always)]
+    fn from(val: WakeupMode) -> u8 {
+        WakeupMode::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum WakeupStatus {
+    #[doc = "The wakeup and hibernation pin is in HiZ mode."]
+    HiZMode = 0x0,
+    #[doc = "The wakeup and hibernation pin is at logic 0. MCU is in sleep mode."]
+    Logic0 = 0x01,
+    #[doc = "The wakeup and hibernation pin is at logic 1. MCU is in sleep mode."]
+    Logic1 = 0x02,
+    _RESERVED_3 = 0x03,
+}
+impl WakeupStatus {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> WakeupStatus {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for WakeupStatus {
+    #[inline(always)]
+    fn from(val: u8) -> WakeupStatus {
+        WakeupStatus::from_bits(val)
+    }
+}
+impl From<WakeupStatus> for u8 {
+    #[inline(always)]
+    fn from(val: WakeupStatus) -> u8 {
+        WakeupStatus::to_bits(val)
     }
 }

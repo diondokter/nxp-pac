@@ -1,6 +1,7 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (2fd28c5 2026-04-02))"]
+#![allow(non_upper_case_globals)]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (859f02b 2026-04-15))"]
 #[doc = "Flash."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fmu {
@@ -32,6 +33,11 @@ impl Fmu {
     pub const fn fctrl(self) -> crate::pac::common::Reg<Fctrl, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
     }
+    #[doc = "Flash Test Register."]
+    #[inline(always)]
+    pub const fn ftest(self) -> crate::pac::common::Reg<Ftest, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
+    }
     #[doc = "Flash Common Command Object Registers."]
     #[inline(always)]
     pub const fn fccob(self, n: usize) -> crate::pac::common::Reg<Fccob, crate::pac::common::RW> {
@@ -49,13 +55,13 @@ impl Fccob {
     #[doc = "CCOBn."]
     #[must_use]
     #[inline(always)]
-    pub const fn ccobn(&self) -> u32 {
+    pub const fn cco_bn(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
     #[doc = "CCOBn."]
     #[inline(always)]
-    pub const fn set_ccobn(&mut self, val: u32) {
+    pub const fn set_cco_bn(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
     }
 }
@@ -68,14 +74,14 @@ impl Default for Fccob {
 impl core::fmt::Debug for Fccob {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fccob")
-            .field("ccobn", &self.ccobn())
+            .field("cco_bn", &self.cco_bn())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
 impl defmt::Format for Fccob {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Fccob {{ ccobn: {=u32:?} }}", self.ccobn())
+        defmt::write!(f, "Fccob {{ cco_bn: {=u32:?} }}", self.cco_bn())
     }
 }
 #[doc = "Flash Configuration Register."]
@@ -467,14 +473,111 @@ impl defmt::Format for Fstat {
         )
     }
 }
+#[doc = "Flash Test Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Ftest(pub u32);
+impl Ftest {
+    #[doc = "Test Mode Entry Control."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn tmectl(&self) -> Tmectl {
+        let val = (self.0 >> 0usize) & 0x01;
+        Tmectl::from_bits(val as u8)
+    }
+    #[doc = "Test Mode Entry Control."]
+    #[inline(always)]
+    pub const fn set_tmectl(&mut self, val: Tmectl) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    }
+    #[doc = "Test Mode Entry Writable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn tmewr(&self) -> Tmewr {
+        let val = (self.0 >> 1usize) & 0x01;
+        Tmewr::from_bits(val as u8)
+    }
+    #[doc = "Test Mode Entry Writable."]
+    #[inline(always)]
+    pub const fn set_tmewr(&mut self, val: Tmewr) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    }
+    #[doc = "Test Mode Entry."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn tme(&self) -> Tme {
+        let val = (self.0 >> 2usize) & 0x01;
+        Tme::from_bits(val as u8)
+    }
+    #[doc = "Test Mode Entry."]
+    #[inline(always)]
+    pub const fn set_tme(&mut self, val: Tme) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
+    }
+    #[doc = "Test Mode Status."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn tmode(&self) -> Tmode {
+        let val = (self.0 >> 3usize) & 0x01;
+        Tmode::from_bits(val as u8)
+    }
+    #[doc = "Test Mode Status."]
+    #[inline(always)]
+    pub const fn set_tmode(&mut self, val: Tmode) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
+    }
+    #[doc = "Test Mode Entry Lock."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn tmelock(&self) -> Tmelock {
+        let val = (self.0 >> 4usize) & 0x01;
+        Tmelock::from_bits(val as u8)
+    }
+    #[doc = "Test Mode Entry Lock."]
+    #[inline(always)]
+    pub const fn set_tmelock(&mut self, val: Tmelock) {
+        self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
+    }
+}
+impl Default for Ftest {
+    #[inline(always)]
+    fn default() -> Ftest {
+        Ftest(0)
+    }
+}
+impl core::fmt::Debug for Ftest {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Ftest")
+            .field("tmectl", &self.tmectl())
+            .field("tmewr", &self.tmewr())
+            .field("tme", &self.tme())
+            .field("tmode", &self.tmode())
+            .field("tmelock", &self.tmelock())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Ftest {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Ftest {{ tmectl: {:?}, tmewr: {:?}, tme: {:?}, tmode: {:?}, tmelock: {:?} }}",
+            self.tmectl(),
+            self.tmewr(),
+            self.tme(),
+            self.tmode(),
+            self.tmelock()
+        )
+    }
+}
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Abtreq {
     #[doc = "No request to abort a command write sequence."]
-    ABTREQ0 = 0x0,
+    Abtreq0 = 0x0,
     #[doc = "Request to abort a command write sequence."]
-    ABTREQ1 = 0x01,
+    Abtreq1 = 0x01,
 }
 impl Abtreq {
     #[inline(always)]
@@ -503,9 +606,9 @@ impl From<Abtreq> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Accerr {
     #[doc = "No access error detected."]
-    ACCERR0 = 0x0,
+    Accerr0 = 0x0,
     #[doc = "Access error detected."]
-    ACCERR1 = 0x01,
+    Accerr1 = 0x01,
 }
 impl Accerr {
     #[inline(always)]
@@ -534,9 +637,9 @@ impl From<Accerr> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ccie {
     #[doc = "Command complete interrupt disabled."]
-    CCIE0 = 0x0,
+    Ccie0 = 0x0,
     #[doc = "Command complete interrupt enabled."]
-    CCIE1 = 0x01,
+    Ccie1 = 0x01,
 }
 impl Ccie {
     #[inline(always)]
@@ -565,9 +668,9 @@ impl From<Ccie> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ccif {
     #[doc = "Flash command, initialization, or power mode recovery in progress."]
-    CCIF0 = 0x0,
+    Ccif0 = 0x0,
     #[doc = "Flash command, initialization, or power mode recovery has completed."]
-    CCIF1 = 0x01,
+    Ccif1 = 0x01,
 }
 impl Ccif {
     #[inline(always)]
@@ -596,9 +699,9 @@ impl From<Ccif> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdabt {
     #[doc = "No command abort detected."]
-    CMDABT0 = 0x0,
+    Cmdabt0 = 0x0,
     #[doc = "Command abort detected."]
-    CMDABT1 = 0x01,
+    Cmdabt1 = 0x01,
 }
 impl Cmdabt {
     #[inline(always)]
@@ -627,9 +730,9 @@ impl From<Cmdabt> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdp {
     #[doc = "Command protection level and domain ID are stale."]
-    CMDP0 = 0x0,
+    Cmdp0 = 0x0,
     #[doc = "Command protection level (CMDPRT) and domain ID (CMDDID) are set."]
-    CMDP1 = 0x01,
+    Cmdp1 = 0x01,
 }
 impl Cmdp {
     #[inline(always)]
@@ -658,13 +761,13 @@ impl From<Cmdp> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdprt {
     #[doc = "Secure, normal access."]
-    CMDPRT00 = 0x0,
+    Cmdprt00 = 0x0,
     #[doc = "Secure, privileged access."]
-    CMDPRT01 = 0x01,
+    Cmdprt01 = 0x01,
     #[doc = "Nonsecure, normal access."]
-    CMDPRT10 = 0x02,
+    Cmdprt10 = 0x02,
     #[doc = "Nonsecure, privileged access."]
-    CMDPRT11 = 0x03,
+    Cmdprt11 = 0x03,
 }
 impl Cmdprt {
     #[inline(always)]
@@ -693,9 +796,9 @@ impl From<Cmdprt> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cwsabt {
     #[doc = "Command write sequence not aborted."]
-    CWSABT0 = 0x0,
+    Cwsabt0 = 0x0,
     #[doc = "Command write sequence aborted."]
-    CWSABT1 = 0x01,
+    Cwsabt1 = 0x01,
 }
 impl Cwsabt {
     #[inline(always)]
@@ -724,9 +827,9 @@ impl From<Cwsabt> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dfdie {
     #[doc = "Double bit fault detect interrupt disabled."]
-    DFDIE0 = 0x0,
+    Dfdie0 = 0x0,
     #[doc = "Double bit fault detect interrupt enabled."]
-    DFDIE1 = 0x01,
+    Dfdie1 = 0x01,
 }
 impl Dfdie {
     #[inline(always)]
@@ -755,9 +858,9 @@ impl From<Dfdie> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dfdif {
     #[doc = "Double bit fault not detected during a valid flash read access."]
-    DFDIF0 = 0x0,
+    Dfdif0 = 0x0,
     #[doc = "Double bit fault detected (or FCTRL\\[FDFD\\] is set) during a valid flash read access."]
-    DFDIF1 = 0x01,
+    Dfdif1 = 0x01,
 }
 impl Dfdif {
     #[inline(always)]
@@ -786,9 +889,9 @@ impl From<Dfdif> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ersien0 {
     #[doc = "Block 0 IFR Sector X is protected from erase by ERSSCR command."]
-    ERSIEN00 = 0x0,
+    Ersien00 = 0x0,
     #[doc = "Block 0 IFR Sector X is not protected from erase by ERSSCR command."]
-    ERSIEN01 = 0x01,
+    Ersien01 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
     _RESERVED_4 = 0x04,
@@ -831,9 +934,9 @@ impl From<Ersien0> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ersien1 {
     #[doc = "Block 1 IFR Sector X is protected from erase by ERSSCR command."]
-    ERSIEN10 = 0x0,
+    Ersien10 = 0x0,
     #[doc = "Block 1 IFR Sector X is not protected from erase by ERSSCR command."]
-    ERSIEN11 = 0x01,
+    Ersien11 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
     _RESERVED_4 = 0x04,
@@ -876,9 +979,9 @@ impl From<Ersien1> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ersreq {
     #[doc = "No request or request complete."]
-    ERSREQ0 = 0x0,
+    Ersreq0 = 0x0,
     #[doc = "Request to run the Mass Erase operation."]
-    ERSREQ1 = 0x01,
+    Ersreq1 = 0x01,
 }
 impl Ersreq {
     #[inline(always)]
@@ -907,9 +1010,9 @@ impl From<Ersreq> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fail {
     #[doc = "Error not detected."]
-    FAIL0 = 0x0,
+    Fail0 = 0x0,
     #[doc = "Error detected."]
-    FAIL1 = 0x01,
+    Fail1 = 0x01,
 }
 impl Fail {
     #[inline(always)]
@@ -938,9 +1041,9 @@ impl From<Fail> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fdfd {
     #[doc = "FSTAT\\[DFDIF\\] sets only if a double bit fault is detected during a valid flash read access from the platform flash controller."]
-    FDFD0 = 0x0,
+    Fdfd0 = 0x0,
     #[doc = "FSTAT\\[DFDIF\\] sets during any valid flash read access from the platform flash controller. An interrupt request is generated if the DFDIE bit is set."]
-    FDFD1 = 0x01,
+    Fdfd1 = 0x01,
 }
 impl Fdfd {
     #[inline(always)]
@@ -969,9 +1072,9 @@ impl From<Fdfd> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lsactive {
     #[doc = "Full speed active mode requested."]
-    LSACTIVE0 = 0x0,
+    Lsactive0 = 0x0,
     #[doc = "Low speed active mode requested."]
-    LSACTIVE1 = 0x01,
+    Lsactive1 = 0x01,
 }
 impl Lsactive {
     #[inline(always)]
@@ -1000,9 +1103,9 @@ impl From<Lsactive> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Perdy {
     #[doc = "Program or sector erase command operation not stalled."]
-    PERDY0 = 0x0,
+    Perdy0 = 0x0,
     #[doc = "Program or sector erase command operation ready to execute."]
-    PERDY1 = 0x01,
+    Perdy1 = 0x01,
 }
 impl Perdy {
     #[inline(always)]
@@ -1031,11 +1134,11 @@ impl From<Perdy> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pewen {
     #[doc = "Writes are not enabled."]
-    PEWEN00 = 0x0,
+    Pewen00 = 0x0,
     #[doc = "Writes are enabled for one flash or IFR phrase (phrase programming, sector erase)."]
-    PEWEN01 = 0x01,
+    Pewen01 = 0x01,
     #[doc = "Writes are enabled for one flash or IFR page (page programming)."]
-    PEWEN10 = 0x02,
+    Pewen10 = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl Pewen {
@@ -1065,9 +1168,9 @@ impl From<Pewen> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pviol {
     #[doc = "No protection violation detected."]
-    PVIOL0 = 0x0,
+    Pviol0 = 0x0,
     #[doc = "Protection violation detected."]
-    PVIOL1 = 0x01,
+    Pviol1 = 0x01,
 }
 impl Pviol {
     #[inline(always)]
@@ -1096,9 +1199,9 @@ impl From<Pviol> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SalvUsed {
     #[doc = "Salvage not used during last operation."]
-    SALV_USED0 = 0x0,
+    SalvUsed0 = 0x0,
     #[doc = "Salvage used during the last erase operation."]
-    SALV_USED1 = 0x01,
+    SalvUsed1 = 0x01,
 }
 impl SalvUsed {
     #[inline(always)]
@@ -1120,5 +1223,160 @@ impl From<SalvUsed> for u8 {
     #[inline(always)]
     fn from(val: SalvUsed) -> u8 {
         SalvUsed::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Tme {
+    #[doc = "Test mode entry not requested."]
+    Tme0 = 0x0,
+    #[doc = "Test mode entry requested."]
+    Tme1 = 0x01,
+}
+impl Tme {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Tme {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Tme {
+    #[inline(always)]
+    fn from(val: u8) -> Tme {
+        Tme::from_bits(val)
+    }
+}
+impl From<Tme> for u8 {
+    #[inline(always)]
+    fn from(val: Tme) -> u8 {
+        Tme::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Tmectl {
+    #[doc = "FTEST register always reads 0 and writes to FTEST are ignored."]
+    Tmectl0 = 0x0,
+    #[doc = "FTEST register is readable and can be written to enable writability of TME."]
+    Tmectl1 = 0x01,
+}
+impl Tmectl {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Tmectl {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Tmectl {
+    #[inline(always)]
+    fn from(val: u8) -> Tmectl {
+        Tmectl::from_bits(val)
+    }
+}
+impl From<Tmectl> for u8 {
+    #[inline(always)]
+    fn from(val: Tmectl) -> u8 {
+        Tmectl::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Tmelock {
+    #[doc = "FTEST register not locked from accepting writes."]
+    Tmelock0 = 0x0,
+    #[doc = "FTEST register locked from accepting writes."]
+    Tmelock1 = 0x01,
+}
+impl Tmelock {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Tmelock {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Tmelock {
+    #[inline(always)]
+    fn from(val: u8) -> Tmelock {
+        Tmelock::from_bits(val)
+    }
+}
+impl From<Tmelock> for u8 {
+    #[inline(always)]
+    fn from(val: Tmelock) -> u8 {
+        Tmelock::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Tmewr {
+    #[doc = "TME bit is not writable."]
+    Tmewr0 = 0x0,
+    #[doc = "TME bit is writable."]
+    Tmewr1 = 0x01,
+}
+impl Tmewr {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Tmewr {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Tmewr {
+    #[inline(always)]
+    fn from(val: u8) -> Tmewr {
+        Tmewr::from_bits(val)
+    }
+}
+impl From<Tmewr> for u8 {
+    #[inline(always)]
+    fn from(val: Tmewr) -> u8 {
+        Tmewr::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Tmode {
+    #[doc = "Test mode not active."]
+    Tmode0 = 0x0,
+    #[doc = "Test mode active."]
+    Tmode1 = 0x01,
+}
+impl Tmode {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Tmode {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Tmode {
+    #[inline(always)]
+    fn from(val: u8) -> Tmode {
+        Tmode::from_bits(val)
+    }
+}
+impl From<Tmode> for u8 {
+    #[inline(always)]
+    fn from(val: Tmode) -> u8 {
+        Tmode::to_bits(val)
     }
 }

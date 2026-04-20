@@ -1,6 +1,7 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (2fd28c5 2026-04-02))"]
+#![allow(non_upper_case_globals)]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (859f02b 2026-04-15))"]
 #[doc = "TRDC."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mbc {
@@ -21,28 +22,28 @@ impl Mbc {
     #[inline(always)]
     pub const fn mbc0_mem0_glbcfg(
         self,
-    ) -> crate::pac::common::Reg<Mem0glbcfg, crate::pac::common::R> {
+    ) -> crate::pac::common::Reg<Mem0Glbcfg, crate::pac::common::R> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
     #[doc = "MBC Global Configuration Register."]
     #[inline(always)]
     pub const fn mbc0_mem1_glbcfg(
         self,
-    ) -> crate::pac::common::Reg<Mem1glbcfg, crate::pac::common::R> {
+    ) -> crate::pac::common::Reg<Mem1Glbcfg, crate::pac::common::R> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
     #[doc = "MBC Global Configuration Register."]
     #[inline(always)]
     pub const fn mbc0_mem2_glbcfg(
         self,
-    ) -> crate::pac::common::Reg<Mem2glbcfg, crate::pac::common::R> {
+    ) -> crate::pac::common::Reg<Mem2Glbcfg, crate::pac::common::R> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
     }
     #[doc = "MBC Global Configuration Register."]
     #[inline(always)]
     pub const fn mbc0_mem3_glbcfg(
         self,
-    ) -> crate::pac::common::Reg<Mem3glbcfg, crate::pac::common::RW> {
+    ) -> crate::pac::common::Reg<Mem3Glbcfg, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
     }
     #[doc = "MBC Global Access Control."]
@@ -137,8 +138,8 @@ impl Mbc {
 #[doc = "MBC Global Configuration Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Mem0glbcfg(pub u32);
-impl Mem0glbcfg {
+pub struct Mem0Glbcfg(pub u32);
+impl Mem0Glbcfg {
     #[doc = "Number of blocks in this memory."]
     #[must_use]
     #[inline(always)]
@@ -164,26 +165,26 @@ impl Mem0glbcfg {
         self.0 = (self.0 & !(0x1f << 16usize)) | (((val as u32) & 0x1f) << 16usize);
     }
 }
-impl Default for Mem0glbcfg {
+impl Default for Mem0Glbcfg {
     #[inline(always)]
-    fn default() -> Mem0glbcfg {
-        Mem0glbcfg(0)
+    fn default() -> Mem0Glbcfg {
+        Mem0Glbcfg(0)
     }
 }
-impl core::fmt::Debug for Mem0glbcfg {
+impl core::fmt::Debug for Mem0Glbcfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Mem0glbcfg")
+        f.debug_struct("Mem0Glbcfg")
             .field("nblks", &self.nblks())
             .field("size_log2", &self.size_log2())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for Mem0glbcfg {
+impl defmt::Format for Mem0Glbcfg {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Mem0glbcfg {{ nblks: {=u16:?}, size_log2: {=u8:?} }}",
+            "Mem0Glbcfg {{ nblks: {=u16:?}, size_log2: {=u8:?} }}",
             self.nblks(),
             self.size_log2()
         )
@@ -192,8 +193,8 @@ impl defmt::Format for Mem0glbcfg {
 #[doc = "MBC Global Configuration Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Mem1glbcfg(pub u32);
-impl Mem1glbcfg {
+pub struct Mem1Glbcfg(pub u32);
+impl Mem1Glbcfg {
     #[doc = "Number of blocks in this memory."]
     #[must_use]
     #[inline(always)]
@@ -219,26 +220,26 @@ impl Mem1glbcfg {
         self.0 = (self.0 & !(0x1f << 16usize)) | (((val as u32) & 0x1f) << 16usize);
     }
 }
-impl Default for Mem1glbcfg {
+impl Default for Mem1Glbcfg {
     #[inline(always)]
-    fn default() -> Mem1glbcfg {
-        Mem1glbcfg(0)
+    fn default() -> Mem1Glbcfg {
+        Mem1Glbcfg(0)
     }
 }
-impl core::fmt::Debug for Mem1glbcfg {
+impl core::fmt::Debug for Mem1Glbcfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Mem1glbcfg")
+        f.debug_struct("Mem1Glbcfg")
             .field("nblks", &self.nblks())
             .field("size_log2", &self.size_log2())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for Mem1glbcfg {
+impl defmt::Format for Mem1Glbcfg {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Mem1glbcfg {{ nblks: {=u16:?}, size_log2: {=u8:?} }}",
+            "Mem1Glbcfg {{ nblks: {=u16:?}, size_log2: {=u8:?} }}",
             self.nblks(),
             self.size_log2()
         )
@@ -247,8 +248,8 @@ impl defmt::Format for Mem1glbcfg {
 #[doc = "MBC Global Configuration Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Mem2glbcfg(pub u32);
-impl Mem2glbcfg {
+pub struct Mem2Glbcfg(pub u32);
+impl Mem2Glbcfg {
     #[doc = "Number of blocks in this memory."]
     #[must_use]
     #[inline(always)]
@@ -274,26 +275,26 @@ impl Mem2glbcfg {
         self.0 = (self.0 & !(0x1f << 16usize)) | (((val as u32) & 0x1f) << 16usize);
     }
 }
-impl Default for Mem2glbcfg {
+impl Default for Mem2Glbcfg {
     #[inline(always)]
-    fn default() -> Mem2glbcfg {
-        Mem2glbcfg(0)
+    fn default() -> Mem2Glbcfg {
+        Mem2Glbcfg(0)
     }
 }
-impl core::fmt::Debug for Mem2glbcfg {
+impl core::fmt::Debug for Mem2Glbcfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Mem2glbcfg")
+        f.debug_struct("Mem2Glbcfg")
             .field("nblks", &self.nblks())
             .field("size_log2", &self.size_log2())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for Mem2glbcfg {
+impl defmt::Format for Mem2Glbcfg {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Mem2glbcfg {{ nblks: {=u16:?}, size_log2: {=u8:?} }}",
+            "Mem2Glbcfg {{ nblks: {=u16:?}, size_log2: {=u8:?} }}",
             self.nblks(),
             self.size_log2()
         )
@@ -302,8 +303,8 @@ impl defmt::Format for Mem2glbcfg {
 #[doc = "MBC Global Configuration Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Mem3glbcfg(pub u32);
-impl Mem3glbcfg {
+pub struct Mem3Glbcfg(pub u32);
+impl Mem3Glbcfg {
     #[doc = "Number of blocks in this memory."]
     #[must_use]
     #[inline(always)]
@@ -341,15 +342,15 @@ impl Mem3glbcfg {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
     }
 }
-impl Default for Mem3glbcfg {
+impl Default for Mem3Glbcfg {
     #[inline(always)]
-    fn default() -> Mem3glbcfg {
-        Mem3glbcfg(0)
+    fn default() -> Mem3Glbcfg {
+        Mem3Glbcfg(0)
     }
 }
-impl core::fmt::Debug for Mem3glbcfg {
+impl core::fmt::Debug for Mem3Glbcfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Mem3glbcfg")
+        f.debug_struct("Mem3Glbcfg")
             .field("nblks", &self.nblks())
             .field("size_log2", &self.size_log2())
             .field("clre", &self.clre())
@@ -357,11 +358,11 @@ impl core::fmt::Debug for Mem3glbcfg {
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for Mem3glbcfg {
+impl defmt::Format for Mem3Glbcfg {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Mem3glbcfg {{ nblks: {=u16:?}, size_log2: {=u8:?}, clre: {=u8:?} }}",
+            "Mem3Glbcfg {{ nblks: {=u16:?}, size_log2: {=u8:?}, clre: {=u8:?} }}",
             self.nblks(),
             self.size_log2(),
             self.clre()
@@ -2282,21 +2283,21 @@ impl defmt::Format for MemnGlbac7 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mbacsel {
     #[doc = "select MBC_MEMN_GLBAC0 access control policy for block B."]
-    GLBAC0 = 0x0,
+    Glbac0 = 0x0,
     #[doc = "select MBC_MEMN_GLBAC1 access control policy for block B."]
-    GLBAC1 = 0x01,
+    Glbac1 = 0x01,
     #[doc = "select MBC_MEMN_GLBAC2 access control policy for block B."]
-    GLBAC2 = 0x02,
+    Glbac2 = 0x02,
     #[doc = "select MBC_MEMN_GLBAC3 access control policy for block B."]
-    GLBAC3 = 0x03,
+    Glbac3 = 0x03,
     #[doc = "select MBC_MEMN_GLBAC4 access control policy for block B."]
-    GLBAC4 = 0x04,
+    Glbac4 = 0x04,
     #[doc = "select MBC_MEMN_GLBAC5 access control policy for block B."]
-    GLBAC5 = 0x05,
+    Glbac5 = 0x05,
     #[doc = "select MBC_MEMN_GLBAC6 access control policy for block B."]
-    GLBAC6 = 0x06,
+    Glbac6 = 0x06,
     #[doc = "select MBC_MEMN_GLBAC7 access control policy for block B."]
-    GLBAC7 = 0x07,
+    Glbac7 = 0x07,
 }
 impl Mbacsel {
     #[inline(always)]
@@ -2325,9 +2326,9 @@ impl From<Mbacsel> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse {
     #[doc = "Secure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww\\[MBACSEL\\]), nonsecure accesses to block B are not allowed."]
-    ALLOWED = 0x0,
+    Allowed = 0x0,
     #[doc = "Secure accesses to block B are not allowed, nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww\\[MBACSEL\\])."]
-    NOTALLOWED = 0x01,
+    Notallowed = 0x01,
 }
 impl Nse {
     #[inline(always)]

@@ -1,6 +1,7 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (2fd28c5 2026-04-02))"]
+#![allow(non_upper_case_globals)]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (859f02b 2026-04-15))"]
 #[doc = "CRC."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Crc {
@@ -144,152 +145,14 @@ impl defmt::Format for Ctrl {
         )
     }
 }
-#[doc = "Data."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Data(pub u32);
-impl Data {
-    #[doc = "Lower Part of Low Byte."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ll(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0xff;
-        val as u8
-    }
-    #[doc = "Lower Part of Low Byte."]
-    #[inline(always)]
-    pub const fn set_ll(&mut self, val: u8) {
-        self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
-    }
-    #[doc = "Upper Part of Low Byte."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn lu(&self) -> u8 {
-        let val = (self.0 >> 8usize) & 0xff;
-        val as u8
-    }
-    #[doc = "Upper Part of Low Byte."]
-    #[inline(always)]
-    pub const fn set_lu(&mut self, val: u8) {
-        self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
-    }
-    #[doc = "Lower Part of High Byte."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn hl(&self) -> u8 {
-        let val = (self.0 >> 16usize) & 0xff;
-        val as u8
-    }
-    #[doc = "Lower Part of High Byte."]
-    #[inline(always)]
-    pub const fn set_hl(&mut self, val: u8) {
-        self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
-    }
-    #[doc = "Upper Part of High Byte."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn hu(&self) -> u8 {
-        let val = (self.0 >> 24usize) & 0xff;
-        val as u8
-    }
-    #[doc = "Upper Part of High Byte."]
-    #[inline(always)]
-    pub const fn set_hu(&mut self, val: u8) {
-        self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
-    }
-}
-impl Default for Data {
-    #[inline(always)]
-    fn default() -> Data {
-        Data(0)
-    }
-}
-impl core::fmt::Debug for Data {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Data")
-            .field("ll", &self.ll())
-            .field("lu", &self.lu())
-            .field("hl", &self.hl())
-            .field("hu", &self.hu())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Data {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "Data {{ ll: {=u8:?}, lu: {=u8:?}, hl: {=u8:?}, hu: {=u8:?} }}",
-            self.ll(),
-            self.lu(),
-            self.hl(),
-            self.hu()
-        )
-    }
-}
-#[doc = "Polynomial."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Gpoly(pub u32);
-impl Gpoly {
-    #[doc = "Low Half-Word."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn low(&self) -> u16 {
-        let val = (self.0 >> 0usize) & 0xffff;
-        val as u16
-    }
-    #[doc = "Low Half-Word."]
-    #[inline(always)]
-    pub const fn set_low(&mut self, val: u16) {
-        self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
-    }
-    #[doc = "High Half-Word."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn high(&self) -> u16 {
-        let val = (self.0 >> 16usize) & 0xffff;
-        val as u16
-    }
-    #[doc = "High Half-Word."]
-    #[inline(always)]
-    pub const fn set_high(&mut self, val: u16) {
-        self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
-    }
-}
-impl Default for Gpoly {
-    #[inline(always)]
-    fn default() -> Gpoly {
-        Gpoly(0)
-    }
-}
-impl core::fmt::Debug for Gpoly {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Gpoly")
-            .field("low", &self.low())
-            .field("high", &self.high())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Gpoly {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "Gpoly {{ low: {=u16:?}, high: {=u16:?} }}",
-            self.low(),
-            self.high()
-        )
-    }
-}
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fxor {
     #[doc = "Disables XOR on reading data."]
-    NOXOR = 0x0,
+    Noxor = 0x0,
     #[doc = "Inverts or complements the read value of the CRC Data."]
-    INVERT = 0x01,
+    Invert = 0x01,
 }
 impl Fxor {
     #[inline(always)]
@@ -349,13 +212,13 @@ impl From<Tcrc> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tot {
     #[doc = "No transposition."]
-    NOTRNPS = 0x0,
+    Notrnps = 0x0,
     #[doc = "Bits in bytes are transposed, but bytes are not transposed."]
-    BTS_TRNPS = 0x01,
+    BtsTrnps = 0x01,
     #[doc = "Both bits in bytes and bytes are transposed."]
-    BYTS_BTS_TRNPS = 0x02,
+    BytsBtsTrnps = 0x02,
     #[doc = "Only bytes are transposed, no bits in a byte are transposed."]
-    BYTS_TRNPS = 0x03,
+    BytsTrnps = 0x03,
 }
 impl Tot {
     #[inline(always)]
@@ -384,13 +247,13 @@ impl From<Tot> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Totr {
     #[doc = "No transposition."]
-    NOTRNPS = 0x0,
+    Notrnps = 0x0,
     #[doc = "Bits in bytes are transposed, but bytes are not transposed."]
-    BTS_TRNPS = 0x01,
+    BtsTrnps = 0x01,
     #[doc = "Both bits in bytes and bytes are transposed."]
-    BYTS_BTS_TRNPS = 0x02,
+    BytsBtsTrnps = 0x02,
     #[doc = "Only bytes are transposed, no bits in a byte are transposed."]
-    BYTS_TRNPS = 0x03,
+    BytsTrnps = 0x03,
 }
 impl Totr {
     #[inline(always)]
@@ -419,9 +282,9 @@ impl From<Totr> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Was {
     #[doc = "Data values."]
-    DATA = 0x0,
+    Data = 0x0,
     #[doc = "Seed values."]
-    SEED = 0x01,
+    Seed = 0x01,
 }
 impl Was {
     #[inline(always)]

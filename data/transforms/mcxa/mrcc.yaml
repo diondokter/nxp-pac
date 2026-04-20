@@ -1,4 +1,8 @@
 transforms:
+  - !Rename
+    from: mrcc0::Mrcc0
+    to: mrcc0::Mrcc
+
   - !MergeEnums
     from: mrcc0::Mrcc(.+)(\d+)(.+)
     to: mrcc0::Mrcc$3
@@ -9,14 +13,18 @@ transforms:
     from: mrcc0::Mrcc(.+)(\d+)(.+)
     to: mrcc0::Mrcc$1$3
 
-  - !MergeEnums
-    from: mrcc0::Mrcc(.*)(\d*)(ClkdivReset|ClkdivHalt|ClkdivUnstab)
-    to: mrcc0::Mrcc$3
+  - !MergeFieldsets
+    from: mrcc0::Mrcc(.+)(\d+)(.+)
+    to: mrcc0::Mrcc$1$3
 
+  - !MergeEnums
+    from: mrcc0::Mrcc(.*)Clkdiv(Reset|Halt|Unstab)?
+    to: mrcc0::MrccClkdiv$2
+  
+  - !MergeFieldsets
+    from: mrcc0::Mrcc.+Clkdiv
+    to: mrcc0::MrccClkdiv
+  
   - !Rename
     from: mrcc0::Mrcc(.+)
     to: mrcc0::$1
-
-  - !MergeFieldsets
-    from: mrcc0::Mrcc(.+)(\d+)(.+)
-    to: mrcc0::$1$3

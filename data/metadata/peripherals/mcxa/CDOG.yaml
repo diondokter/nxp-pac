@@ -1,5 +1,5 @@
 block/Cdog:
-  description: CDOG.
+  description: Code Watchdog Timer.
   items:
   - name: control
     description: Control Register.
@@ -14,6 +14,11 @@ block/Cdog:
     byte_offset: 8
     access: Read
     fieldset: InstructionTimer
+  - name: secure_counter
+    description: Secure Counter Register.
+    byte_offset: 12
+    access: Read
+    fieldset: SecureCounter
   - name: status
     description: Status 1 Register.
     byte_offset: 16
@@ -87,11 +92,6 @@ block/Cdog:
     byte_offset: 72
     access: Write
     fieldset: Sub256
-  - name: assert16
-    description: ASSERT16 Command Register.
-    byte_offset: 76
-    access: Write
-    fieldset: Assert16
 fieldset/Add:
   description: ADD Command Register.
   fields:
@@ -118,13 +118,6 @@ fieldset/Add256:
   fields:
   - name: ad256
     description: ADD 256.
-    bit_offset: 0
-    bit_size: 32
-fieldset/Assert16:
-  description: ASSERT16 Command Register.
-  fields:
-  - name: ast16
-    description: ASSERT16 Command.
     bit_offset: 0
     bit_size: 32
 fieldset/Control:
@@ -229,6 +222,13 @@ fieldset/Restart:
     description: Restart command.
     bit_offset: 0
     bit_size: 32
+fieldset/SecureCounter:
+  description: Secure Counter Register.
+  fields:
+  - name: seccnt
+    description: Secure Counter.
+    bit_offset: 0
+    bit_size: 32
 fieldset/Start:
   description: START Command Register.
   fields:
@@ -308,39 +308,39 @@ fieldset/Sub256:
 enum/Ctrl:
   bit_size: 3
   variants:
-  - name: ENABLE_RESET
+  - name: EnableReset
     description: Enable reset.
     value: 1
-  - name: ENABLE_INTERRUPT
+  - name: EnableInterrupt
     description: Enable interrupt.
     value: 2
-  - name: DISABLE_BOTH
+  - name: DisableBoth
     description: Disable both reset and interrupt.
     value: 4
 enum/DebugHaltCtrl:
   bit_size: 2
   variants:
-  - name: RUN_TIMER
+  - name: RunTimer
     description: Keep the timer running.
     value: 1
-  - name: PAUSE_TIMER
+  - name: PauseTimer
     description: Stop the timer.
     value: 2
 enum/IrqPause:
   bit_size: 2
   variants:
-  - name: RUN_TIMER
+  - name: RunTimer
     description: Keep the timer running.
     value: 1
-  - name: PAUSE_TIMER
+  - name: PauseTimer
     description: Stop the timer.
     value: 2
 enum/LockCtrl:
   bit_size: 2
   variants:
-  - name: LOCKED
+  - name: Locked
     description: Locked.
     value: 1
-  - name: UNLOCKED
+  - name: Unlocked
     description: Unlocked.
     value: 2

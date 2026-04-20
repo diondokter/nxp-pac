@@ -90,7 +90,3 @@ fieldset/OseventCtrl:
     description: EVTimer Match Write Ready.
     bit_offset: 2
     bit_size: 1
-  - name: debug_en
-    description: Debug Enable.
-    bit_offset: 3
-    bit_size: 1

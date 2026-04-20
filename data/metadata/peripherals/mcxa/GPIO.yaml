@@ -11,6 +11,26 @@ block/Gpio:
     byte_offset: 4
     access: Read
     fieldset: Param
+  - name: lock
+    description: Lock.
+    byte_offset: 12
+    fieldset: Lock
+  - name: pcns
+    description: Pin Control Nonsecure.
+    byte_offset: 16
+    fieldset: Pcns
+  - name: icns
+    description: Interrupt Control Nonsecure.
+    byte_offset: 20
+    fieldset: Icns
+  - name: pcnp
+    description: Pin Control Nonprivilege.
+    byte_offset: 24
+    fieldset: Pcnp
+  - name: icnp
+    description: Interrupt Control Nonprivilege.
+    byte_offset: 28
+    fieldset: Icnp
   - name: pdor
     description: Port Data Output.
     byte_offset: 64
@@ -66,93 +86,20 @@ block/Gpio:
   - name: isfr
     description: Interrupt Status Flag.
     array:
-      len: 1
-      stride: 0
+      len: 2
+      stride: 4
     byte_offset: 288
     fieldset: Isfr
 fieldset/Gichr:
   description: Global Interrupt Control High.
   fields:
-  - name: giwe16
+  - name: giwe
     description: Global Interrupt Write Enable.
     bit_offset: 0
     bit_size: 1
-    enum: Giwe16
-  - name: giwe17
-    description: Global Interrupt Write Enable.
-    bit_offset: 1
-    bit_size: 1
-    enum: Giwe17
-  - name: giwe18
-    description: Global Interrupt Write Enable.
-    bit_offset: 2
-    bit_size: 1
-    enum: Giwe18
-  - name: giwe19
-    description: Global Interrupt Write Enable.
-    bit_offset: 3
-    bit_size: 1
-    enum: Giwe19
-  - name: giwe20
-    description: Global Interrupt Write Enable.
-    bit_offset: 4
-    bit_size: 1
-    enum: Giwe20
-  - name: giwe21
-    description: Global Interrupt Write Enable.
-    bit_offset: 5
-    bit_size: 1
-    enum: Giwe21
-  - name: giwe22
-    description: Global Interrupt Write Enable.
-    bit_offset: 6
-    bit_size: 1
-    enum: Giwe22
-  - name: giwe23
-    description: Global Interrupt Write Enable.
-    bit_offset: 7
-    bit_size: 1
-    enum: Giwe23
-  - name: giwe24
-    description: Global Interrupt Write Enable.
-    bit_offset: 8
-    bit_size: 1
-    enum: Giwe24
-  - name: giwe25
-    description: Global Interrupt Write Enable.
-    bit_offset: 9
-    bit_size: 1
-    enum: Giwe25
-  - name: giwe26
-    description: Global Interrupt Write Enable.
-    bit_offset: 10
-    bit_size: 1
-    enum: Giwe26
-  - name: giwe27
-    description: Global Interrupt Write Enable.
-    bit_offset: 11
-    bit_size: 1
-    enum: Giwe27
-  - name: giwe28
-    description: Global Interrupt Write Enable.
-    bit_offset: 12
-    bit_size: 1
-    enum: Giwe28
-  - name: giwe29
-    description: Global Interrupt Write Enable.
-    bit_offset: 13
-    bit_size: 1
-    enum: Giwe29
-  - name: giwe30
-    description: Global Interrupt Write Enable.
-    bit_offset: 14
-    bit_size: 1
-    enum: Giwe30
-  - name: giwe31
-    description: Global Interrupt Write Enable.
-    bit_offset: 15
-    bit_size: 1
-    enum: Giwe31
+    array:
+      len: 16
+      stride: 1
   - name: giwd
     description: Global Interrupt Write Data.
     bit_offset: 16
@@ -160,90 +107,43 @@ fieldset/Gichr:
 fieldset/Giclr:
   description: Global Interrupt Control Low.
   fields:
-  - name: giwe0
+  - name: giwe
     description: Global Interrupt Write Enable.
     bit_offset: 0
     bit_size: 1
-    enum: Giwe0
-  - name: giwe1
-    description: Global Interrupt Write Enable.
-    bit_offset: 1
-    bit_size: 1
-    enum: Giwe1
-  - name: giwe2
-    description: Global Interrupt Write Enable.
-    bit_offset: 2
-    bit_size: 1
-    enum: Giwe2
-  - name: giwe3
-    description: Global Interrupt Write Enable.
-    bit_offset: 3
-    bit_size: 1
-    enum: Giwe3
-  - name: giwe4
-    description: Global Interrupt Write Enable.
-    bit_offset: 4
-    bit_size: 1
-    enum: Giwe4
-  - name: giwe5
-    description: Global Interrupt Write Enable.
-    bit_offset: 5
-    bit_size: 1
-    enum: Giwe5
-  - name: giwe6
-    description: Global Interrupt Write Enable.
-    bit_offset: 6
-    bit_size: 1
-    enum: Giwe6
-  - name: giwe7
-    description: Global Interrupt Write Enable.
-    bit_offset: 7
-    bit_size: 1
-    enum: Giwe7
-  - name: giwe8
-    description: Global Interrupt Write Enable.
-    bit_offset: 8
-    bit_size: 1
-    enum: Giwe8
-  - name: giwe9
-    description: Global Interrupt Write Enable.
-    bit_offset: 9
-    bit_size: 1
-    enum: Giwe9
-  - name: giwe10
-    description: Global Interrupt Write Enable.
-    bit_offset: 10
-    bit_size: 1
-    enum: Giwe10
-  - name: giwe11
-    description: Global Interrupt Write Enable.
-    bit_offset: 11
-    bit_size: 1
-    enum: Giwe11
-  - name: giwe12
-    description: Global Interrupt Write Enable.
-    bit_offset: 12
-    bit_size: 1
-    enum: Giwe12
-  - name: giwe13
-    description: Global Interrupt Write Enable.
-    bit_offset: 13
-    bit_size: 1
-    enum: Giwe13
-  - name: giwe14
-    description: Global Interrupt Write Enable.
-    bit_offset: 14
-    bit_size: 1
-    enum: Giwe14
-  - name: giwe15
-    description: Global Interrupt Write Enable.
-    bit_offset: 15
-    bit_size: 1
-    enum: Giwe15
+    array:
+      len: 16
+      stride: 1
   - name: giwd
     description: Global Interrupt Write Data.
     bit_offset: 16
     bit_size: 16
+fieldset/Icnp:
+  description: Interrupt Control Nonprivilege.
+  fields:
+  - name: npe0
+    description: Nonprivilege Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: IcnpNpe0
+  - name: npe1
+    description: Nonprivilege Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: IcnpNpe1
+fieldset/Icns:
+  description: Interrupt Control Nonsecure.
+  fields:
+  - name: nse0
+    description: Nonsecure Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: IcnsNse0
+  - name: nse1
+    description: Nonsecure Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: IcnsNse1
 fieldset/Icr:
   description: Interrupt Control index.
   fields:
@@ -252,6 +152,16 @@ fieldset/Icr:
     bit_offset: 16
     bit_size: 4
     enum: Irqc
+  - name: irqs
+    description: Interrupt Select.
+    bit_offset: 20
+    bit_size: 1
+    enum: Irqs
+  - name: lk
+    description: Lock.
+    bit_offset: 23
+    bit_size: 1
+    enum: Lk
   - name: isf
     description: Interrupt Status Flag.
     bit_offset: 24
@@ -264,162 +174,149 @@ fieldset/Isfr:
     description: Interrupt Status Flag.
     bit_offset: 0
     bit_size: 1
-    enum: Isf0
   - name: isf1
     description: Interrupt Status Flag.
     bit_offset: 1
     bit_size: 1
-    enum: Isf1
   - name: isf2
     description: Interrupt Status Flag.
     bit_offset: 2
     bit_size: 1
-    enum: Isf2
   - name: isf3
     description: Interrupt Status Flag.
     bit_offset: 3
     bit_size: 1
-    enum: Isf3
   - name: isf4
     description: Interrupt Status Flag.
     bit_offset: 4
     bit_size: 1
-    enum: Isf4
   - name: isf5
     description: Interrupt Status Flag.
     bit_offset: 5
     bit_size: 1
-    enum: Isf5
   - name: isf6
     description: Interrupt Status Flag.
     bit_offset: 6
     bit_size: 1
-    enum: Isf6
   - name: isf7
     description: Interrupt Status Flag.
     bit_offset: 7
     bit_size: 1
-    enum: Isf7
   - name: isf8
     description: Interrupt Status Flag.
     bit_offset: 8
     bit_size: 1
-    enum: Isf8
   - name: isf9
     description: Interrupt Status Flag.
     bit_offset: 9
     bit_size: 1
-    enum: Isf9
   - name: isf10
     description: Interrupt Status Flag.
     bit_offset: 10
     bit_size: 1
-    enum: Isf10
   - name: isf11
     description: Interrupt Status Flag.
     bit_offset: 11
     bit_size: 1
-    enum: Isf11
   - name: isf12
     description: Interrupt Status Flag.
     bit_offset: 12
     bit_size: 1
-    enum: Isf12
   - name: isf13
     description: Interrupt Status Flag.
     bit_offset: 13
     bit_size: 1
-    enum: Isf13
   - name: isf14
     description: Interrupt Status Flag.
     bit_offset: 14
     bit_size: 1
-    enum: Isf14
   - name: isf15
     description: Interrupt Status Flag.
     bit_offset: 15
     bit_size: 1
-    enum: Isf15
   - name: isf16
     description: Interrupt Status Flag.
     bit_offset: 16
     bit_size: 1
-    enum: Isf16
   - name: isf17
     description: Interrupt Status Flag.
     bit_offset: 17
     bit_size: 1
-    enum: Isf17
   - name: isf18
     description: Interrupt Status Flag.
     bit_offset: 18
     bit_size: 1
-    enum: Isf18
   - name: isf19
     description: Interrupt Status Flag.
     bit_offset: 19
     bit_size: 1
-    enum: Isf19
   - name: isf20
     description: Interrupt Status Flag.
     bit_offset: 20
     bit_size: 1
-    enum: Isf20
   - name: isf21
     description: Interrupt Status Flag.
     bit_offset: 21
     bit_size: 1
-    enum: Isf21
   - name: isf22
     description: Interrupt Status Flag.
     bit_offset: 22
     bit_size: 1
-    enum: Isf22
   - name: isf23
     description: Interrupt Status Flag.
     bit_offset: 23
     bit_size: 1
-    enum: Isf23
   - name: isf24
     description: Interrupt Status Flag.
     bit_offset: 24
     bit_size: 1
-    enum: Isf24
   - name: isf25
     description: Interrupt Status Flag.
     bit_offset: 25
     bit_size: 1
-    enum: Isf25
   - name: isf26
     description: Interrupt Status Flag.
     bit_offset: 26
     bit_size: 1
-    enum: Isf26
   - name: isf27
     description: Interrupt Status Flag.
     bit_offset: 27
     bit_size: 1
-    enum: Isf27
   - name: isf28
     description: Interrupt Status Flag.
     bit_offset: 28
     bit_size: 1
-    enum: Isf28
   - name: isf29
     description: Interrupt Status Flag.
     bit_offset: 29
     bit_size: 1
-    enum: Isf29
   - name: isf30
     description: Interrupt Status Flag.
     bit_offset: 30
     bit_size: 1
-    enum: Isf30
   - name: isf31
     description: Interrupt Status Flag.
     bit_offset: 31
     bit_size: 1
-    enum: Isf31
+fieldset/Lock:
+  description: Lock.
+  fields:
+  - name: pcns
+    description: Lock PCNS.
+    bit_offset: 0
+    bit_size: 1
+  - name: icns
+    description: Lock ICNS.
+    bit_offset: 1
+    bit_size: 1
+  - name: pcnp
+    description: Lock PCNP.
+    bit_offset: 2
+    bit_size: 1
+  - name: icnp
+    description: Lock ICNP.
+    bit_offset: 3
+    bit_size: 1
 fieldset/Param:
   description: Parameter.
   fields:
@@ -427,6 +324,28 @@ fieldset/Param:
     description: Interrupt Number.
     bit_offset: 0
     bit_size: 4
+fieldset/Pcnp:
+  description: Pin Control Nonprivilege.
+  fields:
+  - name: npe
+    description: Nonprivilege Enable.
+    bit_offset: 0
+    bit_size: 1
+    array:
+      len: 32
+      stride: 1
+    enum: PcnpNpe0
+fieldset/Pcns:
+  description: Pin Control Nonsecure.
+  fields:
+  - name: nse
+    description: Nonsecure Enable.
+    bit_offset: 0
+    bit_size: 1
+    array:
+      len: 32
+      stride: 1
+    enum: PcnsNse0
 fieldset/Pcor:
   description: Port Clear Output.
   fields:
@@ -517,7 +436,6 @@ fieldset/Verid:
     description: Feature Specification Number.
     bit_offset: 0
     bit_size: 16
-    enum: Feature
   - name: minor
     description: Minor Version Number.
     bit_offset: 16
@@ -526,687 +444,174 @@ fieldset/Verid:
     description: Major Version Number.
     bit_offset: 24
     bit_size: 8
-enum/Feature:
-  bit_size: 16
-  variants:
-  - name: FEATURE0
-    description: Basic implementation.
-    value: 0
-  - name: FEATURE1
-    description: Protection registers implemented.
-    value: 1
-enum/Giwe0:
+enum/IcnpNpe0:
   bit_size: 1
   variants:
-  - name: GIWE0
-    description: Not updated.
+  - name: Npe0
+    description: Privilege access.
     value: 0
-  - name: GIWE1
-    description: Updated.
+  - name: Npe1
+    description: Nonprivilege access.
     value: 1
-enum/Giwe1:
+enum/IcnpNpe1:
   bit_size: 1
   variants:
-  - name: GIWE0
-    description: Not updated.
+  - name: Npe0
+    description: Privilege access.
     value: 0
-  - name: GIWE1
-    description: Updated.
+  - name: Npe1
+    description: Nonprivilege access.
     value: 1
-enum/Giwe10:
+enum/IcnsNse0:
   bit_size: 1
   variants:
-  - name: GIWE0
-    description: Not updated.
+  - name: Nse0
+    description: Secure access.
     value: 0
-  - name: GIWE1
-    description: Updated.
+  - name: Nse1
+    description: Nonsecure access.
     value: 1
-enum/Giwe11:
+enum/IcnsNse1:
   bit_size: 1
   variants:
-  - name: GIWE0
-    description: Not updated.
+  - name: Nse0
+    description: Secure access.
     value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe12:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe13:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe14:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe15:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe16:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe17:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe18:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe19:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe2:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe20:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe21:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe22:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe23:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe24:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe25:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe26:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe27:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe28:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe29:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe3:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe30:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe31:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe4:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe5:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe6:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe7:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe8:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
-    value: 1
-enum/Giwe9:
-  bit_size: 1
-  variants:
-  - name: GIWE0
-    description: Not updated.
-    value: 0
-  - name: GIWE1
-    description: Updated.
+  - name: Nse1
+    description: Nonsecure access.
     value: 1
 enum/Irqc:
   bit_size: 4
   variants:
-  - name: IRQC0
+  - name: Irqc0
     description: ISF is disabled.
     value: 0
-  - name: IRQC1
+  - name: Irqc1
     description: ISF and DMA request on rising edge.
     value: 1
-  - name: IRQC2
+  - name: Irqc2
     description: ISF and DMA request on falling edge.
     value: 2
-  - name: IRQC3
+  - name: Irqc3
     description: ISF and DMA request on either edge.
     value: 3
-  - name: IRQC5
+  - name: Irqc5
     description: ISF sets on rising edge.
     value: 5
-  - name: IRQC6
+  - name: Irqc6
     description: ISF sets on falling edge.
     value: 6
-  - name: IRQC7
+  - name: Irqc7
     description: ISF sets on either edge.
     value: 7
-  - name: IRQC8
+  - name: Irqc8
     description: ISF and interrupt when logic 0.
     value: 8
-  - name: IRQC9
+  - name: Irqc9
     description: ISF and interrupt on rising edge.
     value: 9
-  - name: IRQC10
+  - name: Irqc10
     description: ISF and interrupt on falling edge.
     value: 10
-  - name: IRQC11
+  - name: Irqc11
     description: ISF and Interrupt on either edge.
     value: 11
-  - name: IRQC12
+  - name: Irqc12
     description: ISF and interrupt when logic 1.
     value: 12
-  - name: IRQC13
+  - name: Irqc13
     description: Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals).
     value: 13
-  - name: IRQC14
+  - name: Irqc14
     description: Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals).
     value: 14
+enum/Irqs:
+  bit_size: 1
+  variants:
+  - name: Irqs0
+    description: Interrupt, trigger output, or DMA request 0.
+    value: 0
+  - name: Irqs1
+    description: Interrupt, trigger output, or DMA request 1.
+    value: 1
 enum/Isf:
   bit_size: 1
   variants:
-  - name: ISF0
+  - name: Isf0
     description: Not detected.
     value: 0
-  - name: ISF1
+  - name: Isf1
     description: Detected.
     value: 1
-enum/Isf0:
+enum/Lk:
   bit_size: 1
   variants:
-  - name: ISF0
-    description: Not detected.
+  - name: Lk0
+    description: Not locked.
     value: 0
-  - name: ISF1
-    description: Detected.
+  - name: Lk1
+    description: Locked.
     value: 1
-enum/Isf1:
+enum/PcnpNpe0:
   bit_size: 1
   variants:
-  - name: ISF0
-    description: Not detected.
+  - name: Npe0
+    description: Privilege access.
     value: 0
-  - name: ISF1
-    description: Detected.
+  - name: Npe1
+    description: Nonprivilege access.
     value: 1
-enum/Isf10:
+enum/PcnsNse0:
   bit_size: 1
   variants:
-  - name: ISF0
-    description: Not detected.
+  - name: Nse0
+    description: Secure access.
     value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf11:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf12:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf13:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf14:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf15:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf16:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf17:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf18:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf19:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf2:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf20:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf21:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf22:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf23:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf24:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf25:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf26:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf27:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf28:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf29:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf3:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf30:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf31:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf4:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf5:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf6:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf7:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf8:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
-    value: 1
-enum/Isf9:
-  bit_size: 1
-  variants:
-  - name: ISF0
-    description: Not detected.
-    value: 0
-  - name: ISF1
-    description: Detected.
+  - name: Nse1
+    description: Nonsecure access.
     value: 1
 enum/Pd:
   bit_size: 1
   variants:
-  - name: PD0
+  - name: Pd0
     description: Logic zero.
     value: 0
-  - name: PD1
+  - name: Pd1
     description: Logic one.
     value: 1
 enum/Pdd:
   bit_size: 1
   variants:
-  - name: PDD0
+  - name: Pdd0
     description: Input.
     value: 0
-  - name: PDD1
+  - name: Pdd1
     description: Output.
     value: 1
 enum/Pid:
   bit_size: 1
   variants:
-  - name: PID0
+  - name: Pid0
     description: Configured for general-purpose input.
     value: 0
-  - name: PID1
+  - name: Pid1
     description: Disabled for general-purpose input.
     value: 1
 enum/Ptco:
   bit_size: 1
   variants:
-  - name: PTCO0
+  - name: Ptco0
     description: No change.
     value: 0
-  - name: PTCO1
+  - name: Ptco1
     description: Corresponding field in PDOR becomes 0.
     value: 1
 enum/Ptso:
   bit_size: 1
   variants:
-  - name: PTSO0
+  - name: Ptso0
     description: No change.
     value: 0
-  - name: PTSO1
+  - name: Ptso1
     description: Corresponding field in PDOR becomes 1.
     value: 1

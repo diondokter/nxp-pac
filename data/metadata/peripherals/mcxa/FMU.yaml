@@ -1,335 +1,413 @@
-block/FMU:
+block/Fmu:
   description: Flash.
   items:
-  - name: FSTAT
+  - name: fstat
     description: Flash Status Register.
     byte_offset: 0
-    fieldset: FSTAT
-  - name: FCNFG
+    fieldset: Fstat
+  - name: fcnfg
     description: Flash Configuration Register.
     byte_offset: 4
-    fieldset: FCNFG
-  - name: FCTRL
+    fieldset: Fcnfg
+  - name: fctrl
     description: Flash Control Register.
     byte_offset: 8
-    fieldset: FCTRL
-  - name: FCCOB
+    fieldset: Fctrl
+  - name: ftest
+    description: Flash Test Register.
+    byte_offset: 12
+    access: Read
+    fieldset: Ftest
+  - name: fccob
     description: Flash Common Command Object Registers.
     array:
       len: 8
       stride: 4
     byte_offset: 16
-    fieldset: FCCOB
-fieldset/FCCOB:
+    fieldset: Fccob
+fieldset/Fccob:
   description: Flash Common Command Object Registers.
   fields:
-  - name: CCOBn
+  - name: cco_bn
     description: CCOBn.
     bit_offset: 0
     bit_size: 32
-fieldset/FCNFG:
+fieldset/Fcnfg:
   description: Flash Configuration Register.
   fields:
-  - name: CCIE
+  - name: ccie
     description: Command Complete Interrupt Enable.
     bit_offset: 7
     bit_size: 1
-    enum: CCIE
-  - name: ERSREQ
+    enum: Ccie
+  - name: ersreq
     description: Mass Erase Request.
     bit_offset: 8
     bit_size: 1
-    enum: ERSREQ
-  - name: DFDIE
+    enum: Ersreq
+  - name: dfdie
     description: Double Bit Fault Detect Interrupt Enable.
     bit_offset: 16
     bit_size: 1
-    enum: DFDIE
-  - name: ERSIEN0
+    enum: Dfdie
+  - name: ersien0
     description: Erase IFR Sector Enable - Block 0.
     bit_offset: 24
     bit_size: 4
-    enum: ERSIEN0
-  - name: ERSIEN1
+    enum: Ersien0
+  - name: ersien1
     description: Erase IFR Sector Enable - Block 1 (for dual block configs).
     bit_offset: 28
     bit_size: 4
-    enum: ERSIEN1
-fieldset/FCTRL:
+    enum: Ersien1
+fieldset/Fctrl:
   description: Flash Control Register.
   fields:
-  - name: RWSC
+  - name: rwsc
     description: Read Wait-State Control.
     bit_offset: 0
     bit_size: 4
-  - name: LSACTIVE
+  - name: lsactive
     description: Low speed active mode.
     bit_offset: 8
     bit_size: 1
-    enum: LSACTIVE
-  - name: FDFD
+    enum: Lsactive
+  - name: fdfd
     description: Force Double Bit Fault Detect.
     bit_offset: 16
     bit_size: 1
-    enum: FDFD
-  - name: ABTREQ
+    enum: Fdfd
+  - name: abtreq
     description: Abort Request.
     bit_offset: 24
     bit_size: 1
-    enum: ABTREQ
-fieldset/FSTAT:
+    enum: Abtreq
+fieldset/Fstat:
   description: Flash Status Register.
   fields:
-  - name: FAIL
+  - name: fail
     description: Command Fail Flag.
     bit_offset: 0
     bit_size: 1
-    enum: FAIL
-  - name: CMDABT
+    enum: Fail
+  - name: cmdabt
     description: Command Abort Flag.
     bit_offset: 2
     bit_size: 1
-    enum: CMDABT
-  - name: PVIOL
+    enum: Cmdabt
+  - name: pviol
     description: Command Protection Violation Flag.
     bit_offset: 4
     bit_size: 1
-    enum: PVIOL
-  - name: ACCERR
+    enum: Pviol
+  - name: accerr
     description: Command Access Error Flag.
     bit_offset: 5
     bit_size: 1
-    enum: ACCERR
-  - name: CWSABT
+    enum: Accerr
+  - name: cwsabt
     description: Command Write Sequence Abort Flag.
     bit_offset: 6
     bit_size: 1
-    enum: CWSABT
-  - name: CCIF
+    enum: Cwsabt
+  - name: ccif
     description: Command Complete Interrupt Flag.
     bit_offset: 7
     bit_size: 1
-    enum: CCIF
-  - name: CMDPRT
+    enum: Ccif
+  - name: cmdprt
     description: Command protection level.
     bit_offset: 8
     bit_size: 2
-    enum: CMDPRT
-  - name: CMDP
+    enum: Cmdprt
+  - name: cmdp
     description: Command protection status flag.
     bit_offset: 11
     bit_size: 1
-    enum: CMDP
-  - name: CMDDID
+    enum: Cmdp
+  - name: cmddid
     description: Command domain ID.
     bit_offset: 12
     bit_size: 4
-  - name: DFDIF
+  - name: dfdif
     description: Double Bit Fault Detect Interrupt Flag.
     bit_offset: 16
     bit_size: 1
-    enum: DFDIF
-  - name: SALV_USED
+    enum: Dfdif
+  - name: salv_used
     description: Salvage Used for Erase operation.
     bit_offset: 17
     bit_size: 1
-    enum: SALV_USED
-  - name: PEWEN
+    enum: SalvUsed
+  - name: pewen
     description: Program-Erase Write Enable Control.
     bit_offset: 24
     bit_size: 2
-    enum: PEWEN
-  - name: PERDY
+    enum: Pewen
+  - name: perdy
     description: Program-Erase Ready Control/Status Flag.
     bit_offset: 31
     bit_size: 1
-    enum: PERDY
-enum/ABTREQ:
+    enum: Perdy
+fieldset/Ftest:
+  description: Flash Test Register.
+  fields:
+  - name: tmectl
+    description: Test Mode Entry Control.
+    bit_offset: 0
+    bit_size: 1
+    enum: Tmectl
+  - name: tmewr
+    description: Test Mode Entry Writable.
+    bit_offset: 1
+    bit_size: 1
+    enum: Tmewr
+  - name: tme
+    description: Test Mode Entry.
+    bit_offset: 2
+    bit_size: 1
+    enum: Tme
+  - name: tmode
+    description: Test Mode Status.
+    bit_offset: 3
+    bit_size: 1
+    enum: Tmode
+  - name: tmelock
+    description: Test Mode Entry Lock.
+    bit_offset: 4
+    bit_size: 1
+    enum: Tmelock
+enum/Abtreq:
   bit_size: 1
   variants:
-  - name: abtreq0
+  - name: Abtreq0
     description: No request to abort a command write sequence.
     value: 0
-  - name: abtreq1
+  - name: Abtreq1
     description: Request to abort a command write sequence.
     value: 1
-enum/ACCERR:
+enum/Accerr:
   bit_size: 1
   variants:
-  - name: accerr0
+  - name: Accerr0
     description: No access error detected.
     value: 0
-  - name: accerr1
+  - name: Accerr1
     description: Access error detected.
     value: 1
-enum/CCIE:
+enum/Ccie:
   bit_size: 1
   variants:
-  - name: ccie0
+  - name: Ccie0
     description: Command complete interrupt disabled.
     value: 0
-  - name: ccie1
+  - name: Ccie1
     description: Command complete interrupt enabled.
     value: 1
-enum/CCIF:
+enum/Ccif:
   bit_size: 1
   variants:
-  - name: ccif0
+  - name: Ccif0
     description: Flash command, initialization, or power mode recovery in progress.
     value: 0
-  - name: ccif1
+  - name: Ccif1
     description: Flash command, initialization, or power mode recovery has completed.
     value: 1
-enum/CMDABT:
+enum/Cmdabt:
   bit_size: 1
   variants:
-  - name: cmdabt0
+  - name: Cmdabt0
     description: No command abort detected.
     value: 0
-  - name: cmdabt1
+  - name: Cmdabt1
     description: Command abort detected.
     value: 1
-enum/CMDP:
+enum/Cmdp:
   bit_size: 1
   variants:
-  - name: cmdp0
+  - name: Cmdp0
     description: Command protection level and domain ID are stale.
     value: 0
-  - name: cmdp1
+  - name: Cmdp1
     description: Command protection level (CMDPRT) and domain ID (CMDDID) are set.
     value: 1
-enum/CMDPRT:
+enum/Cmdprt:
   bit_size: 2
   variants:
-  - name: cmdprt00
+  - name: Cmdprt00
     description: Secure, normal access.
     value: 0
-  - name: cmdprt01
+  - name: Cmdprt01
     description: Secure, privileged access.
     value: 1
-  - name: cmdprt10
+  - name: Cmdprt10
     description: Nonsecure, normal access.
     value: 2
-  - name: cmdprt11
+  - name: Cmdprt11
     description: Nonsecure, privileged access.
     value: 3
-enum/CWSABT:
+enum/Cwsabt:
   bit_size: 1
   variants:
-  - name: cwsabt0
+  - name: Cwsabt0
     description: Command write sequence not aborted.
     value: 0
-  - name: cwsabt1
+  - name: Cwsabt1
     description: Command write sequence aborted.
     value: 1
-enum/DFDIE:
+enum/Dfdie:
   bit_size: 1
   variants:
-  - name: dfdie0
+  - name: Dfdie0
     description: Double bit fault detect interrupt disabled.
     value: 0
-  - name: dfdie1
+  - name: Dfdie1
     description: Double bit fault detect interrupt enabled.
     value: 1
-enum/DFDIF:
+enum/Dfdif:
   bit_size: 1
   variants:
-  - name: dfdif0
+  - name: Dfdif0
     description: Double bit fault not detected during a valid flash read access.
     value: 0
-  - name: dfdif1
+  - name: Dfdif1
     description: Double bit fault detected (or FCTRL[FDFD] is set) during a valid flash read access.
     value: 1
-enum/ERSIEN0:
+enum/Ersien0:
   bit_size: 4
   variants:
-  - name: ersien00
+  - name: Ersien00
     description: Block 0 IFR Sector X is protected from erase by ERSSCR command.
     value: 0
-  - name: ersien01
+  - name: Ersien01
     description: Block 0 IFR Sector X is not protected from erase by ERSSCR command.
     value: 1
-enum/ERSIEN1:
+enum/Ersien1:
   bit_size: 4
   variants:
-  - name: ersien10
+  - name: Ersien10
     description: Block 1 IFR Sector X is protected from erase by ERSSCR command.
     value: 0
-  - name: ersien11
+  - name: Ersien11
     description: Block 1 IFR Sector X is not protected from erase by ERSSCR command.
     value: 1
-enum/ERSREQ:
+enum/Ersreq:
   bit_size: 1
   variants:
-  - name: ersreq0
+  - name: Ersreq0
     description: No request or request complete.
     value: 0
-  - name: ersreq1
+  - name: Ersreq1
     description: Request to run the Mass Erase operation.
     value: 1
-enum/FAIL:
+enum/Fail:
   bit_size: 1
   variants:
-  - name: fail0
+  - name: Fail0
     description: Error not detected.
     value: 0
-  - name: fail1
+  - name: Fail1
     description: Error detected.
     value: 1
-enum/FDFD:
+enum/Fdfd:
   bit_size: 1
   variants:
-  - name: fdfd0
+  - name: Fdfd0
     description: FSTAT[DFDIF] sets only if a double bit fault is detected during a valid flash read access from the platform flash controller.
     value: 0
-  - name: fdfd1
+  - name: Fdfd1
     description: FSTAT[DFDIF] sets during any valid flash read access from the platform flash controller. An interrupt request is generated if the DFDIE bit is set.
     value: 1
-enum/LSACTIVE:
+enum/Lsactive:
   bit_size: 1
   variants:
-  - name: lsactive0
+  - name: Lsactive0
     description: Full speed active mode requested.
     value: 0
-  - name: lsactive1
+  - name: Lsactive1
     description: Low speed active mode requested.
     value: 1
-enum/PERDY:
+enum/Perdy:
   bit_size: 1
   variants:
-  - name: perdy0
+  - name: Perdy0
     description: Program or sector erase command operation not stalled.
     value: 0
-  - name: perdy1
+  - name: Perdy1
     description: Program or sector erase command operation ready to execute.
     value: 1
-enum/PEWEN:
+enum/Pewen:
   bit_size: 2
   variants:
-  - name: pewen00
+  - name: Pewen00
     description: Writes are not enabled.
     value: 0
-  - name: pewen01
+  - name: Pewen01
     description: Writes are enabled for one flash or IFR phrase (phrase programming, sector erase).
     value: 1
-  - name: pewen10
+  - name: Pewen10
     description: Writes are enabled for one flash or IFR page (page programming).
     value: 2
-enum/PVIOL:
+enum/Pviol:
   bit_size: 1
   variants:
-  - name: pviol0
+  - name: Pviol0
     description: No protection violation detected.
     value: 0
-  - name: pviol1
+  - name: Pviol1
     description: Protection violation detected.
     value: 1
-enum/SALV_USED:
+enum/SalvUsed:
   bit_size: 1
   variants:
-  - name: salv_used0
+  - name: SalvUsed0
     description: Salvage not used during last operation.
     value: 0
-  - name: salv_used1
+  - name: SalvUsed1
     description: Salvage used during the last erase operation.
+    value: 1
+enum/Tme:
+  bit_size: 1
+  variants:
+  - name: Tme0
+    description: Test mode entry not requested.
+    value: 0
+  - name: Tme1
+    description: Test mode entry requested.
+    value: 1
+enum/Tmectl:
+  bit_size: 1
+  variants:
+  - name: Tmectl0
+    description: FTEST register always reads 0 and writes to FTEST are ignored.
+    value: 0
+  - name: Tmectl1
+    description: FTEST register is readable and can be written to enable writability of TME.
+    value: 1
+enum/Tmelock:
+  bit_size: 1
+  variants:
+  - name: Tmelock0
+    description: FTEST register not locked from accepting writes.
+    value: 0
+  - name: Tmelock1
+    description: FTEST register locked from accepting writes.
+    value: 1
+enum/Tmewr:
+  bit_size: 1
+  variants:
+  - name: Tmewr0
+    description: TME bit is not writable.
+    value: 0
+  - name: Tmewr1
+    description: TME bit is writable.
+    value: 1
+enum/Tmode:
+  bit_size: 1
+  variants:
+  - name: Tmode0
+    description: Test mode not active.
+    value: 0
+  - name: Tmode1
+    description: Test mode active.
     value: 1

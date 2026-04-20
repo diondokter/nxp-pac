@@ -1,6 +1,7 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (2fd28c5 2026-04-02))"]
+#![allow(non_upper_case_globals)]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (859f02b 2026-04-15))"]
 #[doc = "Standard Counter or Timer."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimer {
@@ -100,146 +101,146 @@ impl Ccr {
     #[doc = "Rising Edge of Capture Channel 0."]
     #[must_use]
     #[inline(always)]
-    pub const fn cap0re(&self) -> Capre {
+    pub const fn cap0re(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
-        Capre::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Rising Edge of Capture Channel 0."]
     #[inline(always)]
-    pub const fn set_cap0re(&mut self, val: Capre) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    pub const fn set_cap0re(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
     #[doc = "Falling Edge of Capture Channel 0."]
     #[must_use]
     #[inline(always)]
-    pub const fn cap0fe(&self) -> Capfe {
+    pub const fn cap0fe(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
-        Capfe::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Falling Edge of Capture Channel 0."]
     #[inline(always)]
-    pub const fn set_cap0fe(&mut self, val: Capfe) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    pub const fn set_cap0fe(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
     #[doc = "Generate Interrupt on Channel 0 Capture Event."]
     #[must_use]
     #[inline(always)]
-    pub const fn cap0i(&self) -> Capi {
+    pub const fn cap0i(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
-        Capi::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Generate Interrupt on Channel 0 Capture Event."]
     #[inline(always)]
-    pub const fn set_cap0i(&mut self, val: Capi) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
+    pub const fn set_cap0i(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
     #[doc = "Rising Edge of Capture Channel 1."]
     #[must_use]
     #[inline(always)]
-    pub const fn cap1re(&self) -> Capre {
+    pub const fn cap1re(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
-        Capre::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Rising Edge of Capture Channel 1."]
     #[inline(always)]
-    pub const fn set_cap1re(&mut self, val: Capre) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
+    pub const fn set_cap1re(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
     #[doc = "Falling Edge of Capture Channel 1."]
     #[must_use]
     #[inline(always)]
-    pub const fn cap1fe(&self) -> Capfe {
+    pub const fn cap1fe(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
-        Capfe::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Falling Edge of Capture Channel 1."]
     #[inline(always)]
-    pub const fn set_cap1fe(&mut self, val: Capfe) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
+    pub const fn set_cap1fe(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
     #[doc = "Generate Interrupt on Channel 1 Capture Event."]
     #[must_use]
     #[inline(always)]
-    pub const fn cap1i(&self) -> Capi {
+    pub const fn cap1i(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
-        Capi::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Generate Interrupt on Channel 1 Capture Event."]
     #[inline(always)]
-    pub const fn set_cap1i(&mut self, val: Capi) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
+    pub const fn set_cap1i(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
     #[doc = "Rising Edge of Capture Channel 2."]
     #[must_use]
     #[inline(always)]
-    pub const fn cap2re(&self) -> Capre {
+    pub const fn cap2re(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
-        Capre::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Rising Edge of Capture Channel 2."]
     #[inline(always)]
-    pub const fn set_cap2re(&mut self, val: Capre) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
+    pub const fn set_cap2re(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
     #[doc = "Falling Edge of Capture Channel 2."]
     #[must_use]
     #[inline(always)]
-    pub const fn cap2fe(&self) -> Capfe {
+    pub const fn cap2fe(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
-        Capfe::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Falling Edge of Capture Channel 2."]
     #[inline(always)]
-    pub const fn set_cap2fe(&mut self, val: Capfe) {
-        self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
+    pub const fn set_cap2fe(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
     #[doc = "Generate Interrupt on Channel 2 Capture Event."]
     #[must_use]
     #[inline(always)]
-    pub const fn cap2i(&self) -> Capi {
+    pub const fn cap2i(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
-        Capi::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Generate Interrupt on Channel 2 Capture Event."]
     #[inline(always)]
-    pub const fn set_cap2i(&mut self, val: Capi) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
+    pub const fn set_cap2i(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
     #[doc = "Rising Edge of Capture Channel 3."]
     #[must_use]
     #[inline(always)]
-    pub const fn cap3re(&self) -> Capre {
+    pub const fn cap3re(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
-        Capre::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Rising Edge of Capture Channel 3."]
     #[inline(always)]
-    pub const fn set_cap3re(&mut self, val: Capre) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
+    pub const fn set_cap3re(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
     #[doc = "Falling Edge of Capture Channel 3."]
     #[must_use]
     #[inline(always)]
-    pub const fn cap3fe(&self) -> Capfe {
+    pub const fn cap3fe(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
-        Capfe::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Falling Edge of Capture Channel 3."]
     #[inline(always)]
-    pub const fn set_cap3fe(&mut self, val: Capfe) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
+    pub const fn set_cap3fe(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
     #[doc = "Generate Interrupt on Channel 3 Capture Event."]
     #[must_use]
     #[inline(always)]
-    pub const fn cap3i(&self) -> Capi {
+    pub const fn cap3i(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
-        Capi::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Generate Interrupt on Channel 3 Capture Event."]
     #[inline(always)]
-    pub const fn set_cap3i(&mut self, val: Capi) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
+    pub const fn set_cap3i(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
 }
 impl Default for Ccr {
@@ -271,7 +272,7 @@ impl defmt::Format for Ccr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Ccr {{ cap0re: {:?}, cap0fe: {:?}, cap0i: {:?}, cap1re: {:?}, cap1fe: {:?}, cap1i: {:?}, cap2re: {:?}, cap2fe: {:?}, cap2i: {:?}, cap3re: {:?}, cap3fe: {:?}, cap3i: {:?} }}",
+            "Ccr {{ cap0re: {=bool:?}, cap0fe: {=bool:?}, cap0i: {=bool:?}, cap1re: {=bool:?}, cap1fe: {=bool:?}, cap1i: {=bool:?}, cap2re: {=bool:?}, cap2fe: {=bool:?}, cap2i: {=bool:?}, cap3re: {=bool:?}, cap3fe: {=bool:?}, cap3i: {=bool:?} }}",
             self.cap0re(),
             self.cap0fe(),
             self.cap0i(),
@@ -413,50 +414,50 @@ impl Emr {
     #[doc = "External Match 0."]
     #[must_use]
     #[inline(always)]
-    pub const fn em0(&self) -> Em {
+    pub const fn em0(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
-        Em::from_bits(val as u8)
+        val != 0
     }
     #[doc = "External Match 0."]
     #[inline(always)]
-    pub const fn set_em0(&mut self, val: Em) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    pub const fn set_em0(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
     #[doc = "External Match 1."]
     #[must_use]
     #[inline(always)]
-    pub const fn em1(&self) -> Em {
+    pub const fn em1(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
-        Em::from_bits(val as u8)
+        val != 0
     }
     #[doc = "External Match 1."]
     #[inline(always)]
-    pub const fn set_em1(&mut self, val: Em) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    pub const fn set_em1(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
     #[doc = "External Match 2."]
     #[must_use]
     #[inline(always)]
-    pub const fn em2(&self) -> Em {
+    pub const fn em2(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
-        Em::from_bits(val as u8)
+        val != 0
     }
     #[doc = "External Match 2."]
     #[inline(always)]
-    pub const fn set_em2(&mut self, val: Em) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
+    pub const fn set_em2(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
     #[doc = "External Match 3."]
     #[must_use]
     #[inline(always)]
-    pub const fn em3(&self) -> Em {
+    pub const fn em3(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
-        Em::from_bits(val as u8)
+        val != 0
     }
     #[doc = "External Match 3."]
     #[inline(always)]
-    pub const fn set_em3(&mut self, val: Em) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
+    pub const fn set_em3(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
     #[doc = "External Match Control 0."]
     #[must_use]
@@ -532,7 +533,7 @@ impl defmt::Format for Emr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Emr {{ em0: {:?}, em1: {:?}, em2: {:?}, em3: {:?}, emc0: {:?}, emc1: {:?}, emc2: {:?}, emc3: {:?} }}",
+            "Emr {{ em0: {=bool:?}, em1: {=bool:?}, em2: {=bool:?}, em3: {=bool:?}, emc0: {:?}, emc1: {:?}, emc2: {:?}, emc3: {:?} }}",
             self.em0(),
             self.em1(),
             self.em2(),
@@ -691,194 +692,194 @@ impl Mcr {
     #[doc = "Interrupt on MR0."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr0i(&self) -> Mri {
+    pub const fn mr0i(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
-        Mri::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt on MR0."]
     #[inline(always)]
-    pub const fn set_mr0i(&mut self, val: Mri) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    pub const fn set_mr0i(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
     #[doc = "Reset on MR0."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr0r(&self) -> Mrr {
+    pub const fn mr0r(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
-        Mrr::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Reset on MR0."]
     #[inline(always)]
-    pub const fn set_mr0r(&mut self, val: Mrr) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    pub const fn set_mr0r(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
     #[doc = "Stop on MR0."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr0s(&self) -> Mrs {
+    pub const fn mr0s(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
-        Mrs::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Stop on MR0."]
     #[inline(always)]
-    pub const fn set_mr0s(&mut self, val: Mrs) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
+    pub const fn set_mr0s(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
     #[doc = "Interrupt on MR1."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr1i(&self) -> Mri {
+    pub const fn mr1i(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
-        Mri::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt on MR1."]
     #[inline(always)]
-    pub const fn set_mr1i(&mut self, val: Mri) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
+    pub const fn set_mr1i(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
     #[doc = "Reset on MR1."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr1r(&self) -> Mrr {
+    pub const fn mr1r(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
-        Mrr::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Reset on MR1."]
     #[inline(always)]
-    pub const fn set_mr1r(&mut self, val: Mrr) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
+    pub const fn set_mr1r(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
     #[doc = "Stop on MR1."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr1s(&self) -> Mrs {
+    pub const fn mr1s(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
-        Mrs::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Stop on MR1."]
     #[inline(always)]
-    pub const fn set_mr1s(&mut self, val: Mrs) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
+    pub const fn set_mr1s(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
     #[doc = "Interrupt on MR2."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr2i(&self) -> Mri {
+    pub const fn mr2i(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
-        Mri::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt on MR2."]
     #[inline(always)]
-    pub const fn set_mr2i(&mut self, val: Mri) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
+    pub const fn set_mr2i(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
     #[doc = "Reset on MR2."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr2r(&self) -> Mrr {
+    pub const fn mr2r(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
-        Mrr::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Reset on MR2."]
     #[inline(always)]
-    pub const fn set_mr2r(&mut self, val: Mrr) {
-        self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
+    pub const fn set_mr2r(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
     #[doc = "Stop on MR2."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr2s(&self) -> Mrs {
+    pub const fn mr2s(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
-        Mrs::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Stop on MR2."]
     #[inline(always)]
-    pub const fn set_mr2s(&mut self, val: Mrs) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
+    pub const fn set_mr2s(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
     #[doc = "Interrupt on MR3."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr3i(&self) -> Mri {
+    pub const fn mr3i(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
-        Mri::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt on MR3."]
     #[inline(always)]
-    pub const fn set_mr3i(&mut self, val: Mri) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
+    pub const fn set_mr3i(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
     #[doc = "Reset on MR3."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr3r(&self) -> Mrr {
+    pub const fn mr3r(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
-        Mrr::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Reset on MR3."]
     #[inline(always)]
-    pub const fn set_mr3r(&mut self, val: Mrr) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
+    pub const fn set_mr3r(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
     #[doc = "Stop on MR3."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr3s(&self) -> Mrs {
+    pub const fn mr3s(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
-        Mrs::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Stop on MR3."]
     #[inline(always)]
-    pub const fn set_mr3s(&mut self, val: Mrs) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
+    pub const fn set_mr3s(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
     #[doc = "Reload MR."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr0rl(&self) -> Mrrl {
+    pub const fn mr0rl(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
-        Mrrl::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Reload MR."]
     #[inline(always)]
-    pub const fn set_mr0rl(&mut self, val: Mrrl) {
-        self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
+    pub const fn set_mr0rl(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
     #[doc = "Reload MR."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr1rl(&self) -> Mrrl {
+    pub const fn mr1rl(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
-        Mrrl::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Reload MR."]
     #[inline(always)]
-    pub const fn set_mr1rl(&mut self, val: Mrrl) {
-        self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
+    pub const fn set_mr1rl(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
     #[doc = "Reload MR."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr2rl(&self) -> Mrrl {
+    pub const fn mr2rl(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
-        Mrrl::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Reload MR."]
     #[inline(always)]
-    pub const fn set_mr2rl(&mut self, val: Mrrl) {
-        self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
+    pub const fn set_mr2rl(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
     #[doc = "Reload MR."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr3rl(&self) -> Mrrl {
+    pub const fn mr3rl(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
-        Mrrl::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Reload MR."]
     #[inline(always)]
-    pub const fn set_mr3rl(&mut self, val: Mrrl) {
-        self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
+    pub const fn set_mr3rl(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
 }
 impl Default for Mcr {
@@ -914,7 +915,7 @@ impl defmt::Format for Mcr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Mcr {{ mr0i: {:?}, mr0r: {:?}, mr0s: {:?}, mr1i: {:?}, mr1r: {:?}, mr1s: {:?}, mr2i: {:?}, mr2r: {:?}, mr2s: {:?}, mr3i: {:?}, mr3r: {:?}, mr3s: {:?}, mr0rl: {:?}, mr1rl: {:?}, mr2rl: {:?}, mr3rl: {:?} }}",
+            "Mcr {{ mr0i: {=bool:?}, mr0r: {=bool:?}, mr0s: {=bool:?}, mr1i: {=bool:?}, mr1r: {=bool:?}, mr1s: {=bool:?}, mr2i: {=bool:?}, mr2r: {=bool:?}, mr2s: {=bool:?}, mr3i: {=bool:?}, mr3r: {=bool:?}, mr3s: {=bool:?}, mr0rl: {=bool:?}, mr1rl: {=bool:?}, mr2rl: {=bool:?}, mr3rl: {=bool:?} }}",
             self.mr0i(),
             self.mr0r(),
             self.mr0s(),
@@ -1282,108 +1283,15 @@ impl defmt::Format for Tcr {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Capfe {
-    #[doc = "Does not load."]
-    CAPFE0 = 0x0,
-    #[doc = "Loads."]
-    CAPFE1 = 0x01,
-}
-impl Capfe {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Capfe {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Capfe {
-    #[inline(always)]
-    fn from(val: u8) -> Capfe {
-        Capfe::from_bits(val)
-    }
-}
-impl From<Capfe> for u8 {
-    #[inline(always)]
-    fn from(val: Capfe) -> u8 {
-        Capfe::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Capi {
-    #[doc = "Does not generate."]
-    CAPI0 = 0x0,
-    #[doc = "Generates."]
-    CAPI1 = 0x01,
-}
-impl Capi {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Capi {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Capi {
-    #[inline(always)]
-    fn from(val: u8) -> Capi {
-        Capi::from_bits(val)
-    }
-}
-impl From<Capi> for u8 {
-    #[inline(always)]
-    fn from(val: Capi) -> u8 {
-        Capi::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Capre {
-    #[doc = "Does not load."]
-    CAPRE0 = 0x0,
-    #[doc = "Loads."]
-    CAPRE1 = 0x01,
-}
-impl Capre {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Capre {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Capre {
-    #[inline(always)]
-    fn from(val: u8) -> Capre {
-        Capre::from_bits(val)
-    }
-}
-impl From<Capre> for u8 {
-    #[inline(always)]
-    fn from(val: Capre) -> u8 {
-        Capre::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cinsel {
     #[doc = "Channel 0, CAPn\\[0\\] for CTIMERn."]
-    CHANNEL_0 = 0x0,
+    Channel0 = 0x0,
     #[doc = "Channel 1, CAPn\\[1\\] for CTIMERn."]
-    CHANNEL_1 = 0x01,
+    Channel1 = 0x01,
     #[doc = "Channel 2, CAPn\\[2\\] for CTIMERn."]
-    CHANNEL_2 = 0x02,
+    Channel2 = 0x02,
     #[doc = "Channel 3, CAPn\\[3\\] for CTIMERn."]
-    CHANNEL_3 = 0x03,
+    Channel3 = 0x03,
 }
 impl Cinsel {
     #[inline(always)]
@@ -1412,13 +1320,13 @@ impl From<Cinsel> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctmode {
     #[doc = "Timer mode."]
-    TIMER = 0x0,
+    Timer = 0x0,
     #[doc = "Counter mode rising edge."]
-    COUNTER_RISING_EDGE = 0x01,
+    CounterRisingEdge = 0x01,
     #[doc = "Counter mode falling edge."]
-    COUNTER_FALLING_EDGE = 0x02,
+    CounterFallingEdge = 0x02,
     #[doc = "Counter mode dual edge."]
-    COUNTER_DUAL_EDGE = 0x03,
+    CounterDualEdge = 0x03,
 }
 impl Ctmode {
     #[inline(always)]
@@ -1445,46 +1353,15 @@ impl From<Ctmode> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Em {
-    #[doc = "Low."]
-    CLEAR = 0x0,
-    #[doc = "High."]
-    SET = 0x01,
-}
-impl Em {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Em {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Em {
-    #[inline(always)]
-    fn from(val: u8) -> Em {
-        Em::from_bits(val)
-    }
-}
-impl From<Em> for u8 {
-    #[inline(always)]
-    fn from(val: Em) -> u8 {
-        Em::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Emc {
     #[doc = "Does nothing."]
-    DO_NOTHING = 0x0,
+    DoNothing = 0x0,
     #[doc = "Goes low."]
-    CLEAR = 0x01,
+    Clear = 0x01,
     #[doc = "Goes high."]
-    SET = 0x02,
+    Set = 0x02,
     #[doc = "Toggles."]
-    TOGGLE = 0x03,
+    Toggle = 0x03,
 }
 impl Emc {
     #[inline(always)]
@@ -1511,135 +1388,11 @@ impl From<Emc> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Mri {
-    #[doc = "Does not generate."]
-    MRI0 = 0x0,
-    #[doc = "Generates."]
-    MRI1 = 0x01,
-}
-impl Mri {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Mri {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Mri {
-    #[inline(always)]
-    fn from(val: u8) -> Mri {
-        Mri::from_bits(val)
-    }
-}
-impl From<Mri> for u8 {
-    #[inline(always)]
-    fn from(val: Mri) -> u8 {
-        Mri::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Mrr {
-    #[doc = "Does not reset."]
-    MRR0 = 0x0,
-    #[doc = "Resets."]
-    MRR1 = 0x01,
-}
-impl Mrr {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Mrr {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Mrr {
-    #[inline(always)]
-    fn from(val: u8) -> Mrr {
-        Mrr::from_bits(val)
-    }
-}
-impl From<Mrr> for u8 {
-    #[inline(always)]
-    fn from(val: Mrr) -> u8 {
-        Mrr::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Mrrl {
-    #[doc = "Does not reload."]
-    MRRL0 = 0x0,
-    #[doc = "Reloads."]
-    MRRL1 = 0x01,
-}
-impl Mrrl {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Mrrl {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Mrrl {
-    #[inline(always)]
-    fn from(val: u8) -> Mrrl {
-        Mrrl::from_bits(val)
-    }
-}
-impl From<Mrrl> for u8 {
-    #[inline(always)]
-    fn from(val: Mrrl) -> u8 {
-        Mrrl::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Mrs {
-    #[doc = "Does not stop."]
-    MRS0 = 0x0,
-    #[doc = "Stops."]
-    MRS1 = 0x01,
-}
-impl Mrs {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Mrs {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Mrs {
-    #[inline(always)]
-    fn from(val: u8) -> Mrs {
-        Mrs::from_bits(val)
-    }
-}
-impl From<Mrs> for u8 {
-    #[inline(always)]
-    fn from(val: Mrs) -> u8 {
-        Mrs::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pwmen {
     #[doc = "Disable."]
-    MATCH = 0x0,
+    Match = 0x0,
     #[doc = "Enable."]
-    PWM = 0x01,
+    Pwm = 0x01,
 }
 impl Pwmen {
     #[inline(always)]
@@ -1668,21 +1421,21 @@ impl From<Pwmen> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Selcc {
     #[doc = "Capture channel 0 rising edge."]
-    CHANNEL_0_RISING = 0x0,
+    Channel0Rising = 0x0,
     #[doc = "Capture channel 0 falling edge."]
-    CHANNEL_0_FALLING = 0x01,
+    Channel0Falling = 0x01,
     #[doc = "Capture channel 1 rising edge."]
-    CHANNEL_1_RISING = 0x02,
+    Channel1Rising = 0x02,
     #[doc = "Capture channel 1 falling edge."]
-    CHANNEL_1_FALLING = 0x03,
+    Channel1Falling = 0x03,
     #[doc = "Capture channel 2 rising edge."]
-    CHANNEL_2_RISING = 0x04,
+    Channel2Rising = 0x04,
     #[doc = "Capture channel 2 falling edge."]
-    CHANNEL_2_FALLING = 0x05,
+    Channel2Falling = 0x05,
     #[doc = "Capture channel 3 rising edge."]
-    CHANNEL_3_RISING = 0x06,
+    Channel3Rising = 0x06,
     #[doc = "Capture channel 3 falling edge."]
-    CHANNEL_3_FALLING = 0x07,
+    Channel3Falling = 0x07,
 }
 impl Selcc {
     #[inline(always)]

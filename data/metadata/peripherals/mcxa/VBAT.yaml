@@ -1,1108 +1,868 @@
-block/VBAT:
+block/Vbat:
   description: VBAT.
   items:
-  - name: VERID
+  - name: verid
     description: Version ID.
     byte_offset: 0
     access: Read
-    fieldset: VERID
-  - name: STATUSA
+    fieldset: Verid
+  - name: statusa
     description: Status A.
     byte_offset: 16
-    fieldset: STATUSA
-  - name: IRQENA
+    fieldset: Statusa
+  - name: irqena
     description: Interrupt Enable A.
     byte_offset: 24
-    fieldset: IRQENA
-  - name: WAKENA
+    fieldset: Irqena
+  - name: wakena
     description: Wake-up Enable A.
     byte_offset: 32
-    fieldset: WAKENA
-  - name: WAKECFG
+    fieldset: Wakena
+  - name: wakecfg
     description: Wake-up Configuration.
     byte_offset: 56
-    fieldset: WAKECFG
-  - name: OSCCTLA
+    fieldset: Wakecfg
+  - name: oscctla
     description: Oscillator Control A.
     byte_offset: 256
-    fieldset: OSCCTLA
-  - name: OSCCFGA
+    fieldset: Oscctla
+  - name: osccfga
     description: Oscillator Configuration A.
     byte_offset: 264
-    fieldset: OSCCFGA
-  - name: OSCTSTA
+    fieldset: Osccfga
+  - name: osctsta
     description: Oscillator Test A.
     byte_offset: 272
-    fieldset: OSCTSTA
-  - name: OSCLCKA
+    fieldset: Osctsta
+  - name: osclcka
     description: Oscillator Lock A.
     byte_offset: 280
-    fieldset: OSCLCKA
-  - name: OSCCLKE
+    fieldset: Osclcka
+  - name: oscclke
     description: Oscillator Clock Enable.
     byte_offset: 288
-    fieldset: OSCCLKE
-  - name: FROCTLA
+    fieldset: Oscclke
+  - name: froctla
     description: FRO16K Control A.
     byte_offset: 512
-    fieldset: FROCTLA
-  - name: FROCFGA
+    fieldset: Froctla
+  - name: frocfga
     description: FRO16K Configuration A.
     byte_offset: 520
-    fieldset: FROCFGA
-  - name: FROTSTA
+    fieldset: Frocfga
+  - name: frotsta
     description: FRO16K Test A.
     byte_offset: 528
-    fieldset: FROTSTA
-  - name: FROLCKA
+    fieldset: Frotsta
+  - name: frolcka
     description: FRO16K Lock A.
     byte_offset: 536
-    fieldset: FROLCKA
-  - name: FROCLKE
+    fieldset: Frolcka
+  - name: froclke
     description: FRO16K Clock Enable.
     byte_offset: 544
-    fieldset: FROCLKE
-  - name: LDOCTLA
+    fieldset: Froclke
+  - name: ldoctla
     description: LDO_RAM Control A.
     byte_offset: 768
-    fieldset: LDOCTLA
-  - name: LDOCFGA
+    fieldset: Ldoctla
+  - name: ldocfga
     description: LDO_RAM Configuration A.
     byte_offset: 776
-    fieldset: LDOCFGA
-  - name: LDOTSTA
+    fieldset: Ldocfga
+  - name: ldotsta
     description: LDO_RAM Test A.
     byte_offset: 784
-    fieldset: LDOTSTA
-  - name: LDOLCKA
+    fieldset: Ldotsta
+  - name: ldolcka
     description: LDO_RAM Lock A.
     byte_offset: 792
-    fieldset: LDOLCKA
-  - name: LDORAMC
+    fieldset: Ldolcka
+  - name: ldoramc
     description: RAM Control.
     byte_offset: 800
-    fieldset: LDORAMC
-  - name: LDOTIMER0
+    fieldset: Ldoramc
+  - name: ldotimer0
     description: Bandgap Timer 0.
     byte_offset: 816
-    fieldset: LDOTIMER0
-  - name: LDOTIMER1
+    fieldset: Ldotimer0
+  - name: ldotimer1
     description: Bandgap Timer 1.
     byte_offset: 824
-    fieldset: LDOTIMER1
-  - name: SWICTLA
+    fieldset: Ldotimer1
+  - name: swictla
     description: Switch Control A.
     byte_offset: 1536
-    fieldset: SWICTLA
-  - name: SWILCKA
+    fieldset: Swictla
+  - name: swilcka
     description: Switch Lock A.
     byte_offset: 1560
-    fieldset: SWILCKA
-  - name: WAKEUP
+    fieldset: Swilcka
+  - name: wakeup
     description: 'Array of registers: WAKEUPA.'
     array:
       len: 2
       stride: 8
     byte_offset: 1792
-    block: WAKEUP
-  - name: WAKLCKA
+    block: Wakeup
+  - name: waklcka
     description: Wakeup Lock A.
     byte_offset: 2040
-    fieldset: WAKLCKA
-block/WAKEUP:
+    fieldset: Waklcka
+block/Wakeup:
   description: 'Array of registers: WAKEUPA.'
   items:
-  - name: WAKEUPA
+  - name: wakeupa
     description: Wakeup 0 Register A.
     byte_offset: 0
-    fieldset: WAKEUPA
-fieldset/FROCFGA:
+    fieldset: Wakeupa
+fieldset/Frocfga:
   description: FRO16K Configuration A.
   fields:
-  - name: FREQ_TRIM
+  - name: freq_trim
     description: Frequency Trim.
     bit_offset: 0
     bit_size: 8
-  - name: TEMP_TRIM
+  - name: temp_trim
     description: Temperature Trim.
     bit_offset: 8
     bit_size: 4
-fieldset/FROCLKE:
+fieldset/Froclke:
   description: FRO16K Clock Enable.
   fields:
-  - name: CLKE
+  - name: clke
     description: Clock Enable.
     bit_offset: 0
     bit_size: 3
-fieldset/FROCTLA:
+fieldset/Froctla:
   description: FRO16K Control A.
   fields:
-  - name: FRO_EN
+  - name: fro_en
     description: FRO16K Enable.
     bit_offset: 0
     bit_size: 1
-fieldset/FROLCKA:
+fieldset/Frolcka:
   description: FRO16K Lock A.
   fields:
-  - name: LOCK
+  - name: lock
     description: Lock.
     bit_offset: 0
     bit_size: 1
-fieldset/FROTSTA:
+fieldset/Frotsta:
   description: FRO16K Test A.
   fields:
-  - name: TSTMODE
+  - name: tstmode
     description: Test Mode.
     bit_offset: 0
     bit_size: 1
-fieldset/IRQENA:
+fieldset/Irqena:
   description: Interrupt Enable A.
   fields:
-  - name: POR_DET
+  - name: por_det
     description: POR Detect.
     bit_offset: 0
     bit_size: 1
-    enum: IRQENA_POR_DET
-  - name: WAKEUP_FLAG
+  - name: wakeup_flag
     description: Wakeup Pin Flag.
     bit_offset: 1
     bit_size: 1
-    enum: IRQENA_WAKEUP_FLAG
-  - name: TIMER0_FLAG
+    enum: IrqenaWakeupFlag
+  - name: timer0_flag
     description: Bandgap Timer 0.
     bit_offset: 2
     bit_size: 1
-    enum: IRQENA_TIMER0_FLAG
-  - name: TIMER1_FLAG
+  - name: timer1_flag
     description: Bandgap Timer 2.
     bit_offset: 3
     bit_size: 1
-    enum: IRQENA_TIMER1_FLAG
-  - name: LDO_RDY
+  - name: ldo_rdy
     description: LDO Ready.
     bit_offset: 4
     bit_size: 1
-    enum: IRQENA_LDO_RDY
-  - name: OSC_RDY
+  - name: osc_rdy
     description: OSC32k Ready.
     bit_offset: 5
     bit_size: 1
-    enum: IRQENA_OSC_RDY
-fieldset/LDOCFGA:
+fieldset/Ldocfga:
   description: LDO_RAM Configuration A.
   fields:
-  - name: LDO_TRIM
+  - name: ldo_trim
     description: LDO Voltage Trim.
     bit_offset: 0
     bit_size: 5
-  - name: BG_2X2_TRIM
+  - name: bg_2x2_trim
     description: Bandgap Trim.
     bit_offset: 5
     bit_size: 3
-  - name: BG_5X5_TRIM
+  - name: bg_5x5_trim
     description: Bandgap Trim.
     bit_offset: 8
     bit_size: 2
-  - name: REFRESH_TRIM
+  - name: refresh_trim
     description: Refresh Trim.
     bit_offset: 10
     bit_size: 2
-    enum: REFRESH_TRIM
-fieldset/LDOCTLA:
+    enum: RefreshTrim
+fieldset/Ldoctla:
   description: LDO_RAM Control A.
   fields:
-  - name: BG_EN
+  - name: bg_en
     description: Bandgap Enable.
     bit_offset: 0
     bit_size: 1
-  - name: LDO_EN
+  - name: ldo_en
     description: LDO Enable.
     bit_offset: 1
     bit_size: 1
-  - name: REFRESH_EN
+  - name: refresh_en
     description: Refresh Enable.
     bit_offset: 2
     bit_size: 1
-fieldset/LDOLCKA:
+fieldset/Ldolcka:
   description: LDO_RAM Lock A.
   fields:
-  - name: LOCK
+  - name: lock
     description: Lock.
     bit_offset: 0
     bit_size: 1
-fieldset/LDORAMC:
+fieldset/Ldoramc:
   description: RAM Control.
   fields:
-  - name: ISO
+  - name: iso
     description: Isolate SRAM.
     bit_offset: 0
     bit_size: 1
-    enum: ISO
-  - name: SWI
+  - name: swi
     description: Switch SRAM.
     bit_offset: 1
     bit_size: 1
-    enum: SWI
-  - name: RET0
+  - name: ret0
     description: Retention.
     bit_offset: 8
     bit_size: 1
-    enum: RET0
-  - name: RET1
+  - name: ret1
     description: Retention.
     bit_offset: 9
     bit_size: 1
-    enum: RET1
-  - name: RET2
+  - name: ret2
     description: Retention.
     bit_offset: 10
     bit_size: 1
-    enum: RET2
-  - name: RET3
+  - name: ret3
     description: Retention.
     bit_offset: 11
     bit_size: 1
-    enum: RET3
-fieldset/LDOTIMER0:
+fieldset/Ldotimer0:
   description: Bandgap Timer 0.
   fields:
-  - name: TIMCFG
+  - name: timcfg
     description: Timeout Configuration.
     bit_offset: 0
     bit_size: 3
-    enum: TIMCFG
-  - name: TIMEN
+    enum: Timcfg
+  - name: timen
     description: Bandgap Timeout Period Enable.
     bit_offset: 31
     bit_size: 1
-    enum: LDOTIMER0_TIMEN
-fieldset/LDOTIMER1:
+fieldset/Ldotimer1:
   description: Bandgap Timer 1.
   fields:
-  - name: TIMCFG
+  - name: timcfg
     description: Timeout Configuration.
     bit_offset: 0
     bit_size: 24
-  - name: TIMEN
+  - name: timen
     description: Bandgap Timeout Period Enable.
     bit_offset: 31
     bit_size: 1
-    enum: LDOTIMER1_TIMEN
-fieldset/LDOTSTA:
+fieldset/Ldotsta:
   description: LDO_RAM Test A.
   fields:
-  - name: TSTMODE
+  - name: tstmode
     description: Test Mode.
     bit_offset: 0
     bit_size: 2
-  - name: CONTROL
+  - name: control
     description: Spare Control.
     bit_offset: 2
     bit_size: 4
-  - name: DISCHG
+  - name: dischg
     description: Discharge Switch.
     bit_offset: 6
     bit_size: 1
-  - name: STATUS
+  - name: status
     description: Spare Status.
     bit_offset: 28
     bit_size: 4
-fieldset/OSCCFGA:
+fieldset/Osccfga:
   description: Oscillator Configuration A.
   fields:
-  - name: CMP_TRIM
+  - name: cmp_trim
     description: Comparator Trim.
     bit_offset: 0
     bit_size: 2
-    enum: CMP_TRIM
-  - name: CAP2_TRIM
+    enum: CmpTrim
+  - name: cap2_trim
     description: CAP2_TRIM.
     bit_offset: 2
     bit_size: 1
-  - name: DLY_TRIM
+  - name: dly_trim
     description: Delay Trim.
     bit_offset: 3
     bit_size: 4
-    enum: DLY_TRIM
-  - name: CAP_TRIM
+    enum: DlyTrim
+  - name: cap_trim
     description: Capacitor Trim.
     bit_offset: 7
     bit_size: 2
-    enum: CAP_TRIM
-  - name: INIT_TRIM
+    enum: CapTrim
+  - name: init_trim
     description: Initialization Trim.
     bit_offset: 9
     bit_size: 3
-    enum: INIT_TRIM
-fieldset/OSCCLKE:
+    enum: InitTrim
+fieldset/Oscclke:
   description: Oscillator Clock Enable.
   fields:
-  - name: CLKE
+  - name: clke
     description: Clock Enable.
     bit_offset: 0
     bit_size: 3
-fieldset/OSCCTLA:
+fieldset/Oscctla:
   description: Oscillator Control A.
   fields:
-  - name: OSC_EN
+  - name: osc_en
     description: Crystal Oscillator Enable.
     bit_offset: 0
     bit_size: 1
-  - name: OSC_BYP_EN
+  - name: osc_byp_en
     description: Crystal Oscillator Bypass Enable.
     bit_offset: 1
     bit_size: 1
-    enum: OSC_BYP_EN
-  - name: COARSE_AMP_GAIN
+  - name: coarse_amp_gain
     description: Amplifier Gain Coarse Adjustment.
     bit_offset: 2
     bit_size: 2
-    enum: COARSE_AMP_GAIN
-  - name: FINE_AMP_GAIN
+    enum: CoarseAmpGain
+  - name: fine_amp_gain
     description: Amplifier Gain Fine Adjustment.
     bit_offset: 4
     bit_size: 2
-    enum: FINE_AMP_GAIN
-  - name: HYST_SEL
+    enum: FineAmpGain
+  - name: hyst_sel
     description: Output Hysteresis Select.
     bit_offset: 6
     bit_size: 1
-    enum: HYST_SEL
-  - name: CAP_SEL_EN
+  - name: cap_sel_en
     description: Crystal Load Capacitance Selection Enable.
     bit_offset: 7
     bit_size: 1
-  - name: EXTAL_CAP_SEL
+  - name: extal_cap_sel
     description: Crystal Load Capacitance Selection.
     bit_offset: 8
     bit_size: 4
-    enum: EXTAL_CAP_SEL
-  - name: XTAL_CAP_SEL
+    enum: ExtalCapSel
+  - name: xtal_cap_sel
     description: Crystal Load Capacitance Selection.
     bit_offset: 12
     bit_size: 4
-    enum: XTAL_CAP_SEL
-  - name: MODE_EN
+    enum: XtalCapSel
+  - name: mode_en
     description: Mode Enable.
     bit_offset: 16
     bit_size: 2
-    enum: MODE_EN
-  - name: SUPPLY_DET
+    enum: ModeEn
+  - name: supply_det
     description: Supply Detector Trim.
     bit_offset: 18
     bit_size: 2
-    enum: SUPPLY_DET
-fieldset/OSCLCKA:
+    enum: SupplyDet
+fieldset/Osclcka:
   description: Oscillator Lock A.
   fields:
-  - name: LOCK
+  - name: lock
     description: Lock.
     bit_offset: 0
     bit_size: 1
-fieldset/OSCTSTA:
+fieldset/Osctsta:
   description: Oscillator Test A.
   fields:
-  - name: TSTMODE
+  - name: tstmode
     description: Test Mode.
     bit_offset: 0
     bit_size: 5
-  - name: SPARE
+  - name: spare
     description: Spare Control.
     bit_offset: 5
     bit_size: 8
-  - name: TSTOUT
+  - name: tstout
     description: Test Output.
     bit_offset: 31
     bit_size: 1
-fieldset/STATUSA:
+fieldset/Statusa:
   description: Status A.
   fields:
-  - name: POR_DET
+  - name: por_det
     description: POR Detect Flag.
     bit_offset: 0
     bit_size: 1
-    enum: STATUSA_POR_DET
-  - name: WAKEUP_FLAG
+    enum: StatusaPorDet
+  - name: wakeup_flag
     description: Wakeup Pin Flag.
     bit_offset: 1
     bit_size: 1
-    enum: STATUSA_WAKEUP_FLAG
-  - name: TIMER0_FLAG
+    enum: StatusaWakeupFlag
+  - name: timer0_flag
     description: Bandgap Timer 0 Flag.
     bit_offset: 2
     bit_size: 1
-    enum: STATUSA_TIMER0_FLAG
-  - name: TIMER1_FLAG
+    enum: StatusaTimer0Flag
+  - name: timer1_flag
     description: Bandgap Timer 1 Flag.
     bit_offset: 3
     bit_size: 1
-    enum: STATUSA_TIMER1_FLAG
-  - name: LDO_RDY
+    enum: StatusaTimer1Flag
+  - name: ldo_rdy
     description: LDO Ready.
     bit_offset: 4
     bit_size: 1
-    enum: STATUSA_LDO_RDY
-  - name: OSC_RDY
+    enum: StatusaLdoRdy
+  - name: osc_rdy
     description: OSC32k Ready.
     bit_offset: 5
     bit_size: 1
-    enum: STATUSA_OSC_RDY
-fieldset/SWICTLA:
+    enum: StatusaOscRdy
+fieldset/Swictla:
   description: Switch Control A.
   fields:
-  - name: SWI_EN
+  - name: swi_en
     description: Switch Enable.
     bit_offset: 0
     bit_size: 1
-    enum: SWI_EN
-  - name: LP_EN
+  - name: lp_en
     description: Low Power Enable.
     bit_offset: 1
     bit_size: 1
-    enum: LP_EN
-fieldset/SWILCKA:
+fieldset/Swilcka:
   description: Switch Lock A.
   fields:
-  - name: LOCK
+  - name: lock
     description: Lock.
     bit_offset: 0
     bit_size: 1
-    enum: SWILCKA_LOCK
-fieldset/VERID:
+fieldset/Verid:
   description: Version ID.
   fields:
-  - name: FEATURE
+  - name: feature
     description: Feature Specification Number.
     bit_offset: 0
     bit_size: 16
-  - name: MINOR
+  - name: minor
     description: Minor Version Number.
     bit_offset: 16
     bit_size: 8
-  - name: MAJOR
+  - name: major
     description: Major Version Number.
     bit_offset: 24
     bit_size: 8
-fieldset/WAKECFG:
+fieldset/Wakecfg:
   description: Wake-up Configuration.
   fields:
-  - name: OUT
+  - name: out
     description: Output.
     bit_offset: 0
     bit_size: 1
-    enum: OUT
-fieldset/WAKENA:
+    enum: Out
+fieldset/Wakena:
   description: Wake-up Enable A.
   fields:
-  - name: POR_DET
+  - name: por_det
     description: POR Detect.
     bit_offset: 0
     bit_size: 1
-    enum: WAKENA_POR_DET
-  - name: WAKEUP_FLAG
+  - name: wakeup_flag
     description: Wake-up Pin Flag.
     bit_offset: 1
     bit_size: 1
-    enum: WAKENA_WAKEUP_FLAG
-  - name: TIMER0_FLAG
+    enum: WakenaWakeupFlag
+  - name: timer0_flag
     description: Bandgap Timer 0.
     bit_offset: 2
     bit_size: 1
-    enum: WAKENA_TIMER0_FLAG
-  - name: TIMER1_FLAG
+  - name: timer1_flag
     description: Bandgap Timer 2.
     bit_offset: 3
     bit_size: 1
-    enum: WAKENA_TIMER1_FLAG
-  - name: LDO_RDY
+  - name: ldo_rdy
     description: LDO Ready.
     bit_offset: 4
     bit_size: 1
-    enum: WAKENA_LDO_RDY
-  - name: OSC_RDY
+  - name: osc_rdy
     description: OSC32K Ready.
     bit_offset: 5
     bit_size: 1
-    enum: WAKENA_OSC_RDY
-fieldset/WAKEUPA:
+fieldset/Wakeupa:
   description: Wakeup 0 Register A.
   fields:
-  - name: REG
+  - name: reg
     description: Register.
     bit_offset: 0
     bit_size: 32
-fieldset/WAKLCKA:
+fieldset/Waklcka:
   description: Wakeup Lock A.
   fields:
-  - name: LOCK
+  - name: lock
     description: Lock.
     bit_offset: 0
     bit_size: 1
-    enum: WAKLCKA_LOCK
-enum/CAP_TRIM:
+enum/CapTrim:
   bit_size: 2
   variants:
-  - name: VAL0
+  - name: Val0
     description: Default (when CAP2_TRIM = 0 and CAP_TRIM[1:0] = 00 ).
     value: 0
-  - name: VAL1
+  - name: Val1
     description: -1us (when CAP2_TRIM = 0 and CAP_TRIM[1:0] = 01).
     value: 1
-  - name: VAL2
+  - name: Val2
     description: -2us (when CAP2_TRIM = 0 and CAP_TRIM[1:0] = 10) or or +3.5us (when CAP2_TRIM = 1 and CAP_TRIM[1:0] = 10).
     value: 2
-  - name: VAL3
+  - name: Val3
     description: -2.5us (when CAP2_TRIM = 0 and CAP_TRIM[1:0] = 11) or +1us (when CAP2_TRIM = 1 and CAP_TRIM[1:0] = 11).
     value: 3
-enum/CMP_TRIM:
+enum/CmpTrim:
   bit_size: 2
   variants:
-  - name: CMP_760
+  - name: Cmp760
     description: 760 mV.
     value: 0
-  - name: CMP_770
+  - name: Cmp770
     description: 770 mV.
     value: 1
-  - name: CMP_740
+  - name: Cmp740
     description: 740 mV.
     value: 3
-enum/COARSE_AMP_GAIN:
+enum/CoarseAmpGain:
   bit_size: 2
   variants:
-  - name: GAIN05
+  - name: Gain05
     description: ESR Range 0.
     value: 0
-  - name: GAIN10
+  - name: Gain10
     description: ESR Range 1.
     value: 1
-  - name: GAIN18
+  - name: Gain18
     description: ESR Range 2.
     value: 2
-  - name: GAIN33
+  - name: Gain33
     description: ESR Range 3.
     value: 3
-enum/DLY_TRIM:
+enum/DlyTrim:
   bit_size: 4
   variants:
-  - name: DLY_9_6
+  - name: Dly96
     description: P current 9(nA) and N Current 6(nA).
     value: 0
-  - name: DLY_13_6
+  - name: Dly136
     description: P current 13(nA) and N Current 6(nA).
     value: 1
-  - name: DLY_4_6
+  - name: Dly46
     description: P current 4(nA) and N Current 6(nA).
     value: 3
-  - name: DLY_9_4
+  - name: Dly94
     description: P current 9(nA) and N Current 4(nA).
     value: 4
-  - name: DLY_13_4
+  - name: Dly134
     description: P current 13(nA) and N Current 4(nA).
     value: 5
-  - name: DLY_4_4
+  - name: Dly44
     description: P current 4(nA) and N Current 4(nA).
     value: 7
-  - name: DLY_9_2
+  - name: Dly92
     description: P current 9(nA) and N Current 2(nA).
     value: 8
-  - name: DLY_13_2
+  - name: Dly132
     description: P current 13(nA) and N Current 2(nA).
     value: 9
-  - name: DLY_4_2
+  - name: Dly42
     description: P current 4(nA) and N Current 2(nA).
     value: 11
-enum/EXTAL_CAP_SEL:
+enum/ExtalCapSel:
   bit_size: 4
   variants:
-  - name: SEL0
+  - name: Sel0
     description: 0 pF.
     value: 0
-  - name: SEL2
+  - name: Sel2
     description: 2 pF.
     value: 1
-  - name: SEL4
+  - name: Sel4
     description: 4 pF.
     value: 2
-  - name: SEL6
+  - name: Sel6
     description: 6 pF.
     value: 3
-  - name: SEL8
+  - name: Sel8
     description: 8 pF.
     value: 4
-  - name: SEL10
+  - name: Sel10
     description: 10 pF.
     value: 5
-  - name: SEL12
+  - name: Sel12
     description: 12 pF.
     value: 6
-  - name: SEL14
+  - name: Sel14
     description: 14 pF.
     value: 7
-  - name: SEL16
+  - name: Sel16
     description: 16 pF.
     value: 8
-  - name: SEL18
+  - name: Sel18
     description: 18 pF.
     value: 9
-  - name: SEL20
+  - name: Sel20
     description: 20 pF.
     value: 10
-  - name: SEL22
+  - name: Sel22
     description: 22 pF.
     value: 11
-  - name: SEL24
+  - name: Sel24
     description: 24 pF.
     value: 12
-  - name: SEL26
+  - name: Sel26
     description: 26 pF.
     value: 13
-  - name: SEL28
+  - name: Sel28
     description: 28 pF.
     value: 14
-  - name: SEL30
+  - name: Sel30
     description: 30 pF.
     value: 15
-enum/FINE_AMP_GAIN:
+enum/FineAmpGain:
   bit_size: 2
   variants:
-  - name: AGC200
+  - name: Agc200
     description: 200 mV.
     value: 0
-enum/HYST_SEL:
-  bit_size: 1
-  variants:
-  - name: DISABLE
-    description: Disable.
-    value: 0
-  - name: ENABLE
-    description: Enable.
-    value: 1
-enum/INIT_TRIM:
+enum/InitTrim:
   bit_size: 3
   variants:
-  - name: SEL0
+  - name: Sel0
     description: 8 s.
     value: 0
-  - name: SEL1
+  - name: Sel1
     description: 4 s.
     value: 1
-  - name: SEL2
+  - name: Sel2
     description: 2 s.
     value: 2
-  - name: SEL3
+  - name: Sel3
     description: 1 s.
     value: 3
-  - name: SEL4
+  - name: Sel4
     description: 0.5 s.
     value: 4
-  - name: SEL5
+  - name: Sel5
     description: 0.25 s.
     value: 5
-  - name: SEL6
+  - name: Sel6
     description: 0.125 s.
     value: 6
-  - name: SEL7
+  - name: Sel7
     description: 0.5 ms.
     value: 7
-enum/IRQENA_LDO_RDY:
+enum/IrqenaWakeupFlag:
   bit_size: 1
   variants:
-  - name: DISABLE
+  - name: Clr
     description: Disable.
     value: 0
-  - name: ENABLE
+  - name: Set
     description: Enable.
     value: 1
-enum/IRQENA_OSC_RDY:
-  bit_size: 1
-  variants:
-  - name: DISABLE
-    description: Disable.
-    value: 0
-  - name: ENABLE
-    description: Enable.
-    value: 1
-enum/IRQENA_POR_DET:
-  bit_size: 1
-  variants:
-  - name: DISABLE
-    description: Disable.
-    value: 0
-  - name: ENABLE
-    description: Enable.
-    value: 1
-enum/IRQENA_TIMER0_FLAG:
-  bit_size: 1
-  variants:
-  - name: DISABLE
-    description: Disable.
-    value: 0
-  - name: ENABLE
-    description: Enable.
-    value: 1
-enum/IRQENA_TIMER1_FLAG:
-  bit_size: 1
-  variants:
-  - name: DISABLE
-    description: Disable.
-    value: 0
-  - name: ENABLE
-    description: Enable.
-    value: 1
-enum/IRQENA_WAKEUP_FLAG:
-  bit_size: 1
-  variants:
-  - name: CLR
-    description: Disable.
-    value: 0
-  - name: SET
-    description: Enable.
-    value: 1
-enum/ISO:
-  bit_size: 1
-  variants:
-  - name: DISABLE
-    description: State follows the chip power modes.
-    value: 0
-  - name: ENABLE
-    description: Isolates SRAM and places it in Low-Power Retention mode.
-    value: 1
-enum/LDOTIMER0_TIMEN:
-  bit_size: 1
-  variants:
-  - name: DISABLE
-    description: Disable.
-    value: 0
-  - name: ENABLE
-    description: Enable.
-    value: 1
-enum/LDOTIMER1_TIMEN:
-  bit_size: 1
-  variants:
-  - name: DISABLE
-    description: Disable.
-    value: 0
-  - name: ENABLE
-    description: Enable.
-    value: 1
-enum/LP_EN:
-  bit_size: 1
-  variants:
-  - name: DISABLE
-    description: VDD_BAT always supplies VBAT modules in low-power modes.
-    value: 0
-  - name: ENABLE
-    description: VDD_SYS always supplies VBAT modules if SWI_EN is also 1.
-    value: 1
-enum/MODE_EN:
+enum/ModeEn:
   bit_size: 2
   variants:
-  - name: HP
+  - name: Hp
     description: Normal mode.
     value: 0
-  - name: LP
+  - name: Lp
     description: Startup mode.
     value: 1
-  - name: SW
+  - name: Sw
     description: Low power mode.
     value: 3
-enum/OSC_BYP_EN:
+enum/Out:
   bit_size: 1
   variants:
-  - name: DISABLE
-    description: Does not bypass.
-    value: 0
-  - name: ENABLE
-    description: Bypass.
-    value: 1
-enum/OUT:
-  bit_size: 1
-  variants:
-  - name: ON
+  - name: On
     description: Logic zero (asserted).
     value: 0
-  - name: OFF
+  - name: Off
     description: Logic one.
     value: 1
-enum/REFRESH_TRIM:
+enum/RefreshTrim:
   bit_size: 2
   variants:
-  - name: SEL7
+  - name: Sel7
     description: Refresh every 7.8125 ms.
     value: 0
-  - name: SEL15
+  - name: Sel15
     description: Refresh every 15.625 ms.
     value: 1
-  - name: SEL31
+  - name: Sel31
     description: Refresh every 31.25 ms.
     value: 2
-  - name: SEL62
+  - name: Sel62
     description: Refresh every 62.5 ms.
     value: 3
-enum/RET0:
+enum/StatusaLdoRdy:
   bit_size: 1
   variants:
-  - name: DISABLE
-    description: Corresponding SRAM array is retained in low-power modes.
-    value: 0
-  - name: ENABLE
-    description: Corresponding SRAM array is not retained in low-power modes.
-    value: 1
-enum/RET1:
-  bit_size: 1
-  variants:
-  - name: DISABLE
-    description: Corresponding SRAM array is retained in low-power modes.
-    value: 0
-  - name: ENABLE
-    description: Corresponding SRAM array is not retained in low-power modes.
-    value: 1
-enum/RET2:
-  bit_size: 1
-  variants:
-  - name: DISABLE
-    description: Corresponding SRAM array is retained in low-power modes.
-    value: 0
-  - name: ENABLE
-    description: Corresponding SRAM array is not retained in low-power modes.
-    value: 1
-enum/RET3:
-  bit_size: 1
-  variants:
-  - name: DISABLE
-    description: Corresponding SRAM array is retained in low-power modes.
-    value: 0
-  - name: ENABLE
-    description: Corresponding SRAM array is not retained in low-power modes.
-    value: 1
-enum/STATUSA_LDO_RDY:
-  bit_size: 1
-  variants:
-  - name: CLR
+  - name: Clr
     description: Disabled (not ready).
     value: 0
-  - name: SET
+  - name: Set
     description: Enabled (ready).
     value: 1
-enum/STATUSA_OSC_RDY:
+enum/StatusaOscRdy:
   bit_size: 1
   variants:
-  - name: CLR
+  - name: Clr
     description: Disabled (clock not ready).
     value: 0
-  - name: SET
+  - name: Set
     description: Enabled (clock ready).
     value: 1
-enum/STATUSA_POR_DET:
+enum/StatusaPorDet:
   bit_size: 1
   variants:
-  - name: CLR
+  - name: Clr
     description: Not reset.
     value: 0
-  - name: SET
+  - name: Set
     description: Reset.
     value: 1
-enum/STATUSA_TIMER0_FLAG:
+enum/StatusaTimer0Flag:
   bit_size: 1
   variants:
-  - name: CLR
+  - name: Clr
     description: Not reached.
     value: 0
-  - name: SET
+  - name: Set
     description: Reached.
     value: 1
-enum/STATUSA_TIMER1_FLAG:
+enum/StatusaTimer1Flag:
   bit_size: 1
   variants:
-  - name: CLR
+  - name: Clr
     description: Not reached.
     value: 0
-  - name: SET
+  - name: Set
     description: Reached.
     value: 1
-enum/STATUSA_WAKEUP_FLAG:
+enum/StatusaWakeupFlag:
   bit_size: 1
   variants:
-  - name: CLR
+  - name: Clr
     description: Not asserted.
     value: 0
-  - name: SET
+  - name: Set
     description: Asserted.
     value: 1
-enum/SUPPLY_DET:
+enum/SupplyDet:
   bit_size: 2
   variants:
-  - name: L3VSUPPLY
+  - name: L3vsupply
     description: VBAT supply is less than 3V.
     value: 0
-  - name: G3VSUPPLY
+  - name: G3vsupply
     description: VBAT supply is greater than 3V.
     value: 1
-enum/SWI:
-  bit_size: 1
-  variants:
-  - name: DISABLE
-    description: Supply follows the chip power modes.
-    value: 0
-  - name: ENABLE
-    description: LDO_RAM powers the array.
-    value: 1
-enum/SWILCKA_LOCK:
-  bit_size: 1
-  variants:
-  - name: DISABLE
-    description: Do not block.
-    value: 0
-  - name: ENABLE
-    description: Block.
-    value: 1
-enum/SWI_EN:
-  bit_size: 1
-  variants:
-  - name: DISABLE
-    description: VDD_BAT.
-    value: 0
-  - name: ENABLE
-    description: VDD_SYS.
-    value: 1
-enum/TIMCFG:
+enum/Timcfg:
   bit_size: 3
   variants:
-  - name: CFG1000
+  - name: Cfg1000
     description: 1 s.
     value: 0
-  - name: CFG500
+  - name: Cfg500
     description: 500 ms.
     value: 1
-  - name: CFG250
+  - name: Cfg250
     description: 250 ms.
     value: 2
-  - name: CFG125
+  - name: Cfg125
     description: 125 ms.
     value: 3
-  - name: CFG62
+  - name: Cfg62
     description: 62.5 ms.
     value: 4
-  - name: CFG31
+  - name: Cfg31
     description: 31.25 ms.
     value: 5
-  - name: CFG15
+  - name: Cfg15
     description: 15.625 ms.
     value: 6
-  - name: CFG7
+  - name: Cfg7
     description: 7.8125 ms.
     value: 7
-enum/WAKENA_LDO_RDY:
+enum/WakenaWakeupFlag:
   bit_size: 1
   variants:
-  - name: DISABLE
+  - name: Clr
     description: Disable.
     value: 0
-  - name: ENABLE
+  - name: Set
     description: Enable.
     value: 1
-enum/WAKENA_OSC_RDY:
-  bit_size: 1
-  variants:
-  - name: DISABLE
-    description: Disable.
-    value: 0
-  - name: ENABLE
-    description: Enable.
-    value: 1
-enum/WAKENA_POR_DET:
-  bit_size: 1
-  variants:
-  - name: DISABLE
-    description: Disable.
-    value: 0
-  - name: ENABLE
-    description: Enable.
-    value: 1
-enum/WAKENA_TIMER0_FLAG:
-  bit_size: 1
-  variants:
-  - name: DISABLE
-    description: Disable.
-    value: 0
-  - name: ENABLE
-    description: Enable.
-    value: 1
-enum/WAKENA_TIMER1_FLAG:
-  bit_size: 1
-  variants:
-  - name: DISABLE
-    description: Disable.
-    value: 0
-  - name: ENABLE
-    description: Enable.
-    value: 1
-enum/WAKENA_WAKEUP_FLAG:
-  bit_size: 1
-  variants:
-  - name: CLR
-    description: Disable.
-    value: 0
-  - name: SET
-    description: Enable.
-    value: 1
-enum/WAKLCKA_LOCK:
-  bit_size: 1
-  variants:
-  - name: DISABLE
-    description: Lock is disabled.
-    value: 0
-  - name: ENABLE
-    description: Lock is enabled.
-    value: 1
-enum/XTAL_CAP_SEL:
+enum/XtalCapSel:
   bit_size: 4
   variants:
-  - name: SEL0
+  - name: Sel0
     description: 0 pF.
     value: 0
-  - name: SEL2
+  - name: Sel2
     description: 2 pF.
     value: 1
-  - name: SEL4
+  - name: Sel4
     description: 4 pF.
     value: 2
-  - name: SEL6
+  - name: Sel6
     description: 6 pF.
     value: 3
-  - name: SEL8
+  - name: Sel8
     description: 8 pF.
     value: 4
-  - name: SEL10
+  - name: Sel10
     description: 10 pF.
     value: 5
-  - name: SEL12
+  - name: Sel12
     description: 12 pF.
     value: 6
-  - name: SEL14
+  - name: Sel14
     description: 14 pF.
     value: 7
-  - name: SEL16
+  - name: Sel16
     description: 16 pF.
     value: 8
-  - name: SEL18
+  - name: Sel18
     description: 18 pF.
     value: 9
-  - name: SEL20
+  - name: Sel20
     description: 20 pF.
     value: 10
-  - name: SEL22
+  - name: Sel22
     description: 22 pF.
     value: 11
-  - name: SEL24
+  - name: Sel24
     description: 24 pF.
     value: 12
-  - name: SEL26
+  - name: Sel26
     description: 26 pF.
     value: 13
-  - name: SEL28
+  - name: Sel28
     description: 28 pF.
     value: 14
-  - name: SEL30
+  - name: Sel30
     description: 30 pF.
     value: 15

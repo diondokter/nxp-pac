@@ -1,0 +1,36 @@
+transforms:
+  - !RenameFields
+    fieldset: scg0::Firccfg
+    from: range
+    to: freq_sel
+
+  - !Rename
+    from: scg0::SosccfgRange
+    to: scg0::Range
+    type: Enum
+
+  - !Rename
+    from: scg0::SpllctrlSource
+    to: scg0::Source
+    type: Enum
+
+  - !Rename
+    from: scg0::FirccfgRange
+    to: scg0::FreqSel
+    type: Enum
+
+  - !DeleteEnumVariants
+    enum: scg0::Source
+    from: .*
+
+  - !AddEnumVariants
+    enum: scg0::Source
+    variants:
+      - { name: Sosc, value: 0, description: "SOSC" }
+      - {
+          name: Firc,
+          value: 1,
+          description: "FIRC 45 MHz clock. FIRC_SCLK_PERIPH_EN needs to be set to use FIRC 45 MHz clock.",
+        }
+      - { name: Rosc, value: 2, description: "ROSC" }
+      - { name: Sirc, value: 3, description: "SIRC 12 MHz clock" }

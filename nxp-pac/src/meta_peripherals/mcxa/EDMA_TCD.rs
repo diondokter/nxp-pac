@@ -1,7 +1,8 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (2fd28c5 2026-04-02))"]
-#[doc = "Array of registers: CH_CSR, CH_ES, CH_INT, CH_MUX, CH_PRI, CH_SBR, TCD_ATTR, TCD_BITER_ELINKNO, TCD_BITER_ELINKYES, TCD_CITER_ELINKNO, TCD_CITER_ELINKYES, TCD_CSR, TCD_DADDR, TCD_DLAST_SGA, TCD_DOFF, TCD_NBYTES_MLOFFNO, TCD_NBYTES_MLOFFYES, TCD_SADDR, TCD_SLAST_SDA, TCD_SOFF."]
+#![allow(non_upper_case_globals)]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (859f02b 2026-04-15))"]
+#[doc = "Array of registers: CH_CSR, CH_ES, CH_INT, CH_PRI, CH_SBR, TCD_ATTR, TCD_BITER_ELINKNO, TCD_BITER_ELINKYES, TCD_CITER_ELINKNO, TCD_CITER_ELINKYES, TCD_CSR, TCD_DADDR, TCD_DLAST_SGA, TCD_DOFF, TCD_NBYTES_MLOFFNO, TCD_NBYTES_MLOFFYES, TCD_SADDR, TCD_SLAST_SDA, TCD_SOFF."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tcd {
     ptr: *mut u8,
@@ -600,6 +601,18 @@ impl ChSbr {
     pub const fn set_mid(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
     }
+    #[doc = "Security Level."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn sec(&self) -> Sec {
+        let val = (self.0 >> 14usize) & 0x01;
+        Sec::from_bits(val as u8)
+    }
+    #[doc = "Security Level."]
+    #[inline(always)]
+    pub const fn set_sec(&mut self, val: Sec) {
+        self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
+    }
     #[doc = "Privileged Access Level."]
     #[must_use]
     #[inline(always)]
@@ -624,6 +637,18 @@ impl ChSbr {
     pub const fn set_emi(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
+    #[doc = "Attribute Output."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn attr(&self) -> u8 {
+        let val = (self.0 >> 17usize) & 0x0f;
+        val as u8
+    }
+    #[doc = "Attribute Output."]
+    #[inline(always)]
+    pub const fn set_attr(&mut self, val: u8) {
+        self.0 = (self.0 & !(0x0f << 17usize)) | (((val as u32) & 0x0f) << 17usize);
+    }
 }
 impl Default for ChSbr {
     #[inline(always)]
@@ -635,8 +660,10 @@ impl core::fmt::Debug for ChSbr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ChSbr")
             .field("mid", &self.mid())
+            .field("sec", &self.sec())
             .field("pal", &self.pal())
             .field("emi", &self.emi())
+            .field("attr", &self.attr())
             .finish()
     }
 }
@@ -645,10 +672,12 @@ impl defmt::Format for ChSbr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "ChSbr {{ mid: {=u8:?}, pal: {:?}, emi: {=bool:?} }}",
+            "ChSbr {{ mid: {=u8:?}, sec: {:?}, pal: {:?}, emi: {=bool:?}, attr: {=u8:?} }}",
             self.mid(),
+            self.sec(),
             self.pal(),
-            self.emi()
+            self.emi(),
+            self.attr()
         )
     }
 }
@@ -696,14 +725,14 @@ impl TcdAttr {
     #[doc = "Source Address Modulo."]
     #[must_use]
     #[inline(always)]
-    pub const fn smod(&self) -> Smod {
+    pub const fn smod(&self) -> u8 {
         let val = (self.0 >> 11usize) & 0x1f;
-        Smod::from_bits(val as u8)
+        val as u8
     }
     #[doc = "Source Address Modulo."]
     #[inline(always)]
-    pub const fn set_smod(&mut self, val: Smod) {
-        self.0 = (self.0 & !(0x1f << 11usize)) | (((val.to_bits() as u16) & 0x1f) << 11usize);
+    pub const fn set_smod(&mut self, val: u8) {
+        self.0 = (self.0 & !(0x1f << 11usize)) | (((val as u16) & 0x1f) << 11usize);
     }
 }
 impl Default for TcdAttr {
@@ -727,7 +756,7 @@ impl defmt::Format for TcdAttr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "TcdAttr {{ dsize: {:?}, dmod: {=u8:?}, ssize: {:?}, smod: {:?} }}",
+            "TcdAttr {{ dsize: {:?}, dmod: {=u8:?}, ssize: {:?}, smod: {=u8:?} }}",
             self.dsize(),
             self.dmod(),
             self.ssize(),
@@ -811,13 +840,13 @@ impl TcdBiterElinkyes {
     #[must_use]
     #[inline(always)]
     pub const fn linkch(&self) -> u8 {
-        let val = (self.0 >> 9usize) & 0x07;
+        let val = (self.0 >> 9usize) & 0x0f;
         val as u8
     }
     #[doc = "Link Channel Number."]
     #[inline(always)]
     pub const fn set_linkch(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x07 << 9usize)) | (((val as u16) & 0x07) << 9usize);
+        self.0 = (self.0 & !(0x0f << 9usize)) | (((val as u16) & 0x0f) << 9usize);
     }
     #[doc = "Enable Link."]
     #[must_use]
@@ -935,13 +964,13 @@ impl TcdCiterElinkyes {
     #[must_use]
     #[inline(always)]
     pub const fn linkch(&self) -> u8 {
-        let val = (self.0 >> 9usize) & 0x07;
+        let val = (self.0 >> 9usize) & 0x0f;
         val as u8
     }
     #[doc = "Minor Loop Link Channel Number."]
     #[inline(always)]
     pub const fn set_linkch(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x07 << 9usize)) | (((val as u16) & 0x07) << 9usize);
+        self.0 = (self.0 & !(0x0f << 9usize)) | (((val as u16) & 0x0f) << 9usize);
     }
     #[doc = "Enable Link."]
     #[must_use]
@@ -1088,13 +1117,13 @@ impl TcdCsr {
     #[must_use]
     #[inline(always)]
     pub const fn majorlinkch(&self) -> u8 {
-        let val = (self.0 >> 8usize) & 0x07;
+        let val = (self.0 >> 8usize) & 0x0f;
         val as u8
     }
     #[doc = "Major Loop Link Channel Number."]
     #[inline(always)]
     pub const fn set_majorlinkch(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x07 << 8usize)) | (((val as u16) & 0x07) << 8usize);
+        self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u16) & 0x0f) << 8usize);
     }
     #[doc = "Bandwidth Control."]
     #[must_use]
@@ -1529,12 +1558,12 @@ impl defmt::Format for TcdSoff {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bwc {
     #[doc = "No eDMA engine stalls."]
-    NO_STALL = 0x0,
+    NoStall = 0x0,
     _RESERVED_1 = 0x01,
     #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
-    ENGINE_STALLS_FOUR = 0x02,
+    EngineStallsFour = 0x02,
     #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
-    ENGINE_STALLS_EIGHT = 0x03,
+    EngineStallsEight = 0x03,
 }
 impl Bwc {
     #[inline(always)]
@@ -1563,9 +1592,9 @@ impl From<Bwc> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dpa {
     #[doc = "Channel can suspend a lower-priority channel."]
-    SUSPEND = 0x0,
+    Suspend = 0x0,
     #[doc = "Channel cannot suspend any other channel, regardless of channel priority."]
-    CANNOT_SUSPEND = 0x01,
+    CannotSuspend = 0x01,
 }
 impl Dpa {
     #[inline(always)]
@@ -1594,9 +1623,9 @@ impl From<Dpa> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dreq {
     #[doc = "No operation."]
-    CHANNEL_NOT_AFFECTED = 0x0,
+    ChannelNotAffected = 0x0,
     #[doc = "Clear the ERQ field to 0 upon major loop completion, thus disabling hardware service requests."]
-    ERQ_FIELD_CLEAR = 0x01,
+    ErqFieldClear = 0x01,
 }
 impl Dreq {
     #[inline(always)]
@@ -1625,9 +1654,9 @@ impl From<Dreq> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ecp {
     #[doc = "Channel cannot be suspended by a higher-priority channel's service request."]
-    CANNOT_SUSPEND = 0x0,
+    CannotSuspend = 0x0,
     #[doc = "Channel can be temporarily suspended by a higher-priority channel's service request."]
-    SUSPEND = 0x01,
+    Suspend = 0x01,
 }
 impl Ecp {
     #[inline(always)]
@@ -1656,9 +1685,9 @@ impl From<Ecp> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Esg {
     #[doc = "Current channel's TCD is normal format."]
-    NORMAL_FORMAT = 0x0,
+    NormalFormat = 0x0,
     #[doc = "Current channel's TCD specifies scatter/gather format."]
-    SCATTER_GATHER_FORMAT = 0x01,
+    ScatterGatherFormat = 0x01,
 }
 impl Esg {
     #[inline(always)]
@@ -1687,9 +1716,9 @@ impl From<Esg> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pal {
     #[doc = "User protection level for DMA transfers."]
-    USER_PROTECTION = 0x0,
+    UserProtection = 0x0,
     #[doc = "Privileged protection level for DMA transfers."]
-    PRIVILEGED_PROTECTION = 0x01,
+    PrivilegedProtection = 0x01,
 }
 impl Pal {
     #[inline(always)]
@@ -1716,19 +1745,50 @@ impl From<Pal> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Sec {
+    #[doc = "Nonsecure protection level for DMA transfers."]
+    NonsecureProtection = 0x0,
+    #[doc = "Secure protection level for DMA transfers."]
+    SecureProtection = 0x01,
+}
+impl Sec {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Sec {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Sec {
+    #[inline(always)]
+    fn from(val: u8) -> Sec {
+        Sec::from_bits(val)
+    }
+}
+impl From<Sec> for u8 {
+    #[inline(always)]
+    fn from(val: Sec) -> u8 {
+        Sec::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Size {
     #[doc = "8-bit."]
-    EIGHT_BIT = 0x0,
+    EightBit = 0x0,
     #[doc = "16-bit."]
-    SIXTEEN_BIT = 0x01,
+    SixteenBit = 0x01,
     #[doc = "32-bit."]
-    THIRTYTWO_BIT = 0x02,
+    ThirtytwoBit = 0x02,
     #[doc = "64-bit."]
-    SIXTYFOUR_BIT = 0x03,
+    SixtyfourBit = 0x03,
     #[doc = "16-byte."]
-    SIXTEEN_BYTE = 0x04,
+    SixteenByte = 0x04,
     #[doc = "32-byte."]
-    THIRTYTWO_BYTE = 0x05,
+    ThirtytwoByte = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
 }
@@ -1757,71 +1817,11 @@ impl From<Size> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Smod {
-    #[doc = "Source address modulo feature disabled."]
-    DISABLE = 0x0,
-    _RESERVED_1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
-    _RESERVED_10 = 0x10,
-    _RESERVED_11 = 0x11,
-    _RESERVED_12 = 0x12,
-    _RESERVED_13 = 0x13,
-    _RESERVED_14 = 0x14,
-    _RESERVED_15 = 0x15,
-    _RESERVED_16 = 0x16,
-    _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
-    _RESERVED_1e = 0x1e,
-    _RESERVED_1f = 0x1f,
-}
-impl Smod {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Smod {
-        unsafe { core::mem::transmute(val & 0x1f) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Smod {
-    #[inline(always)]
-    fn from(val: u8) -> Smod {
-        Smod::from_bits(val)
-    }
-}
-impl From<Smod> for u8 {
-    #[inline(always)]
-    fn from(val: Smod) -> u8 {
-        Smod::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Start {
     #[doc = "Channel not explicitly started."]
-    CHANNEL_NOT_STARTED = 0x0,
+    ChannelNotStarted = 0x0,
     #[doc = "Channel explicitly started via a software-initiated service request."]
-    CHANNEL_STARTED = 0x01,
+    ChannelStarted = 0x01,
 }
 impl Start {
     #[inline(always)]
@@ -1850,9 +1850,9 @@ impl From<Start> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TcdNbytesMloffnoDmloe {
     #[doc = "Minor loop offset not applied to DADDR."]
-    OFFSET_NOT_APPLIED = 0x0,
+    OffsetNotApplied = 0x0,
     #[doc = "Minor loop offset applied to DADDR."]
-    OFFSET_APPLIED = 0x01,
+    OffsetApplied = 0x01,
 }
 impl TcdNbytesMloffnoDmloe {
     #[inline(always)]
@@ -1881,9 +1881,9 @@ impl From<TcdNbytesMloffnoDmloe> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TcdNbytesMloffnoSmloe {
     #[doc = "Minor loop offset not applied to SADDR."]
-    OFFSET_NOT_APPLIED = 0x0,
+    OffsetNotApplied = 0x0,
     #[doc = "Minor loop offset applied to SADDR."]
-    OFFSET_APPLIED = 0x01,
+    OffsetApplied = 0x01,
 }
 impl TcdNbytesMloffnoSmloe {
     #[inline(always)]
@@ -1912,9 +1912,9 @@ impl From<TcdNbytesMloffnoSmloe> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TcdNbytesMloffyesDmloe {
     #[doc = "Minor loop offset not applied to DADDR."]
-    OFFSET_NOT_APPLIED = 0x0,
+    OffsetNotApplied = 0x0,
     #[doc = "Minor loop offset applied to DADDR."]
-    OFFSET_APPLIED = 0x01,
+    OffsetApplied = 0x01,
 }
 impl TcdNbytesMloffyesDmloe {
     #[inline(always)]
@@ -1943,9 +1943,9 @@ impl From<TcdNbytesMloffyesDmloe> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TcdNbytesMloffyesSmloe {
     #[doc = "Minor loop offset not applied to SADDR."]
-    OFFSET_NOT_APPLIED = 0x0,
+    OffsetNotApplied = 0x0,
     #[doc = "Minor loop offset applied to SADDR."]
-    OFFSET_APPLIED = 0x01,
+    OffsetApplied = 0x01,
 }
 impl TcdNbytesMloffyesSmloe {
     #[inline(always)]

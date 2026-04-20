@@ -641,36 +641,36 @@ fieldset/MemnGlbac7:
 enum/Mbacsel:
   bit_size: 3
   variants:
-  - name: GLBAC0
+  - name: Glbac0
     description: select MBC_MEMN_GLBAC0 access control policy for block B.
     value: 0
-  - name: GLBAC1
+  - name: Glbac1
     description: select MBC_MEMN_GLBAC1 access control policy for block B.
     value: 1
-  - name: GLBAC2
+  - name: Glbac2
     description: select MBC_MEMN_GLBAC2 access control policy for block B.
     value: 2
-  - name: GLBAC3
+  - name: Glbac3
     description: select MBC_MEMN_GLBAC3 access control policy for block B.
     value: 3
-  - name: GLBAC4
+  - name: Glbac4
     description: select MBC_MEMN_GLBAC4 access control policy for block B.
     value: 4
-  - name: GLBAC5
+  - name: Glbac5
     description: select MBC_MEMN_GLBAC5 access control policy for block B.
     value: 5
-  - name: GLBAC6
+  - name: Glbac6
     description: select MBC_MEMN_GLBAC6 access control policy for block B.
     value: 6
-  - name: GLBAC7
+  - name: Glbac7
     description: select MBC_MEMN_GLBAC7 access control policy for block B.
     value: 7
 enum/Nse:
   bit_size: 1
   variants:
-  - name: ALLOWED
+  - name: Allowed
     description: Secure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
     value: 0
-  - name: NOTALLOWED
+  - name: Notallowed
     description: Secure accesses to block B are not allowed, nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
     value: 1

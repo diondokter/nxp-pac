@@ -1,6 +1,7 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (2fd28c5 2026-04-02))"]
+#![allow(non_upper_case_globals)]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (859f02b 2026-04-15))"]
 #[doc = "ADC."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Adc {
@@ -135,7 +136,7 @@ impl Adc {
         self,
         n: usize,
     ) -> crate::pac::common::Reg<CalGar, crate::pac::common::RW> {
-        assert!(n < 34usize);
+        assert!(n < 33usize);
         unsafe {
             crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0400usize + n * 4usize) as _)
         }
@@ -144,6 +145,11 @@ impl Adc {
     #[inline(always)]
     pub const fn cfg2(self) -> crate::pac::common::Reg<Cfg2, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0ff8usize) as _) }
+    }
+    #[doc = "ADC Test Register."]
+    #[inline(always)]
+    pub const fn tst(self) -> crate::pac::common::Reg<Tst, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0ffcusize) as _) }
     }
 }
 #[doc = "Calibration General A-Side Registers."]
@@ -327,6 +333,42 @@ impl defmt::Format for Cfg {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cfg2(pub u32);
 impl Cfg2 {
+    #[doc = "Async SAR settling delay."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn as_settle(&self) -> AsSettle {
+        let val = (self.0 >> 0usize) & 0x03;
+        AsSettle::from_bits(val as u8)
+    }
+    #[doc = "Async SAR settling delay."]
+    #[inline(always)]
+    pub const fn set_as_settle(&mut self, val: AsSettle) {
+        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
+    }
+    #[doc = "Async SAR latch time out delay."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn as_lto(&self) -> AsLto {
+        let val = (self.0 >> 2usize) & 0x03;
+        AsLto::from_bits(val as u8)
+    }
+    #[doc = "Async SAR latch time out delay."]
+    #[inline(always)]
+    pub const fn set_as_lto(&mut self, val: AsLto) {
+        self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
+    }
+    #[doc = "Noise cancellation delay selection."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn noise_cancel(&self) -> NoiseCancel {
+        let val = (self.0 >> 4usize) & 0x03;
+        NoiseCancel::from_bits(val as u8)
+    }
+    #[doc = "Noise cancellation delay selection."]
+    #[inline(always)]
+    pub const fn set_noise_cancel(&mut self, val: NoiseCancel) {
+        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
+    }
     #[doc = "Justified Left Enable register."]
     #[must_use]
     #[inline(always)]
@@ -385,6 +427,9 @@ impl Default for Cfg2 {
 impl core::fmt::Debug for Cfg2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cfg2")
+            .field("as_settle", &self.as_settle())
+            .field("as_lto", &self.as_lto())
+            .field("noise_cancel", &self.noise_cancel())
             .field("jleft", &self.jleft())
             .field("hs", &self.hs())
             .field("hsextra", &self.hsextra())
@@ -397,7 +442,10 @@ impl defmt::Format for Cfg2 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Cfg2 {{ jleft: {=bool:?}, hs: {=bool:?}, hsextra: {:?}, tune: {=u8:?} }}",
+            "Cfg2 {{ as_settle: {:?}, as_lto: {:?}, noise_cancel: {:?}, jleft: {=bool:?}, hs: {=bool:?}, hsextra: {:?}, tune: {=u8:?} }}",
+            self.as_settle(),
+            self.as_lto(),
+            self.noise_cancel(),
             self.jleft(),
             self.hs(),
             self.hsextra(),
@@ -571,6 +619,30 @@ impl Cmdl {
     pub const fn set_mode(&mut self, val: Mode) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
+    #[doc = "Alternate Channel B Input Channel Select."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn altb_adch(&self) -> AltbAdch {
+        let val = (self.0 >> 16usize) & 0x1f;
+        AltbAdch::from_bits(val as u8)
+    }
+    #[doc = "Alternate Channel B Input Channel Select."]
+    #[inline(always)]
+    pub const fn set_altb_adch(&mut self, val: AltbAdch) {
+        self.0 = (self.0 & !(0x1f << 16usize)) | (((val.to_bits() as u32) & 0x1f) << 16usize);
+    }
+    #[doc = "Alternate Channel B Select Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn altben(&self) -> bool {
+        let val = (self.0 >> 21usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Alternate Channel B Select Enable."]
+    #[inline(always)]
+    pub const fn set_altben(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
+    }
 }
 impl Default for Cmdl {
     #[inline(always)]
@@ -584,6 +656,8 @@ impl core::fmt::Debug for Cmdl {
             .field("adch", &self.adch())
             .field("ctype", &self.ctype())
             .field("mode", &self.mode())
+            .field("altb_adch", &self.altb_adch())
+            .field("altben", &self.altben())
             .finish()
     }
 }
@@ -592,10 +666,12 @@ impl defmt::Format for Cmdl {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Cmdl {{ adch: {=u8:?}, ctype: {:?}, mode: {:?} }}",
+            "Cmdl {{ adch: {=u8:?}, ctype: {:?}, mode: {:?}, altb_adch: {:?}, altben: {=bool:?} }}",
             self.adch(),
             self.ctype(),
-            self.mode()
+            self.mode(),
+            self.altb_adch(),
+            self.altben()
         )
     }
 }
@@ -905,13 +981,13 @@ impl Gcc0 {
     #[doc = "Gain Calibration Value Valid."]
     #[must_use]
     #[inline(always)]
-    pub const fn rdy(&self) -> Gcc0rdy {
+    pub const fn rdy(&self) -> Gcc0Rdy {
         let val = (self.0 >> 24usize) & 0x01;
-        Gcc0rdy::from_bits(val as u8)
+        Gcc0Rdy::from_bits(val as u8)
     }
     #[doc = "Gain Calibration Value Valid."]
     #[inline(always)]
-    pub const fn set_rdy(&mut self, val: Gcc0rdy) {
+    pub const fn set_rdy(&mut self, val: Gcc0Rdy) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
     }
 }
@@ -1688,6 +1764,103 @@ impl defmt::Format for Tctrl {
         )
     }
 }
+#[doc = "ADC Test Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Tst(pub u32);
+impl Tst {
+    #[doc = "Calibration Sample Time Long."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn cst_long(&self) -> CstLong {
+        let val = (self.0 >> 0usize) & 0x01;
+        CstLong::from_bits(val as u8)
+    }
+    #[doc = "Calibration Sample Time Long."]
+    #[inline(always)]
+    pub const fn set_cst_long(&mut self, val: CstLong) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    }
+    #[doc = "Force P-side positive offset."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn foffp(&self) -> bool {
+        let val = (self.0 >> 9usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Force P-side positive offset."]
+    #[inline(always)]
+    pub const fn set_foffp(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
+    }
+    #[doc = "Force P-side negative offset."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn foffp2(&self) -> bool {
+        let val = (self.0 >> 11usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Force P-side negative offset."]
+    #[inline(always)]
+    pub const fn set_foffp2(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
+    }
+    #[doc = "Enable FIFO Data out to Pin."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ipp_do_en(&self) -> bool {
+        let val = (self.0 >> 22usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Enable FIFO Data out to Pin."]
+    #[inline(always)]
+    pub const fn set_ipp_do_en(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
+    }
+    #[doc = "Enable test configuration."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn testen(&self) -> bool {
+        let val = (self.0 >> 23usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Enable test configuration."]
+    #[inline(always)]
+    pub const fn set_testen(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
+    }
+}
+impl Default for Tst {
+    #[inline(always)]
+    fn default() -> Tst {
+        Tst(0)
+    }
+}
+impl core::fmt::Debug for Tst {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Tst")
+            .field("cst_long", &self.cst_long())
+            .field("foffp", &self.foffp())
+            .field("foffp2", &self.foffp2())
+            .field("ipp_do_en", &self.ipp_do_en())
+            .field("testen", &self.testen())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Tst {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Tst {{ cst_long: {:?}, foffp: {=bool:?}, foffp2: {=bool:?}, ipp_do_en: {=bool:?}, testen: {=bool:?} }}",
+            self.cst_long(),
+            self.foffp(),
+            self.foffp2(),
+            self.ipp_do_en(),
+            self.testen()
+        )
+    }
+}
 #[doc = "Trigger Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -1929,9 +2102,9 @@ impl defmt::Format for Verid {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AdcActive {
     #[doc = "The ADC is IDLE. There are no pending triggers to service and no active commands are being processed."]
-    NOT_ACTIVE = 0x0,
+    NotActive = 0x0,
     #[doc = "The ADC is processing a conversion, running through the power up delay, or servicing a trigger."]
-    BUSY = 0x01,
+    Busy = 0x01,
 }
 impl AdcActive {
     #[inline(always)]
@@ -1958,29 +2131,170 @@ impl From<AdcActive> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum AltbAdch {
+    #[doc = "Select CH0B."]
+    SelectCh0b = 0x0,
+    #[doc = "Select CH1B."]
+    SelectCh1b = 0x01,
+    #[doc = "Select CH2B."]
+    SelectCh2b = 0x02,
+    #[doc = "Select CH3B."]
+    SelectCh3b = 0x03,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB4 = 0x04,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB5 = 0x05,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB6 = 0x06,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB7 = 0x07,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB8 = 0x08,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB9 = 0x09,
+    _RESERVED_a = 0x0a,
+    _RESERVED_b = 0x0b,
+    _RESERVED_c = 0x0c,
+    _RESERVED_d = 0x0d,
+    _RESERVED_e = 0x0e,
+    _RESERVED_f = 0x0f,
+    _RESERVED_10 = 0x10,
+    _RESERVED_11 = 0x11,
+    _RESERVED_12 = 0x12,
+    _RESERVED_13 = 0x13,
+    _RESERVED_14 = 0x14,
+    _RESERVED_15 = 0x15,
+    _RESERVED_16 = 0x16,
+    _RESERVED_17 = 0x17,
+    _RESERVED_18 = 0x18,
+    _RESERVED_19 = 0x19,
+    _RESERVED_1a = 0x1a,
+    _RESERVED_1b = 0x1b,
+    _RESERVED_1c = 0x1c,
+    _RESERVED_1d = 0x1d,
+    #[doc = "Select CH30B."]
+    SelectCh30b = 0x1e,
+    #[doc = "Select CH31B."]
+    SelectCh31b = 0x1f,
+}
+impl AltbAdch {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> AltbAdch {
+        unsafe { core::mem::transmute(val & 0x1f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for AltbAdch {
+    #[inline(always)]
+    fn from(val: u8) -> AltbAdch {
+        AltbAdch::from_bits(val)
+    }
+}
+impl From<AltbAdch> for u8 {
+    #[inline(always)]
+    fn from(val: AltbAdch) -> u8 {
+        AltbAdch::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum AsLto {
+    #[doc = "Shortest delay."]
+    ShortestDelay = 0x0,
+    #[doc = "Mid 1 delay."]
+    Mid1Delay = 0x01,
+    #[doc = "Mid 2 delay."]
+    Mid2Delay = 0x02,
+    #[doc = "Longest delay."]
+    LongestDelay = 0x03,
+}
+impl AsLto {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> AsLto {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for AsLto {
+    #[inline(always)]
+    fn from(val: u8) -> AsLto {
+        AsLto::from_bits(val)
+    }
+}
+impl From<AsLto> for u8 {
+    #[inline(always)]
+    fn from(val: AsLto) -> u8 {
+        AsLto::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum AsSettle {
+    #[doc = "Shortest delay."]
+    ShortestDelay = 0x0,
+    #[doc = "Mid 1 delay."]
+    Mid1Delay = 0x01,
+    #[doc = "Mid 2 delay."]
+    Mid2Delay = 0x02,
+    #[doc = "Longest delay."]
+    LongestDelay = 0x03,
+}
+impl AsSettle {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> AsSettle {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for AsSettle {
+    #[inline(always)]
+    fn from(val: u8) -> AsSettle {
+        AsSettle::from_bits(val)
+    }
+}
+impl From<AsSettle> for u8 {
+    #[inline(always)]
+    fn from(val: AsSettle) -> u8 {
+        AsSettle::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Avgs {
     #[doc = "Single conversion."]
-    NO_AVERAGE = 0x0,
+    NoAverage = 0x0,
     #[doc = "2 conversions averaged."]
-    AVERAGE_2 = 0x01,
+    Average2 = 0x01,
     #[doc = "4 conversions averaged."]
-    AVERAGE_4 = 0x02,
+    Average4 = 0x02,
     #[doc = "8 conversions averaged."]
-    AVERAGE_8 = 0x03,
+    Average8 = 0x03,
     #[doc = "16 conversions averaged."]
-    AVERAGE_16 = 0x04,
+    Average16 = 0x04,
     #[doc = "32 conversions averaged."]
-    AVERAGE_32 = 0x05,
+    Average32 = 0x05,
     #[doc = "64 conversions averaged."]
-    AVERAGE_64 = 0x06,
+    Average64 = 0x06,
     #[doc = "128 conversions averaged."]
-    AVERAGE_128 = 0x07,
+    Average128 = 0x07,
     #[doc = "256 conversions averaged."]
-    AVERAGE_256 = 0x08,
+    Average256 = 0x08,
     #[doc = "512 conversions averaged."]
-    AVERAGE_512 = 0x09,
+    Average512 = 0x09,
     #[doc = "1024 conversions averaged."]
-    AVERAGE_1024 = 0x0a,
+    Average1024 = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
@@ -2014,27 +2328,27 @@ impl From<Avgs> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CalAvgs {
     #[doc = "Single conversion."]
-    NO_AVERAGE = 0x0,
+    NoAverage = 0x0,
     #[doc = "2 conversions averaged."]
-    AVERAGE_2 = 0x01,
+    Average2 = 0x01,
     #[doc = "4 conversions averaged."]
-    AVERAGE_4 = 0x02,
+    Average4 = 0x02,
     #[doc = "8 conversions averaged."]
-    AVERAGE_8 = 0x03,
+    Average8 = 0x03,
     #[doc = "16 conversions averaged."]
-    AVERAGE_16 = 0x04,
+    Average16 = 0x04,
     #[doc = "32 conversions averaged."]
-    AVERAGE_32 = 0x05,
+    Average32 = 0x05,
     #[doc = "64 conversions averaged."]
-    AVERAGE_64 = 0x06,
+    Average64 = 0x06,
     #[doc = "128 conversions averaged."]
-    AVERAGE_128 = 0x07,
+    Average128 = 0x07,
     #[doc = "256 conversions averaged."]
-    AVERAGE_256 = 0x08,
+    Average256 = 0x08,
     #[doc = "512 conversions averaged."]
-    AVERAGE_512 = 0x09,
+    Average512 = 0x09,
     #[doc = "1024 conversions averaged."]
-    AVERAGE_1024 = 0x0a,
+    Average1024 = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
@@ -2068,9 +2382,9 @@ impl From<CalAvgs> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CalRdy {
     #[doc = "Calibration is incomplete or hasn't been ran."]
-    NOT_SET = 0x0,
+    NotSet = 0x0,
     #[doc = "The ADC is calibrated."]
-    HARDWARE_CAL_STEP_COMPLETED = 0x01,
+    HardwareCalStepCompleted = 0x01,
 }
 impl CalRdy {
     #[inline(always)]
@@ -2099,9 +2413,9 @@ impl From<CalRdy> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CalReq {
     #[doc = "No request for hardware calibration has been made."]
-    NO_CALIBRATION_REQUEST = 0x0,
+    NoCalibrationRequest = 0x0,
     #[doc = "A request for hardware calibration has been made."]
-    CALIBRATION_REQUEST_PENDING = 0x01,
+    CalibrationRequestPending = 0x01,
 }
 impl CalReq {
     #[inline(always)]
@@ -2130,9 +2444,9 @@ impl From<CalReq> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Calhs {
     #[doc = "No request for high speed mode trim has been made."]
-    NO_ACTIVE_HS_TRIM_REQUEST = 0x0,
+    NoActiveHsTrimRequest = 0x0,
     #[doc = "Request for high speed mode trim has been made."]
-    HS_TRIM_REQUEST_PENDING = 0x01,
+    HsTrimRequestPending = 0x01,
 }
 impl Calhs {
     #[inline(always)]
@@ -2161,9 +2475,9 @@ impl From<Calhs> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Calofs {
     #[doc = "No request for offset calibration has been made."]
-    NO_ACTIVE_OFFSET_CALIBRATION_REQUEST = 0x0,
+    NoActiveOffsetCalibrationRequest = 0x0,
     #[doc = "Request for offset calibration function."]
-    OFFSET_CALIBRATION_REQUEST_PENDING = 0x01,
+    OffsetCalibrationRequestPending = 0x01,
 }
 impl Calofs {
     #[inline(always)]
@@ -2192,9 +2506,9 @@ impl From<Calofs> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Calofsi {
     #[doc = "Calibration Not Implemented."]
-    CAL_FUNCTION_NOT_AVAILABLE = 0x0,
+    CalFunctionNotAvailable = 0x0,
     #[doc = "Calibration Implemented."]
-    CAL_FUNCTION_AVAILABLE = 0x01,
+    CalFunctionAvailable = 0x01,
 }
 impl Calofsi {
     #[inline(always)]
@@ -2223,21 +2537,21 @@ impl From<Calofsi> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdact {
     #[doc = "No command is currently in progress."]
-    NO_COMMAND_ACTIVE = 0x0,
+    NoCommandActive = 0x0,
     #[doc = "Command 1 currently being executed."]
-    COMMAND_1 = 0x01,
+    Command1 = 0x01,
     #[doc = "Command 2 currently being executed."]
-    COMMAND_2 = 0x02,
+    Command2 = 0x02,
     #[doc = "Associated command number is currently being executed."]
-    COMMAND_X_3 = 0x03,
+    CommandX3 = 0x03,
     #[doc = "Associated command number is currently being executed."]
-    COMMAND_X_4 = 0x04,
+    CommandX4 = 0x04,
     #[doc = "Associated command number is currently being executed."]
-    COMMAND_X_5 = 0x05,
+    CommandX5 = 0x05,
     #[doc = "Associated command number is currently being executed."]
-    COMMAND_X_6 = 0x06,
+    CommandX6 = 0x06,
     #[doc = "Associated command number is currently being executed."]
-    COMMAND_X_7 = 0x07,
+    CommandX7 = 0x07,
 }
 impl Cmdact {
     #[inline(always)]
@@ -2266,21 +2580,21 @@ impl From<Cmdact> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdsrc {
     #[doc = "Not a valid value CMDSRC value for a dataword in RESFIFO. 0x0 is only found in initial FIFO state prior to an ADC conversion result dataword being stored to a RESFIFO buffer."]
-    NOT_VALID = 0x0,
+    NotValid = 0x0,
     #[doc = "CMD1 buffer used as control settings for this conversion."]
-    CMD1 = 0x01,
+    Cmd1 = 0x01,
     #[doc = "Corresponding command buffer used as control settings for this conversion."]
-    CORRESPONDING_CMD_2 = 0x02,
+    CorrespondingCmd2 = 0x02,
     #[doc = "Corresponding command buffer used as control settings for this conversion."]
-    CORRESPONDING_CMD_3 = 0x03,
+    CorrespondingCmd3 = 0x03,
     #[doc = "Corresponding command buffer used as control settings for this conversion."]
-    CORRESPONDING_CMD_4 = 0x04,
+    CorrespondingCmd4 = 0x04,
     #[doc = "Corresponding command buffer used as control settings for this conversion."]
-    CORRESPONDING_CMD_5 = 0x05,
+    CorrespondingCmd5 = 0x05,
     #[doc = "Corresponding command buffer used as control settings for this conversion."]
-    CORRESPONDING_CMD_6 = 0x06,
+    CorrespondingCmd6 = 0x06,
     #[doc = "CMD7 buffer used as control settings for this conversion."]
-    CMD7 = 0x07,
+    Cmd7 = 0x07,
 }
 impl Cmdsrc {
     #[inline(always)]
@@ -2309,12 +2623,12 @@ impl From<Cmdsrc> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmpen {
     #[doc = "Compare disabled."]
-    DISABLED_ALWAYS_STORE_RESULT = 0x0,
+    DisabledAlwaysStoreResult = 0x0,
     _RESERVED_1 = 0x01,
     #[doc = "Compare enabled. Store on true."]
-    COMPARE_RESULT_STORE_IF_TRUE = 0x02,
+    CompareResultStoreIfTrue = 0x02,
     #[doc = "Compare enabled. Repeat channel acquisition (sample/convert/compare) until true."]
-    COMPARE_RESULT_KEEP_CONVERTING_UNTIL_TRUE_STORE_IF_TRUE = 0x03,
+    CompareResultKeepConvertingUntilTrueStoreIfTrue = 0x03,
 }
 impl Cmpen {
     #[inline(always)]
@@ -2341,17 +2655,48 @@ impl From<Cmpen> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum CstLong {
+    #[doc = "Normal sample time. Minimum sample time of 3.5 ADCK cycles."]
+    Sample3p5 = 0x0,
+    #[doc = "Increased sample time. 67.5 ADCK cycles total sample time."]
+    Sample67p5 = 0x01,
+}
+impl CstLong {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> CstLong {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for CstLong {
+    #[inline(always)]
+    fn from(val: u8) -> CstLong {
+        CstLong::from_bits(val)
+    }
+}
+impl From<CstLong> for u8 {
+    #[inline(always)]
+    fn from(val: CstLong) -> u8 {
+        CstLong::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Csw {
     #[doc = "Channel scaling not supported."]
-    CSCALE_NOT_SUPPORTED = 0x0,
+    CscaleNotSupported = 0x0,
     #[doc = "Channel scaling supported. 1-bit CSCALE control field."]
-    BIT_WIDTH_1 = 0x01,
+    BitWidth1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
     #[doc = "Channel scaling supported. 6-bit CSCALE control field."]
-    BIT_WIDTH_6 = 0x06,
+    BitWidth6 = 0x06,
     _RESERVED_7 = 0x07,
 }
 impl Csw {
@@ -2381,7 +2726,7 @@ impl From<Csw> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctype {
     #[doc = "Single-Ended Mode. Only A side channel is converted."]
-    SINGLE_ENDED_A_SIDE_CHANNEL = 0x0,
+    SingleEndedASideChannel = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -2413,9 +2758,9 @@ impl From<Ctype> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Diffen {
     #[doc = "Differential operation not supported."]
-    DIFFERENTIAL_NOT_SUPPORTED = 0x0,
+    DifferentialNotSupported = 0x0,
     #[doc = "Differential operation supported."]
-    DIFFERENTIAL_SUPPORTED = 0x01,
+    DifferentialSupported = 0x01,
 }
 impl Diffen {
     #[inline(always)]
@@ -2444,9 +2789,9 @@ impl From<Diffen> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dozen {
     #[doc = "ADC is enabled in low power mode."]
-    ENABLED = 0x0,
+    Enabled = 0x0,
     #[doc = "ADC is disabled in low power mode."]
-    DISABLED = 0x01,
+    Disabled = 0x01,
 }
 impl Dozen {
     #[inline(always)]
@@ -2475,17 +2820,17 @@ impl From<Dozen> for u8 {
 pub struct Fifosize(u8);
 impl Fifosize {
     #[doc = "Result FIFO depth = 2 dataword."]
-    pub const ENTRIES_2: Self = Self(0x01);
+    pub const Entries2: Self = Self(0x01);
     #[doc = "Result FIFO depth = 4 datawords."]
-    pub const ENTRIES_4: Self = Self(0x04);
+    pub const Entries4: Self = Self(0x04);
     #[doc = "Result FIFO depth = 8 datawords."]
-    pub const ENTRIES_8: Self = Self(0x08);
+    pub const Entries8: Self = Self(0x08);
     #[doc = "Result FIFO depth = 16 datawords."]
-    pub const ENTRIES_16: Self = Self(0x10);
+    pub const Entries16: Self = Self(0x10);
     #[doc = "Result FIFO depth = 32 datawords."]
-    pub const ENTRIES_32: Self = Self(0x20);
+    pub const Entries32: Self = Self(0x20);
     #[doc = "Result FIFO depth = 64 datawords."]
-    pub const ENTRIES_64: Self = Self(0x40);
+    pub const Entries64: Self = Self(0x40);
 }
 impl Fifosize {
     pub const fn from_bits(val: u8) -> Fifosize {
@@ -2498,12 +2843,12 @@ impl Fifosize {
 impl core::fmt::Debug for Fifosize {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
-            0x01 => f.write_str("ENTRIES_2"),
-            0x04 => f.write_str("ENTRIES_4"),
-            0x08 => f.write_str("ENTRIES_8"),
-            0x10 => f.write_str("ENTRIES_16"),
-            0x20 => f.write_str("ENTRIES_32"),
-            0x40 => f.write_str("ENTRIES_64"),
+            0x01 => f.write_str("Entries2"),
+            0x04 => f.write_str("Entries4"),
+            0x08 => f.write_str("Entries8"),
+            0x10 => f.write_str("Entries16"),
+            0x20 => f.write_str("Entries32"),
+            0x40 => f.write_str("Entries64"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -2512,12 +2857,12 @@ impl core::fmt::Debug for Fifosize {
 impl defmt::Format for Fifosize {
     fn format(&self, f: defmt::Formatter) {
         match self.0 {
-            0x01 => defmt::write!(f, "ENTRIES_2"),
-            0x04 => defmt::write!(f, "ENTRIES_4"),
-            0x08 => defmt::write!(f, "ENTRIES_8"),
-            0x10 => defmt::write!(f, "ENTRIES_16"),
-            0x20 => defmt::write!(f, "ENTRIES_32"),
-            0x40 => defmt::write!(f, "ENTRIES_64"),
+            0x01 => defmt::write!(f, "Entries2"),
+            0x04 => defmt::write!(f, "Entries4"),
+            0x08 => defmt::write!(f, "Entries8"),
+            0x10 => defmt::write!(f, "Entries16"),
+            0x20 => defmt::write!(f, "Entries32"),
+            0x40 => defmt::write!(f, "Entries64"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }
@@ -2539,9 +2884,9 @@ impl From<Fifosize> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fof0 {
     #[doc = "No result FIFO 0 overflow has occurred since the last time the flag was cleared."]
-    NO_OVERFLOW = 0x0,
+    NoOverflow = 0x0,
     #[doc = "At least one result FIFO 0 overflow has occurred since the last time the flag was cleared."]
-    OVERFLOW_DETECTED = 0x01,
+    OverflowDetected = 0x01,
 }
 impl Fof0 {
     #[inline(always)]
@@ -2568,15 +2913,15 @@ impl From<Fof0> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Gcc0rdy {
+pub enum Gcc0Rdy {
     #[doc = "The GAIN_CAL value is invalid. Run the hardware calibration routine for this value to be set."]
-    GAIN_CAL_NOT_VALID = 0x0,
+    GainCalNotValid = 0x0,
     #[doc = "The GAIN_CAL value is valid. GAIN_CAL should be used by software to derive GCRa\\[GCALR\\]."]
-    HARDWARE_CAL_ROUTINE_COMPLETED = 0x01,
+    HardwareCalRoutineCompleted = 0x01,
 }
-impl Gcc0rdy {
+impl Gcc0Rdy {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Gcc0rdy {
+    pub const fn from_bits(val: u8) -> Gcc0Rdy {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -2584,16 +2929,16 @@ impl Gcc0rdy {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Gcc0rdy {
+impl From<u8> for Gcc0Rdy {
     #[inline(always)]
-    fn from(val: u8) -> Gcc0rdy {
-        Gcc0rdy::from_bits(val)
+    fn from(val: u8) -> Gcc0Rdy {
+        Gcc0Rdy::from_bits(val)
     }
 }
-impl From<Gcc0rdy> for u8 {
+impl From<Gcc0Rdy> for u8 {
     #[inline(always)]
-    fn from(val: Gcc0rdy) -> u8 {
-        Gcc0rdy::to_bits(val)
+    fn from(val: Gcc0Rdy) -> u8 {
+        Gcc0Rdy::to_bits(val)
     }
 }
 #[repr(u8)]
@@ -2601,9 +2946,9 @@ impl From<Gcc0rdy> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HptExdi {
     #[doc = "High priority trigger exceptions are enabled."]
-    ENABLED = 0x0,
+    Enabled = 0x0,
     #[doc = "High priority trigger exceptions are disabled."]
-    DISABLED = 0x01,
+    Disabled = 0x01,
 }
 impl HptExdi {
     #[inline(always)]
@@ -2631,10 +2976,10 @@ impl From<HptExdi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hsextra {
-    #[doc = "No extra cycle added."]
-    HSEXTRA_0 = 0x0,
-    #[doc = "Extra cycle added."]
-    HSEXTRA_1 = 0x01,
+    #[doc = "No extra cycle added. Allow 2 ADCK cycles for async SAR operation."]
+    Hsextra0 = 0x0,
+    #[doc = "Extra cycle added. Allow 3 ADCK cycles for async SAR operation."]
+    Hsextra1 = 0x01,
 }
 impl Hsextra {
     #[inline(always)]
@@ -2663,9 +3008,9 @@ impl From<Hsextra> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Iadcki {
     #[doc = "Internal clock source not implemented."]
-    INTERNAL_CLK_NOT_AVAILABLE = 0x0,
+    InternalClkNotAvailable = 0x0,
     #[doc = "Internal clock source (and CFG\\[ADCKEN\\]) implemented."]
-    INTERNAL_CLK_AVAILABLE = 0x01,
+    InternalClkAvailable = 0x01,
 }
 impl Iadcki {
     #[inline(always)]
@@ -2694,32 +3039,32 @@ impl From<Iadcki> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Loop {
     #[doc = "Looping not enabled. Command executes 1 time."]
-    CMD_EXEC_1X = 0x0,
+    CmdExec1x = 0x0,
     #[doc = "Loop 1 time. Command executes 2 times."]
-    CMD_EXEC_2X = 0x01,
+    CmdExec2x = 0x01,
     #[doc = "Loop 2 times. Command executes 3 times."]
-    CMD_EXEC_3X = 0x02,
+    CmdExec3x = 0x02,
     #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_3 = 0x03,
+    CmdExecutesCorrespondingTimes3 = 0x03,
     #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_4 = 0x04,
+    CmdExecutesCorrespondingTimes4 = 0x04,
     #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_5 = 0x05,
+    CmdExecutesCorrespondingTimes5 = 0x05,
     #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_6 = 0x06,
+    CmdExecutesCorrespondingTimes6 = 0x06,
     #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_7 = 0x07,
+    CmdExecutesCorrespondingTimes7 = 0x07,
     #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_8 = 0x08,
+    CmdExecutesCorrespondingTimes8 = 0x08,
     #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_9 = 0x09,
+    CmdExecutesCorrespondingTimes9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     #[doc = "Loop 15 times. Command executes 16 times."]
-    CMD_EXEC_15X = 0x0f,
+    CmdExec15x = 0x0f,
 }
 impl Loop {
     #[inline(always)]
@@ -2748,32 +3093,32 @@ impl From<Loop> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Loopcnt {
     #[doc = "Result is from initial conversion in command."]
-    RESULT_1 = 0x0,
+    Result1 = 0x0,
     #[doc = "Result is from second conversion in command."]
-    RESULT_2 = 0x01,
+    Result2 = 0x01,
     #[doc = "Result is from LOOPCNT+1 conversion in command."]
-    CORRESPONDING_RESULT_2 = 0x02,
+    CorrespondingResult2 = 0x02,
     #[doc = "Result is from LOOPCNT+1 conversion in command."]
-    CORRESPONDING_RESULT_3 = 0x03,
+    CorrespondingResult3 = 0x03,
     #[doc = "Result is from LOOPCNT+1 conversion in command."]
-    CORRESPONDING_RESULT_4 = 0x04,
+    CorrespondingResult4 = 0x04,
     #[doc = "Result is from LOOPCNT+1 conversion in command."]
-    CORRESPONDING_RESULT_5 = 0x05,
+    CorrespondingResult5 = 0x05,
     #[doc = "Result is from LOOPCNT+1 conversion in command."]
-    CORRESPONDING_RESULT_6 = 0x06,
+    CorrespondingResult6 = 0x06,
     #[doc = "Result is from LOOPCNT+1 conversion in command."]
-    CORRESPONDING_RESULT_7 = 0x07,
+    CorrespondingResult7 = 0x07,
     #[doc = "Result is from LOOPCNT+1 conversion in command."]
-    CORRESPONDING_RESULT_8 = 0x08,
+    CorrespondingResult8 = 0x08,
     #[doc = "Result is from LOOPCNT+1 conversion in command."]
-    CORRESPONDING_RESULT_9 = 0x09,
+    CorrespondingResult9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     #[doc = "Result is from 16th conversion in command."]
-    RESULT_16 = 0x0f,
+    Result16 = 0x0f,
 }
 impl Loopcnt {
     #[inline(always)]
@@ -2802,9 +3147,9 @@ impl From<Loopcnt> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mode {
     #[doc = "Standard resolution. Single-ended 12-bit conversion."]
-    DATA_12_BITS = 0x0,
+    Data12Bits = 0x0,
     #[doc = "High resolution. Single-ended 16-bit conversion."]
-    DATA_16_BITS = 0x01,
+    Data16Bits = 0x01,
 }
 impl Mode {
     #[inline(always)]
@@ -2833,9 +3178,9 @@ impl From<Mode> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mvi {
     #[doc = "Single voltage reference high (VREFH) input supported."]
-    MULTIPLE_REF_NOT_SUPPORTED = 0x0,
+    MultipleRefNotSupported = 0x0,
     #[doc = "Multiple voltage reference high (VREFH) inputs supported."]
-    MULTIPLE_REF_SUPPORTED = 0x01,
+    MultipleRefSupported = 0x01,
 }
 impl Mvi {
     #[inline(always)]
@@ -2864,21 +3209,21 @@ impl From<Mvi> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
-    NO_NEXT_CMD_TERMINATE_ON_FINISH = 0x0,
+    NoNextCmdTerminateOnFinish = 0x0,
     #[doc = "Select CMD1 command buffer register as next command."]
-    DO_CMD1_NEXT = 0x01,
+    DoCmd1Next = 0x01,
     #[doc = "Select corresponding CMD command buffer register as next command."]
-    DO_CORRESPONDING_CMD_NEXT_2 = 0x02,
+    DoCorrespondingCmdNext2 = 0x02,
     #[doc = "Select corresponding CMD command buffer register as next command."]
-    DO_CORRESPONDING_CMD_NEXT_3 = 0x03,
+    DoCorrespondingCmdNext3 = 0x03,
     #[doc = "Select corresponding CMD command buffer register as next command."]
-    DO_CORRESPONDING_CMD_NEXT_4 = 0x04,
+    DoCorrespondingCmdNext4 = 0x04,
     #[doc = "Select corresponding CMD command buffer register as next command."]
-    DO_CORRESPONDING_CMD_NEXT_5 = 0x05,
+    DoCorrespondingCmdNext5 = 0x05,
     #[doc = "Select corresponding CMD command buffer register as next command."]
-    DO_CORRESPONDING_CMD_NEXT_6 = 0x06,
+    DoCorrespondingCmdNext6 = 0x06,
     #[doc = "Select CMD7 command buffer register as next command."]
-    DO_CMD7_NEXT = 0x07,
+    DoCmd7Next = 0x07,
 }
 impl Next {
     #[inline(always)]
@@ -2905,17 +3250,52 @@ impl From<Next> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum NoiseCancel {
+    #[doc = "Noise cancelling disabled."]
+    Disabled = 0x0,
+    #[doc = "Shortest delay."]
+    ShortDelay = 0x01,
+    #[doc = "Mid delay."]
+    MidDelay = 0x02,
+    #[doc = "Longest delay."]
+    LongestDelay = 0x03,
+}
+impl NoiseCancel {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> NoiseCancel {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for NoiseCancel {
+    #[inline(always)]
+    fn from(val: u8) -> NoiseCancel {
+        NoiseCancel::from_bits(val)
+    }
+}
+impl From<NoiseCancel> for u8 {
+    #[inline(always)]
+    fn from(val: NoiseCancel) -> u8 {
+        NoiseCancel::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum NumFifo {
     #[doc = "N/A."]
-    NO_FIFO_IMPLEMENTED = 0x0,
+    NoFifoImplemented = 0x0,
     #[doc = "This design supports one result FIFO."]
-    CNT_1 = 0x01,
+    Cnt1 = 0x01,
     #[doc = "This design supports two result FIFOs."]
-    CNT_2 = 0x02,
+    Cnt2 = 0x02,
     #[doc = "This design supports three result FIFOs."]
-    CNT_3 = 0x03,
+    Cnt3 = 0x03,
     #[doc = "This design supports four result FIFOs."]
-    CNT_4 = 0x04,
+    Cnt4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -2947,9 +3327,9 @@ impl From<NumFifo> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum NumSec {
     #[doc = "This design supports one single ended conversion at a time."]
-    SINGLE_CONVERTOR = 0x0,
+    SingleConvertor = 0x0,
     #[doc = "This design supports two simultaneous single ended conversions."]
-    DUAL_CONVERTOR = 0x01,
+    DualConvertor = 0x01,
 }
 impl NumSec {
     #[inline(always)]
@@ -2978,9 +3358,9 @@ impl From<NumSec> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pwrsel {
     #[doc = "Low power."]
-    LOWEST = 0x0,
+    Lowest = 0x0,
     #[doc = "High power."]
-    HIGHEST = 0x01,
+    Highest = 0x01,
 }
 impl Pwrsel {
     #[inline(always)]
@@ -3009,9 +3389,9 @@ impl From<Pwrsel> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rdy0 {
     #[doc = "Result FIFO 0 data level not above watermark level."]
-    BELOW_THRESHOLD = 0x0,
+    BelowThreshold = 0x0,
     #[doc = "Result FIFO 0 holding data above watermark level."]
-    ABOVE_THRESHOLD = 0x01,
+    AboveThreshold = 0x01,
 }
 impl Rdy0 {
     #[inline(always)]
@@ -3040,11 +3420,11 @@ impl From<Rdy0> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Refsel {
     #[doc = "(Default) Option 1 setting."]
-    OPTION_1 = 0x0,
+    Option1 = 0x0,
     #[doc = "Option 2 setting."]
-    OPTION_2 = 0x01,
+    Option2 = 0x01,
     #[doc = "Option 3 setting."]
-    OPTION_3 = 0x02,
+    Option3 = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl Refsel {
@@ -3074,9 +3454,9 @@ impl From<Refsel> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Res {
     #[doc = "Up to 12-bit single ended resolution supported (and 13-bit differential resolution if VERID\\[DIFFEN\\] = 1b)."]
-    MAX_13_BIT = 0x0,
+    Max13Bit = 0x0,
     #[doc = "Up to 16-bit single ended resolution supported (and 16-bit differential resolution if VERID\\[DIFFEN\\] = 1b)."]
-    MAX_16_BIT = 0x01,
+    Max16Bit = 0x01,
 }
 impl Res {
     #[inline(always)]
@@ -3105,9 +3485,9 @@ impl From<Res> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rst {
     #[doc = "ADC logic is not reset."]
-    RELEASED_FROM_RESET = 0x0,
+    ReleasedFromReset = 0x0,
     #[doc = "ADC logic is reset."]
-    HELD_IN_RESET = 0x01,
+    HeldInReset = 0x01,
 }
 impl Rst {
     #[inline(always)]
@@ -3136,9 +3516,9 @@ impl From<Rst> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rstfifo0 {
     #[doc = "No effect."]
-    NO_ACTION = 0x0,
+    NoAction = 0x0,
     #[doc = "FIFO 0 is reset."]
-    TRIGGER_RESET = 0x01,
+    TriggerReset = 0x01,
 }
 impl Rstfifo0 {
     #[inline(always)]
@@ -3167,21 +3547,21 @@ impl From<Rstfifo0> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
-    SAMPLE_3P5 = 0x0,
+    Sample3p5 = 0x0,
     #[doc = "3.5 + 21 ADCK cycles; 5.5 ADCK cycles total sample time."]
-    SAMPLE_5P5 = 0x01,
+    Sample5p5 = 0x01,
     #[doc = "3.5 + 22 ADCK cycles; 7.5 ADCK cycles total sample time."]
-    SAMPLE_7P5 = 0x02,
+    Sample7p5 = 0x02,
     #[doc = "3.5 + 23 ADCK cycles; 11.5 ADCK cycles total sample time."]
-    SAMPLE_11P5 = 0x03,
+    Sample11p5 = 0x03,
     #[doc = "3.5 + 24 ADCK cycles; 19.5 ADCK cycles total sample time."]
-    SAMPLE_19P5 = 0x04,
+    Sample19p5 = 0x04,
     #[doc = "3.5 + 25 ADCK cycles; 35.5 ADCK cycles total sample time."]
-    SAMPLE_35P5 = 0x05,
+    Sample35p5 = 0x05,
     #[doc = "3.5 + 26 ADCK cycles; 67.5 ADCK cycles total sample time."]
-    SAMPLE_67P5 = 0x06,
+    Sample67p5 = 0x06,
     #[doc = "3.5 + 27 ADCK cycles; 131.5 ADCK cycles total sample time."]
-    SAMPLE_131P5 = 0x07,
+    Sample131p5 = 0x07,
 }
 impl Sts {
     #[inline(always)]
@@ -3210,21 +3590,21 @@ impl From<Sts> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcmd {
     #[doc = "Not a valid selection from the command buffer. Trigger event is ignored."]
-    NOT_VALID = 0x0,
+    NotValid = 0x0,
     #[doc = "CMD1 is executed."]
-    EXECUTE_CMD1 = 0x01,
+    ExecuteCmd1 = 0x01,
     #[doc = "Corresponding CMD is executed."]
-    EXECUTE_CORRESPONDING_CMD_2 = 0x02,
+    ExecuteCorrespondingCmd2 = 0x02,
     #[doc = "Corresponding CMD is executed."]
-    EXECUTE_CORRESPONDING_CMD_3 = 0x03,
+    ExecuteCorrespondingCmd3 = 0x03,
     #[doc = "Corresponding CMD is executed."]
-    EXECUTE_CORRESPONDING_CMD_4 = 0x04,
+    ExecuteCorrespondingCmd4 = 0x04,
     #[doc = "Corresponding CMD is executed."]
-    EXECUTE_CORRESPONDING_CMD_5 = 0x05,
+    ExecuteCorrespondingCmd5 = 0x05,
     #[doc = "Corresponding CMD is executed."]
-    EXECUTE_CORRESPONDING_CMD_6 = 0x06,
+    ExecuteCorrespondingCmd6 = 0x06,
     #[doc = "CMD7 is executed."]
-    EXECUTE_CMD7 = 0x07,
+    ExecuteCmd7 = 0x07,
 }
 impl Tcmd {
     #[inline(always)]
@@ -3253,32 +3633,32 @@ impl From<Tcmd> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TcompFlag {
     #[doc = "No triggers have been completed. Trigger completion interrupts are disabled."]
-    NO_TRIGGER = 0x0,
+    NoTrigger = 0x0,
     #[doc = "Trigger 0 has been completed and trigger 0 has enabled completion interrupts."]
-    BIT0_MEANS_TRIGGER_0_COMPLETED = 0x01,
+    Bit0MeansTrigger0Completed = 0x01,
     #[doc = "Trigger 1 has been completed and trigger 1 has enabled completion interrupts."]
-    BIT1_MEANS_TRIGGER_1_COMPLETED = 0x02,
+    Bit1MeansTrigger1Completed = 0x02,
     #[doc = "Associated trigger sequence has completed and has enabled completion interrupts."]
-    SET_BITS_INDICATE_TRIGGER_X_COMPLETED_3 = 0x03,
+    SetBitsIndicateTriggerXCompleted3 = 0x03,
     #[doc = "Associated trigger sequence has completed and has enabled completion interrupts."]
-    SET_BITS_INDICATE_TRIGGER_X_COMPLETED_4 = 0x04,
+    SetBitsIndicateTriggerXCompleted4 = 0x04,
     #[doc = "Associated trigger sequence has completed and has enabled completion interrupts."]
-    SET_BITS_INDICATE_TRIGGER_X_COMPLETED_5 = 0x05,
+    SetBitsIndicateTriggerXCompleted5 = 0x05,
     #[doc = "Associated trigger sequence has completed and has enabled completion interrupts."]
-    SET_BITS_INDICATE_TRIGGER_X_COMPLETED_6 = 0x06,
+    SetBitsIndicateTriggerXCompleted6 = 0x06,
     #[doc = "Associated trigger sequence has completed and has enabled completion interrupts."]
-    SET_BITS_INDICATE_TRIGGER_X_COMPLETED_7 = 0x07,
+    SetBitsIndicateTriggerXCompleted7 = 0x07,
     #[doc = "Associated trigger sequence has completed and has enabled completion interrupts."]
-    SET_BITS_INDICATE_TRIGGER_X_COMPLETED_8 = 0x08,
+    SetBitsIndicateTriggerXCompleted8 = 0x08,
     #[doc = "Associated trigger sequence has completed and has enabled completion interrupts."]
-    SET_BITS_INDICATE_TRIGGER_X_COMPLETED_9 = 0x09,
+    SetBitsIndicateTriggerXCompleted9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     #[doc = "Every trigger sequence has been completed and every trigger has enabled completion interrupts."]
-    ALL_BITS_SET_INDICATE_ALL_TRIGGERS_COMPLETED = 0x0f,
+    AllBitsSetIndicateAllTriggersCompleted = 0x0f,
 }
 impl TcompFlag {
     #[inline(always)]
@@ -3307,32 +3687,32 @@ impl From<TcompFlag> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TcompIe {
     #[doc = "Trigger completion interrupts are disabled."]
-    DISABLED = 0x0,
+    Disabled = 0x0,
     #[doc = "Trigger completion interrupts are enabled for trigger source 0 only."]
-    TRIGGER_0_COMPLETE_ENABLED = 0x01,
+    Trigger0CompleteEnabled = 0x01,
     #[doc = "Trigger completion interrupts are enabled for trigger source 1 only."]
-    TRIGGER_1_COMPLETE_ENABLED = 0x02,
+    Trigger1CompleteEnabled = 0x02,
     #[doc = "Associated trigger completion interrupts are enabled."]
-    TRIGGER_X_COMPLETE_ENABLED_3 = 0x03,
+    TriggerXCompleteEnabled3 = 0x03,
     #[doc = "Associated trigger completion interrupts are enabled."]
-    TRIGGER_X_COMPLETE_ENABLED_4 = 0x04,
+    TriggerXCompleteEnabled4 = 0x04,
     #[doc = "Associated trigger completion interrupts are enabled."]
-    TRIGGER_X_COMPLETE_ENABLED_5 = 0x05,
+    TriggerXCompleteEnabled5 = 0x05,
     #[doc = "Associated trigger completion interrupts are enabled."]
-    TRIGGER_X_COMPLETE_ENABLED_6 = 0x06,
+    TriggerXCompleteEnabled6 = 0x06,
     #[doc = "Associated trigger completion interrupts are enabled."]
-    TRIGGER_X_COMPLETE_ENABLED_7 = 0x07,
+    TriggerXCompleteEnabled7 = 0x07,
     #[doc = "Associated trigger completion interrupts are enabled."]
-    TRIGGER_X_COMPLETE_ENABLED_8 = 0x08,
+    TriggerXCompleteEnabled8 = 0x08,
     #[doc = "Associated trigger completion interrupts are enabled."]
-    TRIGGER_X_COMPLETE_ENABLED_9 = 0x09,
+    TriggerXCompleteEnabled9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     #[doc = "Trigger completion interrupts are enabled for every trigger source."]
-    ALL_TRIGGER_COMPLETES_ENABLED = 0x0f,
+    AllTriggerCompletesEnabled = 0x0f,
 }
 impl TcompIe {
     #[inline(always)]
@@ -3361,9 +3741,9 @@ impl From<TcompIe> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TcompInt {
     #[doc = "Either IE\\[TCOMP_IE\\] is set to 0, or no trigger sequences have run to completion."]
-    FLAG_CLEAR = 0x0,
+    FlagClear = 0x0,
     #[doc = "Trigger sequence has been completed and all data is stored in the associated FIFO."]
-    COMPLETION_DETECTED = 0x01,
+    CompletionDetected = 0x01,
 }
 impl TcompInt {
     #[inline(always)]
@@ -3392,9 +3772,9 @@ impl From<TcompInt> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TexcInt {
     #[doc = "No trigger exceptions have occurred."]
-    NO_EXCEPTION = 0x0,
+    NoException = 0x0,
     #[doc = "A trigger exception has occurred and is pending acknowledgement."]
-    EXCEPTION_DETECTED = 0x01,
+    ExceptionDetected = 0x01,
 }
 impl TexcInt {
     #[inline(always)]
@@ -3423,32 +3803,32 @@ impl From<TexcInt> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TexcNum {
     #[doc = "No triggers have been interrupted by a high priority exception. Or CFG\\[TRES\\] = 1."]
-    NO_EXCEPTIONS = 0x0,
+    NoExceptions = 0x0,
     #[doc = "Trigger 0 has been interrupted by a high priority exception."]
-    BIT0_MEANS_TRIGGER_0_INTERRUPTED = 0x01,
+    Bit0MeansTrigger0Interrupted = 0x01,
     #[doc = "Trigger 1 has been interrupted by a high priority exception."]
-    BIT1_MEANS_TRIGGER_1_INTERRUPTED = 0x02,
+    Bit1MeansTrigger1Interrupted = 0x02,
     #[doc = "Associated trigger sequence has interrupted by a high priority exception."]
-    SET_BITS_INDICATE_TRIGGER_X_INTERRUPTED_3 = 0x03,
+    SetBitsIndicateTriggerXInterrupted3 = 0x03,
     #[doc = "Associated trigger sequence has interrupted by a high priority exception."]
-    SET_BITS_INDICATE_TRIGGER_X_INTERRUPTED_4 = 0x04,
+    SetBitsIndicateTriggerXInterrupted4 = 0x04,
     #[doc = "Associated trigger sequence has interrupted by a high priority exception."]
-    SET_BITS_INDICATE_TRIGGER_X_INTERRUPTED_5 = 0x05,
+    SetBitsIndicateTriggerXInterrupted5 = 0x05,
     #[doc = "Associated trigger sequence has interrupted by a high priority exception."]
-    SET_BITS_INDICATE_TRIGGER_X_INTERRUPTED_6 = 0x06,
+    SetBitsIndicateTriggerXInterrupted6 = 0x06,
     #[doc = "Associated trigger sequence has interrupted by a high priority exception."]
-    SET_BITS_INDICATE_TRIGGER_X_INTERRUPTED_7 = 0x07,
+    SetBitsIndicateTriggerXInterrupted7 = 0x07,
     #[doc = "Associated trigger sequence has interrupted by a high priority exception."]
-    SET_BITS_INDICATE_TRIGGER_X_INTERRUPTED_8 = 0x08,
+    SetBitsIndicateTriggerXInterrupted8 = 0x08,
     #[doc = "Associated trigger sequence has interrupted by a high priority exception."]
-    SET_BITS_INDICATE_TRIGGER_X_INTERRUPTED_9 = 0x09,
+    SetBitsIndicateTriggerXInterrupted9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     #[doc = "Every trigger sequence has been interrupted by a high priority exception."]
-    ALL_BITS_SET_INDICATE_ALL_TRIGGERS_INTERRUPTED = 0x0f,
+    AllBitsSetIndicateAllTriggersInterrupted = 0x0f,
 }
 impl TexcNum {
     #[inline(always)]
@@ -3477,13 +3857,13 @@ impl From<TexcNum> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tpri {
     #[doc = "Set to highest priority, Level 1."]
-    HIGHEST_PRIORITY = 0x0,
+    HighestPriority = 0x0,
     #[doc = "Set to corresponding priority level."]
-    CORRESPONDING_LOWER_PRIORITY_1 = 0x01,
+    CorrespondingLowerPriority1 = 0x01,
     #[doc = "Set to corresponding priority level."]
-    CORRESPONDING_LOWER_PRIORITY_2 = 0x02,
+    CorrespondingLowerPriority2 = 0x02,
     #[doc = "Set to lowest priority, Level 4."]
-    LOWEST_PRIORITY = 0x03,
+    LowestPriority = 0x03,
 }
 impl Tpri {
     #[inline(always)]
@@ -3512,11 +3892,11 @@ impl From<Tpri> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tprictrl {
     #[doc = "If a higher priority trigger is detected during command processing, the current conversion is aborted and the new command specified by the trigger is started."]
-    ABORT_CURRENT_ON_PRIORITY = 0x0,
+    AbortCurrentOnPriority = 0x0,
     #[doc = "If a higher priority trigger is received during command processing, the current command is stopped after completing the current conversion. If averaging is enabled, the averaging loop will be completed. However, CMDHa\\[LOOP\\] will be ignored and the higher priority trigger will be serviced."]
-    FINISH_CURRENT_ON_PRIORITY = 0x01,
+    FinishCurrentOnPriority = 0x01,
     #[doc = "If a higher priority trigger is received during command processing, the current command will be completed (averaging, looping, compare) before servicing the higher priority trigger."]
-    FINISH_SEQUENCE_ON_PRIORITY = 0x02,
+    FinishSequenceOnPriority = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl Tprictrl {
@@ -3546,13 +3926,13 @@ impl From<Tprictrl> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trgact {
     #[doc = "Command (sequence) associated with Trigger 0 currently being executed."]
-    TRIG_0 = 0x0,
+    Trig0 = 0x0,
     #[doc = "Command (sequence) associated with Trigger 1 currently being executed."]
-    TRIG_1 = 0x01,
+    Trig1 = 0x01,
     #[doc = "Command (sequence) associated with Trigger 2 currently being executed."]
-    TRIG_2 = 0x02,
+    Trig2 = 0x02,
     #[doc = "Command (sequence) associated with Trigger 3 currently being executed."]
-    TRIG_3 = 0x03,
+    Trig3 = 0x03,
 }
 impl Trgact {
     #[inline(always)]
@@ -3581,13 +3961,13 @@ impl From<Trgact> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tsrc {
     #[doc = "Trigger source 0 initiated this conversion."]
-    TRIGGER_0 = 0x0,
+    Trigger0 = 0x0,
     #[doc = "Trigger source 1 initiated this conversion."]
-    TRIGGER_1 = 0x01,
+    Trigger1 = 0x01,
     #[doc = "Trigger source 2 initiated this conversion."]
-    TRIGGER_2 = 0x02,
+    Trigger2 = 0x02,
     #[doc = "Trigger source 3 initiated this conversion."]
-    TRIGGER_3 = 0x03,
+    Trigger3 = 0x03,
 }
 impl Tsrc {
     #[inline(always)]
@@ -3616,9 +3996,9 @@ impl From<Tsrc> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Vr1rngi {
     #[doc = "Range control not required. CFG\\[VREF1RNG\\] is not implemented."]
-    REF1_FIXED_VOLTAGE_RANGE = 0x0,
+    Ref1FixedVoltageRange = 0x0,
     #[doc = "Range control required. CFG\\[VREF1RNG\\] is implemented."]
-    REF1_SELECTABLE_VOLTAGE_RANGE = 0x01,
+    Ref1SelectableVoltageRange = 0x01,
 }
 impl Vr1rngi {
     #[inline(always)]

@@ -1,6 +1,7 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (2fd28c5 2026-04-02))"]
+#![allow(non_upper_case_globals)]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (859f02b 2026-04-15))"]
 #[doc = "AHBSC."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ahbsc {
@@ -17,12 +18,23 @@ impl Ahbsc {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
+    #[doc = "AHB Slave Port 0 Rule."]
+    #[inline(always)]
+    pub const fn ahb_slave_port_p0_slave_rule(
+        self,
+        n: usize,
+    ) -> crate::pac::common::Reg<AhbSlavePortP0SlaveRule, crate::pac::common::RW> {
+        assert!(n < 4usize);
+        unsafe {
+            crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize + n * 4usize) as _)
+        }
+    }
     #[doc = "Flash Memory Rule."]
     #[inline(always)]
     pub const fn flash00_mem_rule(
         self,
         n: usize,
-    ) -> crate::pac::common::Reg<Flash00memRule, crate::pac::common::RW> {
+    ) -> crate::pac::common::Reg<Flash00MemRule, crate::pac::common::RW> {
         assert!(n < 4usize);
         unsafe {
             crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize + n * 4usize) as _)
@@ -30,28 +42,28 @@ impl Ahbsc {
     }
     #[doc = "Flash Memory Rule."]
     #[inline(always)]
-    pub const fn flash01_mem_rule(
+    pub const fn flash01_mem_rule0(
         self,
-        n: usize,
-    ) -> crate::pac::common::Reg<Flash01memRule, crate::pac::common::RW> {
-        assert!(n < 4usize);
-        unsafe {
-            crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x20usize + n * 4usize) as _)
-        }
-    }
-    #[doc = "Flash IFR0 Rule register."]
-    #[inline(always)]
-    pub const fn flash02_mem_rule(
-        self,
-    ) -> crate::pac::common::Reg<Flash02memRule, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x30usize) as _) }
+    ) -> crate::pac::common::Reg<Flash01MemRule0, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x20usize) as _) }
     }
     #[doc = "Flash Memory Rule."]
     #[inline(always)]
-    pub const fn flash03_mem_rule(
+    pub const fn flash02_mem_rule0(
         self,
-    ) -> crate::pac::common::Reg<Flash03memRule, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x40usize) as _) }
+    ) -> crate::pac::common::Reg<Flash02MemRule0, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x30usize) as _) }
+    }
+    #[doc = "AHB Slave Port 1 Rule."]
+    #[inline(always)]
+    pub const fn ahb_slave_port_p1_slave_rule(
+        self,
+        n: usize,
+    ) -> crate::pac::common::Reg<AhbSlavePortP1SlaveRule, crate::pac::common::RW> {
+        assert!(n < 4usize);
+        unsafe {
+            crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x40usize + n * 4usize) as _)
+        }
     }
     #[doc = "ROM Memory Rule."]
     #[inline(always)]
@@ -61,249 +73,260 @@ impl Ahbsc {
     ) -> crate::pac::common::Reg<RomMemRule, crate::pac::common::RW> {
         assert!(n < 4usize);
         unsafe {
+            crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x50usize + n * 4usize) as _)
+        }
+    }
+    #[doc = "AHB Slave Port 2 Rule."]
+    #[inline(always)]
+    pub const fn ahb_slave_port_p2_slave_rule(
+        self,
+        n: usize,
+    ) -> crate::pac::common::Reg<AhbSlavePortP2SlaveRule, crate::pac::common::RW> {
+        assert!(n < 4usize);
+        unsafe {
             crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x60usize + n * 4usize) as _)
         }
     }
     #[doc = "RAMX Memory Rule."]
     #[inline(always)]
-    pub const fn ramx_mem_rule(
+    pub const fn ramx_mem_rule0(
+        self,
+    ) -> crate::pac::common::Reg<RamxMemRule0, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x70usize) as _) }
+    }
+    #[doc = "AHB Slave Port 3 Rule."]
+    #[inline(always)]
+    pub const fn ahb_slave_port_p3_slave_rule(
         self,
         n: usize,
-    ) -> crate::pac::common::Reg<RamMemRule, crate::pac::common::RW> {
+    ) -> crate::pac::common::Reg<AhbSlavePortP3SlaveRule, crate::pac::common::RW> {
         assert!(n < 4usize);
         unsafe {
             crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x80usize + n * 4usize) as _)
         }
     }
-    #[doc = "RAMA Memory Rule 0."]
+    #[doc = "RAMA Memory Rule."]
     #[inline(always)]
     pub const fn rama_mem_rule(
         self,
         n: usize,
     ) -> crate::pac::common::Reg<RamMemRule, crate::pac::common::RW> {
-        assert!(n < 8usize);
+        assert!(n < 4usize);
+        unsafe {
+            crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x90usize + n * 4usize) as _)
+        }
+    }
+    #[doc = "AHB Slave Port 4 Rule."]
+    #[inline(always)]
+    pub const fn ahb_slave_port_p4_slave_rule(
+        self,
+        n: usize,
+    ) -> crate::pac::common::Reg<AhbSlavePortP4SlaveRule, crate::pac::common::RW> {
+        assert!(n < 4usize);
         unsafe {
             crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xa0usize + n * 4usize) as _)
         }
     }
-    #[doc = "RAMB Memory Rule 0."]
+    #[doc = "RAMB Memory Rule."]
     #[inline(always)]
     pub const fn ramb_mem_rule(
         self,
         n: usize,
     ) -> crate::pac::common::Reg<RamMemRule, crate::pac::common::RW> {
-        assert!(n < 8usize);
+        assert!(n < 4usize);
         unsafe {
-            crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xd0usize + n * 4usize) as _)
+            crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xb0usize + n * 4usize) as _)
         }
     }
-    #[doc = "AHB Slave Port 5 Rule Register."]
+    #[doc = "AHB Peripheral Slave Port 5 Slave Rule 0."]
     #[inline(always)]
-    pub const fn ahb_slave_port_p5_slave_rule0(
+    pub const fn ahb_peripheral_slave_port_p5_slave_rule0(
         self,
-    ) -> crate::pac::common::Reg<AhbSlavePortP5slaveRule0, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xf0usize) as _) }
+    ) -> crate::pac::common::Reg<AhbPeripheralSlavePortP5SlaveRule0, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xc0usize) as _) }
     }
-    #[doc = "APB Bridge Group 0 Memory Rule Register 0."]
+    #[doc = "AHB Peripheral Slave Port 5 Slave Rule 1."]
+    #[inline(always)]
+    pub const fn ahb_peripheral_slave_port_p5_slave_rule1(
+        self,
+    ) -> crate::pac::common::Reg<AhbPeripheralSlavePortP5SlaveRule1, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xc4usize) as _) }
+    }
+    #[doc = "APB Bridge Group 0 Memory Rule 0."]
     #[inline(always)]
     pub const fn apb_peripheral_group0_mem_rule0(
         self,
-    ) -> crate::pac::common::Reg<ApbPeripheralGroup0memRule0, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0100usize) as _) }
+    ) -> crate::pac::common::Reg<ApbPeripheralGroup0MemRule0, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xd0usize) as _) }
     }
-    #[doc = "APB Bridge Group 0 Memory Rule Register 1."]
+    #[doc = "APB Bridge Group 0 Memory Rule 1."]
     #[inline(always)]
     pub const fn apb_peripheral_group0_mem_rule1(
         self,
-    ) -> crate::pac::common::Reg<ApbPeripheralGroup0memRule1, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0104usize) as _) }
+    ) -> crate::pac::common::Reg<ApbPeripheralGroup0MemRule1, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xd4usize) as _) }
+    }
+    #[doc = "APB Bridge Group 0 Rule 2."]
+    #[inline(always)]
+    pub const fn apb_peripheral_group0_mem_rule2(
+        self,
+    ) -> crate::pac::common::Reg<u32, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xd8usize) as _) }
+    }
+    #[doc = "APB Bridge Group 0 Memory Rule 3."]
+    #[inline(always)]
+    pub const fn apb_peripheral_group0_mem_rule3(
+        self,
+    ) -> crate::pac::common::Reg<u32, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xdcusize) as _) }
     }
     #[doc = "AIPS Bridge Group 0 Memory Rule 0."]
     #[inline(always)]
     pub const fn aips_bridge_group0_mem_rule0(
         self,
-    ) -> crate::pac::common::Reg<AipsBridgeGroup0memRule0, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0110usize) as _) }
+    ) -> crate::pac::common::Reg<AipsBridgeGroup0MemRule0, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xe0usize) as _) }
     }
     #[doc = "AIPS Bridge Group 0 Memory Rule 1."]
     #[inline(always)]
     pub const fn aips_bridge_group0_mem_rule1(
         self,
-    ) -> crate::pac::common::Reg<AipsBridgeGroup0memRule1, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0114usize) as _) }
+    ) -> crate::pac::common::Reg<AipsBridgeGroup0MemRule1, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xe4usize) as _) }
     }
-    #[doc = "AIPS Bridge Group 1 Memory Rule 0."]
+    #[doc = "AIPS Bridge Group 0 Memory Rule 2."]
     #[inline(always)]
-    pub const fn aips_bridge_group1_mem_rule0(
+    pub const fn aips_bridge_group0_mem_rule2(
         self,
-    ) -> crate::pac::common::Reg<AipsBridgeGroup1memRule0, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0120usize) as _) }
+    ) -> crate::pac::common::Reg<AipsBridgeGroup0MemRule2, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xe8usize) as _) }
     }
-    #[doc = "AIPS Bridge Group 1 Memory Rule 1."]
+    #[doc = "AIPS Bridge Group 0 Memory Rule 3."]
     #[inline(always)]
-    pub const fn aips_bridge_group1_mem_rule1(
+    pub const fn aips_bridge_group0_mem_rule3(
         self,
-    ) -> crate::pac::common::Reg<AipsBridgeGroup1memRule1, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0124usize) as _) }
+    ) -> crate::pac::common::Reg<AipsBridgeGroup0MemRule3, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xecusize) as _) }
     }
-    #[doc = "AHB Secure Control Peripheral Rule."]
-    #[inline(always)]
-    pub const fn ahb_secure_ctrl_mem_rule0(
-        self,
-    ) -> crate::pac::common::Reg<AhbSecureCtrlMemRule0, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0130usize) as _) }
-    }
-    #[doc = "AHB Peripheral 0 Memory Rule 1."]
-    #[inline(always)]
-    pub const fn ahb_peripheral0_mem_rule1(
-        self,
-    ) -> crate::pac::common::Reg<AhbPeripheral0memRule1, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0140usize) as _) }
-    }
-    #[doc = "AHB Peripheral 0 Memory Rule 2."]
-    #[inline(always)]
-    pub const fn ahb_peripheral0_mem_rule2(
-        self,
-    ) -> crate::pac::common::Reg<AhbPeripheral0memRule2, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0150usize) as _) }
-    }
-    #[doc = "AHB Peripheral 0 Memory Rule 3."]
-    #[inline(always)]
-    pub const fn ahb_peripheral0_mem_rule3(
-        self,
-    ) -> crate::pac::common::Reg<AhbPeripheral0memRule3, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0160usize) as _) }
-    }
-    #[doc = "AHB Peripheral 0 Memory Rule 4."]
-    #[inline(always)]
-    pub const fn ahb_peripheral0_mem_rule4(
-        self,
-    ) -> crate::pac::common::Reg<AhbPeripheral0memRule4, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0170usize) as _) }
-    }
-    #[doc = "AHB Peripheral 0 Memory Rule 5."]
-    #[inline(always)]
-    pub const fn ahb_peripheral0_mem_rule5(
-        self,
-    ) -> crate::pac::common::Reg<AhbPeripheral0memRule5, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0180usize) as _) }
-    }
-    #[doc = "AIPS Bridge Group 2 Rule 0."]
+    #[doc = "AIPS Bridge Group 2 Memory Rule 0."]
     #[inline(always)]
     pub const fn aips_bridge_group2_mem_rule0(
         self,
-    ) -> crate::pac::common::Reg<AipsBridgeGroup2memRule0, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x01a0usize) as _) }
+    ) -> crate::pac::common::Reg<AipsBridgeGroup2MemRule0, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xf0usize) as _) }
     }
-    #[doc = "AIPS Bridge Group 2 Rule 1."]
+    #[doc = "AIPS Bridge Group 2 Memory Rule 1."]
     #[inline(always)]
     pub const fn aips_bridge_group2_mem_rule1(
         self,
-    ) -> crate::pac::common::Reg<AipsBridgeGroup2memRule1, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x01a4usize) as _) }
+    ) -> crate::pac::common::Reg<AipsBridgeGroup2MemRule1, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xf4usize) as _) }
     }
-    #[doc = "AIPS Bridge Group 2 Rule 2."]
+    #[doc = "AIPS Bridge Group 2 Memory Rule 2."]
     #[inline(always)]
     pub const fn aips_bridge_group2_mem_rule2(
         self,
-    ) -> crate::pac::common::Reg<AipsBridgeGroup2memRule2, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x01a8usize) as _) }
+    ) -> crate::pac::common::Reg<AipsBridgeGroup2MemRule2, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xf8usize) as _) }
     }
-    #[doc = "AIPS Bridge Group 2 Rule 3."]
+    #[doc = "AIPS Bridge Group 2 Memory Rule 3."]
     #[inline(always)]
     pub const fn aips_bridge_group2_mem_rule3(
         self,
-    ) -> crate::pac::common::Reg<AipsBridgeGroup2memRule3, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x01acusize) as _) }
+    ) -> crate::pac::common::Reg<AipsBridgeGroup2MemRule3, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xfcusize) as _) }
     }
-    #[doc = "AIPS Bridge Group 2 Rule 4."]
+    #[doc = "AIPS Bridge Group 3 Rule 0."]
     #[inline(always)]
-    pub const fn aips_bridge_group2_mem_rule4(
+    pub const fn aips_bridge_group3_mem_rule0(
         self,
-    ) -> crate::pac::common::Reg<AipsBridgeGroup2memRule4, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x01b0usize) as _) }
+    ) -> crate::pac::common::Reg<AipsBridgeGroup3MemRule0, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0100usize) as _) }
     }
-    #[doc = "AIPS Bridge Group 2 Rule 5."]
+    #[doc = "AIPS Bridge Group 3 Memory Rule 1."]
     #[inline(always)]
-    pub const fn aips_bridge_group2_mem_rule5(
+    pub const fn aips_bridge_group3_mem_rule1(
         self,
-    ) -> crate::pac::common::Reg<AipsBridgeGroup2memRule5, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x01b4usize) as _) }
+    ) -> crate::pac::common::Reg<u32, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0104usize) as _) }
     }
-    #[doc = "AIPS Bridge Group 2 Rule 6."]
+    #[doc = "AIPS Bridge Group 3 Rule 2."]
     #[inline(always)]
-    pub const fn aips_bridge_group2_mem_rule6(
+    pub const fn aips_bridge_group3_mem_rule2(
         self,
-    ) -> crate::pac::common::Reg<AipsBridgeGroup2memRule6, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x01b8usize) as _) }
+    ) -> crate::pac::common::Reg<AipsBridgeGroup3MemRule2, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0108usize) as _) }
     }
-    #[doc = "AIPS Bridge Group 2 Rule 7."]
+    #[doc = "AIPS Bridge Group 3 Rule 3."]
     #[inline(always)]
-    pub const fn aips_bridge_group2_mem_rule7(
+    pub const fn aips_bridge_group3_mem_rule3(
         self,
-    ) -> crate::pac::common::Reg<AipsBridgeGroup2memRule7, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x01bcusize) as _) }
+    ) -> crate::pac::common::Reg<AipsBridgeGroup3MemRule3, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x010cusize) as _) }
     }
-    #[doc = "AIPS Bridge Group 2 Rule 8."]
+    #[doc = "AHB Secure Control Peripheral Rule 0."]
     #[inline(always)]
-    pub const fn aips_bridge_group2_mem_rule8(
+    pub const fn ahb_secure_ctrl_peripheral_rule0(
         self,
-    ) -> crate::pac::common::Reg<AipsBridgeGroup2memRule8, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x01c0usize) as _) }
+    ) -> crate::pac::common::Reg<AhbSecureCtrlPeripheralRule0, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0110usize) as _) }
     }
-    #[doc = "AIPS Bridge Group 2 Rule 9."]
+    #[doc = "AHB Slave Port 6 Rule."]
     #[inline(always)]
-    pub const fn aips_bridge_group2_mem_rule9(
-        self,
-    ) -> crate::pac::common::Reg<AipsBridgeGroup2memRule9, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x01c4usize) as _) }
-    }
-    #[doc = "AIPS Bridge Group 2 Rule 10."]
-    #[inline(always)]
-    pub const fn aips_bridge_group2_mem_rule10(
-        self,
-    ) -> crate::pac::common::Reg<AipsBridgeGroup2memRule10, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x01c8usize) as _) }
-    }
-    #[doc = "AIPS Bridge Group 2 Rule 11."]
-    #[inline(always)]
-    pub const fn aips_bridge_group2_mem_rule11(
-        self,
-    ) -> crate::pac::common::Reg<AipsBridgeGroup2memRule11, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x01ccusize) as _) }
-    }
-    #[doc = "AIPS Bridge Group 2 Rule 12."]
-    #[inline(always)]
-    pub const fn aips_bridge_group2_mem_rule12(
-        self,
-    ) -> crate::pac::common::Reg<AipsBridgeGroup2memRule12, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x01d0usize) as _) }
-    }
-    #[doc = "AIPS Bridge Group 2 Rule 13."]
-    #[inline(always)]
-    pub const fn aips_bridge_group2_mem_rule13(
-        self,
-    ) -> crate::pac::common::Reg<AipsBridgeGroup2memRule13, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x01d4usize) as _) }
-    }
-    #[doc = "FLEXSPI0 Region 0 Memory Rule."]
-    #[inline(always)]
-    pub const fn flexspi0_region0_mem_rule(
+    pub const fn ahb_slave_port_p6_slave_rule(
         self,
         n: usize,
-    ) -> crate::pac::common::Reg<Flexspi0region0memRule, crate::pac::common::RW> {
+    ) -> crate::pac::common::Reg<AhbSlavePortP6SlaveRule, crate::pac::common::RW> {
         assert!(n < 4usize);
         unsafe {
-            crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x01f0usize + n * 4usize) as _)
+            crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0120usize + n * 4usize) as _)
         }
     }
-    #[doc = "Array of registers: FLEXSPI0_REGION_MEM_RULE."]
+    #[doc = "AON Domain Peripheral Rule 0."]
     #[inline(always)]
-    pub const fn flexspi0_region1_6_mem_rule(self, n: usize) -> Flexspi0region16memRule {
-        assert!(n < 6usize);
+    pub const fn aon_domain_peripheral_mem_rule0(
+        self,
+    ) -> crate::pac::common::Reg<AonDomainPeripheralMemRule0, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0130usize) as _) }
+    }
+    #[doc = "AON Domain Peripheral Rule 1."]
+    #[inline(always)]
+    pub const fn aon_domain_peripheral_mem_rule1(
+        self,
+    ) -> crate::pac::common::Reg<AonDomainPeripheralMemRule1, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0134usize) as _) }
+    }
+    #[doc = "AON Domain Peripheral Rule 2."]
+    #[inline(always)]
+    pub const fn aon_domain_peripheral_mem_rule2(
+        self,
+    ) -> crate::pac::common::Reg<AonDomainPeripheralMemRule2, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0138usize) as _) }
+    }
+    #[doc = "AON Domain Peripheral Rule 3."]
+    #[inline(always)]
+    pub const fn aon_domain_peripheral_mem_rule3(
+        self,
+    ) -> crate::pac::common::Reg<AonDomainPeripheralMemRule3, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x013cusize) as _) }
+    }
+    #[doc = "AHB Slave Port 6 Rule."]
+    #[inline(always)]
+    pub const fn ahb_slave_port_p7_slave_rule(
+        self,
+        n: usize,
+    ) -> crate::pac::common::Reg<AhbSlavePortP7SlaveRule, crate::pac::common::RW> {
+        assert!(n < 4usize);
         unsafe {
-            Flexspi0region16memRule::from_ptr(self.ptr.wrapping_add(0x0200usize + n * 16usize) as _)
+            crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0140usize + n * 4usize) as _)
         }
+    }
+    #[doc = "AON Domain SRAM Memory Rule."]
+    #[inline(always)]
+    pub const fn aon_domain_sram_mem_rule0(
+        self,
+    ) -> crate::pac::common::Reg<AonDomainSramMemRule0, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0150usize) as _) }
     }
     #[doc = "Security Violation Address."]
     #[inline(always)]
@@ -363,7 +386,7 @@ impl Ahbsc {
     #[inline(always)]
     pub const fn cpu0_lock_reg(
         self,
-    ) -> crate::pac::common::Reg<Cpu0lockReg, crate::pac::common::RW> {
+    ) -> crate::pac::common::Reg<Cpu0LockReg, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0fecusize) as _) }
     }
     #[doc = "Secure Control Duplicate."]
@@ -381,145 +404,94 @@ impl Ahbsc {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0ffcusize) as _) }
     }
 }
-#[doc = "Array of registers: FLEXSPI0_REGION_MEM_RULE."]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Flexspi0region16memRule {
-    ptr: *mut u8,
-}
-unsafe impl Send for Flexspi0region16memRule {}
-unsafe impl Sync for Flexspi0region16memRule {}
-impl Flexspi0region16memRule {
-    #[inline(always)]
-    pub const unsafe fn from_ptr(ptr: *mut ()) -> Self {
-        Self { ptr: ptr as _ }
-    }
-    #[inline(always)]
-    pub const fn as_ptr(&self) -> *mut () {
-        self.ptr as _
-    }
-    #[doc = "FLEXSPI0 Region index Memory Rule."]
-    #[inline(always)]
-    pub const fn flexspi0_region_mem_rule(
-        self,
-    ) -> crate::pac::common::Reg<Flexspi0regionMemRule, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
-    }
-}
-#[doc = "AHB Peripheral 0 Memory Rule 1."]
+#[doc = "AHB Peripheral Slave Port 5 Slave Rule 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AhbPeripheral0memRule1(pub u32);
-impl AhbPeripheral0memRule1 {
-    #[doc = "GPIO0."]
+pub struct AhbPeripheralSlavePortP5SlaveRule0(pub u32);
+impl AhbPeripheralSlavePortP5SlaveRule0 {
+    #[doc = "AIPS4 slaves."]
     #[must_use]
     #[inline(always)]
-    pub const fn gpio0(&self) -> Rule {
-        let val = (self.0 >> 0usize) & 0x03;
+    pub const fn aips4_slaves(&self) -> Rule {
+        let val = (self.0 >> 16usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "GPIO0."]
+    #[doc = "AIPS4 slaves."]
     #[inline(always)]
-    pub const fn set_gpio0(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
+    pub const fn set_aips4_slaves(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
-    #[doc = "GPIO0 ALIAS."]
+    #[doc = "CDOG0."]
     #[must_use]
     #[inline(always)]
-    pub const fn gpio0_alias(&self) -> Rule {
-        let val = (self.0 >> 4usize) & 0x03;
+    pub const fn cdog0(&self) -> Rule {
+        let val = (self.0 >> 20usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "GPIO0 ALIAS."]
+    #[doc = "CDOG0."]
     #[inline(always)]
-    pub const fn set_gpio0_alias(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
+    pub const fn set_cdog0(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
-}
-impl Default for AhbPeripheral0memRule1 {
+    #[doc = "DEBUG_MAILBOX."]
+    #[must_use]
     #[inline(always)]
-    fn default() -> AhbPeripheral0memRule1 {
-        AhbPeripheral0memRule1(0)
+    pub const fn debug_mailbox(&self) -> Rule {
+        let val = (self.0 >> 24usize) & 0x03;
+        Rule::from_bits(val as u8)
     }
-}
-impl core::fmt::Debug for AhbPeripheral0memRule1 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AhbPeripheral0memRule1")
-            .field("gpio0", &self.gpio0())
-            .field("gpio0_alias", &self.gpio0_alias())
-            .finish()
+    #[doc = "DEBUG_MAILBOX."]
+    #[inline(always)]
+    pub const fn set_debug_mailbox(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for AhbPeripheral0memRule1 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "AhbPeripheral0memRule1 {{ gpio0: {:?}, gpio0_alias: {:?} }}",
-            self.gpio0(),
-            self.gpio0_alias()
-        )
-    }
-}
-#[doc = "AHB Peripheral 0 Memory Rule 2."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AhbPeripheral0memRule2(pub u32);
-impl AhbPeripheral0memRule2 {
     #[doc = "GPIO1."]
     #[must_use]
     #[inline(always)]
     pub const fn gpio1(&self) -> Rule {
-        let val = (self.0 >> 0usize) & 0x03;
+        let val = (self.0 >> 28usize) & 0x03;
         Rule::from_bits(val as u8)
     }
     #[doc = "GPIO1."]
     #[inline(always)]
     pub const fn set_gpio1(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
-    }
-    #[doc = "GPIO1 ALIAS."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpio1_alias(&self) -> Rule {
-        let val = (self.0 >> 4usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "GPIO1 ALIAS."]
-    #[inline(always)]
-    pub const fn set_gpio1_alias(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
+        self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
 }
-impl Default for AhbPeripheral0memRule2 {
+impl Default for AhbPeripheralSlavePortP5SlaveRule0 {
     #[inline(always)]
-    fn default() -> AhbPeripheral0memRule2 {
-        AhbPeripheral0memRule2(0)
+    fn default() -> AhbPeripheralSlavePortP5SlaveRule0 {
+        AhbPeripheralSlavePortP5SlaveRule0(0)
     }
 }
-impl core::fmt::Debug for AhbPeripheral0memRule2 {
+impl core::fmt::Debug for AhbPeripheralSlavePortP5SlaveRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AhbPeripheral0memRule2")
+        f.debug_struct("AhbPeripheralSlavePortP5SlaveRule0")
+            .field("aips4_slaves", &self.aips4_slaves())
+            .field("cdog0", &self.cdog0())
+            .field("debug_mailbox", &self.debug_mailbox())
             .field("gpio1", &self.gpio1())
-            .field("gpio1_alias", &self.gpio1_alias())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for AhbPeripheral0memRule2 {
+impl defmt::Format for AhbPeripheralSlavePortP5SlaveRule0 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "AhbPeripheral0memRule2 {{ gpio1: {:?}, gpio1_alias: {:?} }}",
-            self.gpio1(),
-            self.gpio1_alias()
+            "AhbPeripheralSlavePortP5SlaveRule0 {{ aips4_slaves: {:?}, cdog0: {:?}, debug_mailbox: {:?}, gpio1: {:?} }}",
+            self.aips4_slaves(),
+            self.cdog0(),
+            self.debug_mailbox(),
+            self.gpio1()
         )
     }
 }
-#[doc = "AHB Peripheral 0 Memory Rule 3."]
+#[doc = "AHB Peripheral Slave Port 5 Slave Rule 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AhbPeripheral0memRule3(pub u32);
-impl AhbPeripheral0memRule3 {
+pub struct AhbPeripheralSlavePortP5SlaveRule1(pub u32);
+impl AhbPeripheralSlavePortP5SlaveRule1 {
     #[doc = "GPIO2."]
     #[must_use]
     #[inline(always)]
@@ -532,160 +504,64 @@ impl AhbPeripheral0memRule3 {
     pub const fn set_gpio2(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "GPIO2 ALIAS."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpio2_alias(&self) -> Rule {
-        let val = (self.0 >> 4usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "GPIO2 ALIAS."]
-    #[inline(always)]
-    pub const fn set_gpio2_alias(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
-    }
-}
-impl Default for AhbPeripheral0memRule3 {
-    #[inline(always)]
-    fn default() -> AhbPeripheral0memRule3 {
-        AhbPeripheral0memRule3(0)
-    }
-}
-impl core::fmt::Debug for AhbPeripheral0memRule3 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AhbPeripheral0memRule3")
-            .field("gpio2", &self.gpio2())
-            .field("gpio2_alias", &self.gpio2_alias())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for AhbPeripheral0memRule3 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "AhbPeripheral0memRule3 {{ gpio2: {:?}, gpio2_alias: {:?} }}",
-            self.gpio2(),
-            self.gpio2_alias()
-        )
-    }
-}
-#[doc = "AHB Peripheral 0 Memory Rule 4."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AhbPeripheral0memRule4(pub u32);
-impl AhbPeripheral0memRule4 {
     #[doc = "GPIO3."]
     #[must_use]
     #[inline(always)]
     pub const fn gpio3(&self) -> Rule {
-        let val = (self.0 >> 0usize) & 0x03;
+        let val = (self.0 >> 4usize) & 0x03;
         Rule::from_bits(val as u8)
     }
     #[doc = "GPIO3."]
     #[inline(always)]
     pub const fn set_gpio3(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
-    }
-    #[doc = "GPIO3 ALIAS."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpio3_alias(&self) -> Rule {
-        let val = (self.0 >> 4usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "GPIO3 ALIAS."]
-    #[inline(always)]
-    pub const fn set_gpio3_alias(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-}
-impl Default for AhbPeripheral0memRule4 {
+    #[doc = "CDOG1."]
+    #[must_use]
     #[inline(always)]
-    fn default() -> AhbPeripheral0memRule4 {
-        AhbPeripheral0memRule4(0)
+    pub const fn cdog1(&self) -> Rule {
+        let val = (self.0 >> 8usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "CDOG1."]
+    #[inline(always)]
+    pub const fn set_cdog1(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
 }
-impl core::fmt::Debug for AhbPeripheral0memRule4 {
+impl Default for AhbPeripheralSlavePortP5SlaveRule1 {
+    #[inline(always)]
+    fn default() -> AhbPeripheralSlavePortP5SlaveRule1 {
+        AhbPeripheralSlavePortP5SlaveRule1(0)
+    }
+}
+impl core::fmt::Debug for AhbPeripheralSlavePortP5SlaveRule1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AhbPeripheral0memRule4")
+        f.debug_struct("AhbPeripheralSlavePortP5SlaveRule1")
+            .field("gpio2", &self.gpio2())
             .field("gpio3", &self.gpio3())
-            .field("gpio3_alias", &self.gpio3_alias())
+            .field("cdog1", &self.cdog1())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for AhbPeripheral0memRule4 {
+impl defmt::Format for AhbPeripheralSlavePortP5SlaveRule1 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "AhbPeripheral0memRule4 {{ gpio3: {:?}, gpio3_alias: {:?} }}",
+            "AhbPeripheralSlavePortP5SlaveRule1 {{ gpio2: {:?}, gpio3: {:?}, cdog1: {:?} }}",
+            self.gpio2(),
             self.gpio3(),
-            self.gpio3_alias()
+            self.cdog1()
         )
     }
 }
-#[doc = "AHB Peripheral 0 Memory Rule 5."]
+#[doc = "AHB Secure Control Peripheral Rule 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AhbPeripheral0memRule5(pub u32);
-impl AhbPeripheral0memRule5 {
-    #[doc = "GPIO4."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpio4(&self) -> Rule {
-        let val = (self.0 >> 0usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "GPIO4."]
-    #[inline(always)]
-    pub const fn set_gpio4(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
-    }
-    #[doc = "GPIO4 ALIAS."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpio4_alias(&self) -> Rule {
-        let val = (self.0 >> 4usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "GPIO4 ALIAS."]
-    #[inline(always)]
-    pub const fn set_gpio4_alias(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
-    }
-}
-impl Default for AhbPeripheral0memRule5 {
-    #[inline(always)]
-    fn default() -> AhbPeripheral0memRule5 {
-        AhbPeripheral0memRule5(0)
-    }
-}
-impl core::fmt::Debug for AhbPeripheral0memRule5 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AhbPeripheral0memRule5")
-            .field("gpio4", &self.gpio4())
-            .field("gpio4_alias", &self.gpio4_alias())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for AhbPeripheral0memRule5 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "AhbPeripheral0memRule5 {{ gpio4: {:?}, gpio4_alias: {:?} }}",
-            self.gpio4(),
-            self.gpio4_alias()
-        )
-    }
-}
-#[doc = "AHB Secure Control Peripheral Rule."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AhbSecureCtrlMemRule0(pub u32);
-impl AhbSecureCtrlMemRule0 {
-    #[doc = "AHBSC."]
+pub struct AhbSecureCtrlPeripheralRule0(pub u32);
+impl AhbSecureCtrlPeripheralRule0 {
+    #[doc = "Rule 0."]
     #[must_use]
     #[inline(always)]
     pub const fn rule(&self, n: usize) -> Rule {
@@ -694,7 +570,7 @@ impl AhbSecureCtrlMemRule0 {
         let val = (self.0 >> offs) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "AHBSC."]
+    #[doc = "Rule 0."]
     #[inline(always)]
     pub const fn set_rule(&mut self, n: usize, val: Rule) {
         assert!(n < 4usize);
@@ -702,15 +578,15 @@ impl AhbSecureCtrlMemRule0 {
         self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
     }
 }
-impl Default for AhbSecureCtrlMemRule0 {
+impl Default for AhbSecureCtrlPeripheralRule0 {
     #[inline(always)]
-    fn default() -> AhbSecureCtrlMemRule0 {
-        AhbSecureCtrlMemRule0(0)
+    fn default() -> AhbSecureCtrlPeripheralRule0 {
+        AhbSecureCtrlPeripheralRule0(0)
     }
 }
-impl core::fmt::Debug for AhbSecureCtrlMemRule0 {
+impl core::fmt::Debug for AhbSecureCtrlPeripheralRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AhbSecureCtrlMemRule0")
+        f.debug_struct("AhbSecureCtrlPeripheralRule0")
             .field("rule[0]", &self.rule(0usize))
             .field("rule[1]", &self.rule(1usize))
             .field("rule[2]", &self.rule(2usize))
@@ -719,11 +595,11 @@ impl core::fmt::Debug for AhbSecureCtrlMemRule0 {
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for AhbSecureCtrlMemRule0 {
+impl defmt::Format for AhbSecureCtrlPeripheralRule0 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "AhbSecureCtrlMemRule0 {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?} }}",
+            "AhbSecureCtrlPeripheralRule0 {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?} }}",
             self.rule(0usize),
             self.rule(1usize),
             self.rule(2usize),
@@ -731,1120 +607,688 @@ impl defmt::Format for AhbSecureCtrlMemRule0 {
         )
     }
 }
-#[doc = "AHB Slave Port 5 Rule Register."]
+#[doc = "AHB Slave Port 0 Rule."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AhbSlavePortP5slaveRule0(pub u32);
-impl AhbSlavePortP5slaveRule0 {
-    #[doc = "CDOG0."]
+pub struct AhbSlavePortP0SlaveRule(pub u32);
+impl AhbSlavePortP0SlaveRule {
+    #[doc = "Rule 0."]
     #[must_use]
     #[inline(always)]
-    pub const fn cdog0(&self) -> Rule {
-        let val = (self.0 >> 12usize) & 0x03;
+    pub const fn rule(&self, n: usize) -> Rule {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        let val = (self.0 >> offs) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "CDOG0."]
+    #[doc = "Rule 0."]
     #[inline(always)]
-    pub const fn set_cdog0(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
-    }
-    #[doc = "CDOG1."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn cdog1(&self) -> Rule {
-        let val = (self.0 >> 16usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "CDOG1."]
-    #[inline(always)]
-    pub const fn set_cdog1(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
-    }
-    #[doc = "DEBUG_MAILBOX."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn debug_mailbox(&self) -> Rule {
-        let val = (self.0 >> 20usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "DEBUG_MAILBOX."]
-    #[inline(always)]
-    pub const fn set_debug_mailbox(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
-    }
-    #[doc = "Rule 6."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mau0(&self) -> Rule {
-        let val = (self.0 >> 24usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "Rule 6."]
-    #[inline(always)]
-    pub const fn set_mau0(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
+    pub const fn set_rule(&mut self, n: usize, val: Rule) {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
     }
 }
-impl Default for AhbSlavePortP5slaveRule0 {
+impl Default for AhbSlavePortP0SlaveRule {
     #[inline(always)]
-    fn default() -> AhbSlavePortP5slaveRule0 {
-        AhbSlavePortP5slaveRule0(0)
+    fn default() -> AhbSlavePortP0SlaveRule {
+        AhbSlavePortP0SlaveRule(0)
     }
 }
-impl core::fmt::Debug for AhbSlavePortP5slaveRule0 {
+impl core::fmt::Debug for AhbSlavePortP0SlaveRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AhbSlavePortP5slaveRule0")
-            .field("cdog0", &self.cdog0())
-            .field("cdog1", &self.cdog1())
-            .field("debug_mailbox", &self.debug_mailbox())
-            .field("mau0", &self.mau0())
+        f.debug_struct("AhbSlavePortP0SlaveRule")
+            .field("rule[0]", &self.rule(0usize))
+            .field("rule[1]", &self.rule(1usize))
+            .field("rule[2]", &self.rule(2usize))
+            .field("rule[3]", &self.rule(3usize))
+            .field("rule[4]", &self.rule(4usize))
+            .field("rule[5]", &self.rule(5usize))
+            .field("rule[6]", &self.rule(6usize))
+            .field("rule[7]", &self.rule(7usize))
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for AhbSlavePortP5slaveRule0 {
+impl defmt::Format for AhbSlavePortP0SlaveRule {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "AhbSlavePortP5slaveRule0 {{ cdog0: {:?}, cdog1: {:?}, debug_mailbox: {:?}, mau0: {:?} }}",
-            self.cdog0(),
-            self.cdog1(),
-            self.debug_mailbox(),
-            self.mau0()
+            "AhbSlavePortP0SlaveRule {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?}, rule[4]: {:?}, rule[5]: {:?}, rule[6]: {:?}, rule[7]: {:?} }}",
+            self.rule(0usize),
+            self.rule(1usize),
+            self.rule(2usize),
+            self.rule(3usize),
+            self.rule(4usize),
+            self.rule(5usize),
+            self.rule(6usize),
+            self.rule(7usize)
+        )
+    }
+}
+#[doc = "AHB Slave Port 1 Rule."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct AhbSlavePortP1SlaveRule(pub u32);
+impl AhbSlavePortP1SlaveRule {
+    #[doc = "Rule 0."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn rule(&self, n: usize) -> Rule {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        let val = (self.0 >> offs) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "Rule 0."]
+    #[inline(always)]
+    pub const fn set_rule(&mut self, n: usize, val: Rule) {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
+    }
+}
+impl Default for AhbSlavePortP1SlaveRule {
+    #[inline(always)]
+    fn default() -> AhbSlavePortP1SlaveRule {
+        AhbSlavePortP1SlaveRule(0)
+    }
+}
+impl core::fmt::Debug for AhbSlavePortP1SlaveRule {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AhbSlavePortP1SlaveRule")
+            .field("rule[0]", &self.rule(0usize))
+            .field("rule[1]", &self.rule(1usize))
+            .field("rule[2]", &self.rule(2usize))
+            .field("rule[3]", &self.rule(3usize))
+            .field("rule[4]", &self.rule(4usize))
+            .field("rule[5]", &self.rule(5usize))
+            .field("rule[6]", &self.rule(6usize))
+            .field("rule[7]", &self.rule(7usize))
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for AhbSlavePortP1SlaveRule {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "AhbSlavePortP1SlaveRule {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?}, rule[4]: {:?}, rule[5]: {:?}, rule[6]: {:?}, rule[7]: {:?} }}",
+            self.rule(0usize),
+            self.rule(1usize),
+            self.rule(2usize),
+            self.rule(3usize),
+            self.rule(4usize),
+            self.rule(5usize),
+            self.rule(6usize),
+            self.rule(7usize)
+        )
+    }
+}
+#[doc = "AHB Slave Port 2 Rule."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct AhbSlavePortP2SlaveRule(pub u32);
+impl AhbSlavePortP2SlaveRule {
+    #[doc = "Rule 0."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn rule(&self, n: usize) -> Rule {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        let val = (self.0 >> offs) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "Rule 0."]
+    #[inline(always)]
+    pub const fn set_rule(&mut self, n: usize, val: Rule) {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
+    }
+}
+impl Default for AhbSlavePortP2SlaveRule {
+    #[inline(always)]
+    fn default() -> AhbSlavePortP2SlaveRule {
+        AhbSlavePortP2SlaveRule(0)
+    }
+}
+impl core::fmt::Debug for AhbSlavePortP2SlaveRule {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AhbSlavePortP2SlaveRule")
+            .field("rule[0]", &self.rule(0usize))
+            .field("rule[1]", &self.rule(1usize))
+            .field("rule[2]", &self.rule(2usize))
+            .field("rule[3]", &self.rule(3usize))
+            .field("rule[4]", &self.rule(4usize))
+            .field("rule[5]", &self.rule(5usize))
+            .field("rule[6]", &self.rule(6usize))
+            .field("rule[7]", &self.rule(7usize))
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for AhbSlavePortP2SlaveRule {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "AhbSlavePortP2SlaveRule {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?}, rule[4]: {:?}, rule[5]: {:?}, rule[6]: {:?}, rule[7]: {:?} }}",
+            self.rule(0usize),
+            self.rule(1usize),
+            self.rule(2usize),
+            self.rule(3usize),
+            self.rule(4usize),
+            self.rule(5usize),
+            self.rule(6usize),
+            self.rule(7usize)
+        )
+    }
+}
+#[doc = "AHB Slave Port 3 Rule."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct AhbSlavePortP3SlaveRule(pub u32);
+impl AhbSlavePortP3SlaveRule {
+    #[doc = "Rule 0."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn rule(&self, n: usize) -> Rule {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        let val = (self.0 >> offs) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "Rule 0."]
+    #[inline(always)]
+    pub const fn set_rule(&mut self, n: usize, val: Rule) {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
+    }
+}
+impl Default for AhbSlavePortP3SlaveRule {
+    #[inline(always)]
+    fn default() -> AhbSlavePortP3SlaveRule {
+        AhbSlavePortP3SlaveRule(0)
+    }
+}
+impl core::fmt::Debug for AhbSlavePortP3SlaveRule {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AhbSlavePortP3SlaveRule")
+            .field("rule[0]", &self.rule(0usize))
+            .field("rule[1]", &self.rule(1usize))
+            .field("rule[2]", &self.rule(2usize))
+            .field("rule[3]", &self.rule(3usize))
+            .field("rule[4]", &self.rule(4usize))
+            .field("rule[5]", &self.rule(5usize))
+            .field("rule[6]", &self.rule(6usize))
+            .field("rule[7]", &self.rule(7usize))
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for AhbSlavePortP3SlaveRule {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "AhbSlavePortP3SlaveRule {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?}, rule[4]: {:?}, rule[5]: {:?}, rule[6]: {:?}, rule[7]: {:?} }}",
+            self.rule(0usize),
+            self.rule(1usize),
+            self.rule(2usize),
+            self.rule(3usize),
+            self.rule(4usize),
+            self.rule(5usize),
+            self.rule(6usize),
+            self.rule(7usize)
+        )
+    }
+}
+#[doc = "AHB Slave Port 4 Rule."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct AhbSlavePortP4SlaveRule(pub u32);
+impl AhbSlavePortP4SlaveRule {
+    #[doc = "Rule 0."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn rule(&self, n: usize) -> Rule {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        let val = (self.0 >> offs) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "Rule 0."]
+    #[inline(always)]
+    pub const fn set_rule(&mut self, n: usize, val: Rule) {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
+    }
+}
+impl Default for AhbSlavePortP4SlaveRule {
+    #[inline(always)]
+    fn default() -> AhbSlavePortP4SlaveRule {
+        AhbSlavePortP4SlaveRule(0)
+    }
+}
+impl core::fmt::Debug for AhbSlavePortP4SlaveRule {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AhbSlavePortP4SlaveRule")
+            .field("rule[0]", &self.rule(0usize))
+            .field("rule[1]", &self.rule(1usize))
+            .field("rule[2]", &self.rule(2usize))
+            .field("rule[3]", &self.rule(3usize))
+            .field("rule[4]", &self.rule(4usize))
+            .field("rule[5]", &self.rule(5usize))
+            .field("rule[6]", &self.rule(6usize))
+            .field("rule[7]", &self.rule(7usize))
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for AhbSlavePortP4SlaveRule {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "AhbSlavePortP4SlaveRule {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?}, rule[4]: {:?}, rule[5]: {:?}, rule[6]: {:?}, rule[7]: {:?} }}",
+            self.rule(0usize),
+            self.rule(1usize),
+            self.rule(2usize),
+            self.rule(3usize),
+            self.rule(4usize),
+            self.rule(5usize),
+            self.rule(6usize),
+            self.rule(7usize)
+        )
+    }
+}
+#[doc = "AHB Slave Port 6 Rule."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct AhbSlavePortP6SlaveRule(pub u32);
+impl AhbSlavePortP6SlaveRule {
+    #[doc = "Rule 0."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn rule(&self, n: usize) -> Rule {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        let val = (self.0 >> offs) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "Rule 0."]
+    #[inline(always)]
+    pub const fn set_rule(&mut self, n: usize, val: Rule) {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
+    }
+}
+impl Default for AhbSlavePortP6SlaveRule {
+    #[inline(always)]
+    fn default() -> AhbSlavePortP6SlaveRule {
+        AhbSlavePortP6SlaveRule(0)
+    }
+}
+impl core::fmt::Debug for AhbSlavePortP6SlaveRule {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AhbSlavePortP6SlaveRule")
+            .field("rule[0]", &self.rule(0usize))
+            .field("rule[1]", &self.rule(1usize))
+            .field("rule[2]", &self.rule(2usize))
+            .field("rule[3]", &self.rule(3usize))
+            .field("rule[4]", &self.rule(4usize))
+            .field("rule[5]", &self.rule(5usize))
+            .field("rule[6]", &self.rule(6usize))
+            .field("rule[7]", &self.rule(7usize))
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for AhbSlavePortP6SlaveRule {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "AhbSlavePortP6SlaveRule {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?}, rule[4]: {:?}, rule[5]: {:?}, rule[6]: {:?}, rule[7]: {:?} }}",
+            self.rule(0usize),
+            self.rule(1usize),
+            self.rule(2usize),
+            self.rule(3usize),
+            self.rule(4usize),
+            self.rule(5usize),
+            self.rule(6usize),
+            self.rule(7usize)
+        )
+    }
+}
+#[doc = "AHB Slave Port 6 Rule."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct AhbSlavePortP7SlaveRule(pub u32);
+impl AhbSlavePortP7SlaveRule {
+    #[doc = "Rule 0."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn rule(&self, n: usize) -> Rule {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        let val = (self.0 >> offs) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "Rule 0."]
+    #[inline(always)]
+    pub const fn set_rule(&mut self, n: usize, val: Rule) {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
+    }
+}
+impl Default for AhbSlavePortP7SlaveRule {
+    #[inline(always)]
+    fn default() -> AhbSlavePortP7SlaveRule {
+        AhbSlavePortP7SlaveRule(0)
+    }
+}
+impl core::fmt::Debug for AhbSlavePortP7SlaveRule {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AhbSlavePortP7SlaveRule")
+            .field("rule[0]", &self.rule(0usize))
+            .field("rule[1]", &self.rule(1usize))
+            .field("rule[2]", &self.rule(2usize))
+            .field("rule[3]", &self.rule(3usize))
+            .field("rule[4]", &self.rule(4usize))
+            .field("rule[5]", &self.rule(5usize))
+            .field("rule[6]", &self.rule(6usize))
+            .field("rule[7]", &self.rule(7usize))
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for AhbSlavePortP7SlaveRule {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "AhbSlavePortP7SlaveRule {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?}, rule[4]: {:?}, rule[5]: {:?}, rule[6]: {:?}, rule[7]: {:?} }}",
+            self.rule(0usize),
+            self.rule(1usize),
+            self.rule(2usize),
+            self.rule(3usize),
+            self.rule(4usize),
+            self.rule(5usize),
+            self.rule(6usize),
+            self.rule(7usize)
         )
     }
 }
 #[doc = "AIPS Bridge Group 0 Memory Rule 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AipsBridgeGroup0memRule0(pub u32);
-impl AipsBridgeGroup0memRule0 {
-    #[doc = "EWM0."]
+pub struct AipsBridgeGroup0MemRule0(pub u32);
+impl AipsBridgeGroup0MemRule0 {
+    #[doc = "eDMA_0_MP."]
     #[must_use]
     #[inline(always)]
-    pub const fn ewm0(&self) -> Rule {
+    pub const fn e_dma_0_mp(&self) -> Rule {
         let val = (self.0 >> 0usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "EWM0."]
+    #[doc = "eDMA_0_MP."]
     #[inline(always)]
-    pub const fn set_ewm0(&mut self, val: Rule) {
+    pub const fn set_e_dma_0_mp(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "ROMCP."]
+    #[doc = "eDMA_0_TCD0."]
     #[must_use]
     #[inline(always)]
-    pub const fn romcp(&self) -> Rule {
+    pub const fn e_dma_0_tcd0(&self) -> Rule {
         let val = (self.0 >> 4usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "ROMCP."]
+    #[doc = "eDMA_0_TCD0."]
     #[inline(always)]
-    pub const fn set_romcp(&mut self, val: Rule) {
+    pub const fn set_e_dma_0_tcd0(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "PKC0."]
+    #[doc = "eDMA_0_TCD1."]
     #[must_use]
     #[inline(always)]
-    pub const fn pkc0(&self) -> Rule {
+    pub const fn e_dma_0_tcd1(&self) -> Rule {
         let val = (self.0 >> 8usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "PKC0."]
+    #[doc = "eDMA_0_TCD1."]
     #[inline(always)]
-    pub const fn set_pkc0(&mut self, val: Rule) {
+    pub const fn set_e_dma_0_tcd1(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
-    #[doc = "DMA_1_MP."]
+    #[doc = "eDMA_0_TCD2."]
     #[must_use]
     #[inline(always)]
-    pub const fn dma_1_mp(&self) -> Rule {
+    pub const fn e_dma_0_tcd2(&self) -> Rule {
         let val = (self.0 >> 12usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "DMA_1_MP."]
+    #[doc = "eDMA_0_TCD2."]
     #[inline(always)]
-    pub const fn set_dma_1_mp(&mut self, val: Rule) {
+    pub const fn set_e_dma_0_tcd2(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
-    #[doc = "DMA_1_CH0."]
+    #[doc = "FLEXSPI0 Registers."]
     #[must_use]
     #[inline(always)]
-    pub const fn dma_1_ch0(&self) -> Rule {
+    pub const fn e_dma_0_tcd3(&self) -> Rule {
         let val = (self.0 >> 16usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "DMA_1_CH0."]
+    #[doc = "FLEXSPI0 Registers."]
     #[inline(always)]
-    pub const fn set_dma_1_ch0(&mut self, val: Rule) {
+    pub const fn set_e_dma_0_tcd3(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
-    #[doc = "DMA_1_CH1."]
+    #[doc = "eDMA_0_TCD4 (Reserved)."]
     #[must_use]
     #[inline(always)]
-    pub const fn dma_1_ch1(&self) -> Rule {
+    pub const fn e_dma_0_tcd4(&self) -> Rule {
         let val = (self.0 >> 20usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "DMA_1_CH1."]
+    #[doc = "eDMA_0_TCD4 (Reserved)."]
     #[inline(always)]
-    pub const fn set_dma_1_ch1(&mut self, val: Rule) {
+    pub const fn set_e_dma_0_tcd4(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
-    #[doc = "DMA_1_CH2."]
+    #[doc = "eDMA_0_TCD5 (Reserved)."]
     #[must_use]
     #[inline(always)]
-    pub const fn dma_1_ch2(&self) -> Rule {
+    pub const fn e_dma_0_tcd5(&self) -> Rule {
         let val = (self.0 >> 24usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "DMA_1_CH2."]
+    #[doc = "eDMA_0_TCD5 (Reserved)."]
     #[inline(always)]
-    pub const fn set_dma_1_ch2(&mut self, val: Rule) {
+    pub const fn set_e_dma_0_tcd5(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
-    #[doc = "DMA_1_CH3."]
+    #[doc = "eDMA_0_TCD6 (Reserved)."]
     #[must_use]
     #[inline(always)]
-    pub const fn dma_1_ch3(&self) -> Rule {
+    pub const fn e_dma_0_tcd6(&self) -> Rule {
         let val = (self.0 >> 28usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "DMA_1_CH3."]
+    #[doc = "eDMA_0_TCD6 (Reserved)."]
     #[inline(always)]
-    pub const fn set_dma_1_ch3(&mut self, val: Rule) {
+    pub const fn set_e_dma_0_tcd6(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
 }
-impl Default for AipsBridgeGroup0memRule0 {
+impl Default for AipsBridgeGroup0MemRule0 {
     #[inline(always)]
-    fn default() -> AipsBridgeGroup0memRule0 {
-        AipsBridgeGroup0memRule0(0)
+    fn default() -> AipsBridgeGroup0MemRule0 {
+        AipsBridgeGroup0MemRule0(0)
     }
 }
-impl core::fmt::Debug for AipsBridgeGroup0memRule0 {
+impl core::fmt::Debug for AipsBridgeGroup0MemRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AipsBridgeGroup0memRule0")
-            .field("ewm0", &self.ewm0())
-            .field("romcp", &self.romcp())
-            .field("pkc0", &self.pkc0())
-            .field("dma_1_mp", &self.dma_1_mp())
-            .field("dma_1_ch0", &self.dma_1_ch0())
-            .field("dma_1_ch1", &self.dma_1_ch1())
-            .field("dma_1_ch2", &self.dma_1_ch2())
-            .field("dma_1_ch3", &self.dma_1_ch3())
+        f.debug_struct("AipsBridgeGroup0MemRule0")
+            .field("e_dma_0_mp", &self.e_dma_0_mp())
+            .field("e_dma_0_tcd0", &self.e_dma_0_tcd0())
+            .field("e_dma_0_tcd1", &self.e_dma_0_tcd1())
+            .field("e_dma_0_tcd2", &self.e_dma_0_tcd2())
+            .field("e_dma_0_tcd3", &self.e_dma_0_tcd3())
+            .field("e_dma_0_tcd4", &self.e_dma_0_tcd4())
+            .field("e_dma_0_tcd5", &self.e_dma_0_tcd5())
+            .field("e_dma_0_tcd6", &self.e_dma_0_tcd6())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for AipsBridgeGroup0memRule0 {
+impl defmt::Format for AipsBridgeGroup0MemRule0 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "AipsBridgeGroup0memRule0 {{ ewm0: {:?}, romcp: {:?}, pkc0: {:?}, dma_1_mp: {:?}, dma_1_ch0: {:?}, dma_1_ch1: {:?}, dma_1_ch2: {:?}, dma_1_ch3: {:?} }}",
-            self.ewm0(),
-            self.romcp(),
-            self.pkc0(),
-            self.dma_1_mp(),
-            self.dma_1_ch0(),
-            self.dma_1_ch1(),
-            self.dma_1_ch2(),
-            self.dma_1_ch3()
+            "AipsBridgeGroup0MemRule0 {{ e_dma_0_mp: {:?}, e_dma_0_tcd0: {:?}, e_dma_0_tcd1: {:?}, e_dma_0_tcd2: {:?}, e_dma_0_tcd3: {:?}, e_dma_0_tcd4: {:?}, e_dma_0_tcd5: {:?}, e_dma_0_tcd6: {:?} }}",
+            self.e_dma_0_mp(),
+            self.e_dma_0_tcd0(),
+            self.e_dma_0_tcd1(),
+            self.e_dma_0_tcd2(),
+            self.e_dma_0_tcd3(),
+            self.e_dma_0_tcd4(),
+            self.e_dma_0_tcd5(),
+            self.e_dma_0_tcd6()
         )
     }
 }
 #[doc = "AIPS Bridge Group 0 Memory Rule 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AipsBridgeGroup0memRule1(pub u32);
-impl AipsBridgeGroup0memRule1 {
-    #[doc = "ENET0_0."]
+pub struct AipsBridgeGroup0MemRule1(pub u32);
+impl AipsBridgeGroup0MemRule1 {
+    #[doc = "eDMA_0_TCD7 (Reserved)."]
     #[must_use]
     #[inline(always)]
-    pub const fn enet0_0(&self) -> Rule {
-        let val = (self.0 >> 16usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "ENET0_0."]
-    #[inline(always)]
-    pub const fn set_enet0_0(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
-    }
-    #[doc = "ENET0_1."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn enet0_1(&self) -> Rule {
-        let val = (self.0 >> 20usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "ENET0_1."]
-    #[inline(always)]
-    pub const fn set_enet0_1(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
-    }
-    #[doc = "eSPI."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn e_spi(&self) -> Rule {
-        let val = (self.0 >> 28usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "eSPI."]
-    #[inline(always)]
-    pub const fn set_e_spi(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
-    }
-}
-impl Default for AipsBridgeGroup0memRule1 {
-    #[inline(always)]
-    fn default() -> AipsBridgeGroup0memRule1 {
-        AipsBridgeGroup0memRule1(0)
-    }
-}
-impl core::fmt::Debug for AipsBridgeGroup0memRule1 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AipsBridgeGroup0memRule1")
-            .field("enet0_0", &self.enet0_0())
-            .field("enet0_1", &self.enet0_1())
-            .field("e_spi", &self.e_spi())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for AipsBridgeGroup0memRule1 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "AipsBridgeGroup0memRule1 {{ enet0_0: {:?}, enet0_1: {:?}, e_spi: {:?} }}",
-            self.enet0_0(),
-            self.enet0_1(),
-            self.e_spi()
-        )
-    }
-}
-#[doc = "AIPS Bridge Group 1 Memory Rule 0."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AipsBridgeGroup1memRule0(pub u32);
-impl AipsBridgeGroup1memRule0 {
-    #[doc = "FLEXSPI0."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn flexspi0(&self) -> Rule {
+    pub const fn e_dma_0_tcd7(&self) -> Rule {
         let val = (self.0 >> 0usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "FLEXSPI0."]
+    #[doc = "eDMA_0_TCD7 (Reserved)."]
     #[inline(always)]
-    pub const fn set_flexspi0(&mut self, val: Rule) {
+    pub const fn set_e_dma_0_tcd7(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "LPSPI2."]
+    #[doc = "AOI0."]
     #[must_use]
     #[inline(always)]
-    pub const fn lpspi2(&self) -> Rule {
+    pub const fn aoi0(&self) -> Rule {
         let val = (self.0 >> 4usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "LPSPI2."]
+    #[doc = "AOI0."]
     #[inline(always)]
-    pub const fn set_lpspi2(&mut self, val: Rule) {
+    pub const fn set_aoi0(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "LPSPI3."]
+    #[doc = "CRC0."]
     #[must_use]
     #[inline(always)]
-    pub const fn lpspi3(&self) -> Rule {
+    pub const fn crc0(&self) -> Rule {
         let val = (self.0 >> 8usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "LPSPI3."]
+    #[doc = "CRC0."]
     #[inline(always)]
-    pub const fn set_lpspi3(&mut self, val: Rule) {
+    pub const fn set_crc0(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
-    #[doc = "LPSPI4."]
+    #[doc = "CMC0."]
     #[must_use]
     #[inline(always)]
-    pub const fn lpspi4(&self) -> Rule {
+    pub const fn cmc0(&self) -> Rule {
         let val = (self.0 >> 12usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "LPSPI4."]
+    #[doc = "CMC0."]
     #[inline(always)]
-    pub const fn set_lpspi4(&mut self, val: Rule) {
+    pub const fn set_cmc0(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
-    #[doc = "LPSPI5."]
+    #[doc = "ERM0."]
     #[must_use]
     #[inline(always)]
-    pub const fn lpspi5(&self) -> Rule {
-        let val = (self.0 >> 16usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "LPSPI5."]
-    #[inline(always)]
-    pub const fn set_lpspi5(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
-    }
-}
-impl Default for AipsBridgeGroup1memRule0 {
-    #[inline(always)]
-    fn default() -> AipsBridgeGroup1memRule0 {
-        AipsBridgeGroup1memRule0(0)
-    }
-}
-impl core::fmt::Debug for AipsBridgeGroup1memRule0 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AipsBridgeGroup1memRule0")
-            .field("flexspi0", &self.flexspi0())
-            .field("lpspi2", &self.lpspi2())
-            .field("lpspi3", &self.lpspi3())
-            .field("lpspi4", &self.lpspi4())
-            .field("lpspi5", &self.lpspi5())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for AipsBridgeGroup1memRule0 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "AipsBridgeGroup1memRule0 {{ flexspi0: {:?}, lpspi2: {:?}, lpspi3: {:?}, lpspi4: {:?}, lpspi5: {:?} }}",
-            self.flexspi0(),
-            self.lpspi2(),
-            self.lpspi3(),
-            self.lpspi4(),
-            self.lpspi5()
-        )
-    }
-}
-#[doc = "AIPS Bridge Group 1 Memory Rule 1."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AipsBridgeGroup1memRule1(pub u32);
-impl AipsBridgeGroup1memRule1 {
-    #[doc = "SPI_FILETER0."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn spi_fileter0(&self) -> Rule {
-        let val = (self.0 >> 16usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "SPI_FILETER0."]
-    #[inline(always)]
-    pub const fn set_spi_fileter0(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
-    }
-    #[doc = "10BASE_T1S0."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn t1s0(&self) -> Rule {
+    pub const fn erm0(&self) -> Rule {
         let val = (self.0 >> 20usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "10BASE_T1S0."]
+    #[doc = "ERM0."]
     #[inline(always)]
-    pub const fn set_t1s0(&mut self, val: Rule) {
+    pub const fn set_erm0(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
-    #[doc = "USB1."]
+    #[doc = "MBC0."]
     #[must_use]
     #[inline(always)]
-    pub const fn usb1(&self) -> Rule {
+    pub const fn mbc0(&self) -> Rule {
         let val = (self.0 >> 24usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "USB1."]
+    #[doc = "MBC0."]
     #[inline(always)]
-    pub const fn set_usb1(&mut self, val: Rule) {
+    pub const fn set_mbc0(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
-    #[doc = "USB1_PHY."]
+    #[doc = "SCG0."]
     #[must_use]
     #[inline(always)]
-    pub const fn usb1_phy(&self) -> Rule {
+    pub const fn scg0(&self) -> Rule {
         let val = (self.0 >> 28usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "USB1_PHY."]
+    #[doc = "SCG0."]
     #[inline(always)]
-    pub const fn set_usb1_phy(&mut self, val: Rule) {
+    pub const fn set_scg0(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
 }
-impl Default for AipsBridgeGroup1memRule1 {
+impl Default for AipsBridgeGroup0MemRule1 {
     #[inline(always)]
-    fn default() -> AipsBridgeGroup1memRule1 {
-        AipsBridgeGroup1memRule1(0)
+    fn default() -> AipsBridgeGroup0MemRule1 {
+        AipsBridgeGroup0MemRule1(0)
     }
 }
-impl core::fmt::Debug for AipsBridgeGroup1memRule1 {
+impl core::fmt::Debug for AipsBridgeGroup0MemRule1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AipsBridgeGroup1memRule1")
-            .field("spi_fileter0", &self.spi_fileter0())
-            .field("t1s0", &self.t1s0())
-            .field("usb1", &self.usb1())
-            .field("usb1_phy", &self.usb1_phy())
+        f.debug_struct("AipsBridgeGroup0MemRule1")
+            .field("e_dma_0_tcd7", &self.e_dma_0_tcd7())
+            .field("aoi0", &self.aoi0())
+            .field("crc0", &self.crc0())
+            .field("cmc0", &self.cmc0())
+            .field("erm0", &self.erm0())
+            .field("mbc0", &self.mbc0())
+            .field("scg0", &self.scg0())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for AipsBridgeGroup1memRule1 {
+impl defmt::Format for AipsBridgeGroup0MemRule1 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "AipsBridgeGroup1memRule1 {{ spi_fileter0: {:?}, t1s0: {:?}, usb1: {:?}, usb1_phy: {:?} }}",
-            self.spi_fileter0(),
-            self.t1s0(),
-            self.usb1(),
-            self.usb1_phy()
+            "AipsBridgeGroup0MemRule1 {{ e_dma_0_tcd7: {:?}, aoi0: {:?}, crc0: {:?}, cmc0: {:?}, erm0: {:?}, mbc0: {:?}, scg0: {:?} }}",
+            self.e_dma_0_tcd7(),
+            self.aoi0(),
+            self.crc0(),
+            self.cmc0(),
+            self.erm0(),
+            self.mbc0(),
+            self.scg0()
         )
     }
 }
-#[doc = "AIPS Bridge Group 2 Rule 0."]
+#[doc = "AIPS Bridge Group 0 Memory Rule 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AipsBridgeGroup2memRule0(pub u32);
-impl AipsBridgeGroup2memRule0 {
-    #[doc = "DMA_0_MP."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma_0_mp(&self) -> Rule {
-        let val = (self.0 >> 0usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "DMA_0_MP."]
-    #[inline(always)]
-    pub const fn set_dma_0_mp(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
-    }
-    #[doc = "DMA_0_CH0."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma_0_ch0(&self) -> Rule {
-        let val = (self.0 >> 4usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "DMA_0_CH0."]
-    #[inline(always)]
-    pub const fn set_dma_0_ch0(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
-    }
-    #[doc = "DMA_0_CH1."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma_0_ch1(&self) -> Rule {
-        let val = (self.0 >> 8usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "DMA_0_CH1."]
-    #[inline(always)]
-    pub const fn set_dma_0_ch1(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
-    }
-    #[doc = "DMA_0_CH2."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma_0_ch2(&self) -> Rule {
-        let val = (self.0 >> 12usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "DMA_0_CH2."]
-    #[inline(always)]
-    pub const fn set_dma_0_ch2(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
-    }
-    #[doc = "DMA_0_CH3."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma_0_ch3(&self) -> Rule {
-        let val = (self.0 >> 16usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "DMA_0_CH3."]
-    #[inline(always)]
-    pub const fn set_dma_0_ch3(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
-    }
-    #[doc = "DMA_0_CH4."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma_0_ch4(&self) -> Rule {
-        let val = (self.0 >> 20usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "DMA_0_CH4."]
-    #[inline(always)]
-    pub const fn set_dma_0_ch4(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
-    }
-    #[doc = "DMA_0_CH5."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma_0_ch5(&self) -> Rule {
-        let val = (self.0 >> 24usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "DMA_0_CH5."]
-    #[inline(always)]
-    pub const fn set_dma_0_ch5(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
-    }
-    #[doc = "DMA_0_CH6."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma_0_ch6(&self) -> Rule {
-        let val = (self.0 >> 28usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "DMA_0_CH6."]
-    #[inline(always)]
-    pub const fn set_dma_0_ch6(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
-    }
-}
-impl Default for AipsBridgeGroup2memRule0 {
-    #[inline(always)]
-    fn default() -> AipsBridgeGroup2memRule0 {
-        AipsBridgeGroup2memRule0(0)
-    }
-}
-impl core::fmt::Debug for AipsBridgeGroup2memRule0 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AipsBridgeGroup2memRule0")
-            .field("dma_0_mp", &self.dma_0_mp())
-            .field("dma_0_ch0", &self.dma_0_ch0())
-            .field("dma_0_ch1", &self.dma_0_ch1())
-            .field("dma_0_ch2", &self.dma_0_ch2())
-            .field("dma_0_ch3", &self.dma_0_ch3())
-            .field("dma_0_ch4", &self.dma_0_ch4())
-            .field("dma_0_ch5", &self.dma_0_ch5())
-            .field("dma_0_ch6", &self.dma_0_ch6())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for AipsBridgeGroup2memRule0 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "AipsBridgeGroup2memRule0 {{ dma_0_mp: {:?}, dma_0_ch0: {:?}, dma_0_ch1: {:?}, dma_0_ch2: {:?}, dma_0_ch3: {:?}, dma_0_ch4: {:?}, dma_0_ch5: {:?}, dma_0_ch6: {:?} }}",
-            self.dma_0_mp(),
-            self.dma_0_ch0(),
-            self.dma_0_ch1(),
-            self.dma_0_ch2(),
-            self.dma_0_ch3(),
-            self.dma_0_ch4(),
-            self.dma_0_ch5(),
-            self.dma_0_ch6()
-        )
-    }
-}
-#[doc = "AIPS Bridge Group 2 Rule 1."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AipsBridgeGroup2memRule1(pub u32);
-impl AipsBridgeGroup2memRule1 {
-    #[doc = "DMA_0_CH7."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma_0_ch7(&self) -> Rule {
-        let val = (self.0 >> 0usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "DMA_0_CH7."]
-    #[inline(always)]
-    pub const fn set_dma_0_ch7(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
-    }
-    #[doc = "DMA_0_CH8."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma_0_ch8(&self) -> Rule {
-        let val = (self.0 >> 4usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "DMA_0_CH8."]
-    #[inline(always)]
-    pub const fn set_dma_0_ch8(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
-    }
-    #[doc = "DMA_0_CH9."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma_0_ch9(&self) -> Rule {
-        let val = (self.0 >> 8usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "DMA_0_CH9."]
-    #[inline(always)]
-    pub const fn set_dma_0_ch9(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
-    }
-    #[doc = "DMA_0_CH10."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma_0_ch10(&self) -> Rule {
-        let val = (self.0 >> 12usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "DMA_0_CH10."]
-    #[inline(always)]
-    pub const fn set_dma_0_ch10(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
-    }
-    #[doc = "DMA_0_CH11."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma_0_ch11(&self) -> Rule {
-        let val = (self.0 >> 16usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "DMA_0_CH11."]
-    #[inline(always)]
-    pub const fn set_dma_0_ch11(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
-    }
-}
-impl Default for AipsBridgeGroup2memRule1 {
-    #[inline(always)]
-    fn default() -> AipsBridgeGroup2memRule1 {
-        AipsBridgeGroup2memRule1(0)
-    }
-}
-impl core::fmt::Debug for AipsBridgeGroup2memRule1 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AipsBridgeGroup2memRule1")
-            .field("dma_0_ch7", &self.dma_0_ch7())
-            .field("dma_0_ch8", &self.dma_0_ch8())
-            .field("dma_0_ch9", &self.dma_0_ch9())
-            .field("dma_0_ch10", &self.dma_0_ch10())
-            .field("dma_0_ch11", &self.dma_0_ch11())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for AipsBridgeGroup2memRule1 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "AipsBridgeGroup2memRule1 {{ dma_0_ch7: {:?}, dma_0_ch8: {:?}, dma_0_ch9: {:?}, dma_0_ch10: {:?}, dma_0_ch11: {:?} }}",
-            self.dma_0_ch7(),
-            self.dma_0_ch8(),
-            self.dma_0_ch9(),
-            self.dma_0_ch10(),
-            self.dma_0_ch11()
-        )
-    }
-}
-#[doc = "AIPS Bridge Group 2 Rule 10."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AipsBridgeGroup2memRule10(pub u32);
-impl AipsBridgeGroup2memRule10 {
-    #[doc = "CAN1 Region 0."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn can1_region0(&self) -> Rule {
-        let val = (self.0 >> 0usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "CAN1 Region 0."]
-    #[inline(always)]
-    pub const fn set_can1_region0(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
-    }
-    #[doc = "CAN1 Region 1."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn can1_region1(&self) -> Rule {
-        let val = (self.0 >> 4usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "CAN1 Region 1."]
-    #[inline(always)]
-    pub const fn set_can1_region1(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
-    }
-    #[doc = "CAN1 Region 2."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn can1_region2(&self) -> Rule {
-        let val = (self.0 >> 8usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "CAN1 Region 2."]
-    #[inline(always)]
-    pub const fn set_can1_region2(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
-    }
-    #[doc = "CAN1 Region 3."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn can1_region3(&self) -> Rule {
-        let val = (self.0 >> 12usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "CAN1 Region 3."]
-    #[inline(always)]
-    pub const fn set_can1_region3(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
-    }
-    #[doc = "LPI2C2."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn lpi2c2(&self) -> Rule {
-        let val = (self.0 >> 16usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "LPI2C2."]
-    #[inline(always)]
-    pub const fn set_lpi2c2(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
-    }
-    #[doc = "LPI2C3."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn lpi2c3(&self) -> Rule {
-        let val = (self.0 >> 20usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "LPI2C3."]
-    #[inline(always)]
-    pub const fn set_lpi2c3(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
-    }
-    #[doc = "LPI2C4."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn lpi2c4(&self) -> Rule {
-        let val = (self.0 >> 24usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "LPI2C4."]
-    #[inline(always)]
-    pub const fn set_lpi2c4(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
-    }
-}
-impl Default for AipsBridgeGroup2memRule10 {
-    #[inline(always)]
-    fn default() -> AipsBridgeGroup2memRule10 {
-        AipsBridgeGroup2memRule10(0)
-    }
-}
-impl core::fmt::Debug for AipsBridgeGroup2memRule10 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AipsBridgeGroup2memRule10")
-            .field("can1_region0", &self.can1_region0())
-            .field("can1_region1", &self.can1_region1())
-            .field("can1_region2", &self.can1_region2())
-            .field("can1_region3", &self.can1_region3())
-            .field("lpi2c2", &self.lpi2c2())
-            .field("lpi2c3", &self.lpi2c3())
-            .field("lpi2c4", &self.lpi2c4())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for AipsBridgeGroup2memRule10 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "AipsBridgeGroup2memRule10 {{ can1_region0: {:?}, can1_region1: {:?}, can1_region2: {:?}, can1_region3: {:?}, lpi2c2: {:?}, lpi2c3: {:?}, lpi2c4: {:?} }}",
-            self.can1_region0(),
-            self.can1_region1(),
-            self.can1_region2(),
-            self.can1_region3(),
-            self.lpi2c2(),
-            self.lpi2c3(),
-            self.lpi2c4()
-        )
-    }
-}
-#[doc = "AIPS Bridge Group 2 Rule 11."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AipsBridgeGroup2memRule11(pub u32);
-impl AipsBridgeGroup2memRule11 {
-    #[doc = "LPUART5."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn lpuart5(&self) -> Rule {
-        let val = (self.0 >> 8usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "LPUART5."]
-    #[inline(always)]
-    pub const fn set_lpuart5(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
-    }
-    #[doc = "I3C3."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn i3c3(&self) -> Rule {
-        let val = (self.0 >> 24usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "I3C3."]
-    #[inline(always)]
-    pub const fn set_i3c3(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
-    }
-    #[doc = "GPIO5."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpio5(&self) -> Rule {
-        let val = (self.0 >> 28usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "GPIO5."]
-    #[inline(always)]
-    pub const fn set_gpio5(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
-    }
-}
-impl Default for AipsBridgeGroup2memRule11 {
-    #[inline(always)]
-    fn default() -> AipsBridgeGroup2memRule11 {
-        AipsBridgeGroup2memRule11(0)
-    }
-}
-impl core::fmt::Debug for AipsBridgeGroup2memRule11 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AipsBridgeGroup2memRule11")
-            .field("lpuart5", &self.lpuart5())
-            .field("i3c3", &self.i3c3())
-            .field("gpio5", &self.gpio5())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for AipsBridgeGroup2memRule11 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "AipsBridgeGroup2memRule11 {{ lpuart5: {:?}, i3c3: {:?}, gpio5: {:?} }}",
-            self.lpuart5(),
-            self.i3c3(),
-            self.gpio5()
-        )
-    }
-}
-#[doc = "AIPS Bridge Group 2 Rule 12."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AipsBridgeGroup2memRule12(pub u32);
-impl AipsBridgeGroup2memRule12 {
-    #[doc = "GPIO5_ALIAS."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpio5_alias(&self) -> Rule {
-        let val = (self.0 >> 0usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "GPIO5_ALIAS."]
-    #[inline(always)]
-    pub const fn set_gpio5_alias(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
-    }
-    #[doc = "PORT5."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn port5(&self) -> Rule {
-        let val = (self.0 >> 12usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "PORT5."]
-    #[inline(always)]
-    pub const fn set_port5(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
-    }
-    #[doc = "DGDET0."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dgdet0(&self) -> Rule {
-        let val = (self.0 >> 20usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "DGDET0."]
-    #[inline(always)]
-    pub const fn set_dgdet0(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
-    }
-    #[doc = "ITRC0."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn itrc0(&self) -> Rule {
-        let val = (self.0 >> 28usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "ITRC0."]
-    #[inline(always)]
-    pub const fn set_itrc0(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
-    }
-}
-impl Default for AipsBridgeGroup2memRule12 {
-    #[inline(always)]
-    fn default() -> AipsBridgeGroup2memRule12 {
-        AipsBridgeGroup2memRule12(0)
-    }
-}
-impl core::fmt::Debug for AipsBridgeGroup2memRule12 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AipsBridgeGroup2memRule12")
-            .field("gpio5_alias", &self.gpio5_alias())
-            .field("port5", &self.port5())
-            .field("dgdet0", &self.dgdet0())
-            .field("itrc0", &self.itrc0())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for AipsBridgeGroup2memRule12 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "AipsBridgeGroup2memRule12 {{ gpio5_alias: {:?}, port5: {:?}, dgdet0: {:?}, itrc0: {:?} }}",
-            self.gpio5_alias(),
-            self.port5(),
-            self.dgdet0(),
-            self.itrc0()
-        )
-    }
-}
-#[doc = "AIPS Bridge Group 2 Rule 13."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AipsBridgeGroup2memRule13(pub u32);
-impl AipsBridgeGroup2memRule13 {
-    #[doc = "GLIKEY0."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn glikey0(&self) -> Rule {
-        let val = (self.0 >> 0usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "GLIKEY0."]
-    #[inline(always)]
-    pub const fn set_glikey0(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
-    }
-    #[doc = "TDET0."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn tdet0(&self) -> Rule {
-        let val = (self.0 >> 4usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "TDET0."]
-    #[inline(always)]
-    pub const fn set_tdet0(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
-    }
-    #[doc = "SECCON."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn seccon(&self) -> Rule {
-        let val = (self.0 >> 8usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "SECCON."]
-    #[inline(always)]
-    pub const fn set_seccon(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
-    }
-    #[doc = "SGI0."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn sgi0(&self) -> Rule {
-        let val = (self.0 >> 12usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "SGI0."]
-    #[inline(always)]
-    pub const fn set_sgi0(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
-    }
-    #[doc = "TRNG0."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn trng0(&self) -> Rule {
-        let val = (self.0 >> 16usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "TRNG0."]
-    #[inline(always)]
-    pub const fn set_trng0(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
-    }
-    #[doc = "UDF0."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn udf0(&self) -> Rule {
-        let val = (self.0 >> 20usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "UDF0."]
-    #[inline(always)]
-    pub const fn set_udf0(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
-    }
-    #[doc = "RTC0."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rtc0(&self) -> Rule {
-        let val = (self.0 >> 24usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "RTC0."]
-    #[inline(always)]
-    pub const fn set_rtc0(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
-    }
-}
-impl Default for AipsBridgeGroup2memRule13 {
-    #[inline(always)]
-    fn default() -> AipsBridgeGroup2memRule13 {
-        AipsBridgeGroup2memRule13(0)
-    }
-}
-impl core::fmt::Debug for AipsBridgeGroup2memRule13 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AipsBridgeGroup2memRule13")
-            .field("glikey0", &self.glikey0())
-            .field("tdet0", &self.tdet0())
-            .field("seccon", &self.seccon())
-            .field("sgi0", &self.sgi0())
-            .field("trng0", &self.trng0())
-            .field("udf0", &self.udf0())
-            .field("rtc0", &self.rtc0())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for AipsBridgeGroup2memRule13 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "AipsBridgeGroup2memRule13 {{ glikey0: {:?}, tdet0: {:?}, seccon: {:?}, sgi0: {:?}, trng0: {:?}, udf0: {:?}, rtc0: {:?} }}",
-            self.glikey0(),
-            self.tdet0(),
-            self.seccon(),
-            self.sgi0(),
-            self.trng0(),
-            self.udf0(),
-            self.rtc0()
-        )
-    }
-}
-#[doc = "AIPS Bridge Group 2 Rule 2."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AipsBridgeGroup2memRule2(pub u32);
-impl AipsBridgeGroup2memRule2 {
+pub struct AipsBridgeGroup0MemRule2(pub u32);
+impl AipsBridgeGroup0MemRule2 {
     #[doc = "SYSCON."]
     #[must_use]
     #[inline(always)]
@@ -1857,99 +1301,125 @@ impl AipsBridgeGroup2memRule2 {
     pub const fn set_syscon(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "WUU."]
+    #[doc = "WUU0."]
     #[must_use]
     #[inline(always)]
-    pub const fn wuu(&self) -> Rule {
+    pub const fn wuu0(&self) -> Rule {
         let val = (self.0 >> 8usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "WUU."]
+    #[doc = "WUU0."]
     #[inline(always)]
-    pub const fn set_wuu(&mut self, val: Rule) {
+    pub const fn set_wuu0(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
-    #[doc = "VBAT."]
+    #[doc = "FMC0."]
     #[must_use]
     #[inline(always)]
-    pub const fn vbat(&self) -> Rule {
-        let val = (self.0 >> 12usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "VBAT."]
-    #[inline(always)]
-    pub const fn set_vbat(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
-    }
-    #[doc = "FMC."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn fmc(&self) -> Rule {
+    pub const fn fmc0(&self) -> Rule {
         let val = (self.0 >> 16usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "FMC."]
+    #[doc = "FMC0."]
     #[inline(always)]
-    pub const fn set_fmc(&mut self, val: Rule) {
+    pub const fn set_fmc0(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
-    #[doc = "FMU."]
+    #[doc = "FMU0."]
     #[must_use]
     #[inline(always)]
-    pub const fn fmu(&self) -> Rule {
+    pub const fn fmu0(&self) -> Rule {
         let val = (self.0 >> 20usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "FMU."]
+    #[doc = "FMU0."]
     #[inline(always)]
-    pub const fn set_fmu(&mut self, val: Rule) {
+    pub const fn set_fmu0(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
-}
-impl Default for AipsBridgeGroup2memRule2 {
+    #[doc = "FMU0_TST."]
+    #[must_use]
     #[inline(always)]
-    fn default() -> AipsBridgeGroup2memRule2 {
-        AipsBridgeGroup2memRule2(0)
+    pub const fn fmu0_tst(&self) -> Rule {
+        let val = (self.0 >> 24usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "FMU0_TST."]
+    #[inline(always)]
+    pub const fn set_fmu0_tst(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
+    }
+    #[doc = "BCANXL (Reserved)."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn bcanxl(&self) -> Rule {
+        let val = (self.0 >> 28usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "BCANXL (Reserved)."]
+    #[inline(always)]
+    pub const fn set_bcanxl(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
 }
-impl core::fmt::Debug for AipsBridgeGroup2memRule2 {
+impl Default for AipsBridgeGroup0MemRule2 {
+    #[inline(always)]
+    fn default() -> AipsBridgeGroup0MemRule2 {
+        AipsBridgeGroup0MemRule2(0)
+    }
+}
+impl core::fmt::Debug for AipsBridgeGroup0MemRule2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AipsBridgeGroup2memRule2")
+        f.debug_struct("AipsBridgeGroup0MemRule2")
             .field("syscon", &self.syscon())
-            .field("wuu", &self.wuu())
-            .field("vbat", &self.vbat())
-            .field("fmc", &self.fmc())
-            .field("fmu", &self.fmu())
+            .field("wuu0", &self.wuu0())
+            .field("fmc0", &self.fmc0())
+            .field("fmu0", &self.fmu0())
+            .field("fmu0_tst", &self.fmu0_tst())
+            .field("bcanxl", &self.bcanxl())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for AipsBridgeGroup2memRule2 {
+impl defmt::Format for AipsBridgeGroup0MemRule2 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "AipsBridgeGroup2memRule2 {{ syscon: {:?}, wuu: {:?}, vbat: {:?}, fmc: {:?}, fmu: {:?} }}",
+            "AipsBridgeGroup0MemRule2 {{ syscon: {:?}, wuu0: {:?}, fmc0: {:?}, fmu0: {:?}, fmu0_tst: {:?}, bcanxl: {:?} }}",
             self.syscon(),
-            self.wuu(),
-            self.vbat(),
-            self.fmc(),
-            self.fmu()
+            self.wuu0(),
+            self.fmc0(),
+            self.fmu0(),
+            self.fmu0_tst(),
+            self.bcanxl()
         )
     }
 }
-#[doc = "AIPS Bridge Group 2 Rule 3."]
+#[doc = "AIPS Bridge Group 0 Memory Rule 3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AipsBridgeGroup2memRule3(pub u32);
-impl AipsBridgeGroup2memRule3 {
-    #[doc = "FLEXIO."]
+pub struct AipsBridgeGroup0MemRule3(pub u32);
+impl AipsBridgeGroup0MemRule3 {
+    #[doc = "CANDMA (Reserved)."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn candma(&self) -> Rule {
+        let val = (self.0 >> 0usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "CANDMA (Reserved)."]
+    #[inline(always)]
+    pub const fn set_candma(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
+    }
+    #[doc = "FLEXIO (Reserved)."]
     #[must_use]
     #[inline(always)]
     pub const fn flexio(&self) -> Rule {
         let val = (self.0 >> 4usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "FLEXIO."]
+    #[doc = "FLEXIO (Reserved)."]
     #[inline(always)]
     pub const fn set_flexio(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
@@ -2002,16 +1472,16 @@ impl AipsBridgeGroup2memRule3 {
     pub const fn set_lpspi1(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
-    #[doc = "I3C2."]
+    #[doc = "LPSPI2 (Reserved)."]
     #[must_use]
     #[inline(always)]
-    pub const fn i3c2(&self) -> Rule {
+    pub const fn lpspi2(&self) -> Rule {
         let val = (self.0 >> 24usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "I3C2."]
+    #[doc = "LPSPI2 (Reserved)."]
     #[inline(always)]
-    pub const fn set_i3c2(&mut self, val: Rule) {
+    pub const fn set_lpspi2(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
     #[doc = "LPUART0."]
@@ -2027,46 +1497,48 @@ impl AipsBridgeGroup2memRule3 {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
 }
-impl Default for AipsBridgeGroup2memRule3 {
+impl Default for AipsBridgeGroup0MemRule3 {
     #[inline(always)]
-    fn default() -> AipsBridgeGroup2memRule3 {
-        AipsBridgeGroup2memRule3(0)
+    fn default() -> AipsBridgeGroup0MemRule3 {
+        AipsBridgeGroup0MemRule3(0)
     }
 }
-impl core::fmt::Debug for AipsBridgeGroup2memRule3 {
+impl core::fmt::Debug for AipsBridgeGroup0MemRule3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AipsBridgeGroup2memRule3")
+        f.debug_struct("AipsBridgeGroup0MemRule3")
+            .field("candma", &self.candma())
             .field("flexio", &self.flexio())
             .field("lpi2c0", &self.lpi2c0())
             .field("lpi2c1", &self.lpi2c1())
             .field("lpspi0", &self.lpspi0())
             .field("lpspi1", &self.lpspi1())
-            .field("i3c2", &self.i3c2())
+            .field("lpspi2", &self.lpspi2())
             .field("lpuart0", &self.lpuart0())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for AipsBridgeGroup2memRule3 {
+impl defmt::Format for AipsBridgeGroup0MemRule3 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "AipsBridgeGroup2memRule3 {{ flexio: {:?}, lpi2c0: {:?}, lpi2c1: {:?}, lpspi0: {:?}, lpspi1: {:?}, i3c2: {:?}, lpuart0: {:?} }}",
+            "AipsBridgeGroup0MemRule3 {{ candma: {:?}, flexio: {:?}, lpi2c0: {:?}, lpi2c1: {:?}, lpspi0: {:?}, lpspi1: {:?}, lpspi2: {:?}, lpuart0: {:?} }}",
+            self.candma(),
             self.flexio(),
             self.lpi2c0(),
             self.lpi2c1(),
             self.lpspi0(),
             self.lpspi1(),
-            self.i3c2(),
+            self.lpspi2(),
             self.lpuart0()
         )
     }
 }
-#[doc = "AIPS Bridge Group 2 Rule 4."]
+#[doc = "AIPS Bridge Group 2 Memory Rule 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AipsBridgeGroup2memRule4(pub u32);
-impl AipsBridgeGroup2memRule4 {
+pub struct AipsBridgeGroup2MemRule0(pub u32);
+impl AipsBridgeGroup2MemRule0 {
     #[doc = "LPUART1."]
     #[must_use]
     #[inline(always)]
@@ -2079,168 +1551,280 @@ impl AipsBridgeGroup2memRule4 {
     pub const fn set_lpuart1(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "LPUART2."]
+    #[doc = "LPUART2 (Reserved)."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart2(&self) -> Rule {
         let val = (self.0 >> 4usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "LPUART2."]
+    #[doc = "LPUART2 (Reserved)."]
     #[inline(always)]
     pub const fn set_lpuart2(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "LPUART3."]
+    #[doc = "LPUART3 (Reserved)."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart3(&self) -> Rule {
         let val = (self.0 >> 8usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "LPUART3."]
+    #[doc = "LPUART3 (Reserved)."]
     #[inline(always)]
     pub const fn set_lpuart3(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
-    #[doc = "LPUART4."]
+    #[doc = "LPUART4 (Reserved)."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart4(&self) -> Rule {
         let val = (self.0 >> 12usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "LPUART4."]
+    #[doc = "LPUART4 (Reserved)."]
     #[inline(always)]
     pub const fn set_lpuart4(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
-}
-impl Default for AipsBridgeGroup2memRule4 {
+    #[doc = "USB_FS_OTG (Reserved)."]
+    #[must_use]
     #[inline(always)]
-    fn default() -> AipsBridgeGroup2memRule4 {
-        AipsBridgeGroup2memRule4(0)
+    pub const fn usb_fs_otg(&self) -> Rule {
+        let val = (self.0 >> 16usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "USB_FS_OTG (Reserved)."]
+    #[inline(always)]
+    pub const fn set_usb_fs_otg(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
+    }
+    #[doc = "USB_FS_DCD (Reserved)."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn usb_fs_dcd(&self) -> Rule {
+        let val = (self.0 >> 20usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "USB_FS_DCD (Reserved)."]
+    #[inline(always)]
+    pub const fn set_usb_fs_dcd(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
+    }
+    #[doc = "USB_TYPEC_PD (Reserved)."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn usb_typec_pd(&self) -> Rule {
+        let val = (self.0 >> 24usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "USB_TYPEC_PD (Reserved)."]
+    #[inline(always)]
+    pub const fn set_usb_typec_pd(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
+    }
+    #[doc = "QUAD_DECODER0 (Reserved)."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn quad_decoder0(&self) -> Rule {
+        let val = (self.0 >> 28usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "QUAD_DECODER0 (Reserved)."]
+    #[inline(always)]
+    pub const fn set_quad_decoder0(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
 }
-impl core::fmt::Debug for AipsBridgeGroup2memRule4 {
+impl Default for AipsBridgeGroup2MemRule0 {
+    #[inline(always)]
+    fn default() -> AipsBridgeGroup2MemRule0 {
+        AipsBridgeGroup2MemRule0(0)
+    }
+}
+impl core::fmt::Debug for AipsBridgeGroup2MemRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AipsBridgeGroup2memRule4")
+        f.debug_struct("AipsBridgeGroup2MemRule0")
             .field("lpuart1", &self.lpuart1())
             .field("lpuart2", &self.lpuart2())
             .field("lpuart3", &self.lpuart3())
             .field("lpuart4", &self.lpuart4())
+            .field("usb_fs_otg", &self.usb_fs_otg())
+            .field("usb_fs_dcd", &self.usb_fs_dcd())
+            .field("usb_typec_pd", &self.usb_typec_pd())
+            .field("quad_decoder0", &self.quad_decoder0())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for AipsBridgeGroup2memRule4 {
+impl defmt::Format for AipsBridgeGroup2MemRule0 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "AipsBridgeGroup2memRule4 {{ lpuart1: {:?}, lpuart2: {:?}, lpuart3: {:?}, lpuart4: {:?} }}",
+            "AipsBridgeGroup2MemRule0 {{ lpuart1: {:?}, lpuart2: {:?}, lpuart3: {:?}, lpuart4: {:?}, usb_fs_otg: {:?}, usb_fs_dcd: {:?}, usb_typec_pd: {:?}, quad_decoder0: {:?} }}",
             self.lpuart1(),
             self.lpuart2(),
             self.lpuart3(),
-            self.lpuart4()
+            self.lpuart4(),
+            self.usb_fs_otg(),
+            self.usb_fs_dcd(),
+            self.usb_typec_pd(),
+            self.quad_decoder0()
         )
     }
 }
-#[doc = "AIPS Bridge Group 2 Rule 5."]
+#[doc = "AIPS Bridge Group 2 Memory Rule 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AipsBridgeGroup2memRule5(pub u32);
-impl AipsBridgeGroup2memRule5 {
-    #[doc = "LPTMR."]
+pub struct AipsBridgeGroup2MemRule1(pub u32);
+impl AipsBridgeGroup2MemRule1 {
+    #[doc = "QUAD_DECODER1 (Reserved)."]
     #[must_use]
     #[inline(always)]
-    pub const fn lptmr(&self) -> Rule {
+    pub const fn quad_decoder1(&self) -> Rule {
+        let val = (self.0 >> 0usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "QUAD_DECODER1 (Reserved)."]
+    #[inline(always)]
+    pub const fn set_quad_decoder1(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
+    }
+    #[doc = "FLEXPWM0."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn flexpwm0(&self) -> Rule {
+        let val = (self.0 >> 4usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "FLEXPWM0."]
+    #[inline(always)]
+    pub const fn set_flexpwm0(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
+    }
+    #[doc = "FLEXPWM1 (Reserved)."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn flexpwm1(&self) -> Rule {
+        let val = (self.0 >> 8usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "FLEXPWM1 (Reserved)."]
+    #[inline(always)]
+    pub const fn set_flexpwm1(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
+    }
+    #[doc = "LPTMR0 (Reserved)."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn lptmr0(&self) -> Rule {
         let val = (self.0 >> 12usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "LPTMR."]
+    #[doc = "LPTMR0 (Reserved)."]
     #[inline(always)]
-    pub const fn set_lptmr(&mut self, val: Rule) {
+    pub const fn set_lptmr0(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
-    #[doc = "OSTIMER."]
+    #[doc = "LPTMR1 (Reserved)."]
     #[must_use]
     #[inline(always)]
-    pub const fn ostimer(&self) -> Rule {
+    pub const fn lptmr1(&self) -> Rule {
+        let val = (self.0 >> 16usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "LPTMR1 (Reserved)."]
+    #[inline(always)]
+    pub const fn set_lptmr1(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
+    }
+    #[doc = "OSTIMER0."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ostimer0(&self) -> Rule {
         let val = (self.0 >> 20usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "OSTIMER."]
+    #[doc = "OSTIMER0."]
     #[inline(always)]
-    pub const fn set_ostimer(&mut self, val: Rule) {
+    pub const fn set_ostimer0(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
-    #[doc = "WAKE_TIMER."]
+    #[doc = "WAKE_TIMER (Reserved)."]
     #[must_use]
     #[inline(always)]
     pub const fn wake_timer(&self) -> Rule {
         let val = (self.0 >> 24usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "WAKE_TIMER."]
+    #[doc = "WAKE_TIMER (Reserved)."]
     #[inline(always)]
     pub const fn set_wake_timer(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
-    #[doc = "ADC0."]
+    #[doc = "HSADC0."]
     #[must_use]
     #[inline(always)]
-    pub const fn adc0(&self) -> Rule {
+    pub const fn hsadc0(&self) -> Rule {
         let val = (self.0 >> 28usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "ADC0."]
+    #[doc = "HSADC0."]
     #[inline(always)]
-    pub const fn set_adc0(&mut self, val: Rule) {
+    pub const fn set_hsadc0(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
 }
-impl Default for AipsBridgeGroup2memRule5 {
+impl Default for AipsBridgeGroup2MemRule1 {
     #[inline(always)]
-    fn default() -> AipsBridgeGroup2memRule5 {
-        AipsBridgeGroup2memRule5(0)
+    fn default() -> AipsBridgeGroup2MemRule1 {
+        AipsBridgeGroup2MemRule1(0)
     }
 }
-impl core::fmt::Debug for AipsBridgeGroup2memRule5 {
+impl core::fmt::Debug for AipsBridgeGroup2MemRule1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AipsBridgeGroup2memRule5")
-            .field("lptmr", &self.lptmr())
-            .field("ostimer", &self.ostimer())
+        f.debug_struct("AipsBridgeGroup2MemRule1")
+            .field("quad_decoder1", &self.quad_decoder1())
+            .field("flexpwm0", &self.flexpwm0())
+            .field("flexpwm1", &self.flexpwm1())
+            .field("lptmr0", &self.lptmr0())
+            .field("lptmr1", &self.lptmr1())
+            .field("ostimer0", &self.ostimer0())
             .field("wake_timer", &self.wake_timer())
-            .field("adc0", &self.adc0())
+            .field("hsadc0", &self.hsadc0())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for AipsBridgeGroup2memRule5 {
+impl defmt::Format for AipsBridgeGroup2MemRule1 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "AipsBridgeGroup2memRule5 {{ lptmr: {:?}, ostimer: {:?}, wake_timer: {:?}, adc0: {:?} }}",
-            self.lptmr(),
-            self.ostimer(),
+            "AipsBridgeGroup2MemRule1 {{ quad_decoder1: {:?}, flexpwm0: {:?}, flexpwm1: {:?}, lptmr0: {:?}, lptmr1: {:?}, ostimer0: {:?}, wake_timer: {:?}, hsadc0: {:?} }}",
+            self.quad_decoder1(),
+            self.flexpwm0(),
+            self.flexpwm1(),
+            self.lptmr0(),
+            self.lptmr1(),
+            self.ostimer0(),
             self.wake_timer(),
-            self.adc0()
+            self.hsadc0()
         )
     }
 }
-#[doc = "AIPS Bridge Group 2 Rule 6."]
+#[doc = "AIPS Bridge Group 2 Memory Rule 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AipsBridgeGroup2memRule6(pub u32);
-impl AipsBridgeGroup2memRule6 {
-    #[doc = "ADC1."]
+pub struct AipsBridgeGroup2MemRule2(pub u32);
+impl AipsBridgeGroup2MemRule2 {
+    #[doc = "ADC1 (Reserved)."]
     #[must_use]
     #[inline(always)]
     pub const fn adc1(&self) -> Rule {
         let val = (self.0 >> 0usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "ADC1."]
+    #[doc = "ADC1 (Reserved)."]
     #[inline(always)]
     pub const fn set_adc1(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
@@ -2257,412 +1841,771 @@ impl AipsBridgeGroup2memRule6 {
     pub const fn set_cmp0(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "DAC0."]
+    #[doc = "CMP1 (Reserved)."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn cmp1(&self) -> Rule {
+        let val = (self.0 >> 8usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "CMP1 (Reserved)."]
+    #[inline(always)]
+    pub const fn set_cmp1(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
+    }
+    #[doc = "CMP2 (Reserved)."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn cmp2(&self) -> Rule {
+        let val = (self.0 >> 12usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "CMP2 (Reserved)."]
+    #[inline(always)]
+    pub const fn set_cmp2(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
+    }
+    #[doc = "DAC0 (Reserved)."]
     #[must_use]
     #[inline(always)]
     pub const fn dac0(&self) -> Rule {
         let val = (self.0 >> 16usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "DAC0."]
+    #[doc = "DAC0 (Reserved)."]
     #[inline(always)]
     pub const fn set_dac0(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
-    #[doc = "DAC1."]
+    #[doc = "DAC1 (Reserved)."]
     #[must_use]
     #[inline(always)]
     pub const fn dac1(&self) -> Rule {
         let val = (self.0 >> 20usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "DAC1."]
+    #[doc = "DAC1 (Reserved)."]
     #[inline(always)]
     pub const fn set_dac1(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
-}
-impl Default for AipsBridgeGroup2memRule6 {
+    #[doc = "DAC2 (Reserved)."]
+    #[must_use]
     #[inline(always)]
-    fn default() -> AipsBridgeGroup2memRule6 {
-        AipsBridgeGroup2memRule6(0)
+    pub const fn dac2(&self) -> Rule {
+        let val = (self.0 >> 24usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "DAC2 (Reserved)."]
+    #[inline(always)]
+    pub const fn set_dac2(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
+    }
+    #[doc = "OPAMP0 (Reserved)."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn opamp0(&self) -> Rule {
+        let val = (self.0 >> 28usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "OPAMP0 (Reserved)."]
+    #[inline(always)]
+    pub const fn set_opamp0(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
 }
-impl core::fmt::Debug for AipsBridgeGroup2memRule6 {
+impl Default for AipsBridgeGroup2MemRule2 {
+    #[inline(always)]
+    fn default() -> AipsBridgeGroup2MemRule2 {
+        AipsBridgeGroup2MemRule2(0)
+    }
+}
+impl core::fmt::Debug for AipsBridgeGroup2MemRule2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AipsBridgeGroup2memRule6")
+        f.debug_struct("AipsBridgeGroup2MemRule2")
             .field("adc1", &self.adc1())
             .field("cmp0", &self.cmp0())
+            .field("cmp1", &self.cmp1())
+            .field("cmp2", &self.cmp2())
             .field("dac0", &self.dac0())
             .field("dac1", &self.dac1())
+            .field("dac2", &self.dac2())
+            .field("opamp0", &self.opamp0())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for AipsBridgeGroup2memRule6 {
+impl defmt::Format for AipsBridgeGroup2MemRule2 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "AipsBridgeGroup2memRule6 {{ adc1: {:?}, cmp0: {:?}, dac0: {:?}, dac1: {:?} }}",
+            "AipsBridgeGroup2MemRule2 {{ adc1: {:?}, cmp0: {:?}, cmp1: {:?}, cmp2: {:?}, dac0: {:?}, dac1: {:?}, dac2: {:?}, opamp0: {:?} }}",
             self.adc1(),
             self.cmp0(),
+            self.cmp1(),
+            self.cmp2(),
             self.dac0(),
-            self.dac1()
+            self.dac1(),
+            self.dac2(),
+            self.opamp0()
         )
     }
 }
-#[doc = "AIPS Bridge Group 2 Rule 7."]
+#[doc = "AIPS Bridge Group 2 Memory Rule 3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AipsBridgeGroup2memRule7(pub u32);
-impl AipsBridgeGroup2memRule7 {
-    #[doc = "VREF0."]
+pub struct AipsBridgeGroup2MemRule3(pub u32);
+impl AipsBridgeGroup2MemRule3 {
+    #[doc = "OPAMP1 (Reserved)."]
     #[must_use]
     #[inline(always)]
-    pub const fn vref0(&self) -> Rule {
+    pub const fn opamp1(&self) -> Rule {
+        let val = (self.0 >> 0usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "OPAMP1 (Reserved)."]
+    #[inline(always)]
+    pub const fn set_opamp1(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
+    }
+    #[doc = "OPAMP2 (Reserved)."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn opamp2(&self) -> Rule {
+        let val = (self.0 >> 4usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "OPAMP2 (Reserved)."]
+    #[inline(always)]
+    pub const fn set_opamp2(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
+    }
+    #[doc = "SD_ADC0 (Reserved)."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn sd_adc0(&self) -> Rule {
+        let val = (self.0 >> 8usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "SD_ADC0 (Reserved)."]
+    #[inline(always)]
+    pub const fn set_sd_adc0(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
+    }
+    #[doc = "DGO_GPIO1_3 (Reserved)."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn dgo_gpio1_3(&self) -> Rule {
         let val = (self.0 >> 12usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "VREF0."]
+    #[doc = "DGO_GPIO1_3 (Reserved)."]
     #[inline(always)]
-    pub const fn set_vref0(&mut self, val: Rule) {
+    pub const fn set_dgo_gpio1_3(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
-    }
-    #[doc = "PORT0."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn port0(&self) -> Rule {
-        let val = (self.0 >> 16usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "PORT0."]
-    #[inline(always)]
-    pub const fn set_port0(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
     #[doc = "PORT1."]
     #[must_use]
     #[inline(always)]
     pub const fn port1(&self) -> Rule {
-        let val = (self.0 >> 20usize) & 0x03;
+        let val = (self.0 >> 16usize) & 0x03;
         Rule::from_bits(val as u8)
     }
     #[doc = "PORT1."]
     #[inline(always)]
     pub const fn set_port1(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
+        self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
     #[doc = "PORT2."]
     #[must_use]
     #[inline(always)]
     pub const fn port2(&self) -> Rule {
-        let val = (self.0 >> 24usize) & 0x03;
+        let val = (self.0 >> 20usize) & 0x03;
         Rule::from_bits(val as u8)
     }
     #[doc = "PORT2."]
     #[inline(always)]
     pub const fn set_port2(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
+        self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
     #[doc = "PORT3."]
     #[must_use]
     #[inline(always)]
     pub const fn port3(&self) -> Rule {
-        let val = (self.0 >> 28usize) & 0x03;
+        let val = (self.0 >> 24usize) & 0x03;
         Rule::from_bits(val as u8)
     }
     #[doc = "PORT3."]
     #[inline(always)]
     pub const fn set_port3(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
+        self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
-}
-impl Default for AipsBridgeGroup2memRule7 {
-    #[inline(always)]
-    fn default() -> AipsBridgeGroup2memRule7 {
-        AipsBridgeGroup2memRule7(0)
-    }
-}
-impl core::fmt::Debug for AipsBridgeGroup2memRule7 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AipsBridgeGroup2memRule7")
-            .field("vref0", &self.vref0())
-            .field("port0", &self.port0())
-            .field("port1", &self.port1())
-            .field("port2", &self.port2())
-            .field("port3", &self.port3())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for AipsBridgeGroup2memRule7 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "AipsBridgeGroup2memRule7 {{ vref0: {:?}, port0: {:?}, port1: {:?}, port2: {:?}, port3: {:?} }}",
-            self.vref0(),
-            self.port0(),
-            self.port1(),
-            self.port2(),
-            self.port3()
-        )
-    }
-}
-#[doc = "AIPS Bridge Group 2 Rule 8."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AipsBridgeGroup2memRule8(pub u32);
-impl AipsBridgeGroup2memRule8 {
-    #[doc = "PORT4."]
+    #[doc = "PORT4 (Reserved)."]
     #[must_use]
     #[inline(always)]
     pub const fn port4(&self) -> Rule {
-        let val = (self.0 >> 0usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "PORT4."]
-    #[inline(always)]
-    pub const fn set_port4(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
-    }
-    #[doc = "TSI0."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn tsi0(&self) -> Rule {
-        let val = (self.0 >> 12usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "TSI0."]
-    #[inline(always)]
-    pub const fn set_tsi0(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
-    }
-    #[doc = "AOI0."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn aoi0(&self) -> Rule {
-        let val = (self.0 >> 16usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "AOI0."]
-    #[inline(always)]
-    pub const fn set_aoi0(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
-    }
-    #[doc = "CRC0."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn crc0(&self) -> Rule {
-        let val = (self.0 >> 20usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "CRC0."]
-    #[inline(always)]
-    pub const fn set_crc0(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
-    }
-    #[doc = "CMC."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn cmc(&self) -> Rule {
-        let val = (self.0 >> 24usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "CMC."]
-    #[inline(always)]
-    pub const fn set_cmc(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
-    }
-    #[doc = "EIM."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn eim(&self) -> Rule {
         let val = (self.0 >> 28usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "EIM."]
+    #[doc = "PORT4 (Reserved)."]
     #[inline(always)]
-    pub const fn set_eim(&mut self, val: Rule) {
+    pub const fn set_port4(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
 }
-impl Default for AipsBridgeGroup2memRule8 {
+impl Default for AipsBridgeGroup2MemRule3 {
     #[inline(always)]
-    fn default() -> AipsBridgeGroup2memRule8 {
-        AipsBridgeGroup2memRule8(0)
+    fn default() -> AipsBridgeGroup2MemRule3 {
+        AipsBridgeGroup2MemRule3(0)
     }
 }
-impl core::fmt::Debug for AipsBridgeGroup2memRule8 {
+impl core::fmt::Debug for AipsBridgeGroup2MemRule3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AipsBridgeGroup2memRule8")
+        f.debug_struct("AipsBridgeGroup2MemRule3")
+            .field("opamp1", &self.opamp1())
+            .field("opamp2", &self.opamp2())
+            .field("sd_adc0", &self.sd_adc0())
+            .field("dgo_gpio1_3", &self.dgo_gpio1_3())
+            .field("port1", &self.port1())
+            .field("port2", &self.port2())
+            .field("port3", &self.port3())
             .field("port4", &self.port4())
-            .field("tsi0", &self.tsi0())
-            .field("aoi0", &self.aoi0())
-            .field("crc0", &self.crc0())
-            .field("cmc", &self.cmc())
-            .field("eim", &self.eim())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for AipsBridgeGroup2memRule8 {
+impl defmt::Format for AipsBridgeGroup2MemRule3 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "AipsBridgeGroup2memRule8 {{ port4: {:?}, tsi0: {:?}, aoi0: {:?}, crc0: {:?}, cmc: {:?}, eim: {:?} }}",
-            self.port4(),
-            self.tsi0(),
-            self.aoi0(),
-            self.crc0(),
-            self.cmc(),
-            self.eim()
+            "AipsBridgeGroup2MemRule3 {{ opamp1: {:?}, opamp2: {:?}, sd_adc0: {:?}, dgo_gpio1_3: {:?}, port1: {:?}, port2: {:?}, port3: {:?}, port4: {:?} }}",
+            self.opamp1(),
+            self.opamp2(),
+            self.sd_adc0(),
+            self.dgo_gpio1_3(),
+            self.port1(),
+            self.port2(),
+            self.port3(),
+            self.port4()
         )
     }
 }
-#[doc = "AIPS Bridge Group 2 Rule 9."]
+#[doc = "AIPS Bridge Group 3 Rule 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AipsBridgeGroup2memRule9(pub u32);
-impl AipsBridgeGroup2memRule9 {
-    #[doc = "ERM."]
+pub struct AipsBridgeGroup3MemRule0(pub u32);
+impl AipsBridgeGroup3MemRule0 {
+    #[doc = "PORT5 (Reserved)."]
     #[must_use]
     #[inline(always)]
-    pub const fn erm(&self) -> Rule {
+    pub const fn port5(&self) -> Rule {
         let val = (self.0 >> 0usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "ERM."]
+    #[doc = "PORT5 (Reserved)."]
     #[inline(always)]
-    pub const fn set_erm(&mut self, val: Rule) {
+    pub const fn set_port5(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "MBC."]
+    #[doc = "SAI (Reserved)."]
     #[must_use]
     #[inline(always)]
-    pub const fn mbc(&self) -> Rule {
+    pub const fn sai(&self) -> Rule {
         let val = (self.0 >> 4usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "MBC."]
+    #[doc = "SAI (Reserved)."]
     #[inline(always)]
-    pub const fn set_mbc(&mut self, val: Rule) {
+    pub const fn set_sai(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "SCG."]
+    #[doc = "SEGMENT_LCD (Reserved)."]
     #[must_use]
     #[inline(always)]
-    pub const fn scg(&self) -> Rule {
+    pub const fn segment_lcd(&self) -> Rule {
         let val = (self.0 >> 8usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "SCG."]
+    #[doc = "SEGMENT_LCD (Reserved)."]
     #[inline(always)]
-    pub const fn set_scg(&mut self, val: Rule) {
+    pub const fn set_segment_lcd(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
-    #[doc = "SPC."]
+    #[doc = "TSI (Reserved)."]
     #[must_use]
     #[inline(always)]
-    pub const fn spc(&self) -> Rule {
+    pub const fn tsi(&self) -> Rule {
         let val = (self.0 >> 12usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "SPC."]
+    #[doc = "TSI (Reserved)."]
     #[inline(always)]
-    pub const fn set_spc(&mut self, val: Rule) {
+    pub const fn set_tsi(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
-    #[doc = "CAN0 Region 0."]
+    #[doc = "MU0."]
     #[must_use]
     #[inline(always)]
-    pub const fn can0_region0(&self) -> Rule {
+    pub const fn mu0(&self) -> Rule {
         let val = (self.0 >> 16usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "CAN0 Region 0."]
+    #[doc = "MU0."]
     #[inline(always)]
-    pub const fn set_can0_region0(&mut self, val: Rule) {
+    pub const fn set_mu0(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
-    #[doc = "CAN0 Region 1."]
+    #[doc = "MU1 (Reserved)."]
     #[must_use]
     #[inline(always)]
-    pub const fn can0_region1(&self) -> Rule {
+    pub const fn mu1(&self) -> Rule {
         let val = (self.0 >> 20usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "CAN0 Region 1."]
+    #[doc = "MU1 (Reserved)."]
     #[inline(always)]
-    pub const fn set_can0_region1(&mut self, val: Rule) {
+    pub const fn set_mu1(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
-    #[doc = "CAN0 Region 2."]
-    #[must_use]
+}
+impl Default for AipsBridgeGroup3MemRule0 {
     #[inline(always)]
-    pub const fn can0_region2(&self) -> Rule {
-        let val = (self.0 >> 24usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "CAN0 Region 2."]
-    #[inline(always)]
-    pub const fn set_can0_region2(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
-    }
-    #[doc = "CAN0 Region 3."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn can0_region3(&self) -> Rule {
-        let val = (self.0 >> 28usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "CAN0 Region 3."]
-    #[inline(always)]
-    pub const fn set_can0_region3(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
+    fn default() -> AipsBridgeGroup3MemRule0 {
+        AipsBridgeGroup3MemRule0(0)
     }
 }
-impl Default for AipsBridgeGroup2memRule9 {
-    #[inline(always)]
-    fn default() -> AipsBridgeGroup2memRule9 {
-        AipsBridgeGroup2memRule9(0)
-    }
-}
-impl core::fmt::Debug for AipsBridgeGroup2memRule9 {
+impl core::fmt::Debug for AipsBridgeGroup3MemRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AipsBridgeGroup2memRule9")
-            .field("erm", &self.erm())
-            .field("mbc", &self.mbc())
-            .field("scg", &self.scg())
-            .field("spc", &self.spc())
-            .field("can0_region0", &self.can0_region0())
-            .field("can0_region1", &self.can0_region1())
-            .field("can0_region2", &self.can0_region2())
-            .field("can0_region3", &self.can0_region3())
+        f.debug_struct("AipsBridgeGroup3MemRule0")
+            .field("port5", &self.port5())
+            .field("sai", &self.sai())
+            .field("segment_lcd", &self.segment_lcd())
+            .field("tsi", &self.tsi())
+            .field("mu0", &self.mu0())
+            .field("mu1", &self.mu1())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for AipsBridgeGroup2memRule9 {
+impl defmt::Format for AipsBridgeGroup3MemRule0 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "AipsBridgeGroup2memRule9 {{ erm: {:?}, mbc: {:?}, scg: {:?}, spc: {:?}, can0_region0: {:?}, can0_region1: {:?}, can0_region2: {:?}, can0_region3: {:?} }}",
-            self.erm(),
-            self.mbc(),
-            self.scg(),
-            self.spc(),
-            self.can0_region0(),
-            self.can0_region1(),
-            self.can0_region2(),
-            self.can0_region3()
+            "AipsBridgeGroup3MemRule0 {{ port5: {:?}, sai: {:?}, segment_lcd: {:?}, tsi: {:?}, mu0: {:?}, mu1: {:?} }}",
+            self.port5(),
+            self.sai(),
+            self.segment_lcd(),
+            self.tsi(),
+            self.mu0(),
+            self.mu1()
         )
     }
 }
-#[doc = "APB Bridge Group 0 Memory Rule Register 0."]
+#[doc = "AIPS Bridge Group 3 Rule 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct ApbPeripheralGroup0memRule0(pub u32);
-impl ApbPeripheralGroup0memRule0 {
+pub struct AipsBridgeGroup3MemRule2(pub u32);
+impl AipsBridgeGroup3MemRule2 {
+    #[doc = "PKC0."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pkc0(&self) -> Rule {
+        let val = (self.0 >> 0usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "PKC0."]
+    #[inline(always)]
+    pub const fn set_pkc0(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
+    }
+    #[doc = "SGI0."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn sgi0(&self) -> Rule {
+        let val = (self.0 >> 4usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "SGI0."]
+    #[inline(always)]
+    pub const fn set_sgi0(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
+    }
+    #[doc = "TRNG0."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn trng0(&self) -> Rule {
+        let val = (self.0 >> 8usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "TRNG0."]
+    #[inline(always)]
+    pub const fn set_trng0(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
+    }
+    #[doc = "CAN0 RULE0."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn udf0(&self) -> Rule {
+        let val = (self.0 >> 12usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "CAN0 RULE0."]
+    #[inline(always)]
+    pub const fn set_udf0(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
+    }
+    #[doc = "eDMA_1_MP."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn e_mda_1_mp(&self) -> Rule {
+        let val = (self.0 >> 28usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "eDMA_1_MP."]
+    #[inline(always)]
+    pub const fn set_e_mda_1_mp(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
+    }
+}
+impl Default for AipsBridgeGroup3MemRule2 {
+    #[inline(always)]
+    fn default() -> AipsBridgeGroup3MemRule2 {
+        AipsBridgeGroup3MemRule2(0)
+    }
+}
+impl core::fmt::Debug for AipsBridgeGroup3MemRule2 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AipsBridgeGroup3MemRule2")
+            .field("pkc0", &self.pkc0())
+            .field("sgi0", &self.sgi0())
+            .field("trng0", &self.trng0())
+            .field("udf0", &self.udf0())
+            .field("e_mda_1_mp", &self.e_mda_1_mp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for AipsBridgeGroup3MemRule2 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "AipsBridgeGroup3MemRule2 {{ pkc0: {:?}, sgi0: {:?}, trng0: {:?}, udf0: {:?}, e_mda_1_mp: {:?} }}",
+            self.pkc0(),
+            self.sgi0(),
+            self.trng0(),
+            self.udf0(),
+            self.e_mda_1_mp()
+        )
+    }
+}
+#[doc = "AIPS Bridge Group 3 Rule 3."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct AipsBridgeGroup3MemRule3(pub u32);
+impl AipsBridgeGroup3MemRule3 {
+    #[doc = "eDMA_1_TCD0."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn e_dma_1_tcd0(&self) -> Rule {
+        let val = (self.0 >> 0usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "eDMA_1_TCD0."]
+    #[inline(always)]
+    pub const fn set_e_dma_1_tcd0(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
+    }
+    #[doc = "eDMA_1_TCD1."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn e_dma_1_tcd1(&self) -> Rule {
+        let val = (self.0 >> 4usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "eDMA_1_TCD1."]
+    #[inline(always)]
+    pub const fn set_e_dma_1_tcd1(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
+    }
+    #[doc = "eDMA_1_TCD2."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn e_dma_1_tcd2(&self) -> Rule {
+        let val = (self.0 >> 8usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "eDMA_1_TCD2."]
+    #[inline(always)]
+    pub const fn set_e_dma_1_tcd2(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
+    }
+    #[doc = "eDMA_1_TCD3."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn e_dma_1_tcd3(&self) -> Rule {
+        let val = (self.0 >> 12usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "eDMA_1_TCD3."]
+    #[inline(always)]
+    pub const fn set_e_dma_1_tcd3(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
+    }
+}
+impl Default for AipsBridgeGroup3MemRule3 {
+    #[inline(always)]
+    fn default() -> AipsBridgeGroup3MemRule3 {
+        AipsBridgeGroup3MemRule3(0)
+    }
+}
+impl core::fmt::Debug for AipsBridgeGroup3MemRule3 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AipsBridgeGroup3MemRule3")
+            .field("e_dma_1_tcd0", &self.e_dma_1_tcd0())
+            .field("e_dma_1_tcd1", &self.e_dma_1_tcd1())
+            .field("e_dma_1_tcd2", &self.e_dma_1_tcd2())
+            .field("e_dma_1_tcd3", &self.e_dma_1_tcd3())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for AipsBridgeGroup3MemRule3 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "AipsBridgeGroup3MemRule3 {{ e_dma_1_tcd0: {:?}, e_dma_1_tcd1: {:?}, e_dma_1_tcd2: {:?}, e_dma_1_tcd3: {:?} }}",
+            self.e_dma_1_tcd0(),
+            self.e_dma_1_tcd1(),
+            self.e_dma_1_tcd2(),
+            self.e_dma_1_tcd3()
+        )
+    }
+}
+#[doc = "AON Domain Peripheral Rule 0."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct AonDomainPeripheralMemRule0(pub u32);
+impl AonDomainPeripheralMemRule0 {
+    #[doc = "LPI2C."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn lpi2c(&self) -> Rule {
+        let val = (self.0 >> 0usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "LPI2C."]
+    #[inline(always)]
+    pub const fn set_lpi2c(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
+    }
+    #[doc = "LPI2C (Reserved)."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn rule1(&self) -> Rule {
+        let val = (self.0 >> 4usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "LPI2C (Reserved)."]
+    #[inline(always)]
+    pub const fn set_rule1(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
+    }
+    #[doc = "LPUART."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn lpuart(&self) -> Rule {
+        let val = (self.0 >> 8usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "LPUART."]
+    #[inline(always)]
+    pub const fn set_lpuart(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
+    }
+    #[doc = "LPUART (Reserved)."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn rule3(&self) -> Rule {
+        let val = (self.0 >> 12usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "LPUART (Reserved)."]
+    #[inline(always)]
+    pub const fn set_rule3(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
+    }
+    #[doc = "MUB."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn mub(&self) -> Rule {
+        let val = (self.0 >> 16usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "MUB."]
+    #[inline(always)]
+    pub const fn set_mub(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
+    }
+    #[doc = "PORT0."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn port0(&self) -> Rule {
+        let val = (self.0 >> 20usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "PORT0."]
+    #[inline(always)]
+    pub const fn set_port0(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
+    }
+    #[doc = "ACMP."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn acmp(&self) -> Rule {
+        let val = (self.0 >> 24usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "ACMP."]
+    #[inline(always)]
+    pub const fn set_acmp(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
+    }
+    #[doc = "ACMP (Reserved)."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn rule7(&self) -> Rule {
+        let val = (self.0 >> 28usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "ACMP (Reserved)."]
+    #[inline(always)]
+    pub const fn set_rule7(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
+    }
+}
+impl Default for AonDomainPeripheralMemRule0 {
+    #[inline(always)]
+    fn default() -> AonDomainPeripheralMemRule0 {
+        AonDomainPeripheralMemRule0(0)
+    }
+}
+impl core::fmt::Debug for AonDomainPeripheralMemRule0 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AonDomainPeripheralMemRule0")
+            .field("lpi2c", &self.lpi2c())
+            .field("rule1", &self.rule1())
+            .field("lpuart", &self.lpuart())
+            .field("rule3", &self.rule3())
+            .field("mub", &self.mub())
+            .field("port0", &self.port0())
+            .field("acmp", &self.acmp())
+            .field("rule7", &self.rule7())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for AonDomainPeripheralMemRule0 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "AonDomainPeripheralMemRule0 {{ lpi2c: {:?}, rule1: {:?}, lpuart: {:?}, rule3: {:?}, mub: {:?}, port0: {:?}, acmp: {:?}, rule7: {:?} }}",
+            self.lpi2c(),
+            self.rule1(),
+            self.lpuart(),
+            self.rule3(),
+            self.mub(),
+            self.port0(),
+            self.acmp(),
+            self.rule7()
+        )
+    }
+}
+#[doc = "AON Domain Peripheral Rule 1."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct AonDomainPeripheralMemRule1(pub u32);
+impl AonDomainPeripheralMemRule1 {
+    #[doc = "LPTIMER."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn lptimer(&self) -> Rule {
+        let val = (self.0 >> 0usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "LPTIMER."]
+    #[inline(always)]
+    pub const fn set_lptimer(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
+    }
+    #[doc = "QTMR32_0."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn qtmr32_0(&self) -> Rule {
+        let val = (self.0 >> 24usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "QTMR32_0."]
+    #[inline(always)]
+    pub const fn set_qtmr32_0(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
+    }
+    #[doc = "QTMR32_1."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn qtmr32_1(&self) -> Rule {
+        let val = (self.0 >> 28usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "QTMR32_1."]
+    #[inline(always)]
+    pub const fn set_qtmr32_1(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
+    }
+}
+impl Default for AonDomainPeripheralMemRule1 {
+    #[inline(always)]
+    fn default() -> AonDomainPeripheralMemRule1 {
+        AonDomainPeripheralMemRule1(0)
+    }
+}
+impl core::fmt::Debug for AonDomainPeripheralMemRule1 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AonDomainPeripheralMemRule1")
+            .field("lptimer", &self.lptimer())
+            .field("qtmr32_0", &self.qtmr32_0())
+            .field("qtmr32_1", &self.qtmr32_1())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for AonDomainPeripheralMemRule1 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "AonDomainPeripheralMemRule1 {{ lptimer: {:?}, qtmr32_0: {:?}, qtmr32_1: {:?} }}",
+            self.lptimer(),
+            self.qtmr32_0(),
+            self.qtmr32_1()
+        )
+    }
+}
+#[doc = "AON Domain Peripheral Rule 2."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct AonDomainPeripheralMemRule2(pub u32);
+impl AonDomainPeripheralMemRule2 {
+    #[doc = "GP_GPR."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn gp_gpr(&self) -> Rule {
+        let val = (self.0 >> 0usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "GP_GPR."]
+    #[inline(always)]
+    pub const fn set_gp_gpr(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
+    }
     #[doc = "INPUTMUX."]
     #[must_use]
     #[inline(always)]
@@ -2675,29 +2618,260 @@ impl ApbPeripheralGroup0memRule0 {
     pub const fn set_inputmux(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "I3C0."]
+    #[doc = "LPADC."]
     #[must_use]
     #[inline(always)]
-    pub const fn i3c0(&self) -> Rule {
+    pub const fn lpadc(&self) -> Rule {
         let val = (self.0 >> 8usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "I3C0."]
+    #[doc = "LPADC."]
     #[inline(always)]
-    pub const fn set_i3c0(&mut self, val: Rule) {
+    pub const fn set_lpadc(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
-    #[doc = "I3C1."]
+    #[doc = "SGLCD0."]
     #[must_use]
     #[inline(always)]
-    pub const fn i3c1(&self) -> Rule {
+    pub const fn sglcd(&self) -> Rule {
+        let val = (self.0 >> 16usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "SGLCD0."]
+    #[inline(always)]
+    pub const fn set_sglcd(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
+    }
+    #[doc = "KPP."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn kpp(&self) -> Rule {
+        let val = (self.0 >> 20usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "KPP."]
+    #[inline(always)]
+    pub const fn set_kpp(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
+    }
+    #[doc = "KPP."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn advc2(&self) -> Rule {
+        let val = (self.0 >> 28usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "KPP."]
+    #[inline(always)]
+    pub const fn set_advc2(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
+    }
+}
+impl Default for AonDomainPeripheralMemRule2 {
+    #[inline(always)]
+    fn default() -> AonDomainPeripheralMemRule2 {
+        AonDomainPeripheralMemRule2(0)
+    }
+}
+impl core::fmt::Debug for AonDomainPeripheralMemRule2 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AonDomainPeripheralMemRule2")
+            .field("gp_gpr", &self.gp_gpr())
+            .field("inputmux", &self.inputmux())
+            .field("lpadc", &self.lpadc())
+            .field("sglcd", &self.sglcd())
+            .field("kpp", &self.kpp())
+            .field("advc2", &self.advc2())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for AonDomainPeripheralMemRule2 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "AonDomainPeripheralMemRule2 {{ gp_gpr: {:?}, inputmux: {:?}, lpadc: {:?}, sglcd: {:?}, kpp: {:?}, advc2: {:?} }}",
+            self.gp_gpr(),
+            self.inputmux(),
+            self.lpadc(),
+            self.sglcd(),
+            self.kpp(),
+            self.advc2()
+        )
+    }
+}
+#[doc = "AON Domain Peripheral Rule 3."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct AonDomainPeripheralMemRule3(pub u32);
+impl AonDomainPeripheralMemRule3 {
+    #[doc = "PMIC_CTRL."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pmic_ctrl(&self) -> Rule {
+        let val = (self.0 >> 0usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "PMIC_CTRL."]
+    #[inline(always)]
+    pub const fn set_pmic_ctrl(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
+    }
+    #[doc = "CGU."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn cgu(&self) -> Rule {
+        let val = (self.0 >> 4usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "CGU."]
+    #[inline(always)]
+    pub const fn set_cgu(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
+    }
+    #[doc = "SMM."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn smm(&self) -> Rule {
+        let val = (self.0 >> 8usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "SMM."]
+    #[inline(always)]
+    pub const fn set_smm(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
+    }
+    #[doc = "LPCMP."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn lpcmp(&self) -> Rule {
         let val = (self.0 >> 12usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "I3C1."]
+    #[doc = "LPCMP."]
     #[inline(always)]
-    pub const fn set_i3c1(&mut self, val: Rule) {
+    pub const fn set_lpcmp(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
+    }
+    #[doc = "AON_GPIO."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn aon_gpio(&self) -> Rule {
+        let val = (self.0 >> 28usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "AON_GPIO."]
+    #[inline(always)]
+    pub const fn set_aon_gpio(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
+    }
+}
+impl Default for AonDomainPeripheralMemRule3 {
+    #[inline(always)]
+    fn default() -> AonDomainPeripheralMemRule3 {
+        AonDomainPeripheralMemRule3(0)
+    }
+}
+impl core::fmt::Debug for AonDomainPeripheralMemRule3 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AonDomainPeripheralMemRule3")
+            .field("pmic_ctrl", &self.pmic_ctrl())
+            .field("cgu", &self.cgu())
+            .field("smm", &self.smm())
+            .field("lpcmp", &self.lpcmp())
+            .field("aon_gpio", &self.aon_gpio())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for AonDomainPeripheralMemRule3 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "AonDomainPeripheralMemRule3 {{ pmic_ctrl: {:?}, cgu: {:?}, smm: {:?}, lpcmp: {:?}, aon_gpio: {:?} }}",
+            self.pmic_ctrl(),
+            self.cgu(),
+            self.smm(),
+            self.lpcmp(),
+            self.aon_gpio()
+        )
+    }
+}
+#[doc = "AON Domain SRAM Memory Rule."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct AonDomainSramMemRule0(pub u32);
+impl AonDomainSramMemRule0 {
+    #[doc = "Rule 0."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn rule(&self, n: usize) -> Rule {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        let val = (self.0 >> offs) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "Rule 0."]
+    #[inline(always)]
+    pub const fn set_rule(&mut self, n: usize, val: Rule) {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
+    }
+}
+impl Default for AonDomainSramMemRule0 {
+    #[inline(always)]
+    fn default() -> AonDomainSramMemRule0 {
+        AonDomainSramMemRule0(0)
+    }
+}
+impl core::fmt::Debug for AonDomainSramMemRule0 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AonDomainSramMemRule0")
+            .field("rule[0]", &self.rule(0usize))
+            .field("rule[1]", &self.rule(1usize))
+            .field("rule[2]", &self.rule(2usize))
+            .field("rule[3]", &self.rule(3usize))
+            .field("rule[4]", &self.rule(4usize))
+            .field("rule[5]", &self.rule(5usize))
+            .field("rule[6]", &self.rule(6usize))
+            .field("rule[7]", &self.rule(7usize))
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for AonDomainSramMemRule0 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "AonDomainSramMemRule0 {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?}, rule[4]: {:?}, rule[5]: {:?}, rule[6]: {:?}, rule[7]: {:?} }}",
+            self.rule(0usize),
+            self.rule(1usize),
+            self.rule(2usize),
+            self.rule(3usize),
+            self.rule(4usize),
+            self.rule(5usize),
+            self.rule(6usize),
+            self.rule(7usize)
+        )
+    }
+}
+#[doc = "APB Bridge Group 0 Memory Rule 0."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct ApbPeripheralGroup0MemRule0(pub u32);
+impl ApbPeripheralGroup0MemRule0 {
+    #[doc = "INPUTMUX0."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inputmux0(&self) -> Rule {
+        let val = (self.0 >> 4usize) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "INPUTMUX0."]
+    #[inline(always)]
+    pub const fn set_inputmux0(&mut self, val: Rule) {
+        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
     #[doc = "CTIMER0."]
     #[must_use]
@@ -2735,93 +2909,63 @@ impl ApbPeripheralGroup0memRule0 {
     pub const fn set_ctimer2(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
-    #[doc = "CTIMER3."]
-    #[must_use]
+}
+impl Default for ApbPeripheralGroup0MemRule0 {
     #[inline(always)]
-    pub const fn ctimer3(&self) -> Rule {
-        let val = (self.0 >> 28usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "CTIMER3."]
-    #[inline(always)]
-    pub const fn set_ctimer3(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
+    fn default() -> ApbPeripheralGroup0MemRule0 {
+        ApbPeripheralGroup0MemRule0(0)
     }
 }
-impl Default for ApbPeripheralGroup0memRule0 {
-    #[inline(always)]
-    fn default() -> ApbPeripheralGroup0memRule0 {
-        ApbPeripheralGroup0memRule0(0)
-    }
-}
-impl core::fmt::Debug for ApbPeripheralGroup0memRule0 {
+impl core::fmt::Debug for ApbPeripheralGroup0MemRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("ApbPeripheralGroup0memRule0")
-            .field("inputmux", &self.inputmux())
-            .field("i3c0", &self.i3c0())
-            .field("i3c1", &self.i3c1())
+        f.debug_struct("ApbPeripheralGroup0MemRule0")
+            .field("inputmux0", &self.inputmux0())
             .field("ctimer0", &self.ctimer0())
             .field("ctimer1", &self.ctimer1())
             .field("ctimer2", &self.ctimer2())
-            .field("ctimer3", &self.ctimer3())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for ApbPeripheralGroup0memRule0 {
+impl defmt::Format for ApbPeripheralGroup0MemRule0 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "ApbPeripheralGroup0memRule0 {{ inputmux: {:?}, i3c0: {:?}, i3c1: {:?}, ctimer0: {:?}, ctimer1: {:?}, ctimer2: {:?}, ctimer3: {:?} }}",
-            self.inputmux(),
-            self.i3c0(),
-            self.i3c1(),
+            "ApbPeripheralGroup0MemRule0 {{ inputmux0: {:?}, ctimer0: {:?}, ctimer1: {:?}, ctimer2: {:?} }}",
+            self.inputmux0(),
             self.ctimer0(),
             self.ctimer1(),
-            self.ctimer2(),
-            self.ctimer3()
+            self.ctimer2()
         )
     }
 }
-#[doc = "APB Bridge Group 0 Memory Rule Register 1."]
+#[doc = "APB Bridge Group 0 Memory Rule 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct ApbPeripheralGroup0memRule1(pub u32);
-impl ApbPeripheralGroup0memRule1 {
-    #[doc = "CTIMER4."]
+pub struct ApbPeripheralGroup0MemRule1(pub u32);
+impl ApbPeripheralGroup0MemRule1 {
+    #[doc = "FREQME00."]
     #[must_use]
     #[inline(always)]
-    pub const fn ctimer4(&self) -> Rule {
-        let val = (self.0 >> 0usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "CTIMER4."]
-    #[inline(always)]
-    pub const fn set_ctimer4(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
-    }
-    #[doc = "FREQME."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn freqme(&self) -> Rule {
+    pub const fn freqme00(&self) -> Rule {
         let val = (self.0 >> 4usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "FREQME."]
+    #[doc = "FREQME00."]
     #[inline(always)]
-    pub const fn set_freqme(&mut self, val: Rule) {
+    pub const fn set_freqme00(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "UTCIK0."]
+    #[doc = "UTICK0."]
     #[must_use]
     #[inline(always)]
-    pub const fn utick(&self) -> Rule {
+    pub const fn utick0(&self) -> Rule {
         let val = (self.0 >> 12usize) & 0x03;
         Rule::from_bits(val as u8)
     }
-    #[doc = "UTCIK0."]
+    #[doc = "UTICK0."]
     #[inline(always)]
-    pub const fn set_utick(&mut self, val: Rule) {
+    pub const fn set_utick0(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
     #[doc = "WWDT0."]
@@ -2836,69 +2980,39 @@ impl ApbPeripheralGroup0memRule1 {
     pub const fn set_wwdt0(&mut self, val: Rule) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
-    #[doc = "WWDT1."]
-    #[must_use]
+}
+impl Default for ApbPeripheralGroup0MemRule1 {
     #[inline(always)]
-    pub const fn wwdt1(&self) -> Rule {
-        let val = (self.0 >> 20usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "WWDT1."]
-    #[inline(always)]
-    pub const fn set_wwdt1(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
-    }
-    #[doc = "SmartDMA."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn smartdma(&self) -> Rule {
-        let val = (self.0 >> 24usize) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "SmartDMA."]
-    #[inline(always)]
-    pub const fn set_smartdma(&mut self, val: Rule) {
-        self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
+    fn default() -> ApbPeripheralGroup0MemRule1 {
+        ApbPeripheralGroup0MemRule1(0)
     }
 }
-impl Default for ApbPeripheralGroup0memRule1 {
-    #[inline(always)]
-    fn default() -> ApbPeripheralGroup0memRule1 {
-        ApbPeripheralGroup0memRule1(0)
-    }
-}
-impl core::fmt::Debug for ApbPeripheralGroup0memRule1 {
+impl core::fmt::Debug for ApbPeripheralGroup0MemRule1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("ApbPeripheralGroup0memRule1")
-            .field("ctimer4", &self.ctimer4())
-            .field("freqme", &self.freqme())
-            .field("utick", &self.utick())
+        f.debug_struct("ApbPeripheralGroup0MemRule1")
+            .field("freqme00", &self.freqme00())
+            .field("utick0", &self.utick0())
             .field("wwdt0", &self.wwdt0())
-            .field("wwdt1", &self.wwdt1())
-            .field("smartdma", &self.smartdma())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for ApbPeripheralGroup0memRule1 {
+impl defmt::Format for ApbPeripheralGroup0MemRule1 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "ApbPeripheralGroup0memRule1 {{ ctimer4: {:?}, freqme: {:?}, utick: {:?}, wwdt0: {:?}, wwdt1: {:?}, smartdma: {:?} }}",
-            self.ctimer4(),
-            self.freqme(),
-            self.utick(),
-            self.wwdt0(),
-            self.wwdt1(),
-            self.smartdma()
+            "ApbPeripheralGroup0MemRule1 {{ freqme00: {:?}, utick0: {:?}, wwdt0: {:?} }}",
+            self.freqme00(),
+            self.utick0(),
+            self.wwdt0()
         )
     }
 }
 #[doc = "Miscellaneous CPU0 Control Signals."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Cpu0lockReg(pub u32);
-impl Cpu0lockReg {
+pub struct Cpu0LockReg(pub u32);
+impl Cpu0LockReg {
     #[doc = "LOCK_NS_VTOR."]
     #[must_use]
     #[inline(always)]
@@ -2926,25 +3040,25 @@ impl Cpu0lockReg {
     #[doc = "LOCK_S_VTAIRCR."]
     #[must_use]
     #[inline(always)]
-    pub const fn lock_s_vtaircr(&self) -> LockSvtaircr {
+    pub const fn lock_s_vtaircr(&self) -> LockSVtaircr {
         let val = (self.0 >> 4usize) & 0x03;
-        LockSvtaircr::from_bits(val as u8)
+        LockSVtaircr::from_bits(val as u8)
     }
     #[doc = "LOCK_S_VTAIRCR."]
     #[inline(always)]
-    pub const fn set_lock_s_vtaircr(&mut self, val: LockSvtaircr) {
+    pub const fn set_lock_s_vtaircr(&mut self, val: LockSVtaircr) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
     #[doc = "LOCK_S_MPU."]
     #[must_use]
     #[inline(always)]
-    pub const fn lock_s_mpu(&self) -> LockSmpu {
+    pub const fn lock_s_mpu(&self) -> LockSMpu {
         let val = (self.0 >> 6usize) & 0x03;
-        LockSmpu::from_bits(val as u8)
+        LockSMpu::from_bits(val as u8)
     }
     #[doc = "LOCK_S_MPU."]
     #[inline(always)]
-    pub const fn set_lock_s_mpu(&mut self, val: LockSmpu) {
+    pub const fn set_lock_s_mpu(&mut self, val: LockSMpu) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
     }
     #[doc = "LOCK_SAU."]
@@ -2960,15 +3074,15 @@ impl Cpu0lockReg {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
 }
-impl Default for Cpu0lockReg {
+impl Default for Cpu0LockReg {
     #[inline(always)]
-    fn default() -> Cpu0lockReg {
-        Cpu0lockReg(0)
+    fn default() -> Cpu0LockReg {
+        Cpu0LockReg(0)
     }
 }
-impl core::fmt::Debug for Cpu0lockReg {
+impl core::fmt::Debug for Cpu0LockReg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Cpu0lockReg")
+        f.debug_struct("Cpu0LockReg")
             .field("lock_ns_vtor", &self.lock_ns_vtor())
             .field("lock_ns_mpu", &self.lock_ns_mpu())
             .field("lock_s_vtaircr", &self.lock_s_vtaircr())
@@ -2978,11 +3092,11 @@ impl core::fmt::Debug for Cpu0lockReg {
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for Cpu0lockReg {
+impl defmt::Format for Cpu0LockReg {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Cpu0lockReg {{ lock_ns_vtor: {:?}, lock_ns_mpu: {:?}, lock_s_vtaircr: {:?}, lock_s_mpu: {:?}, lock_sau: {:?} }}",
+            "Cpu0LockReg {{ lock_ns_vtor: {:?}, lock_ns_mpu: {:?}, lock_s_vtaircr: {:?}, lock_s_mpu: {:?}, lock_sau: {:?} }}",
             self.lock_ns_vtor(),
             self.lock_ns_mpu(),
             self.lock_s_vtaircr(),
@@ -2994,8 +3108,8 @@ impl defmt::Format for Cpu0lockReg {
 #[doc = "Flash Memory Rule."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Flash00memRule(pub u32);
-impl Flash00memRule {
+pub struct Flash00MemRule(pub u32);
+impl Flash00MemRule {
     #[doc = "Rule 0."]
     #[must_use]
     #[inline(always)]
@@ -3013,15 +3127,15 @@ impl Flash00memRule {
         self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
     }
 }
-impl Default for Flash00memRule {
+impl Default for Flash00MemRule {
     #[inline(always)]
-    fn default() -> Flash00memRule {
-        Flash00memRule(0)
+    fn default() -> Flash00MemRule {
+        Flash00MemRule(0)
     }
 }
-impl core::fmt::Debug for Flash00memRule {
+impl core::fmt::Debug for Flash00MemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Flash00memRule")
+        f.debug_struct("Flash00MemRule")
             .field("rule[0]", &self.rule(0usize))
             .field("rule[1]", &self.rule(1usize))
             .field("rule[2]", &self.rule(2usize))
@@ -3034,11 +3148,11 @@ impl core::fmt::Debug for Flash00memRule {
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for Flash00memRule {
+impl defmt::Format for Flash00MemRule {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Flash00memRule {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?}, rule[4]: {:?}, rule[5]: {:?}, rule[6]: {:?}, rule[7]: {:?} }}",
+            "Flash00MemRule {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?}, rule[4]: {:?}, rule[5]: {:?}, rule[6]: {:?}, rule[7]: {:?} }}",
             self.rule(0usize),
             self.rule(1usize),
             self.rule(2usize),
@@ -3053,67 +3167,8 @@ impl defmt::Format for Flash00memRule {
 #[doc = "Flash Memory Rule."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Flash01memRule(pub u32);
-impl Flash01memRule {
-    #[doc = "Rule 0."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule(&self, n: usize) -> Rule {
-        assert!(n < 8usize);
-        let offs = 0usize + n * 4usize;
-        let val = (self.0 >> offs) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "Rule 0."]
-    #[inline(always)]
-    pub const fn set_rule(&mut self, n: usize, val: Rule) {
-        assert!(n < 8usize);
-        let offs = 0usize + n * 4usize;
-        self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
-    }
-}
-impl Default for Flash01memRule {
-    #[inline(always)]
-    fn default() -> Flash01memRule {
-        Flash01memRule(0)
-    }
-}
-impl core::fmt::Debug for Flash01memRule {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Flash01memRule")
-            .field("rule[0]", &self.rule(0usize))
-            .field("rule[1]", &self.rule(1usize))
-            .field("rule[2]", &self.rule(2usize))
-            .field("rule[3]", &self.rule(3usize))
-            .field("rule[4]", &self.rule(4usize))
-            .field("rule[5]", &self.rule(5usize))
-            .field("rule[6]", &self.rule(6usize))
-            .field("rule[7]", &self.rule(7usize))
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Flash01memRule {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "Flash01memRule {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?}, rule[4]: {:?}, rule[5]: {:?}, rule[6]: {:?}, rule[7]: {:?} }}",
-            self.rule(0usize),
-            self.rule(1usize),
-            self.rule(2usize),
-            self.rule(3usize),
-            self.rule(4usize),
-            self.rule(5usize),
-            self.rule(6usize),
-            self.rule(7usize)
-        )
-    }
-}
-#[doc = "Flash IFR0 Rule register."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Flash02memRule(pub u32);
-impl Flash02memRule {
+pub struct Flash01MemRule0(pub u32);
+impl Flash01MemRule0 {
     #[doc = "Rule 0."]
     #[must_use]
     #[inline(always)]
@@ -3131,15 +3186,15 @@ impl Flash02memRule {
         self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
     }
 }
-impl Default for Flash02memRule {
+impl Default for Flash01MemRule0 {
     #[inline(always)]
-    fn default() -> Flash02memRule {
-        Flash02memRule(0)
+    fn default() -> Flash01MemRule0 {
+        Flash01MemRule0(0)
     }
 }
-impl core::fmt::Debug for Flash02memRule {
+impl core::fmt::Debug for Flash01MemRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Flash02memRule")
+        f.debug_struct("Flash01MemRule0")
             .field("rule[0]", &self.rule(0usize))
             .field("rule[1]", &self.rule(1usize))
             .field("rule[2]", &self.rule(2usize))
@@ -3148,11 +3203,11 @@ impl core::fmt::Debug for Flash02memRule {
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for Flash02memRule {
+impl defmt::Format for Flash01MemRule0 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Flash02memRule {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?} }}",
+            "Flash01MemRule0 {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?} }}",
             self.rule(0usize),
             self.rule(1usize),
             self.rule(2usize),
@@ -3163,8 +3218,8 @@ impl defmt::Format for Flash02memRule {
 #[doc = "Flash Memory Rule."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Flash03memRule(pub u32);
-impl Flash03memRule {
+pub struct Flash02MemRule0(pub u32);
+impl Flash02MemRule0 {
     #[doc = "Rule 0."]
     #[must_use]
     #[inline(always)]
@@ -3182,15 +3237,15 @@ impl Flash03memRule {
         self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
     }
 }
-impl Default for Flash03memRule {
+impl Default for Flash02MemRule0 {
     #[inline(always)]
-    fn default() -> Flash03memRule {
-        Flash03memRule(0)
+    fn default() -> Flash02MemRule0 {
+        Flash02MemRule0(0)
     }
 }
-impl core::fmt::Debug for Flash03memRule {
+impl core::fmt::Debug for Flash02MemRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Flash03memRule")
+        f.debug_struct("Flash02MemRule0")
             .field("rule[0]", &self.rule(0usize))
             .field("rule[1]", &self.rule(1usize))
             .field("rule[2]", &self.rule(2usize))
@@ -3199,121 +3254,11 @@ impl core::fmt::Debug for Flash03memRule {
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for Flash03memRule {
+impl defmt::Format for Flash02MemRule0 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Flash03memRule {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?} }}",
-            self.rule(0usize),
-            self.rule(1usize),
-            self.rule(2usize),
-            self.rule(3usize)
-        )
-    }
-}
-#[doc = "FLEXSPI0 Region 0 Memory Rule."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Flexspi0region0memRule(pub u32);
-impl Flexspi0region0memRule {
-    #[doc = "Rule 0."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule(&self, n: usize) -> Rule {
-        assert!(n < 8usize);
-        let offs = 0usize + n * 4usize;
-        let val = (self.0 >> offs) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "Rule 0."]
-    #[inline(always)]
-    pub const fn set_rule(&mut self, n: usize, val: Rule) {
-        assert!(n < 8usize);
-        let offs = 0usize + n * 4usize;
-        self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
-    }
-}
-impl Default for Flexspi0region0memRule {
-    #[inline(always)]
-    fn default() -> Flexspi0region0memRule {
-        Flexspi0region0memRule(0)
-    }
-}
-impl core::fmt::Debug for Flexspi0region0memRule {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Flexspi0region0memRule")
-            .field("rule[0]", &self.rule(0usize))
-            .field("rule[1]", &self.rule(1usize))
-            .field("rule[2]", &self.rule(2usize))
-            .field("rule[3]", &self.rule(3usize))
-            .field("rule[4]", &self.rule(4usize))
-            .field("rule[5]", &self.rule(5usize))
-            .field("rule[6]", &self.rule(6usize))
-            .field("rule[7]", &self.rule(7usize))
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Flexspi0region0memRule {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "Flexspi0region0memRule {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?}, rule[4]: {:?}, rule[5]: {:?}, rule[6]: {:?}, rule[7]: {:?} }}",
-            self.rule(0usize),
-            self.rule(1usize),
-            self.rule(2usize),
-            self.rule(3usize),
-            self.rule(4usize),
-            self.rule(5usize),
-            self.rule(6usize),
-            self.rule(7usize)
-        )
-    }
-}
-#[doc = "FLEXSPI0 Region index Memory Rule."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Flexspi0regionMemRule(pub u32);
-impl Flexspi0regionMemRule {
-    #[doc = "Rule 0."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule(&self, n: usize) -> Rule {
-        assert!(n < 4usize);
-        let offs = 0usize + n * 4usize;
-        let val = (self.0 >> offs) & 0x03;
-        Rule::from_bits(val as u8)
-    }
-    #[doc = "Rule 0."]
-    #[inline(always)]
-    pub const fn set_rule(&mut self, n: usize, val: Rule) {
-        assert!(n < 4usize);
-        let offs = 0usize + n * 4usize;
-        self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
-    }
-}
-impl Default for Flexspi0regionMemRule {
-    #[inline(always)]
-    fn default() -> Flexspi0regionMemRule {
-        Flexspi0regionMemRule(0)
-    }
-}
-impl core::fmt::Debug for Flexspi0regionMemRule {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Flexspi0regionMemRule")
-            .field("rule[0]", &self.rule(0usize))
-            .field("rule[1]", &self.rule(1usize))
-            .field("rule[2]", &self.rule(2usize))
-            .field("rule[3]", &self.rule(3usize))
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Flexspi0regionMemRule {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "Flexspi0regionMemRule {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?} }}",
+            "Flash02MemRule0 {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?} }}",
             self.rule(0usize),
             self.rule(1usize),
             self.rule(2usize),
@@ -3326,77 +3271,41 @@ impl defmt::Format for Flexspi0regionMemRule {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct MasterSecAntiPolReg(pub u32);
 impl MasterSecAntiPolReg {
-    #[doc = "SMARTDMA Data."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn smartdma(&self) -> MasterSec {
-        let val = (self.0 >> 4usize) & 0x03;
-        MasterSec::from_bits(val as u8)
-    }
-    #[doc = "SMARTDMA Data."]
-    #[inline(always)]
-    pub const fn set_smartdma(&mut self, val: MasterSec) {
-        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
-    }
-    #[doc = "eDMA0."]
+    #[doc = "DMA0."]
     #[must_use]
     #[inline(always)]
     pub const fn dma0(&self) -> MasterSec {
-        let val = (self.0 >> 6usize) & 0x03;
+        let val = (self.0 >> 2usize) & 0x03;
         MasterSec::from_bits(val as u8)
     }
-    #[doc = "eDMA0."]
+    #[doc = "DMA0."]
     #[inline(always)]
     pub const fn set_dma0(&mut self, val: MasterSec) {
-        self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
-    }
-    #[doc = "eDMA1."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1(&self) -> MasterSec {
-        let val = (self.0 >> 8usize) & 0x03;
-        MasterSec::from_bits(val as u8)
-    }
-    #[doc = "eDMA1."]
-    #[inline(always)]
-    pub const fn set_dma1(&mut self, val: MasterSec) {
-        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
+        self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
     #[doc = "PKC."]
     #[must_use]
     #[inline(always)]
     pub const fn pkc(&self) -> MasterSec {
-        let val = (self.0 >> 10usize) & 0x03;
+        let val = (self.0 >> 4usize) & 0x03;
         MasterSec::from_bits(val as u8)
     }
     #[doc = "PKC."]
     #[inline(always)]
     pub const fn set_pkc(&mut self, val: MasterSec) {
-        self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u32) & 0x03) << 10usize);
+        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "ENET0."]
+    #[doc = "DMA1."]
     #[must_use]
     #[inline(always)]
-    pub const fn enet0(&self) -> MasterSec {
-        let val = (self.0 >> 24usize) & 0x03;
+    pub const fn dma1(&self) -> MasterSec {
+        let val = (self.0 >> 6usize) & 0x03;
         MasterSec::from_bits(val as u8)
     }
-    #[doc = "ENET0."]
+    #[doc = "DMA1."]
     #[inline(always)]
-    pub const fn set_enet0(&mut self, val: MasterSec) {
-        self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
-    }
-    #[doc = "USB1."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn usb1(&self) -> MasterSec {
-        let val = (self.0 >> 26usize) & 0x03;
-        MasterSec::from_bits(val as u8)
-    }
-    #[doc = "USB1."]
-    #[inline(always)]
-    pub const fn set_usb1(&mut self, val: MasterSec) {
-        self.0 = (self.0 & !(0x03 << 26usize)) | (((val.to_bits() as u32) & 0x03) << 26usize);
+    pub const fn set_dma1(&mut self, val: MasterSec) {
+        self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
     }
 }
 impl Default for MasterSecAntiPolReg {
@@ -3408,12 +3317,9 @@ impl Default for MasterSecAntiPolReg {
 impl core::fmt::Debug for MasterSecAntiPolReg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MasterSecAntiPolReg")
-            .field("smartdma", &self.smartdma())
             .field("dma0", &self.dma0())
-            .field("dma1", &self.dma1())
             .field("pkc", &self.pkc())
-            .field("enet0", &self.enet0())
-            .field("usb1", &self.usb1())
+            .field("dma1", &self.dma1())
             .finish()
     }
 }
@@ -3422,13 +3328,10 @@ impl defmt::Format for MasterSecAntiPolReg {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "MasterSecAntiPolReg {{ smartdma: {:?}, dma0: {:?}, dma1: {:?}, pkc: {:?}, enet0: {:?}, usb1: {:?} }}",
-            self.smartdma(),
+            "MasterSecAntiPolReg {{ dma0: {:?}, pkc: {:?}, dma1: {:?} }}",
             self.dma0(),
-            self.dma1(),
             self.pkc(),
-            self.enet0(),
-            self.usb1()
+            self.dma1()
         )
     }
 }
@@ -3437,77 +3340,41 @@ impl defmt::Format for MasterSecAntiPolReg {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct MasterSecLevel(pub u32);
 impl MasterSecLevel {
-    #[doc = "SMARTDMA Data."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn smartdma(&self) -> MasterSec {
-        let val = (self.0 >> 4usize) & 0x03;
-        MasterSec::from_bits(val as u8)
-    }
-    #[doc = "SMARTDMA Data."]
-    #[inline(always)]
-    pub const fn set_smartdma(&mut self, val: MasterSec) {
-        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
-    }
-    #[doc = "eDMA0."]
+    #[doc = "DMA0."]
     #[must_use]
     #[inline(always)]
     pub const fn dma0(&self) -> MasterSec {
-        let val = (self.0 >> 6usize) & 0x03;
+        let val = (self.0 >> 2usize) & 0x03;
         MasterSec::from_bits(val as u8)
     }
-    #[doc = "eDMA0."]
+    #[doc = "DMA0."]
     #[inline(always)]
     pub const fn set_dma0(&mut self, val: MasterSec) {
-        self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
-    }
-    #[doc = "eDMA1."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1(&self) -> MasterSec {
-        let val = (self.0 >> 8usize) & 0x03;
-        MasterSec::from_bits(val as u8)
-    }
-    #[doc = "eDMA1."]
-    #[inline(always)]
-    pub const fn set_dma1(&mut self, val: MasterSec) {
-        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
+        self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
     #[doc = "PKC."]
     #[must_use]
     #[inline(always)]
     pub const fn pkc(&self) -> MasterSec {
-        let val = (self.0 >> 10usize) & 0x03;
+        let val = (self.0 >> 4usize) & 0x03;
         MasterSec::from_bits(val as u8)
     }
     #[doc = "PKC."]
     #[inline(always)]
     pub const fn set_pkc(&mut self, val: MasterSec) {
-        self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u32) & 0x03) << 10usize);
+        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "ENET0."]
+    #[doc = "DMA1."]
     #[must_use]
     #[inline(always)]
-    pub const fn enet0(&self) -> MasterSec {
-        let val = (self.0 >> 24usize) & 0x03;
+    pub const fn dma1(&self) -> MasterSec {
+        let val = (self.0 >> 6usize) & 0x03;
         MasterSec::from_bits(val as u8)
     }
-    #[doc = "ENET0."]
+    #[doc = "DMA1."]
     #[inline(always)]
-    pub const fn set_enet0(&mut self, val: MasterSec) {
-        self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
-    }
-    #[doc = "USB1."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn usb1(&self) -> MasterSec {
-        let val = (self.0 >> 26usize) & 0x03;
-        MasterSec::from_bits(val as u8)
-    }
-    #[doc = "USB1."]
-    #[inline(always)]
-    pub const fn set_usb1(&mut self, val: MasterSec) {
-        self.0 = (self.0 & !(0x03 << 26usize)) | (((val.to_bits() as u32) & 0x03) << 26usize);
+    pub const fn set_dma1(&mut self, val: MasterSec) {
+        self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
     }
 }
 impl Default for MasterSecLevel {
@@ -3519,12 +3386,9 @@ impl Default for MasterSecLevel {
 impl core::fmt::Debug for MasterSecLevel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MasterSecLevel")
-            .field("smartdma", &self.smartdma())
             .field("dma0", &self.dma0())
-            .field("dma1", &self.dma1())
             .field("pkc", &self.pkc())
-            .field("enet0", &self.enet0())
-            .field("usb1", &self.usb1())
+            .field("dma1", &self.dma1())
             .finish()
     }
 }
@@ -3533,13 +3397,10 @@ impl defmt::Format for MasterSecLevel {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "MasterSecLevel {{ smartdma: {:?}, dma0: {:?}, dma1: {:?}, pkc: {:?}, enet0: {:?}, usb1: {:?} }}",
-            self.smartdma(),
+            "MasterSecLevel {{ dma0: {:?}, pkc: {:?}, dma1: {:?} }}",
             self.dma0(),
-            self.dma1(),
             self.pkc(),
-            self.enet0(),
-            self.usb1()
+            self.dma1()
         )
     }
 }
@@ -3793,7 +3654,7 @@ impl defmt::Format for MiscCtrlReg {
         )
     }
 }
-#[doc = "RAMA Memory Rule 0."]
+#[doc = "RAMA Memory Rule."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct RamMemRule(pub u32);
@@ -3841,6 +3702,65 @@ impl defmt::Format for RamMemRule {
         defmt::write!(
             f,
             "RamMemRule {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?}, rule[4]: {:?}, rule[5]: {:?}, rule[6]: {:?}, rule[7]: {:?} }}",
+            self.rule(0usize),
+            self.rule(1usize),
+            self.rule(2usize),
+            self.rule(3usize),
+            self.rule(4usize),
+            self.rule(5usize),
+            self.rule(6usize),
+            self.rule(7usize)
+        )
+    }
+}
+#[doc = "RAMX Memory Rule."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct RamxMemRule0(pub u32);
+impl RamxMemRule0 {
+    #[doc = "Rule 0."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn rule(&self, n: usize) -> Rule {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        let val = (self.0 >> offs) & 0x03;
+        Rule::from_bits(val as u8)
+    }
+    #[doc = "Rule 0."]
+    #[inline(always)]
+    pub const fn set_rule(&mut self, n: usize, val: Rule) {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
+    }
+}
+impl Default for RamxMemRule0 {
+    #[inline(always)]
+    fn default() -> RamxMemRule0 {
+        RamxMemRule0(0)
+    }
+}
+impl core::fmt::Debug for RamxMemRule0 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RamxMemRule0")
+            .field("rule[0]", &self.rule(0usize))
+            .field("rule[1]", &self.rule(1usize))
+            .field("rule[2]", &self.rule(2usize))
+            .field("rule[3]", &self.rule(3usize))
+            .field("rule[4]", &self.rule(4usize))
+            .field("rule[5]", &self.rule(5usize))
+            .field("rule[6]", &self.rule(6usize))
+            .field("rule[7]", &self.rule(7usize))
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for RamxMemRule0 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "RamxMemRule0 {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?}, rule[4]: {:?}, rule[5]: {:?}, rule[6]: {:?}, rule[7]: {:?} }}",
             self.rule(0usize),
             self.rule(1usize),
             self.rule(2usize),
@@ -4067,98 +3987,18 @@ impl SecVioInfoValid {
     #[doc = "Violation information valid flag for AHB port 0."]
     #[must_use]
     #[inline(always)]
-    pub const fn vio_info_valid0(&self) -> bool {
-        let val = (self.0 >> 0usize) & 0x01;
+    pub const fn vio_info_valid(&self, n: usize) -> bool {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 1usize;
+        let val = (self.0 >> offs) & 0x01;
         val != 0
     }
     #[doc = "Violation information valid flag for AHB port 0."]
     #[inline(always)]
-    pub const fn set_vio_info_valid0(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
-    }
-    #[doc = "Violation information valid flag for AHB port 1."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn vio_info_valid1(&self) -> bool {
-        let val = (self.0 >> 1usize) & 0x01;
-        val != 0
-    }
-    #[doc = "Violation information valid flag for AHB port 1."]
-    #[inline(always)]
-    pub const fn set_vio_info_valid1(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
-    }
-    #[doc = "Violation information valid flag for AHB port 2."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn vio_info_valid2(&self) -> bool {
-        let val = (self.0 >> 2usize) & 0x01;
-        val != 0
-    }
-    #[doc = "Violation information valid flag for AHB port 2."]
-    #[inline(always)]
-    pub const fn set_vio_info_valid2(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
-    }
-    #[doc = "Violation information valid flag for AHB port 3."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn vio_info_valid3(&self) -> bool {
-        let val = (self.0 >> 3usize) & 0x01;
-        val != 0
-    }
-    #[doc = "Violation information valid flag for AHB port 3."]
-    #[inline(always)]
-    pub const fn set_vio_info_valid3(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
-    }
-    #[doc = "Violation information valid flag for AHB port 4."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn vio_info_valid4(&self) -> bool {
-        let val = (self.0 >> 4usize) & 0x01;
-        val != 0
-    }
-    #[doc = "Violation information valid flag for AHB port 4."]
-    #[inline(always)]
-    pub const fn set_vio_info_valid4(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
-    }
-    #[doc = "Violation information valid flag for AHB port 5."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn vio_info_valid5(&self) -> bool {
-        let val = (self.0 >> 5usize) & 0x01;
-        val != 0
-    }
-    #[doc = "Violation information valid flag for AHB port 5."]
-    #[inline(always)]
-    pub const fn set_vio_info_valid5(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
-    }
-    #[doc = "Violation information valid flag for AHB port 6."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn vio_info_valid6(&self) -> bool {
-        let val = (self.0 >> 6usize) & 0x01;
-        val != 0
-    }
-    #[doc = "Violation information valid flag for AHB port 6."]
-    #[inline(always)]
-    pub const fn set_vio_info_valid6(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
-    }
-    #[doc = "Violation information valid flag for AHB port 7."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn vio_info_valid7(&self) -> bool {
-        let val = (self.0 >> 7usize) & 0x01;
-        val != 0
-    }
-    #[doc = "Violation information valid flag for AHB port 7."]
-    #[inline(always)]
-    pub const fn set_vio_info_valid7(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
+    pub const fn set_vio_info_valid(&mut self, n: usize, val: bool) {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 1usize;
+        self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
     }
 }
 impl Default for SecVioInfoValid {
@@ -4170,14 +4010,14 @@ impl Default for SecVioInfoValid {
 impl core::fmt::Debug for SecVioInfoValid {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecVioInfoValid")
-            .field("vio_info_valid0", &self.vio_info_valid0())
-            .field("vio_info_valid1", &self.vio_info_valid1())
-            .field("vio_info_valid2", &self.vio_info_valid2())
-            .field("vio_info_valid3", &self.vio_info_valid3())
-            .field("vio_info_valid4", &self.vio_info_valid4())
-            .field("vio_info_valid5", &self.vio_info_valid5())
-            .field("vio_info_valid6", &self.vio_info_valid6())
-            .field("vio_info_valid7", &self.vio_info_valid7())
+            .field("vio_info_valid[0]", &self.vio_info_valid(0usize))
+            .field("vio_info_valid[1]", &self.vio_info_valid(1usize))
+            .field("vio_info_valid[2]", &self.vio_info_valid(2usize))
+            .field("vio_info_valid[3]", &self.vio_info_valid(3usize))
+            .field("vio_info_valid[4]", &self.vio_info_valid(4usize))
+            .field("vio_info_valid[5]", &self.vio_info_valid(5usize))
+            .field("vio_info_valid[6]", &self.vio_info_valid(6usize))
+            .field("vio_info_valid[7]", &self.vio_info_valid(7usize))
             .finish()
     }
 }
@@ -4186,15 +4026,15 @@ impl defmt::Format for SecVioInfoValid {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "SecVioInfoValid {{ vio_info_valid0: {=bool:?}, vio_info_valid1: {=bool:?}, vio_info_valid2: {=bool:?}, vio_info_valid3: {=bool:?}, vio_info_valid4: {=bool:?}, vio_info_valid5: {=bool:?}, vio_info_valid6: {=bool:?}, vio_info_valid7: {=bool:?} }}",
-            self.vio_info_valid0(),
-            self.vio_info_valid1(),
-            self.vio_info_valid2(),
-            self.vio_info_valid3(),
-            self.vio_info_valid4(),
-            self.vio_info_valid5(),
-            self.vio_info_valid6(),
-            self.vio_info_valid7()
+            "SecVioInfoValid {{ vio_info_valid[0]: {=bool:?}, vio_info_valid[1]: {=bool:?}, vio_info_valid[2]: {=bool:?}, vio_info_valid[3]: {=bool:?}, vio_info_valid[4]: {=bool:?}, vio_info_valid[5]: {=bool:?}, vio_info_valid[6]: {=bool:?}, vio_info_valid[7]: {=bool:?} }}",
+            self.vio_info_valid(0usize),
+            self.vio_info_valid(1usize),
+            self.vio_info_valid(2usize),
+            self.vio_info_valid(3usize),
+            self.vio_info_valid(4usize),
+            self.vio_info_valid(5usize),
+            self.vio_info_valid(6usize),
+            self.vio_info_valid(7usize)
         )
     }
 }
@@ -4290,9 +4130,9 @@ impl defmt::Format for SecVioMiscInfo {
 pub enum LockNsMpu {
     _RESERVED_0 = 0x0,
     #[doc = "CM33 (CPU0) LOCK_NS_MPU is 1."]
-    LOCK_NS_MPU_EQ_1 = 0x01,
+    LockNsMpuEq1 = 0x01,
     #[doc = "CM33 (CPU0) LOCK_NS_MPU is 0."]
-    LOCK_NS_MPU_EQ_0 = 0x02,
+    LockNsMpuEq0 = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl LockNsMpu {
@@ -4323,9 +4163,9 @@ impl From<LockNsMpu> for u8 {
 pub enum LockNsVtor {
     _RESERVED_0 = 0x0,
     #[doc = "CM33 (CPU0) LOCKNSVTOR is 1."]
-    LOCK_NS_VTOR_EQ_1 = 0x01,
+    LockNsVtorEq1 = 0x01,
     #[doc = "CM33 (CPU0) LOCKNSVTOR is 0."]
-    LOCK_NS_VTOR_EQ_0 = 0x02,
+    LockNsVtorEq0 = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl LockNsVtor {
@@ -4353,12 +4193,78 @@ impl From<LockNsVtor> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum LockSMpu {
+    _RESERVED_0 = 0x0,
+    #[doc = "CM33 (CPU0) LOCK_S_MPU is 1."]
+    LockSMpuEq1 = 0x01,
+    #[doc = "CM33 (CPU0) LOCK_S_MPU is 0."]
+    LockSMpuEq0 = 0x02,
+    _RESERVED_3 = 0x03,
+}
+impl LockSMpu {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> LockSMpu {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for LockSMpu {
+    #[inline(always)]
+    fn from(val: u8) -> LockSMpu {
+        LockSMpu::from_bits(val)
+    }
+}
+impl From<LockSMpu> for u8 {
+    #[inline(always)]
+    fn from(val: LockSMpu) -> u8 {
+        LockSMpu::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum LockSVtaircr {
+    _RESERVED_0 = 0x0,
+    #[doc = "CM33 (CPU0) LOCK_S_VTAIRCR is 1."]
+    LockSVtaircrEq1 = 0x01,
+    #[doc = "CM33 (CPU0) LOCK_S_VTAIRCR is 0."]
+    LockSVtaircrEq0 = 0x02,
+    _RESERVED_3 = 0x03,
+}
+impl LockSVtaircr {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> LockSVtaircr {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for LockSVtaircr {
+    #[inline(always)]
+    fn from(val: u8) -> LockSVtaircr {
+        LockSVtaircr::from_bits(val)
+    }
+}
+impl From<LockSVtaircr> for u8 {
+    #[inline(always)]
+    fn from(val: LockSVtaircr) -> u8 {
+        LockSVtaircr::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockSau {
     _RESERVED_0 = 0x0,
     #[doc = "CM33 (CPU0) LOCK_SAU is 1."]
-    LOCK_SAU_EQ_1 = 0x01,
+    LockSauEq1 = 0x01,
     #[doc = "CM33 (CPU0) LOCK_SAU is 0."]
-    LOCK_SAU_EQ_0 = 0x02,
+    LockSauEq0 = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl LockSau {
@@ -4386,81 +4292,15 @@ impl From<LockSau> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum LockSmpu {
-    _RESERVED_0 = 0x0,
-    #[doc = "CM33 (CPU0) LOCK_S_MPU is 1."]
-    LOCK_S_MPU_EQ_1 = 0x01,
-    #[doc = "CM33 (CPU0) LOCK_S_MPU is 0."]
-    LOCK_S_MPU_EQ_0 = 0x02,
-    _RESERVED_3 = 0x03,
-}
-impl LockSmpu {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> LockSmpu {
-        unsafe { core::mem::transmute(val & 0x03) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for LockSmpu {
-    #[inline(always)]
-    fn from(val: u8) -> LockSmpu {
-        LockSmpu::from_bits(val)
-    }
-}
-impl From<LockSmpu> for u8 {
-    #[inline(always)]
-    fn from(val: LockSmpu) -> u8 {
-        LockSmpu::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum LockSvtaircr {
-    _RESERVED_0 = 0x0,
-    #[doc = "CM33 (CPU0) LOCK_S_VTAIRCR is 1."]
-    LOCK_S_VTAIRCR_EQ_1 = 0x01,
-    #[doc = "CM33 (CPU0) LOCK_S_VTAIRCR is 0."]
-    LOCK_S_VTAIRCR_EQ_0 = 0x02,
-    _RESERVED_3 = 0x03,
-}
-impl LockSvtaircr {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> LockSvtaircr {
-        unsafe { core::mem::transmute(val & 0x03) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for LockSvtaircr {
-    #[inline(always)]
-    fn from(val: u8) -> LockSvtaircr {
-        LockSvtaircr::from_bits(val)
-    }
-}
-impl From<LockSvtaircr> for u8 {
-    #[inline(always)]
-    fn from(val: LockSvtaircr) -> u8 {
-        LockSvtaircr::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSec {
-    #[doc = "Non-secure and non-privileged Master."]
-    NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Non-secure and privileged Master."]
-    NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Secure and non-privileged Master."]
-    SECURE_NONPRIV_MASTER = 0x02,
     #[doc = "Secure and privileged Master."]
-    SECURE_PRIV_MASTER = 0x03,
+    NonsecureNonprivMaster = 0x0,
+    #[doc = "Secure and non-privileged Master."]
+    NonsecurePrivMaster = 0x01,
+    #[doc = "Non-secure and privileged Master."]
+    SecureNonprivMaster = 0x02,
+    #[doc = "Non-secure and non-privileged Master."]
+    SecurePrivMaster = 0x03,
 }
 impl MasterSec {
     #[inline(always)]
@@ -4490,9 +4330,9 @@ impl From<MasterSec> for u8 {
 pub enum MiscCtrlEnable {
     _RESERVED_0 = 0x0,
     #[doc = "Enables the privilege checking of non-secure mode access."]
-    ENABLED = 0x01,
+    Enabled = 0x01,
     #[doc = "Disables the privilege checking of non-secure mode access."]
-    DISABLED = 0x02,
+    Disabled = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl MiscCtrlEnable {
@@ -4522,10 +4362,10 @@ impl From<MiscCtrlEnable> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MiscCtrlRegDisableStrictMode {
     _RESERVED_0 = 0x0,
-    #[doc = "Master can access memories and peripherals at the same level or below that level."]
-    AHBTM = 0x01,
-    #[doc = "Master can access memories and peripherals at same level only."]
-    AHBSM1 = 0x02,
+    #[doc = "Master strict mode is disabled and can access memories and peripherals at the same level or below that level."]
+    Ahbtm = 0x01,
+    #[doc = "Master strict mode is enabled and can access memories and peripherals at same level only."]
+    Ahbsm1 = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl MiscCtrlRegDisableStrictMode {
@@ -4556,9 +4396,9 @@ impl From<MiscCtrlRegDisableStrictMode> for u8 {
 pub enum MiscCtrlRegDisableViolationAbort {
     _RESERVED_0 = 0x0,
     #[doc = "The violation detected by the secure checker will not cause an abort, but a secure_violation_irq (interrupt request) will still be asserted and serviced by ISR."]
-    NO_ABORT = 0x01,
+    NoAbort = 0x01,
     #[doc = "The violation detected by the secure checker will cause an abort."]
-    ABORT = 0x02,
+    Abort = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl MiscCtrlRegDisableViolationAbort {
@@ -4589,9 +4429,9 @@ impl From<MiscCtrlRegDisableViolationAbort> for u8 {
 pub enum MiscCtrlRegIdauAllNs {
     _RESERVED_0 = 0x0,
     #[doc = "IDAU is disabled, which means that all memories are attributed as non-secure memory."]
-    DISABLED = 0x01,
+    Disabled = 0x01,
     #[doc = "IDAU is enabled (restrictive mode)."]
-    ENABLED = 0x02,
+    Enabled = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl MiscCtrlRegIdauAllNs {
@@ -4622,9 +4462,9 @@ impl From<MiscCtrlRegIdauAllNs> for u8 {
 pub enum MiscCtrlRegWriteLock {
     _RESERVED_0 = 0x0,
     #[doc = "Writes to this register and to the Memory and Peripheral RULE registers are not allowed."]
-    LOCKED = 0x01,
+    Locked = 0x01,
     #[doc = "Writes to this register and to the Memory and Peripheral RULE registers are allowed."]
-    NOT_LOCKED = 0x02,
+    NotLocked = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl MiscCtrlRegWriteLock {
@@ -4654,13 +4494,13 @@ impl From<MiscCtrlRegWriteLock> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rule {
     #[doc = "Non-secure and non-privilege user access allowed."]
-    NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
+    NonsecureNonprivUserAllowed = 0x0,
     #[doc = "Non-secure and privilege access allowed."]
-    NONSECURE_PRIV_USER_ALLOWED = 0x01,
+    NonsecurePrivUserAllowed = 0x01,
     #[doc = "Secure and non-privilege user access allowed."]
-    SECURE_NONPRIV_USER_ALLOWED = 0x02,
+    SecureNonprivUserAllowed = 0x02,
     #[doc = "Secure and privilege user access allowed."]
-    SECURE_PRIV_USER_ALLOWED = 0x03,
+    SecurePrivUserAllowed = 0x03,
 }
 impl Rule {
     #[inline(always)]
@@ -4689,9 +4529,9 @@ impl From<Rule> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecVioInfoDataAccess {
     #[doc = "Code."]
-    CODE = 0x0,
+    Code = 0x0,
     #[doc = "Data."]
-    DATA = 0x01,
+    Data = 0x01,
 }
 impl SecVioInfoDataAccess {
     #[inline(always)]
@@ -4719,30 +4559,25 @@ impl From<SecVioInfoDataAccess> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecVioInfoMaster {
-    #[doc = "CM33 Code."]
-    CPU0_CODE = 0x0,
-    #[doc = "CM33 System."]
-    CPU0_SYS = 0x01,
-    #[doc = "SMARTDMA Instruction."]
-    SDMA_INSTR = 0x02,
-    #[doc = "SMARTDMA Data."]
-    SDMA_DATA = 0x03,
-    #[doc = "eDMA1."]
-    E_DMA1 = 0x04,
-    #[doc = "eDMA0."]
-    E_DMA0 = 0x05,
-    #[doc = "USB HS."]
-    USB_HS = 0x06,
-    _RESERVED_7 = 0x07,
+    #[doc = "M33 Code."]
+    Cpu0Code = 0x0,
+    #[doc = "M33 System."]
+    Cpu0Sys = 0x01,
+    _RESERVED_2 = 0x02,
+    _RESERVED_3 = 0x03,
+    _RESERVED_4 = 0x04,
+    #[doc = "DMA0."]
+    Dma0 = 0x05,
+    _RESERVED_6 = 0x06,
+    #[doc = "DMA1."]
+    Dma1 = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
-    #[doc = "eSPI."]
-    ESPI = 0x0a,
+    _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     #[doc = "PKC."]
-    PKC = 0x0c,
-    #[doc = "Ethernet."]
-    ENET = 0x0d,
+    Pkc = 0x0c,
+    _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -4789,9 +4624,9 @@ impl From<SecVioInfoMaster> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecVioInfoWrite {
     #[doc = "Read access."]
-    READ = 0x0,
+    Read = 0x0,
     #[doc = "Write access."]
-    WRITE = 0x01,
+    Write = 0x01,
 }
 impl SecVioInfoWrite {
     #[inline(always)]

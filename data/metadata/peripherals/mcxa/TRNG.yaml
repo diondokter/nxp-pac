@@ -1,5 +1,5 @@
 block/Trng:
-  description: TRNG.
+  description: pd_main.trng0.
   items:
   - name: mctl
     description: Miscellaneous Control Register.
@@ -122,12 +122,11 @@ block/Trng:
     access: Read
     fieldset: Status
   - name: ent
-    description: Entropy Read Register.
+    description: Entropy Read Register
     array:
       len: 8
       stride: 4
     byte_offset: 64
-    access: Read
     fieldset: Ent
   - name: pkrcnt10
     description: Statistical Check Poker Count 1 and 0 Register.
@@ -186,16 +185,6 @@ block/Trng:
     byte_offset: 172
     access: Read
     fieldset: IntStatus
-  - name: cser
-    description: Common Security Error Register.
-    byte_offset: 176
-    access: Read
-    fieldset: Cser
-  - name: csclr
-    description: Common Security Clear Register.
-    byte_offset: 180
-    access: Write
-    fieldset: Csclr
   - name: osc2_ctl
     description: TRNG Oscillator 2 Control Register.
     byte_offset: 236
@@ -210,52 +199,11 @@ block/Trng:
     byte_offset: 244
     access: Read
     fieldset: Vid2
-fieldset/Csclr:
-  description: Common Security Clear Register.
-  fields:
-  - name: red_sigs_clr
-    description: Redundant Signals error/fault Detected.
-    bit_offset: 0
-    bit_size: 1
-    enum: RedSigsClr
-  - name: red_fsm_clr
-    description: 'Read only: Redundant FSM error/fault detected.'
-    bit_offset: 1
-    bit_size: 1
-    enum: RedFsmClr
-  - name: local_edc_clr
-    description: 'Read only: Local-EDC error/fault detected.'
-    bit_offset: 2
-    bit_size: 1
-    enum: LocalEdcClr
-  - name: bus_edc_clr
-    description: 'Read only: Bus-EDC error/fault detected.'
-    bit_offset: 3
-    bit_size: 1
-    enum: BusEdcClr
-fieldset/Cser:
-  description: Common Security Error Register.
-  fields:
-  - name: red_sigs
-    description: Redundant Signals error/fault Detected.
-    bit_offset: 0
-    bit_size: 1
-    enum: RedSigs
-  - name: red_fsm
-    description: Redundant FSM error/fault detected.
-    bit_offset: 1
-    bit_size: 1
-    enum: RedFsm
-  - name: local_edc
-    description: Local-EDC error/fault detected.
-    bit_offset: 2
-    bit_size: 1
-    enum: LocalEdc
-  - name: bus_edc
-    description: Bus-EDC error/fault detected.
-    bit_offset: 3
-    bit_size: 1
-    enum: BusEdc
+  - name: osc_inv_chain_len
+    description: Oscillator Inverter Chain Length Register.
+    byte_offset: 248
+    access: Read
+    fieldset: OscInvChainLen
 fieldset/Ent:
   description: Entropy Read Register.
   fields:
@@ -300,7 +248,7 @@ fieldset/IntCtrl:
     bit_offset: 2
     bit_size: 1
   - name: intg_flt
-    description: Clear the INTG_FLT interrupt.
+    description: Clear the INTG_FLT interrupt
     bit_offset: 3
     bit_size: 1
 fieldset/IntMask:
@@ -319,7 +267,7 @@ fieldset/IntMask:
     bit_offset: 2
     bit_size: 1
   - name: intg_flt
-    description: Mask the INTG_FLT interrupt.
+    description: Mask the INTG_FLT interrupt
     bit_offset: 3
     bit_size: 1
 fieldset/IntStatus:
@@ -333,7 +281,6 @@ fieldset/IntStatus:
     description: Entropy Valid.
     bit_offset: 1
     bit_size: 1
-    enum: IntStatusEntVal
   - name: frq_ct_fail
     description: Frequency Count Fail.
     bit_offset: 2
@@ -345,6 +292,11 @@ fieldset/IntStatus:
 fieldset/Mctl:
   description: Miscellaneous Control Register.
   fields:
+  - name: samp_mode
+    description: Sample Mode.
+    bit_offset: 0
+    bit_size: 2
+    enum: SampMode
   - name: osc_div
     description: Oscillator1 Divide.
     bit_offset: 2
@@ -361,6 +313,10 @@ fieldset/Mctl:
   - name: rst_def
     description: Reset Defaults.
     bit_offset: 6
+    bit_size: 1
+  - name: for_sclk
+    description: Force System Clock.
+    bit_offset: 7
     bit_size: 1
   - name: fct_fail
     description: Frequency Count Fail.
@@ -389,10 +345,6 @@ fieldset/Mctl:
   - name: prgm
     description: Program Mode.
     bit_offset: 16
-    bit_size: 1
-  - name: intg_err
-    description: Integrity Error.
-    bit_offset: 31
     bit_size: 1
 fieldset/Osc2Ctl:
   description: TRNG Oscillator 2 Control Register.
@@ -432,6 +384,19 @@ fieldset/Osc2Frqcnt:
     description: Frequency Count.
     bit_offset: 0
     bit_size: 22
+fieldset/OscInvChainLen:
+  description: Oscillator Inverter Chain Length Register.
+  fields:
+  - name: osc1_inv_chain_len
+    description: Shows the even number of inverters set/chosen for the oscillator 1.
+    bit_offset: 0
+    bit_size: 8
+    enum: Osc1InvChainLen
+  - name: osc2_inv_chain_len
+    description: Shows the even number of inverters set/chosen for the oscillator 2.
+    bit_offset: 8
+    bit_size: 8
+    enum: Osc2InvChainLen
 fieldset/Pkrcnt10:
   description: Statistical Check Poker Count 1 and 0 Register.
   fields:
@@ -724,7 +689,7 @@ fieldset/SecCfg:
   description: Security Configuration Register.
   fields:
   - name: no_prgm
-    description: 'If set, below mentioned TRNG configuration registers cannot be programmed: Oscillator 2 Control Register (OSC2_CTL): TRNG Entropy Generation Control [1:0] Oscillator 2 Divider [3:2] Oscillator Fail Safe Limit [13:12] Oscillator Fail Safe Test [14] TRNG Seed Control Register (SDCTL) TRNG Frequency Count Minimum Limit Register (FRQMIN) TRNG Frequency Count Maximum Limit Register (FRQMAX) TRNG Statistical Check Monobit Limit Register (SCML) TRNG Statistical Check Run Length 1 Limit Register (SCR1L) TRNG Statistical Check Run Length 2 Limit Register (SCR2L) TRNG Statistical Check Run Length 3 Limit Register (SCR3L) TRNG Miscellaneous Control Register (MCTL): Sample Mode [1:0] Oscillator Divider [3:2] Reset Defaults [6] Force System Clock [7] Long Runs Continuation Mode [14] After this bit has been written to a 1, it cannot be changed.'
+    description: 'If set, below mentioned TRNG configuration registers cannot be programmed: Oscillator 2 Control Register (OSC2_CTL): TRNG Entropy Generation Control [1:0] Oscillator 2 Divider [3:2] Oscillator Fail Safe Limit [13:12] Oscillator Fail Safe Test [14] TRNG Seed Control Register (SDCTL) TRNG Frequency Count Minimum Limit Register (FRQMIN) TRNG Frequency Count Maximum Limit Register (FRQMAX) TRNG Poker Range Register (PKRRNG) TRNG Poker Maximum Limit Register (PKRMAX) TRNG Statistical Check Monobit Limit Register (SCML) TRNG Statistical Check Run Length 1 Limit Register (SCR1L) TRNG Statistical Check Run Length 2 Limit Register (SCR2L) TRNG Statistical Check Run Length 3 Limit Register (SCR3L) TRNG Statistical Check Run Length 4 Limit Register (SCR4L) TRNG Statistical Check Run Length 5 Limit Register (SCR5L) TRNG Statistical Check Run Length 6 Limit Register (SCR6PL) TRNG Sparse Bit Limit Register (SBLIM) TRNG Miscellaneous Control Register (MCTL): Sample Mode [1:0] Oscillator Divider [3:2] Reset Defaults [6] Force System Clock [7] Long Runs Continuation Mode [14] After this bit has been written to a 1, it cannot be changed.'
     bit_offset: 1
     bit_size: 1
 fieldset/Status:
@@ -837,7 +802,7 @@ fieldset/Vid2:
     bit_size: 8
     enum: EcoRev
   - name: intg_opt
-    description: Shows the integration options for the TRNG.
+    description: Shows the integration options for the TRNG. (For 2019 or newer SoCs).
     bit_offset: 16
     bit_size: 8
     enum: IntgOpt
@@ -846,195 +811,141 @@ fieldset/Vid2:
     bit_offset: 24
     bit_size: 8
     enum: Era
-enum/BusEdc:
-  bit_size: 1
-  variants:
-  - name: BUS_EDC_NOERR
-    description: No Bus-EDC error/fault detected.
-    value: 0
-  - name: bus_edc_err
-    description: Bus-EDC error/fault detected.
-    value: 1
-enum/BusEdcClr:
-  bit_size: 1
-  variants:
-  - name: BUS_EDC_NOEFFECT
-    description: No effect, ignored.
-    value: 0
-  - name: BUS_EDC_CLEAR
-    description: Clears the CSER[BUS_EDC] bit.
-    value: 1
 enum/ConfigOpt:
   bit_size: 8
   variants:
-  - name: CONFIG_OPT_VAL
+  - name: ConfigOptVal
     description: TRNG_CONFIG_OPT for TRNG.
     value: 0
 enum/EcoRev:
   bit_size: 8
   variants:
-  - name: ECO_REV_VAL
+  - name: EcoRevVal
     description: TRNG_ECO_REV for TRNG.
     value: 0
 enum/Era:
   bit_size: 8
   variants:
-  - name: ERA_VAL
+  - name: EraVal
     description: ERA of the TRNG.
     value: 12
 enum/IntgOpt:
   bit_size: 8
   variants:
-  - name: INTG_OPT_VAL
+  - name: IntgOptVal
     description: INTG_OPT for TRNG.
     value: 10
-enum/IntStatusEntVal:
-  bit_size: 1
-  variants:
-  - name: ENT_VAL_INVALID
-    description: Busy generating entropy. Any value read from the Entropy registers is invalid.
-    value: 0
-  - name: ENT_VAL_VALID
-    description: Values read from the Entropy registers are valid.
-    value: 1
 enum/IpId:
   bit_size: 16
   variants:
-  - name: IP_ID_VAL
+  - name: IpIdVal
     description: ID for TRNG.
     value: 48
-enum/LocalEdc:
-  bit_size: 1
-  variants:
-  - name: LOCAL_EDC_NOERR
-    description: No Local-EDC error/fault detected.
-    value: 0
-  - name: LOCAL_EDC_ERR
-    description: Local-EDC error/fault detected.
-    value: 1
-enum/LocalEdcClr:
-  bit_size: 1
-  variants:
-  - name: LOCAL_EDC_NOEFFECT
-    description: No effect, ignored.
-    value: 0
-  - name: LOCAL_EDC_CLEAR
-    description: Clears the CSER[LOCAL_EDC] bit.
-    value: 1
 enum/MajRev:
   bit_size: 8
   variants:
-  - name: MAJ_REV_VAL
+  - name: MajRevVal
     description: Major revision number for TRNG.
-    value: 20
+    value: 17
 enum/MinRev:
   bit_size: 8
   variants:
-  - name: MIN_REV_VAL
+  - name: MinRevVal
     description: Minor revision number for TRNG.
     value: 12
+enum/Osc1InvChainLen:
+  bit_size: 8
+  variants:
+  - name: Osc1InvLen
+    description: Adding 1 to this count are the total number of inversions occurring in ring oscillator 1.
+    value: 40
 enum/Osc2Div:
   bit_size: 2
   variants:
-  - name: OSC2_DIV_DIV1
+  - name: Osc2DivDiv1
     description: Use ring oscillator 2 with no divide.
     value: 0
-  - name: OSC2_DIV_DIV2
+  - name: Osc2DivDiv2
     description: Use ring oscillator 2 divided-by-2.
     value: 1
-  - name: OSC2_DIV_DIV4
+  - name: Osc2DivDiv4
     description: Use ring oscillator 2 divided-by-4.
     value: 2
-  - name: OSC2_DIV_DIV8
+  - name: Osc2DivDiv8
     description: Use ring oscillator 2 divided-by-8.
     value: 3
+enum/Osc2InvChainLen:
+  bit_size: 8
+  variants:
+  - name: Osc2InvLen
+    description: Adding 1 to this count are the total number of inversions occurring in ring oscillator 2.
+    value: 54
 enum/Osc2OutEn:
   bit_size: 1
   variants:
-  - name: OSC2_OUT_EN_0
+  - name: Osc2OutEn0
     description: Ring oscillator 2 output is gated to an output pad.
     value: 0
-  - name: OSC2_OUT_EN_1
+  - name: Osc2OutEn1
     description: Allows external viewing of divided-by-2 ring oscillator 2 if MCTL[PRGM] = 1 mode is also selected, else ring oscillator 2 output is gated to an output pad.
     value: 1
 enum/OscDiv:
   bit_size: 2
   variants:
-  - name: OSC_DIV_DIV1
+  - name: OscDivDiv1
     description: use ring oscillator with no divide.
     value: 0
-  - name: OSC_DIV_DIV2
+  - name: OscDivDiv2
     description: use ring oscillator divided-by-2.
     value: 1
-  - name: OSC_DIV_DIV4
+  - name: OscDivDiv4
     description: use ring oscillator divided-by-4.
     value: 2
-  - name: OSC_DIV_DIV8
+  - name: OscDivDiv8
     description: use ring oscillator divided-by-8.
     value: 3
 enum/OscFailsafeLmt:
   bit_size: 2
   variants:
-  - name: OSC_FAILSAFE_LMT_4K
+  - name: OscFailsafeLmt4k
     description: The limit N is 4096 (2^12) system clocks.
     value: 0
-  - name: OSC_FAILSAFE_LMT_64K
+  - name: OscFailsafeLmt64k
     description: The limit N is 65536 (2^16) system clocks. (default).
     value: 1
-  - name: OSC_FAILSAFE_LMT_1M
+  - name: OscFailsafeLmt1m
     description: N is 2^20 system clocks.
     value: 2
-  - name: OSC_FAILSAFE_LMT_4M
+  - name: OscFailsafeLmt4m
     description: N is 2^22 system clocks (full range of the counter being used).
     value: 3
-enum/RedFsm:
-  bit_size: 1
+enum/SampMode:
+  bit_size: 2
   variants:
-  - name: RED_FSM_NOERR
-    description: No redundant FSM error/fault.
+  - name: SampModeVonBoth
+    description: undefined/reserved.
     value: 0
-  - name: RED_FSM_ERR
-    description: Redundant FSM error/fault detected.
+  - name: SampModeRawBoth
+    description: use raw data into both Entropy shifter and Statistical Checker.
     value: 1
-enum/RedFsmClr:
-  bit_size: 1
-  variants:
-  - name: RED_FSM_NOEFFECT
-    description: No effect, ignored.
-    value: 0
-  - name: RED_FSM_CLEAR
-    description: Clears the CSER[RED_FSM] bit.
-    value: 1
-enum/RedSigs:
-  bit_size: 1
-  variants:
-  - name: RED_SIGS_NOERR
-    description: No redundant signal error/fault.
-    value: 0
-  - name: RED_SIGS_ERR
-    description: Redundant signal error/fault detected.
-    value: 1
-enum/RedSigsClr:
-  bit_size: 1
-  variants:
-  - name: RED_SIGS_NOEFFECT
-    description: No effect, ignored.
-    value: 0
-  - name: RED_SIGS_CLEAR
-    description: Clears the CSER[RED_SIGS] bit.
-    value: 1
+  - name: SampModeVonEnt
+    description: undefined/reserved.
+    value: 2
+  - name: SampModeUndef
+    description: undefined/reserved.
+    value: 3
 enum/TrngEntCtl:
   bit_size: 2
   variants:
-  - name: TRNG_ENT_CTL_SINGLE_OSC1
+  - name: TrngEntCtlSingleOsc1
     description: Single oscillator mode, using OSC1 (default).
     value: 0
-  - name: TRNG_ENT_CTL_DUAL_OSCS
+  - name: TrngEntCtlDualOscs
     description: Dual oscillator mode.
     value: 1
-  - name: TRNG_ENT_CTL_SINGLE_OSC2
+  - name: TrngEntCtlSingleOsc2
     description: Single oscillator mode, using OSC2.
     value: 2
-  - name: OSC2_DIV_DIV8
+  - name: Osc2DivDiv8
     description: Unused, (bit field cannot be written to this value).
     value: 3

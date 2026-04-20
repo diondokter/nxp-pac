@@ -64,6 +64,10 @@ fieldset/Mod:
     description: Lock.
     bit_offset: 5
     bit_size: 1
+  - name: debug_en
+    description: Debug Enable.
+    bit_offset: 6
+    bit_size: 1
 fieldset/Tc:
   description: Timer Constant.
   fields:
@@ -95,27 +99,27 @@ fieldset/Window:
 enum/Wden:
   bit_size: 1
   variants:
-  - name: STOP
+  - name: Stop
     description: Timer stopped.
     value: 0
-  - name: RUN
+  - name: Run
     description: Timer running.
     value: 1
 enum/Wdprotect:
   bit_size: 1
   variants:
-  - name: FLEXIBLE
+  - name: Flexible
     description: Flexible.
     value: 0
-  - name: THRESHOLD
+  - name: Threshold
     description: Threshold.
     value: 1
 enum/Wdreset:
   bit_size: 1
   variants:
-  - name: INTERRUPT
+  - name: Interrupt
     description: Interrupt.
     value: 0
-  - name: RESET
+  - name: Reset
     description: Reset.
     value: 1

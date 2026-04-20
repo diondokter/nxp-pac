@@ -1,6 +1,7 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (2fd28c5 2026-04-02))"]
+#![allow(non_upper_case_globals)]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (859f02b 2026-04-15))"]
 #[doc = "GPIO."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpio {
@@ -26,6 +27,31 @@ impl Gpio {
     #[inline(always)]
     pub const fn param(self) -> crate::pac::common::Reg<Param, crate::pac::common::R> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
+    }
+    #[doc = "Lock."]
+    #[inline(always)]
+    pub const fn lock(self) -> crate::pac::common::Reg<Lock, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
+    }
+    #[doc = "Pin Control Nonsecure."]
+    #[inline(always)]
+    pub const fn pcns(self) -> crate::pac::common::Reg<Pcns, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
+    }
+    #[doc = "Interrupt Control Nonsecure."]
+    #[inline(always)]
+    pub const fn icns(self) -> crate::pac::common::Reg<Icns, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x14usize) as _) }
+    }
+    #[doc = "Pin Control Nonprivilege."]
+    #[inline(always)]
+    pub const fn pcnp(self) -> crate::pac::common::Reg<Pcnp, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x18usize) as _) }
+    }
+    #[doc = "Interrupt Control Nonprivilege."]
+    #[inline(always)]
+    pub const fn icnp(self) -> crate::pac::common::Reg<Icnp, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x1cusize) as _) }
     }
     #[doc = "Port Data Output."]
     #[inline(always)]
@@ -91,9 +117,9 @@ impl Gpio {
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn isfr(self, n: usize) -> crate::pac::common::Reg<Isfr, crate::pac::common::RW> {
-        assert!(n < 1usize);
+        assert!(n < 2usize);
         unsafe {
-            crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0120usize + n * 0usize) as _)
+            crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0120usize + n * 4usize) as _)
         }
     }
 }
@@ -105,194 +131,18 @@ impl Gichr {
     #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
-    pub const fn giwe16(&self) -> Giwe16 {
-        let val = (self.0 >> 0usize) & 0x01;
-        Giwe16::from_bits(val as u8)
+    pub const fn giwe(&self, n: usize) -> bool {
+        assert!(n < 16usize);
+        let offs = 0usize + n * 1usize;
+        let val = (self.0 >> offs) & 0x01;
+        val != 0
     }
     #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
-    pub const fn set_giwe16(&mut self, val: Giwe16) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe17(&self) -> Giwe17 {
-        let val = (self.0 >> 1usize) & 0x01;
-        Giwe17::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe17(&mut self, val: Giwe17) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe18(&self) -> Giwe18 {
-        let val = (self.0 >> 2usize) & 0x01;
-        Giwe18::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe18(&mut self, val: Giwe18) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe19(&self) -> Giwe19 {
-        let val = (self.0 >> 3usize) & 0x01;
-        Giwe19::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe19(&mut self, val: Giwe19) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe20(&self) -> Giwe20 {
-        let val = (self.0 >> 4usize) & 0x01;
-        Giwe20::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe20(&mut self, val: Giwe20) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe21(&self) -> Giwe21 {
-        let val = (self.0 >> 5usize) & 0x01;
-        Giwe21::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe21(&mut self, val: Giwe21) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe22(&self) -> Giwe22 {
-        let val = (self.0 >> 6usize) & 0x01;
-        Giwe22::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe22(&mut self, val: Giwe22) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe23(&self) -> Giwe23 {
-        let val = (self.0 >> 7usize) & 0x01;
-        Giwe23::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe23(&mut self, val: Giwe23) {
-        self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe24(&self) -> Giwe24 {
-        let val = (self.0 >> 8usize) & 0x01;
-        Giwe24::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe24(&mut self, val: Giwe24) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe25(&self) -> Giwe25 {
-        let val = (self.0 >> 9usize) & 0x01;
-        Giwe25::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe25(&mut self, val: Giwe25) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe26(&self) -> Giwe26 {
-        let val = (self.0 >> 10usize) & 0x01;
-        Giwe26::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe26(&mut self, val: Giwe26) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe27(&self) -> Giwe27 {
-        let val = (self.0 >> 11usize) & 0x01;
-        Giwe27::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe27(&mut self, val: Giwe27) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe28(&self) -> Giwe28 {
-        let val = (self.0 >> 12usize) & 0x01;
-        Giwe28::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe28(&mut self, val: Giwe28) {
-        self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe29(&self) -> Giwe29 {
-        let val = (self.0 >> 13usize) & 0x01;
-        Giwe29::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe29(&mut self, val: Giwe29) {
-        self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe30(&self) -> Giwe30 {
-        let val = (self.0 >> 14usize) & 0x01;
-        Giwe30::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe30(&mut self, val: Giwe30) {
-        self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe31(&self) -> Giwe31 {
-        let val = (self.0 >> 15usize) & 0x01;
-        Giwe31::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe31(&mut self, val: Giwe31) {
-        self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
+    pub const fn set_giwe(&mut self, n: usize, val: bool) {
+        assert!(n < 16usize);
+        let offs = 0usize + n * 1usize;
+        self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
     }
     #[doc = "Global Interrupt Write Data."]
     #[must_use]
@@ -316,22 +166,22 @@ impl Default for Gichr {
 impl core::fmt::Debug for Gichr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gichr")
-            .field("giwe16", &self.giwe16())
-            .field("giwe17", &self.giwe17())
-            .field("giwe18", &self.giwe18())
-            .field("giwe19", &self.giwe19())
-            .field("giwe20", &self.giwe20())
-            .field("giwe21", &self.giwe21())
-            .field("giwe22", &self.giwe22())
-            .field("giwe23", &self.giwe23())
-            .field("giwe24", &self.giwe24())
-            .field("giwe25", &self.giwe25())
-            .field("giwe26", &self.giwe26())
-            .field("giwe27", &self.giwe27())
-            .field("giwe28", &self.giwe28())
-            .field("giwe29", &self.giwe29())
-            .field("giwe30", &self.giwe30())
-            .field("giwe31", &self.giwe31())
+            .field("giwe[0]", &self.giwe(0usize))
+            .field("giwe[1]", &self.giwe(1usize))
+            .field("giwe[2]", &self.giwe(2usize))
+            .field("giwe[3]", &self.giwe(3usize))
+            .field("giwe[4]", &self.giwe(4usize))
+            .field("giwe[5]", &self.giwe(5usize))
+            .field("giwe[6]", &self.giwe(6usize))
+            .field("giwe[7]", &self.giwe(7usize))
+            .field("giwe[8]", &self.giwe(8usize))
+            .field("giwe[9]", &self.giwe(9usize))
+            .field("giwe[10]", &self.giwe(10usize))
+            .field("giwe[11]", &self.giwe(11usize))
+            .field("giwe[12]", &self.giwe(12usize))
+            .field("giwe[13]", &self.giwe(13usize))
+            .field("giwe[14]", &self.giwe(14usize))
+            .field("giwe[15]", &self.giwe(15usize))
             .field("giwd", &self.giwd())
             .finish()
     }
@@ -341,23 +191,23 @@ impl defmt::Format for Gichr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Gichr {{ giwe16: {:?}, giwe17: {:?}, giwe18: {:?}, giwe19: {:?}, giwe20: {:?}, giwe21: {:?}, giwe22: {:?}, giwe23: {:?}, giwe24: {:?}, giwe25: {:?}, giwe26: {:?}, giwe27: {:?}, giwe28: {:?}, giwe29: {:?}, giwe30: {:?}, giwe31: {:?}, giwd: {=u16:?} }}",
-            self.giwe16(),
-            self.giwe17(),
-            self.giwe18(),
-            self.giwe19(),
-            self.giwe20(),
-            self.giwe21(),
-            self.giwe22(),
-            self.giwe23(),
-            self.giwe24(),
-            self.giwe25(),
-            self.giwe26(),
-            self.giwe27(),
-            self.giwe28(),
-            self.giwe29(),
-            self.giwe30(),
-            self.giwe31(),
+            "Gichr {{ giwe[0]: {=bool:?}, giwe[1]: {=bool:?}, giwe[2]: {=bool:?}, giwe[3]: {=bool:?}, giwe[4]: {=bool:?}, giwe[5]: {=bool:?}, giwe[6]: {=bool:?}, giwe[7]: {=bool:?}, giwe[8]: {=bool:?}, giwe[9]: {=bool:?}, giwe[10]: {=bool:?}, giwe[11]: {=bool:?}, giwe[12]: {=bool:?}, giwe[13]: {=bool:?}, giwe[14]: {=bool:?}, giwe[15]: {=bool:?}, giwd: {=u16:?} }}",
+            self.giwe(0usize),
+            self.giwe(1usize),
+            self.giwe(2usize),
+            self.giwe(3usize),
+            self.giwe(4usize),
+            self.giwe(5usize),
+            self.giwe(6usize),
+            self.giwe(7usize),
+            self.giwe(8usize),
+            self.giwe(9usize),
+            self.giwe(10usize),
+            self.giwe(11usize),
+            self.giwe(12usize),
+            self.giwe(13usize),
+            self.giwe(14usize),
+            self.giwe(15usize),
             self.giwd()
         )
     }
@@ -370,194 +220,18 @@ impl Giclr {
     #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
-    pub const fn giwe0(&self) -> Giwe0 {
-        let val = (self.0 >> 0usize) & 0x01;
-        Giwe0::from_bits(val as u8)
+    pub const fn giwe(&self, n: usize) -> bool {
+        assert!(n < 16usize);
+        let offs = 0usize + n * 1usize;
+        let val = (self.0 >> offs) & 0x01;
+        val != 0
     }
     #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
-    pub const fn set_giwe0(&mut self, val: Giwe0) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe1(&self) -> Giwe1 {
-        let val = (self.0 >> 1usize) & 0x01;
-        Giwe1::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe1(&mut self, val: Giwe1) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe2(&self) -> Giwe2 {
-        let val = (self.0 >> 2usize) & 0x01;
-        Giwe2::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe2(&mut self, val: Giwe2) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe3(&self) -> Giwe3 {
-        let val = (self.0 >> 3usize) & 0x01;
-        Giwe3::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe3(&mut self, val: Giwe3) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe4(&self) -> Giwe4 {
-        let val = (self.0 >> 4usize) & 0x01;
-        Giwe4::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe4(&mut self, val: Giwe4) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe5(&self) -> Giwe5 {
-        let val = (self.0 >> 5usize) & 0x01;
-        Giwe5::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe5(&mut self, val: Giwe5) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe6(&self) -> Giwe6 {
-        let val = (self.0 >> 6usize) & 0x01;
-        Giwe6::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe6(&mut self, val: Giwe6) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe7(&self) -> Giwe7 {
-        let val = (self.0 >> 7usize) & 0x01;
-        Giwe7::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe7(&mut self, val: Giwe7) {
-        self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe8(&self) -> Giwe8 {
-        let val = (self.0 >> 8usize) & 0x01;
-        Giwe8::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe8(&mut self, val: Giwe8) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe9(&self) -> Giwe9 {
-        let val = (self.0 >> 9usize) & 0x01;
-        Giwe9::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe9(&mut self, val: Giwe9) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe10(&self) -> Giwe10 {
-        let val = (self.0 >> 10usize) & 0x01;
-        Giwe10::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe10(&mut self, val: Giwe10) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe11(&self) -> Giwe11 {
-        let val = (self.0 >> 11usize) & 0x01;
-        Giwe11::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe11(&mut self, val: Giwe11) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe12(&self) -> Giwe12 {
-        let val = (self.0 >> 12usize) & 0x01;
-        Giwe12::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe12(&mut self, val: Giwe12) {
-        self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe13(&self) -> Giwe13 {
-        let val = (self.0 >> 13usize) & 0x01;
-        Giwe13::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe13(&mut self, val: Giwe13) {
-        self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe14(&self) -> Giwe14 {
-        let val = (self.0 >> 14usize) & 0x01;
-        Giwe14::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe14(&mut self, val: Giwe14) {
-        self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn giwe15(&self) -> Giwe15 {
-        let val = (self.0 >> 15usize) & 0x01;
-        Giwe15::from_bits(val as u8)
-    }
-    #[doc = "Global Interrupt Write Enable."]
-    #[inline(always)]
-    pub const fn set_giwe15(&mut self, val: Giwe15) {
-        self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
+    pub const fn set_giwe(&mut self, n: usize, val: bool) {
+        assert!(n < 16usize);
+        let offs = 0usize + n * 1usize;
+        self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
     }
     #[doc = "Global Interrupt Write Data."]
     #[must_use]
@@ -581,22 +255,22 @@ impl Default for Giclr {
 impl core::fmt::Debug for Giclr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Giclr")
-            .field("giwe0", &self.giwe0())
-            .field("giwe1", &self.giwe1())
-            .field("giwe2", &self.giwe2())
-            .field("giwe3", &self.giwe3())
-            .field("giwe4", &self.giwe4())
-            .field("giwe5", &self.giwe5())
-            .field("giwe6", &self.giwe6())
-            .field("giwe7", &self.giwe7())
-            .field("giwe8", &self.giwe8())
-            .field("giwe9", &self.giwe9())
-            .field("giwe10", &self.giwe10())
-            .field("giwe11", &self.giwe11())
-            .field("giwe12", &self.giwe12())
-            .field("giwe13", &self.giwe13())
-            .field("giwe14", &self.giwe14())
-            .field("giwe15", &self.giwe15())
+            .field("giwe[0]", &self.giwe(0usize))
+            .field("giwe[1]", &self.giwe(1usize))
+            .field("giwe[2]", &self.giwe(2usize))
+            .field("giwe[3]", &self.giwe(3usize))
+            .field("giwe[4]", &self.giwe(4usize))
+            .field("giwe[5]", &self.giwe(5usize))
+            .field("giwe[6]", &self.giwe(6usize))
+            .field("giwe[7]", &self.giwe(7usize))
+            .field("giwe[8]", &self.giwe(8usize))
+            .field("giwe[9]", &self.giwe(9usize))
+            .field("giwe[10]", &self.giwe(10usize))
+            .field("giwe[11]", &self.giwe(11usize))
+            .field("giwe[12]", &self.giwe(12usize))
+            .field("giwe[13]", &self.giwe(13usize))
+            .field("giwe[14]", &self.giwe(14usize))
+            .field("giwe[15]", &self.giwe(15usize))
             .field("giwd", &self.giwd())
             .finish()
     }
@@ -606,24 +280,134 @@ impl defmt::Format for Giclr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Giclr {{ giwe0: {:?}, giwe1: {:?}, giwe2: {:?}, giwe3: {:?}, giwe4: {:?}, giwe5: {:?}, giwe6: {:?}, giwe7: {:?}, giwe8: {:?}, giwe9: {:?}, giwe10: {:?}, giwe11: {:?}, giwe12: {:?}, giwe13: {:?}, giwe14: {:?}, giwe15: {:?}, giwd: {=u16:?} }}",
-            self.giwe0(),
-            self.giwe1(),
-            self.giwe2(),
-            self.giwe3(),
-            self.giwe4(),
-            self.giwe5(),
-            self.giwe6(),
-            self.giwe7(),
-            self.giwe8(),
-            self.giwe9(),
-            self.giwe10(),
-            self.giwe11(),
-            self.giwe12(),
-            self.giwe13(),
-            self.giwe14(),
-            self.giwe15(),
+            "Giclr {{ giwe[0]: {=bool:?}, giwe[1]: {=bool:?}, giwe[2]: {=bool:?}, giwe[3]: {=bool:?}, giwe[4]: {=bool:?}, giwe[5]: {=bool:?}, giwe[6]: {=bool:?}, giwe[7]: {=bool:?}, giwe[8]: {=bool:?}, giwe[9]: {=bool:?}, giwe[10]: {=bool:?}, giwe[11]: {=bool:?}, giwe[12]: {=bool:?}, giwe[13]: {=bool:?}, giwe[14]: {=bool:?}, giwe[15]: {=bool:?}, giwd: {=u16:?} }}",
+            self.giwe(0usize),
+            self.giwe(1usize),
+            self.giwe(2usize),
+            self.giwe(3usize),
+            self.giwe(4usize),
+            self.giwe(5usize),
+            self.giwe(6usize),
+            self.giwe(7usize),
+            self.giwe(8usize),
+            self.giwe(9usize),
+            self.giwe(10usize),
+            self.giwe(11usize),
+            self.giwe(12usize),
+            self.giwe(13usize),
+            self.giwe(14usize),
+            self.giwe(15usize),
             self.giwd()
+        )
+    }
+}
+#[doc = "Interrupt Control Nonprivilege."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Icnp(pub u32);
+impl Icnp {
+    #[doc = "Nonprivilege Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn npe0(&self) -> IcnpNpe0 {
+        let val = (self.0 >> 0usize) & 0x01;
+        IcnpNpe0::from_bits(val as u8)
+    }
+    #[doc = "Nonprivilege Enable."]
+    #[inline(always)]
+    pub const fn set_npe0(&mut self, val: IcnpNpe0) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    }
+    #[doc = "Nonprivilege Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn npe1(&self) -> IcnpNpe1 {
+        let val = (self.0 >> 1usize) & 0x01;
+        IcnpNpe1::from_bits(val as u8)
+    }
+    #[doc = "Nonprivilege Enable."]
+    #[inline(always)]
+    pub const fn set_npe1(&mut self, val: IcnpNpe1) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    }
+}
+impl Default for Icnp {
+    #[inline(always)]
+    fn default() -> Icnp {
+        Icnp(0)
+    }
+}
+impl core::fmt::Debug for Icnp {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Icnp")
+            .field("npe0", &self.npe0())
+            .field("npe1", &self.npe1())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Icnp {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Icnp {{ npe0: {:?}, npe1: {:?} }}",
+            self.npe0(),
+            self.npe1()
+        )
+    }
+}
+#[doc = "Interrupt Control Nonsecure."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Icns(pub u32);
+impl Icns {
+    #[doc = "Nonsecure Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn nse0(&self) -> IcnsNse0 {
+        let val = (self.0 >> 0usize) & 0x01;
+        IcnsNse0::from_bits(val as u8)
+    }
+    #[doc = "Nonsecure Enable."]
+    #[inline(always)]
+    pub const fn set_nse0(&mut self, val: IcnsNse0) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    }
+    #[doc = "Nonsecure Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn nse1(&self) -> IcnsNse1 {
+        let val = (self.0 >> 1usize) & 0x01;
+        IcnsNse1::from_bits(val as u8)
+    }
+    #[doc = "Nonsecure Enable."]
+    #[inline(always)]
+    pub const fn set_nse1(&mut self, val: IcnsNse1) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    }
+}
+impl Default for Icns {
+    #[inline(always)]
+    fn default() -> Icns {
+        Icns(0)
+    }
+}
+impl core::fmt::Debug for Icns {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Icns")
+            .field("nse0", &self.nse0())
+            .field("nse1", &self.nse1())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Icns {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Icns {{ nse0: {:?}, nse1: {:?} }}",
+            self.nse0(),
+            self.nse1()
         )
     }
 }
@@ -643,6 +427,30 @@ impl Icr {
     #[inline(always)]
     pub const fn set_irqc(&mut self, val: Irqc) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
+    }
+    #[doc = "Interrupt Select."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn irqs(&self) -> Irqs {
+        let val = (self.0 >> 20usize) & 0x01;
+        Irqs::from_bits(val as u8)
+    }
+    #[doc = "Interrupt Select."]
+    #[inline(always)]
+    pub const fn set_irqs(&mut self, val: Irqs) {
+        self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
+    }
+    #[doc = "Lock."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn lk(&self) -> Lk {
+        let val = (self.0 >> 23usize) & 0x01;
+        Lk::from_bits(val as u8)
+    }
+    #[doc = "Lock."]
+    #[inline(always)]
+    pub const fn set_lk(&mut self, val: Lk) {
+        self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
@@ -667,6 +475,8 @@ impl core::fmt::Debug for Icr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Icr")
             .field("irqc", &self.irqc())
+            .field("irqs", &self.irqs())
+            .field("lk", &self.lk())
             .field("isf", &self.isf())
             .finish()
     }
@@ -676,8 +486,10 @@ impl defmt::Format for Icr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Icr {{ irqc: {:?}, isf: {:?} }}",
+            "Icr {{ irqc: {:?}, irqs: {:?}, lk: {:?}, isf: {:?} }}",
             self.irqc(),
+            self.irqs(),
+            self.lk(),
             self.isf()
         )
     }
@@ -690,386 +502,386 @@ impl Isfr {
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf0(&self) -> Isf0 {
+    pub const fn isf0(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
-        Isf0::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf0(&mut self, val: Isf0) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    pub const fn set_isf0(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf1(&self) -> Isf1 {
+    pub const fn isf1(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
-        Isf1::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf1(&mut self, val: Isf1) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    pub const fn set_isf1(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf2(&self) -> Isf2 {
+    pub const fn isf2(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
-        Isf2::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf2(&mut self, val: Isf2) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
+    pub const fn set_isf2(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf3(&self) -> Isf3 {
+    pub const fn isf3(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
-        Isf3::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf3(&mut self, val: Isf3) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
+    pub const fn set_isf3(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf4(&self) -> Isf4 {
+    pub const fn isf4(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
-        Isf4::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf4(&mut self, val: Isf4) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
+    pub const fn set_isf4(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf5(&self) -> Isf5 {
+    pub const fn isf5(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
-        Isf5::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf5(&mut self, val: Isf5) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
+    pub const fn set_isf5(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf6(&self) -> Isf6 {
+    pub const fn isf6(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
-        Isf6::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf6(&mut self, val: Isf6) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
+    pub const fn set_isf6(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf7(&self) -> Isf7 {
+    pub const fn isf7(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
-        Isf7::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf7(&mut self, val: Isf7) {
-        self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
+    pub const fn set_isf7(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf8(&self) -> Isf8 {
+    pub const fn isf8(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
-        Isf8::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf8(&mut self, val: Isf8) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
+    pub const fn set_isf8(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf9(&self) -> Isf9 {
+    pub const fn isf9(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
-        Isf9::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf9(&mut self, val: Isf9) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
+    pub const fn set_isf9(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf10(&self) -> Isf10 {
+    pub const fn isf10(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
-        Isf10::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf10(&mut self, val: Isf10) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
+    pub const fn set_isf10(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf11(&self) -> Isf11 {
+    pub const fn isf11(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
-        Isf11::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf11(&mut self, val: Isf11) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
+    pub const fn set_isf11(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf12(&self) -> Isf12 {
+    pub const fn isf12(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
-        Isf12::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf12(&mut self, val: Isf12) {
-        self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
+    pub const fn set_isf12(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf13(&self) -> Isf13 {
+    pub const fn isf13(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
-        Isf13::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf13(&mut self, val: Isf13) {
-        self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
+    pub const fn set_isf13(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf14(&self) -> Isf14 {
+    pub const fn isf14(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
-        Isf14::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf14(&mut self, val: Isf14) {
-        self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
+    pub const fn set_isf14(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf15(&self) -> Isf15 {
+    pub const fn isf15(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
-        Isf15::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf15(&mut self, val: Isf15) {
-        self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
+    pub const fn set_isf15(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf16(&self) -> Isf16 {
+    pub const fn isf16(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
-        Isf16::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf16(&mut self, val: Isf16) {
-        self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
+    pub const fn set_isf16(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf17(&self) -> Isf17 {
+    pub const fn isf17(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
-        Isf17::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf17(&mut self, val: Isf17) {
-        self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
+    pub const fn set_isf17(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf18(&self) -> Isf18 {
+    pub const fn isf18(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
-        Isf18::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf18(&mut self, val: Isf18) {
-        self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
+    pub const fn set_isf18(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf19(&self) -> Isf19 {
+    pub const fn isf19(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
-        Isf19::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf19(&mut self, val: Isf19) {
-        self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
+    pub const fn set_isf19(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf20(&self) -> Isf20 {
+    pub const fn isf20(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
-        Isf20::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf20(&mut self, val: Isf20) {
-        self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
+    pub const fn set_isf20(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf21(&self) -> Isf21 {
+    pub const fn isf21(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
-        Isf21::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf21(&mut self, val: Isf21) {
-        self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
+    pub const fn set_isf21(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf22(&self) -> Isf22 {
+    pub const fn isf22(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
-        Isf22::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf22(&mut self, val: Isf22) {
-        self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
+    pub const fn set_isf22(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf23(&self) -> Isf23 {
+    pub const fn isf23(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
-        Isf23::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf23(&mut self, val: Isf23) {
-        self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
+    pub const fn set_isf23(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf24(&self) -> Isf24 {
+    pub const fn isf24(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
-        Isf24::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf24(&mut self, val: Isf24) {
-        self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
+    pub const fn set_isf24(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf25(&self) -> Isf25 {
+    pub const fn isf25(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
-        Isf25::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf25(&mut self, val: Isf25) {
-        self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
+    pub const fn set_isf25(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf26(&self) -> Isf26 {
+    pub const fn isf26(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
-        Isf26::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf26(&mut self, val: Isf26) {
-        self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
+    pub const fn set_isf26(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf27(&self) -> Isf27 {
+    pub const fn isf27(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
-        Isf27::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf27(&mut self, val: Isf27) {
-        self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
+    pub const fn set_isf27(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf28(&self) -> Isf28 {
+    pub const fn isf28(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
-        Isf28::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf28(&mut self, val: Isf28) {
-        self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
+    pub const fn set_isf28(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf29(&self) -> Isf29 {
+    pub const fn isf29(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
-        Isf29::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf29(&mut self, val: Isf29) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
+    pub const fn set_isf29(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf30(&self) -> Isf30 {
+    pub const fn isf30(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
-        Isf30::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf30(&mut self, val: Isf30) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
+    pub const fn set_isf30(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
     #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn isf31(&self) -> Isf31 {
+    pub const fn isf31(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
-        Isf31::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Status Flag."]
     #[inline(always)]
-    pub const fn set_isf31(&mut self, val: Isf31) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
+    pub const fn set_isf31(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
     }
 }
 impl Default for Isfr {
@@ -1121,7 +933,7 @@ impl defmt::Format for Isfr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Isfr {{ isf0: {:?}, isf1: {:?}, isf2: {:?}, isf3: {:?}, isf4: {:?}, isf5: {:?}, isf6: {:?}, isf7: {:?}, isf8: {:?}, isf9: {:?}, isf10: {:?}, isf11: {:?}, isf12: {:?}, isf13: {:?}, isf14: {:?}, isf15: {:?}, isf16: {:?}, isf17: {:?}, isf18: {:?}, isf19: {:?}, isf20: {:?}, isf21: {:?}, isf22: {:?}, isf23: {:?}, isf24: {:?}, isf25: {:?}, isf26: {:?}, isf27: {:?}, isf28: {:?}, isf29: {:?}, isf30: {:?}, isf31: {:?} }}",
+            "Isfr {{ isf0: {=bool:?}, isf1: {=bool:?}, isf2: {=bool:?}, isf3: {=bool:?}, isf4: {=bool:?}, isf5: {=bool:?}, isf6: {=bool:?}, isf7: {=bool:?}, isf8: {=bool:?}, isf9: {=bool:?}, isf10: {=bool:?}, isf11: {=bool:?}, isf12: {=bool:?}, isf13: {=bool:?}, isf14: {=bool:?}, isf15: {=bool:?}, isf16: {=bool:?}, isf17: {=bool:?}, isf18: {=bool:?}, isf19: {=bool:?}, isf20: {=bool:?}, isf21: {=bool:?}, isf22: {=bool:?}, isf23: {=bool:?}, isf24: {=bool:?}, isf25: {=bool:?}, isf26: {=bool:?}, isf27: {=bool:?}, isf28: {=bool:?}, isf29: {=bool:?}, isf30: {=bool:?}, isf31: {=bool:?} }}",
             self.isf0(),
             self.isf1(),
             self.isf2(),
@@ -1154,6 +966,89 @@ impl defmt::Format for Isfr {
             self.isf29(),
             self.isf30(),
             self.isf31()
+        )
+    }
+}
+#[doc = "Lock."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Lock(pub u32);
+impl Lock {
+    #[doc = "Lock PCNS."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pcns(&self) -> bool {
+        let val = (self.0 >> 0usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Lock PCNS."]
+    #[inline(always)]
+    pub const fn set_pcns(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
+    }
+    #[doc = "Lock ICNS."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn icns(&self) -> bool {
+        let val = (self.0 >> 1usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Lock ICNS."]
+    #[inline(always)]
+    pub const fn set_icns(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
+    }
+    #[doc = "Lock PCNP."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pcnp(&self) -> bool {
+        let val = (self.0 >> 2usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Lock PCNP."]
+    #[inline(always)]
+    pub const fn set_pcnp(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
+    }
+    #[doc = "Lock ICNP."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn icnp(&self) -> bool {
+        let val = (self.0 >> 3usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Lock ICNP."]
+    #[inline(always)]
+    pub const fn set_icnp(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
+    }
+}
+impl Default for Lock {
+    #[inline(always)]
+    fn default() -> Lock {
+        Lock(0)
+    }
+}
+impl core::fmt::Debug for Lock {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Lock")
+            .field("pcns", &self.pcns())
+            .field("icns", &self.icns())
+            .field("pcnp", &self.pcnp())
+            .field("icnp", &self.icnp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Lock {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Lock {{ pcns: {=bool:?}, icns: {=bool:?}, pcnp: {=bool:?}, icnp: {=bool:?} }}",
+            self.pcns(),
+            self.icns(),
+            self.pcnp(),
+            self.icnp()
         )
     }
 }
@@ -1192,6 +1087,220 @@ impl core::fmt::Debug for Param {
 impl defmt::Format for Param {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(f, "Param {{ irqnum: {=u8:?} }}", self.irqnum())
+    }
+}
+#[doc = "Pin Control Nonprivilege."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Pcnp(pub u32);
+impl Pcnp {
+    #[doc = "Nonprivilege Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn npe(&self, n: usize) -> PcnpNpe0 {
+        assert!(n < 32usize);
+        let offs = 0usize + n * 1usize;
+        let val = (self.0 >> offs) & 0x01;
+        PcnpNpe0::from_bits(val as u8)
+    }
+    #[doc = "Nonprivilege Enable."]
+    #[inline(always)]
+    pub const fn set_npe(&mut self, n: usize, val: PcnpNpe0) {
+        assert!(n < 32usize);
+        let offs = 0usize + n * 1usize;
+        self.0 = (self.0 & !(0x01 << offs)) | (((val.to_bits() as u32) & 0x01) << offs);
+    }
+}
+impl Default for Pcnp {
+    #[inline(always)]
+    fn default() -> Pcnp {
+        Pcnp(0)
+    }
+}
+impl core::fmt::Debug for Pcnp {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Pcnp")
+            .field("npe[0]", &self.npe(0usize))
+            .field("npe[1]", &self.npe(1usize))
+            .field("npe[2]", &self.npe(2usize))
+            .field("npe[3]", &self.npe(3usize))
+            .field("npe[4]", &self.npe(4usize))
+            .field("npe[5]", &self.npe(5usize))
+            .field("npe[6]", &self.npe(6usize))
+            .field("npe[7]", &self.npe(7usize))
+            .field("npe[8]", &self.npe(8usize))
+            .field("npe[9]", &self.npe(9usize))
+            .field("npe[10]", &self.npe(10usize))
+            .field("npe[11]", &self.npe(11usize))
+            .field("npe[12]", &self.npe(12usize))
+            .field("npe[13]", &self.npe(13usize))
+            .field("npe[14]", &self.npe(14usize))
+            .field("npe[15]", &self.npe(15usize))
+            .field("npe[16]", &self.npe(16usize))
+            .field("npe[17]", &self.npe(17usize))
+            .field("npe[18]", &self.npe(18usize))
+            .field("npe[19]", &self.npe(19usize))
+            .field("npe[20]", &self.npe(20usize))
+            .field("npe[21]", &self.npe(21usize))
+            .field("npe[22]", &self.npe(22usize))
+            .field("npe[23]", &self.npe(23usize))
+            .field("npe[24]", &self.npe(24usize))
+            .field("npe[25]", &self.npe(25usize))
+            .field("npe[26]", &self.npe(26usize))
+            .field("npe[27]", &self.npe(27usize))
+            .field("npe[28]", &self.npe(28usize))
+            .field("npe[29]", &self.npe(29usize))
+            .field("npe[30]", &self.npe(30usize))
+            .field("npe[31]", &self.npe(31usize))
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Pcnp {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Pcnp {{ npe[0]: {:?}, npe[1]: {:?}, npe[2]: {:?}, npe[3]: {:?}, npe[4]: {:?}, npe[5]: {:?}, npe[6]: {:?}, npe[7]: {:?}, npe[8]: {:?}, npe[9]: {:?}, npe[10]: {:?}, npe[11]: {:?}, npe[12]: {:?}, npe[13]: {:?}, npe[14]: {:?}, npe[15]: {:?}, npe[16]: {:?}, npe[17]: {:?}, npe[18]: {:?}, npe[19]: {:?}, npe[20]: {:?}, npe[21]: {:?}, npe[22]: {:?}, npe[23]: {:?}, npe[24]: {:?}, npe[25]: {:?}, npe[26]: {:?}, npe[27]: {:?}, npe[28]: {:?}, npe[29]: {:?}, npe[30]: {:?}, npe[31]: {:?} }}",
+            self.npe(0usize),
+            self.npe(1usize),
+            self.npe(2usize),
+            self.npe(3usize),
+            self.npe(4usize),
+            self.npe(5usize),
+            self.npe(6usize),
+            self.npe(7usize),
+            self.npe(8usize),
+            self.npe(9usize),
+            self.npe(10usize),
+            self.npe(11usize),
+            self.npe(12usize),
+            self.npe(13usize),
+            self.npe(14usize),
+            self.npe(15usize),
+            self.npe(16usize),
+            self.npe(17usize),
+            self.npe(18usize),
+            self.npe(19usize),
+            self.npe(20usize),
+            self.npe(21usize),
+            self.npe(22usize),
+            self.npe(23usize),
+            self.npe(24usize),
+            self.npe(25usize),
+            self.npe(26usize),
+            self.npe(27usize),
+            self.npe(28usize),
+            self.npe(29usize),
+            self.npe(30usize),
+            self.npe(31usize)
+        )
+    }
+}
+#[doc = "Pin Control Nonsecure."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Pcns(pub u32);
+impl Pcns {
+    #[doc = "Nonsecure Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn nse(&self, n: usize) -> PcnsNse0 {
+        assert!(n < 32usize);
+        let offs = 0usize + n * 1usize;
+        let val = (self.0 >> offs) & 0x01;
+        PcnsNse0::from_bits(val as u8)
+    }
+    #[doc = "Nonsecure Enable."]
+    #[inline(always)]
+    pub const fn set_nse(&mut self, n: usize, val: PcnsNse0) {
+        assert!(n < 32usize);
+        let offs = 0usize + n * 1usize;
+        self.0 = (self.0 & !(0x01 << offs)) | (((val.to_bits() as u32) & 0x01) << offs);
+    }
+}
+impl Default for Pcns {
+    #[inline(always)]
+    fn default() -> Pcns {
+        Pcns(0)
+    }
+}
+impl core::fmt::Debug for Pcns {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Pcns")
+            .field("nse[0]", &self.nse(0usize))
+            .field("nse[1]", &self.nse(1usize))
+            .field("nse[2]", &self.nse(2usize))
+            .field("nse[3]", &self.nse(3usize))
+            .field("nse[4]", &self.nse(4usize))
+            .field("nse[5]", &self.nse(5usize))
+            .field("nse[6]", &self.nse(6usize))
+            .field("nse[7]", &self.nse(7usize))
+            .field("nse[8]", &self.nse(8usize))
+            .field("nse[9]", &self.nse(9usize))
+            .field("nse[10]", &self.nse(10usize))
+            .field("nse[11]", &self.nse(11usize))
+            .field("nse[12]", &self.nse(12usize))
+            .field("nse[13]", &self.nse(13usize))
+            .field("nse[14]", &self.nse(14usize))
+            .field("nse[15]", &self.nse(15usize))
+            .field("nse[16]", &self.nse(16usize))
+            .field("nse[17]", &self.nse(17usize))
+            .field("nse[18]", &self.nse(18usize))
+            .field("nse[19]", &self.nse(19usize))
+            .field("nse[20]", &self.nse(20usize))
+            .field("nse[21]", &self.nse(21usize))
+            .field("nse[22]", &self.nse(22usize))
+            .field("nse[23]", &self.nse(23usize))
+            .field("nse[24]", &self.nse(24usize))
+            .field("nse[25]", &self.nse(25usize))
+            .field("nse[26]", &self.nse(26usize))
+            .field("nse[27]", &self.nse(27usize))
+            .field("nse[28]", &self.nse(28usize))
+            .field("nse[29]", &self.nse(29usize))
+            .field("nse[30]", &self.nse(30usize))
+            .field("nse[31]", &self.nse(31usize))
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Pcns {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Pcns {{ nse[0]: {:?}, nse[1]: {:?}, nse[2]: {:?}, nse[3]: {:?}, nse[4]: {:?}, nse[5]: {:?}, nse[6]: {:?}, nse[7]: {:?}, nse[8]: {:?}, nse[9]: {:?}, nse[10]: {:?}, nse[11]: {:?}, nse[12]: {:?}, nse[13]: {:?}, nse[14]: {:?}, nse[15]: {:?}, nse[16]: {:?}, nse[17]: {:?}, nse[18]: {:?}, nse[19]: {:?}, nse[20]: {:?}, nse[21]: {:?}, nse[22]: {:?}, nse[23]: {:?}, nse[24]: {:?}, nse[25]: {:?}, nse[26]: {:?}, nse[27]: {:?}, nse[28]: {:?}, nse[29]: {:?}, nse[30]: {:?}, nse[31]: {:?} }}",
+            self.nse(0usize),
+            self.nse(1usize),
+            self.nse(2usize),
+            self.nse(3usize),
+            self.nse(4usize),
+            self.nse(5usize),
+            self.nse(6usize),
+            self.nse(7usize),
+            self.nse(8usize),
+            self.nse(9usize),
+            self.nse(10usize),
+            self.nse(11usize),
+            self.nse(12usize),
+            self.nse(13usize),
+            self.nse(14usize),
+            self.nse(15usize),
+            self.nse(16usize),
+            self.nse(17usize),
+            self.nse(18usize),
+            self.nse(19usize),
+            self.nse(20usize),
+            self.nse(21usize),
+            self.nse(22usize),
+            self.nse(23usize),
+            self.nse(24usize),
+            self.nse(25usize),
+            self.nse(26usize),
+            self.nse(27usize),
+            self.nse(28usize),
+            self.nse(29usize),
+            self.nse(30usize),
+            self.nse(31usize)
+        )
     }
 }
 #[doc = "Port Clear Output."]
@@ -1986,14 +2095,14 @@ impl Verid {
     #[doc = "Feature Specification Number."]
     #[must_use]
     #[inline(always)]
-    pub const fn feature(&self) -> Feature {
+    pub const fn feature(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
-        Feature::from_bits(val as u16)
+        val as u16
     }
     #[doc = "Feature Specification Number."]
     #[inline(always)]
-    pub const fn set_feature(&mut self, val: Feature) {
-        self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
+    pub const fn set_feature(&mut self, val: u16) {
+        self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
     #[doc = "Minor Version Number."]
     #[must_use]
@@ -2040,73 +2149,25 @@ impl defmt::Format for Verid {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Verid {{ feature: {:?}, minor: {=u8:?}, major: {=u8:?} }}",
+            "Verid {{ feature: {=u16:?}, minor: {=u8:?}, major: {=u8:?} }}",
             self.feature(),
             self.minor(),
             self.major()
         )
     }
 }
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
-pub struct Feature(u16);
-impl Feature {
-    #[doc = "Basic implementation."]
-    pub const FEATURE0: Self = Self(0x0);
-    #[doc = "Protection registers implemented."]
-    pub const FEATURE1: Self = Self(0x01);
-}
-impl Feature {
-    pub const fn from_bits(val: u16) -> Feature {
-        Self(val & 0xffff)
-    }
-    pub const fn to_bits(self) -> u16 {
-        self.0
-    }
-}
-impl core::fmt::Debug for Feature {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        match self.0 {
-            0x0 => f.write_str("FEATURE0"),
-            0x01 => f.write_str("FEATURE1"),
-            other => core::write!(f, "0x{:02X}", other),
-        }
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Feature {
-    fn format(&self, f: defmt::Formatter) {
-        match self.0 {
-            0x0 => defmt::write!(f, "FEATURE0"),
-            0x01 => defmt::write!(f, "FEATURE1"),
-            other => defmt::write!(f, "0x{:02X}", other),
-        }
-    }
-}
-impl From<u16> for Feature {
-    #[inline(always)]
-    fn from(val: u16) -> Feature {
-        Feature::from_bits(val)
-    }
-}
-impl From<Feature> for u16 {
-    #[inline(always)]
-    fn from(val: Feature) -> u16 {
-        Feature::to_bits(val)
-    }
-}
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe0 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
+pub enum IcnpNpe0 {
+    #[doc = "Privilege access."]
+    Npe0 = 0x0,
+    #[doc = "Nonprivilege access."]
+    Npe1 = 0x01,
 }
-impl Giwe0 {
+impl IcnpNpe0 {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe0 {
+    pub const fn from_bits(val: u8) -> IcnpNpe0 {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -2114,30 +2175,30 @@ impl Giwe0 {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Giwe0 {
+impl From<u8> for IcnpNpe0 {
     #[inline(always)]
-    fn from(val: u8) -> Giwe0 {
-        Giwe0::from_bits(val)
+    fn from(val: u8) -> IcnpNpe0 {
+        IcnpNpe0::from_bits(val)
     }
 }
-impl From<Giwe0> for u8 {
+impl From<IcnpNpe0> for u8 {
     #[inline(always)]
-    fn from(val: Giwe0) -> u8 {
-        Giwe0::to_bits(val)
+    fn from(val: IcnpNpe0) -> u8 {
+        IcnpNpe0::to_bits(val)
     }
 }
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe1 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
+pub enum IcnpNpe1 {
+    #[doc = "Privilege access."]
+    Npe0 = 0x0,
+    #[doc = "Nonprivilege access."]
+    Npe1 = 0x01,
 }
-impl Giwe1 {
+impl IcnpNpe1 {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe1 {
+    pub const fn from_bits(val: u8) -> IcnpNpe1 {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -2145,30 +2206,30 @@ impl Giwe1 {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Giwe1 {
+impl From<u8> for IcnpNpe1 {
     #[inline(always)]
-    fn from(val: u8) -> Giwe1 {
-        Giwe1::from_bits(val)
+    fn from(val: u8) -> IcnpNpe1 {
+        IcnpNpe1::from_bits(val)
     }
 }
-impl From<Giwe1> for u8 {
+impl From<IcnpNpe1> for u8 {
     #[inline(always)]
-    fn from(val: Giwe1) -> u8 {
-        Giwe1::to_bits(val)
+    fn from(val: IcnpNpe1) -> u8 {
+        IcnpNpe1::to_bits(val)
     }
 }
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe10 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
+pub enum IcnsNse0 {
+    #[doc = "Secure access."]
+    Nse0 = 0x0,
+    #[doc = "Nonsecure access."]
+    Nse1 = 0x01,
 }
-impl Giwe10 {
+impl IcnsNse0 {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe10 {
+    pub const fn from_bits(val: u8) -> IcnsNse0 {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -2176,30 +2237,30 @@ impl Giwe10 {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Giwe10 {
+impl From<u8> for IcnsNse0 {
     #[inline(always)]
-    fn from(val: u8) -> Giwe10 {
-        Giwe10::from_bits(val)
+    fn from(val: u8) -> IcnsNse0 {
+        IcnsNse0::from_bits(val)
     }
 }
-impl From<Giwe10> for u8 {
+impl From<IcnsNse0> for u8 {
     #[inline(always)]
-    fn from(val: Giwe10) -> u8 {
-        Giwe10::to_bits(val)
+    fn from(val: IcnsNse0) -> u8 {
+        IcnsNse0::to_bits(val)
     }
 }
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe11 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
+pub enum IcnsNse1 {
+    #[doc = "Secure access."]
+    Nse0 = 0x0,
+    #[doc = "Nonsecure access."]
+    Nse1 = 0x01,
 }
-impl Giwe11 {
+impl IcnsNse1 {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe11 {
+    pub const fn from_bits(val: u8) -> IcnsNse1 {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -2207,884 +2268,16 @@ impl Giwe11 {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Giwe11 {
+impl From<u8> for IcnsNse1 {
     #[inline(always)]
-    fn from(val: u8) -> Giwe11 {
-        Giwe11::from_bits(val)
+    fn from(val: u8) -> IcnsNse1 {
+        IcnsNse1::from_bits(val)
     }
 }
-impl From<Giwe11> for u8 {
+impl From<IcnsNse1> for u8 {
     #[inline(always)]
-    fn from(val: Giwe11) -> u8 {
-        Giwe11::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe12 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe12 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe12 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe12 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe12 {
-        Giwe12::from_bits(val)
-    }
-}
-impl From<Giwe12> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe12) -> u8 {
-        Giwe12::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe13 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe13 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe13 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe13 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe13 {
-        Giwe13::from_bits(val)
-    }
-}
-impl From<Giwe13> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe13) -> u8 {
-        Giwe13::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe14 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe14 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe14 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe14 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe14 {
-        Giwe14::from_bits(val)
-    }
-}
-impl From<Giwe14> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe14) -> u8 {
-        Giwe14::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe15 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe15 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe15 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe15 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe15 {
-        Giwe15::from_bits(val)
-    }
-}
-impl From<Giwe15> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe15) -> u8 {
-        Giwe15::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe16 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe16 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe16 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe16 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe16 {
-        Giwe16::from_bits(val)
-    }
-}
-impl From<Giwe16> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe16) -> u8 {
-        Giwe16::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe17 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe17 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe17 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe17 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe17 {
-        Giwe17::from_bits(val)
-    }
-}
-impl From<Giwe17> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe17) -> u8 {
-        Giwe17::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe18 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe18 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe18 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe18 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe18 {
-        Giwe18::from_bits(val)
-    }
-}
-impl From<Giwe18> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe18) -> u8 {
-        Giwe18::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe19 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe19 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe19 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe19 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe19 {
-        Giwe19::from_bits(val)
-    }
-}
-impl From<Giwe19> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe19) -> u8 {
-        Giwe19::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe2 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe2 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe2 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe2 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe2 {
-        Giwe2::from_bits(val)
-    }
-}
-impl From<Giwe2> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe2) -> u8 {
-        Giwe2::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe20 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe20 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe20 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe20 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe20 {
-        Giwe20::from_bits(val)
-    }
-}
-impl From<Giwe20> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe20) -> u8 {
-        Giwe20::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe21 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe21 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe21 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe21 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe21 {
-        Giwe21::from_bits(val)
-    }
-}
-impl From<Giwe21> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe21) -> u8 {
-        Giwe21::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe22 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe22 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe22 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe22 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe22 {
-        Giwe22::from_bits(val)
-    }
-}
-impl From<Giwe22> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe22) -> u8 {
-        Giwe22::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe23 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe23 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe23 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe23 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe23 {
-        Giwe23::from_bits(val)
-    }
-}
-impl From<Giwe23> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe23) -> u8 {
-        Giwe23::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe24 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe24 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe24 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe24 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe24 {
-        Giwe24::from_bits(val)
-    }
-}
-impl From<Giwe24> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe24) -> u8 {
-        Giwe24::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe25 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe25 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe25 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe25 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe25 {
-        Giwe25::from_bits(val)
-    }
-}
-impl From<Giwe25> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe25) -> u8 {
-        Giwe25::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe26 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe26 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe26 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe26 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe26 {
-        Giwe26::from_bits(val)
-    }
-}
-impl From<Giwe26> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe26) -> u8 {
-        Giwe26::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe27 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe27 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe27 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe27 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe27 {
-        Giwe27::from_bits(val)
-    }
-}
-impl From<Giwe27> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe27) -> u8 {
-        Giwe27::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe28 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe28 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe28 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe28 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe28 {
-        Giwe28::from_bits(val)
-    }
-}
-impl From<Giwe28> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe28) -> u8 {
-        Giwe28::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe29 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe29 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe29 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe29 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe29 {
-        Giwe29::from_bits(val)
-    }
-}
-impl From<Giwe29> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe29) -> u8 {
-        Giwe29::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe3 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe3 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe3 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe3 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe3 {
-        Giwe3::from_bits(val)
-    }
-}
-impl From<Giwe3> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe3) -> u8 {
-        Giwe3::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe30 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe30 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe30 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe30 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe30 {
-        Giwe30::from_bits(val)
-    }
-}
-impl From<Giwe30> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe30) -> u8 {
-        Giwe30::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe31 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe31 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe31 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe31 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe31 {
-        Giwe31::from_bits(val)
-    }
-}
-impl From<Giwe31> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe31) -> u8 {
-        Giwe31::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe4 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe4 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe4 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe4 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe4 {
-        Giwe4::from_bits(val)
-    }
-}
-impl From<Giwe4> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe4) -> u8 {
-        Giwe4::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe5 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe5 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe5 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe5 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe5 {
-        Giwe5::from_bits(val)
-    }
-}
-impl From<Giwe5> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe5) -> u8 {
-        Giwe5::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe6 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe6 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe6 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe6 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe6 {
-        Giwe6::from_bits(val)
-    }
-}
-impl From<Giwe6> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe6) -> u8 {
-        Giwe6::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe7 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe7 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe7 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe7 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe7 {
-        Giwe7::from_bits(val)
-    }
-}
-impl From<Giwe7> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe7) -> u8 {
-        Giwe7::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe8 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe8 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe8 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe8 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe8 {
-        Giwe8::from_bits(val)
-    }
-}
-impl From<Giwe8> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe8) -> u8 {
-        Giwe8::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Giwe9 {
-    #[doc = "Not updated."]
-    GIWE0 = 0x0,
-    #[doc = "Updated."]
-    GIWE1 = 0x01,
-}
-impl Giwe9 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Giwe9 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Giwe9 {
-    #[inline(always)]
-    fn from(val: u8) -> Giwe9 {
-        Giwe9::from_bits(val)
-    }
-}
-impl From<Giwe9> for u8 {
-    #[inline(always)]
-    fn from(val: Giwe9) -> u8 {
-        Giwe9::to_bits(val)
+    fn from(val: IcnsNse1) -> u8 {
+        IcnsNse1::to_bits(val)
     }
 }
 #[repr(u8)]
@@ -3092,34 +2285,34 @@ impl From<Giwe9> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Irqc {
     #[doc = "ISF is disabled."]
-    IRQC0 = 0x0,
+    Irqc0 = 0x0,
     #[doc = "ISF and DMA request on rising edge."]
-    IRQC1 = 0x01,
+    Irqc1 = 0x01,
     #[doc = "ISF and DMA request on falling edge."]
-    IRQC2 = 0x02,
+    Irqc2 = 0x02,
     #[doc = "ISF and DMA request on either edge."]
-    IRQC3 = 0x03,
+    Irqc3 = 0x03,
     _RESERVED_4 = 0x04,
     #[doc = "ISF sets on rising edge."]
-    IRQC5 = 0x05,
+    Irqc5 = 0x05,
     #[doc = "ISF sets on falling edge."]
-    IRQC6 = 0x06,
+    Irqc6 = 0x06,
     #[doc = "ISF sets on either edge."]
-    IRQC7 = 0x07,
+    Irqc7 = 0x07,
     #[doc = "ISF and interrupt when logic 0."]
-    IRQC8 = 0x08,
+    Irqc8 = 0x08,
     #[doc = "ISF and interrupt on rising edge."]
-    IRQC9 = 0x09,
+    Irqc9 = 0x09,
     #[doc = "ISF and interrupt on falling edge."]
-    IRQC10 = 0x0a,
+    Irqc10 = 0x0a,
     #[doc = "ISF and Interrupt on either edge."]
-    IRQC11 = 0x0b,
+    Irqc11 = 0x0b,
     #[doc = "ISF and interrupt when logic 1."]
-    IRQC12 = 0x0c,
+    Irqc12 = 0x0c,
     #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
-    IRQC13 = 0x0d,
+    Irqc13 = 0x0d,
     #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
-    IRQC14 = 0x0e,
+    Irqc14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
 impl Irqc {
@@ -3147,11 +2340,42 @@ impl From<Irqc> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Irqs {
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
+    Irqs0 = 0x0,
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
+    Irqs1 = 0x01,
+}
+impl Irqs {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Irqs {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Irqs {
+    #[inline(always)]
+    fn from(val: u8) -> Irqs {
+        Irqs::from_bits(val)
+    }
+}
+impl From<Irqs> for u8 {
+    #[inline(always)]
+    fn from(val: Irqs) -> u8 {
+        Irqs::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf {
     #[doc = "Not detected."]
-    ISF0 = 0x0,
+    Isf0 = 0x0,
     #[doc = "Detected."]
-    ISF1 = 0x01,
+    Isf1 = 0x01,
 }
 impl Isf {
     #[inline(always)]
@@ -3178,15 +2402,15 @@ impl From<Isf> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf0 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
+pub enum Lk {
+    #[doc = "Not locked."]
+    Lk0 = 0x0,
+    #[doc = "Locked."]
+    Lk1 = 0x01,
 }
-impl Isf0 {
+impl Lk {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf0 {
+    pub const fn from_bits(val: u8) -> Lk {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -3194,30 +2418,30 @@ impl Isf0 {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Isf0 {
+impl From<u8> for Lk {
     #[inline(always)]
-    fn from(val: u8) -> Isf0 {
-        Isf0::from_bits(val)
+    fn from(val: u8) -> Lk {
+        Lk::from_bits(val)
     }
 }
-impl From<Isf0> for u8 {
+impl From<Lk> for u8 {
     #[inline(always)]
-    fn from(val: Isf0) -> u8 {
-        Isf0::to_bits(val)
+    fn from(val: Lk) -> u8 {
+        Lk::to_bits(val)
     }
 }
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf1 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
+pub enum PcnpNpe0 {
+    #[doc = "Privilege access."]
+    Npe0 = 0x0,
+    #[doc = "Nonprivilege access."]
+    Npe1 = 0x01,
 }
-impl Isf1 {
+impl PcnpNpe0 {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf1 {
+    pub const fn from_bits(val: u8) -> PcnpNpe0 {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -3225,30 +2449,30 @@ impl Isf1 {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Isf1 {
+impl From<u8> for PcnpNpe0 {
     #[inline(always)]
-    fn from(val: u8) -> Isf1 {
-        Isf1::from_bits(val)
+    fn from(val: u8) -> PcnpNpe0 {
+        PcnpNpe0::from_bits(val)
     }
 }
-impl From<Isf1> for u8 {
+impl From<PcnpNpe0> for u8 {
     #[inline(always)]
-    fn from(val: Isf1) -> u8 {
-        Isf1::to_bits(val)
+    fn from(val: PcnpNpe0) -> u8 {
+        PcnpNpe0::to_bits(val)
     }
 }
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf10 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
+pub enum PcnsNse0 {
+    #[doc = "Secure access."]
+    Nse0 = 0x0,
+    #[doc = "Nonsecure access."]
+    Nse1 = 0x01,
 }
-impl Isf10 {
+impl PcnsNse0 {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf10 {
+    pub const fn from_bits(val: u8) -> PcnsNse0 {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -3256,915 +2480,16 @@ impl Isf10 {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Isf10 {
+impl From<u8> for PcnsNse0 {
     #[inline(always)]
-    fn from(val: u8) -> Isf10 {
-        Isf10::from_bits(val)
+    fn from(val: u8) -> PcnsNse0 {
+        PcnsNse0::from_bits(val)
     }
 }
-impl From<Isf10> for u8 {
+impl From<PcnsNse0> for u8 {
     #[inline(always)]
-    fn from(val: Isf10) -> u8 {
-        Isf10::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf11 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf11 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf11 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf11 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf11 {
-        Isf11::from_bits(val)
-    }
-}
-impl From<Isf11> for u8 {
-    #[inline(always)]
-    fn from(val: Isf11) -> u8 {
-        Isf11::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf12 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf12 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf12 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf12 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf12 {
-        Isf12::from_bits(val)
-    }
-}
-impl From<Isf12> for u8 {
-    #[inline(always)]
-    fn from(val: Isf12) -> u8 {
-        Isf12::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf13 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf13 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf13 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf13 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf13 {
-        Isf13::from_bits(val)
-    }
-}
-impl From<Isf13> for u8 {
-    #[inline(always)]
-    fn from(val: Isf13) -> u8 {
-        Isf13::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf14 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf14 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf14 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf14 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf14 {
-        Isf14::from_bits(val)
-    }
-}
-impl From<Isf14> for u8 {
-    #[inline(always)]
-    fn from(val: Isf14) -> u8 {
-        Isf14::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf15 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf15 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf15 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf15 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf15 {
-        Isf15::from_bits(val)
-    }
-}
-impl From<Isf15> for u8 {
-    #[inline(always)]
-    fn from(val: Isf15) -> u8 {
-        Isf15::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf16 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf16 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf16 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf16 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf16 {
-        Isf16::from_bits(val)
-    }
-}
-impl From<Isf16> for u8 {
-    #[inline(always)]
-    fn from(val: Isf16) -> u8 {
-        Isf16::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf17 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf17 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf17 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf17 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf17 {
-        Isf17::from_bits(val)
-    }
-}
-impl From<Isf17> for u8 {
-    #[inline(always)]
-    fn from(val: Isf17) -> u8 {
-        Isf17::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf18 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf18 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf18 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf18 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf18 {
-        Isf18::from_bits(val)
-    }
-}
-impl From<Isf18> for u8 {
-    #[inline(always)]
-    fn from(val: Isf18) -> u8 {
-        Isf18::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf19 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf19 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf19 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf19 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf19 {
-        Isf19::from_bits(val)
-    }
-}
-impl From<Isf19> for u8 {
-    #[inline(always)]
-    fn from(val: Isf19) -> u8 {
-        Isf19::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf2 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf2 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf2 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf2 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf2 {
-        Isf2::from_bits(val)
-    }
-}
-impl From<Isf2> for u8 {
-    #[inline(always)]
-    fn from(val: Isf2) -> u8 {
-        Isf2::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf20 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf20 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf20 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf20 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf20 {
-        Isf20::from_bits(val)
-    }
-}
-impl From<Isf20> for u8 {
-    #[inline(always)]
-    fn from(val: Isf20) -> u8 {
-        Isf20::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf21 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf21 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf21 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf21 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf21 {
-        Isf21::from_bits(val)
-    }
-}
-impl From<Isf21> for u8 {
-    #[inline(always)]
-    fn from(val: Isf21) -> u8 {
-        Isf21::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf22 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf22 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf22 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf22 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf22 {
-        Isf22::from_bits(val)
-    }
-}
-impl From<Isf22> for u8 {
-    #[inline(always)]
-    fn from(val: Isf22) -> u8 {
-        Isf22::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf23 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf23 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf23 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf23 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf23 {
-        Isf23::from_bits(val)
-    }
-}
-impl From<Isf23> for u8 {
-    #[inline(always)]
-    fn from(val: Isf23) -> u8 {
-        Isf23::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf24 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf24 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf24 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf24 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf24 {
-        Isf24::from_bits(val)
-    }
-}
-impl From<Isf24> for u8 {
-    #[inline(always)]
-    fn from(val: Isf24) -> u8 {
-        Isf24::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf25 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf25 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf25 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf25 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf25 {
-        Isf25::from_bits(val)
-    }
-}
-impl From<Isf25> for u8 {
-    #[inline(always)]
-    fn from(val: Isf25) -> u8 {
-        Isf25::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf26 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf26 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf26 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf26 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf26 {
-        Isf26::from_bits(val)
-    }
-}
-impl From<Isf26> for u8 {
-    #[inline(always)]
-    fn from(val: Isf26) -> u8 {
-        Isf26::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf27 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf27 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf27 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf27 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf27 {
-        Isf27::from_bits(val)
-    }
-}
-impl From<Isf27> for u8 {
-    #[inline(always)]
-    fn from(val: Isf27) -> u8 {
-        Isf27::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf28 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf28 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf28 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf28 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf28 {
-        Isf28::from_bits(val)
-    }
-}
-impl From<Isf28> for u8 {
-    #[inline(always)]
-    fn from(val: Isf28) -> u8 {
-        Isf28::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf29 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf29 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf29 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf29 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf29 {
-        Isf29::from_bits(val)
-    }
-}
-impl From<Isf29> for u8 {
-    #[inline(always)]
-    fn from(val: Isf29) -> u8 {
-        Isf29::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf3 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf3 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf3 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf3 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf3 {
-        Isf3::from_bits(val)
-    }
-}
-impl From<Isf3> for u8 {
-    #[inline(always)]
-    fn from(val: Isf3) -> u8 {
-        Isf3::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf30 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf30 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf30 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf30 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf30 {
-        Isf30::from_bits(val)
-    }
-}
-impl From<Isf30> for u8 {
-    #[inline(always)]
-    fn from(val: Isf30) -> u8 {
-        Isf30::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf31 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf31 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf31 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf31 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf31 {
-        Isf31::from_bits(val)
-    }
-}
-impl From<Isf31> for u8 {
-    #[inline(always)]
-    fn from(val: Isf31) -> u8 {
-        Isf31::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf4 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf4 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf4 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf4 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf4 {
-        Isf4::from_bits(val)
-    }
-}
-impl From<Isf4> for u8 {
-    #[inline(always)]
-    fn from(val: Isf4) -> u8 {
-        Isf4::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf5 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf5 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf5 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf5 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf5 {
-        Isf5::from_bits(val)
-    }
-}
-impl From<Isf5> for u8 {
-    #[inline(always)]
-    fn from(val: Isf5) -> u8 {
-        Isf5::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf6 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf6 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf6 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf6 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf6 {
-        Isf6::from_bits(val)
-    }
-}
-impl From<Isf6> for u8 {
-    #[inline(always)]
-    fn from(val: Isf6) -> u8 {
-        Isf6::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf7 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf7 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf7 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf7 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf7 {
-        Isf7::from_bits(val)
-    }
-}
-impl From<Isf7> for u8 {
-    #[inline(always)]
-    fn from(val: Isf7) -> u8 {
-        Isf7::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf8 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf8 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf8 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf8 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf8 {
-        Isf8::from_bits(val)
-    }
-}
-impl From<Isf8> for u8 {
-    #[inline(always)]
-    fn from(val: Isf8) -> u8 {
-        Isf8::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Isf9 {
-    #[doc = "Not detected."]
-    ISF0 = 0x0,
-    #[doc = "Detected."]
-    ISF1 = 0x01,
-}
-impl Isf9 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Isf9 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Isf9 {
-    #[inline(always)]
-    fn from(val: u8) -> Isf9 {
-        Isf9::from_bits(val)
-    }
-}
-impl From<Isf9> for u8 {
-    #[inline(always)]
-    fn from(val: Isf9) -> u8 {
-        Isf9::to_bits(val)
+    fn from(val: PcnsNse0) -> u8 {
+        PcnsNse0::to_bits(val)
     }
 }
 #[repr(u8)]
@@ -4172,9 +2497,9 @@ impl From<Isf9> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pd {
     #[doc = "Logic zero."]
-    PD0 = 0x0,
+    Pd0 = 0x0,
     #[doc = "Logic one."]
-    PD1 = 0x01,
+    Pd1 = 0x01,
 }
 impl Pd {
     #[inline(always)]
@@ -4203,9 +2528,9 @@ impl From<Pd> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd {
     #[doc = "Input."]
-    PDD0 = 0x0,
+    Pdd0 = 0x0,
     #[doc = "Output."]
-    PDD1 = 0x01,
+    Pdd1 = 0x01,
 }
 impl Pdd {
     #[inline(always)]
@@ -4234,9 +2559,9 @@ impl From<Pdd> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid {
     #[doc = "Configured for general-purpose input."]
-    PID0 = 0x0,
+    Pid0 = 0x0,
     #[doc = "Disabled for general-purpose input."]
-    PID1 = 0x01,
+    Pid1 = 0x01,
 }
 impl Pid {
     #[inline(always)]
@@ -4265,9 +2590,9 @@ impl From<Pid> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco {
     #[doc = "No change."]
-    PTCO0 = 0x0,
+    Ptco0 = 0x0,
     #[doc = "Corresponding field in PDOR becomes 0."]
-    PTCO1 = 0x01,
+    Ptco1 = 0x01,
 }
 impl Ptco {
     #[inline(always)]
@@ -4296,9 +2621,9 @@ impl From<Ptco> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso {
     #[doc = "No change."]
-    PTSO0 = 0x0,
+    Ptso0 = 0x0,
     #[doc = "Corresponding field in PDOR becomes 1."]
-    PTSO1 = 0x01,
+    Ptso1 = 0x01,
 }
 impl Ptso {
     #[inline(always)]

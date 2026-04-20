@@ -103,7 +103,7 @@ checksum = "613afe47fcd5fac7ccf1db93babcb082c5994d996f20b8b159f2ad1658eb5724"
 [[package]]
 name = "chiptool"
 version = "0.1.0"
-source = "git+https://github.com/embassy-rs/chiptool.git?rev=be1bff3e9e1b27b090e69bd9ac753c66fdcce678#be1bff3e9e1b27b090e69bd9ac753c66fdcce678"
+source = "git+https://github.com/embassy-rs/chiptool.git?rev=859f02b7c3408f52c37065de6f1ad1b1bcb0c94a#859f02b7c3408f52c37065de6f1ad1b1bcb0c94a"
 dependencies = [
  "anyhow",
  "clap",

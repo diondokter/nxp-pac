@@ -1,7 +1,8 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (2fd28c5 2026-04-02))"]
-#[doc = "TRNG."]
+#![allow(non_upper_case_globals)]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (859f02b 2026-04-15))"]
+#[doc = "pd_main.trng0."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trng {
     ptr: *mut u8,
@@ -64,7 +65,7 @@ impl Trng {
     }
     #[doc = "Oscillator-2 Frequency Count Register."]
     #[inline(always)]
-    pub const fn osc2_frqcnt(self) -> crate::pac::common::Reg<Osc2frqcnt, crate::pac::common::R> {
+    pub const fn osc2_frqcnt(self) -> crate::pac::common::Reg<Osc2Frqcnt, crate::pac::common::R> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x18usize) as _) }
     }
     #[doc = "Frequency Count Register."]
@@ -152,9 +153,9 @@ impl Trng {
     pub const fn status(self) -> crate::pac::common::Reg<Status, crate::pac::common::R> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x3cusize) as _) }
     }
-    #[doc = "Entropy Read Register."]
+    #[doc = "Entropy Read Register"]
     #[inline(always)]
-    pub const fn ent(self, n: usize) -> crate::pac::common::Reg<Ent, crate::pac::common::R> {
+    pub const fn ent(self, n: usize) -> crate::pac::common::Reg<Ent, crate::pac::common::RW> {
         assert!(n < 8usize);
         unsafe {
             crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x40usize + n * 4usize) as _)
@@ -220,19 +221,9 @@ impl Trng {
     pub const fn int_status(self) -> crate::pac::common::Reg<IntStatus, crate::pac::common::R> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xacusize) as _) }
     }
-    #[doc = "Common Security Error Register."]
-    #[inline(always)]
-    pub const fn cser(self) -> crate::pac::common::Reg<Cser, crate::pac::common::R> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xb0usize) as _) }
-    }
-    #[doc = "Common Security Clear Register."]
-    #[inline(always)]
-    pub const fn csclr(self) -> crate::pac::common::Reg<Csclr, crate::pac::common::W> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xb4usize) as _) }
-    }
     #[doc = "TRNG Oscillator 2 Control Register."]
     #[inline(always)]
-    pub const fn osc2_ctl(self) -> crate::pac::common::Reg<Osc2ctl, crate::pac::common::RW> {
+    pub const fn osc2_ctl(self) -> crate::pac::common::Reg<Osc2Ctl, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xecusize) as _) }
     }
     #[doc = "Version ID Register (MS)."]
@@ -245,171 +236,12 @@ impl Trng {
     pub const fn vid2(self) -> crate::pac::common::Reg<Vid2, crate::pac::common::R> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xf4usize) as _) }
     }
-}
-#[doc = "Common Security Clear Register."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Csclr(pub u32);
-impl Csclr {
-    #[doc = "Redundant Signals error/fault Detected."]
-    #[must_use]
+    #[doc = "Oscillator Inverter Chain Length Register."]
     #[inline(always)]
-    pub const fn red_sigs_clr(&self) -> RedSigsClr {
-        let val = (self.0 >> 0usize) & 0x01;
-        RedSigsClr::from_bits(val as u8)
-    }
-    #[doc = "Redundant Signals error/fault Detected."]
-    #[inline(always)]
-    pub const fn set_red_sigs_clr(&mut self, val: RedSigsClr) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
-    }
-    #[doc = "Read only: Redundant FSM error/fault detected."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn red_fsm_clr(&self) -> RedFsmClr {
-        let val = (self.0 >> 1usize) & 0x01;
-        RedFsmClr::from_bits(val as u8)
-    }
-    #[doc = "Read only: Redundant FSM error/fault detected."]
-    #[inline(always)]
-    pub const fn set_red_fsm_clr(&mut self, val: RedFsmClr) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
-    }
-    #[doc = "Read only: Local-EDC error/fault detected."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn local_edc_clr(&self) -> LocalEdcClr {
-        let val = (self.0 >> 2usize) & 0x01;
-        LocalEdcClr::from_bits(val as u8)
-    }
-    #[doc = "Read only: Local-EDC error/fault detected."]
-    #[inline(always)]
-    pub const fn set_local_edc_clr(&mut self, val: LocalEdcClr) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
-    }
-    #[doc = "Read only: Bus-EDC error/fault detected."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn bus_edc_clr(&self) -> BusEdcClr {
-        let val = (self.0 >> 3usize) & 0x01;
-        BusEdcClr::from_bits(val as u8)
-    }
-    #[doc = "Read only: Bus-EDC error/fault detected."]
-    #[inline(always)]
-    pub const fn set_bus_edc_clr(&mut self, val: BusEdcClr) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
-    }
-}
-impl Default for Csclr {
-    #[inline(always)]
-    fn default() -> Csclr {
-        Csclr(0)
-    }
-}
-impl core::fmt::Debug for Csclr {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Csclr")
-            .field("red_sigs_clr", &self.red_sigs_clr())
-            .field("red_fsm_clr", &self.red_fsm_clr())
-            .field("local_edc_clr", &self.local_edc_clr())
-            .field("bus_edc_clr", &self.bus_edc_clr())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Csclr {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "Csclr {{ red_sigs_clr: {:?}, red_fsm_clr: {:?}, local_edc_clr: {:?}, bus_edc_clr: {:?} }}",
-            self.red_sigs_clr(),
-            self.red_fsm_clr(),
-            self.local_edc_clr(),
-            self.bus_edc_clr()
-        )
-    }
-}
-#[doc = "Common Security Error Register."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Cser(pub u32);
-impl Cser {
-    #[doc = "Redundant Signals error/fault Detected."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn red_sigs(&self) -> RedSigs {
-        let val = (self.0 >> 0usize) & 0x01;
-        RedSigs::from_bits(val as u8)
-    }
-    #[doc = "Redundant Signals error/fault Detected."]
-    #[inline(always)]
-    pub const fn set_red_sigs(&mut self, val: RedSigs) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
-    }
-    #[doc = "Redundant FSM error/fault detected."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn red_fsm(&self) -> RedFsm {
-        let val = (self.0 >> 1usize) & 0x01;
-        RedFsm::from_bits(val as u8)
-    }
-    #[doc = "Redundant FSM error/fault detected."]
-    #[inline(always)]
-    pub const fn set_red_fsm(&mut self, val: RedFsm) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
-    }
-    #[doc = "Local-EDC error/fault detected."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn local_edc(&self) -> LocalEdc {
-        let val = (self.0 >> 2usize) & 0x01;
-        LocalEdc::from_bits(val as u8)
-    }
-    #[doc = "Local-EDC error/fault detected."]
-    #[inline(always)]
-    pub const fn set_local_edc(&mut self, val: LocalEdc) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
-    }
-    #[doc = "Bus-EDC error/fault detected."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn bus_edc(&self) -> BusEdc {
-        let val = (self.0 >> 3usize) & 0x01;
-        BusEdc::from_bits(val as u8)
-    }
-    #[doc = "Bus-EDC error/fault detected."]
-    #[inline(always)]
-    pub const fn set_bus_edc(&mut self, val: BusEdc) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
-    }
-}
-impl Default for Cser {
-    #[inline(always)]
-    fn default() -> Cser {
-        Cser(0)
-    }
-}
-impl core::fmt::Debug for Cser {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Cser")
-            .field("red_sigs", &self.red_sigs())
-            .field("red_fsm", &self.red_fsm())
-            .field("local_edc", &self.local_edc())
-            .field("bus_edc", &self.bus_edc())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Cser {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "Cser {{ red_sigs: {:?}, red_fsm: {:?}, local_edc: {:?}, bus_edc: {:?} }}",
-            self.red_sigs(),
-            self.red_fsm(),
-            self.local_edc(),
-            self.bus_edc()
-        )
+    pub const fn osc_inv_chain_len(
+        self,
+    ) -> crate::pac::common::Reg<OscInvChainLen, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xf8usize) as _) }
     }
 }
 #[doc = "Entropy Read Register."]
@@ -599,14 +431,14 @@ impl IntCtrl {
     pub const fn set_frq_ct_fail(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Clear the INTG_FLT interrupt."]
+    #[doc = "Clear the INTG_FLT interrupt"]
     #[must_use]
     #[inline(always)]
     pub const fn intg_flt(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Clear the INTG_FLT interrupt."]
+    #[doc = "Clear the INTG_FLT interrupt"]
     #[inline(always)]
     pub const fn set_intg_flt(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
@@ -682,14 +514,14 @@ impl IntMask {
     pub const fn set_frq_ct_fail(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Mask the INTG_FLT interrupt."]
+    #[doc = "Mask the INTG_FLT interrupt"]
     #[must_use]
     #[inline(always)]
     pub const fn intg_flt(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Mask the INTG_FLT interrupt."]
+    #[doc = "Mask the INTG_FLT interrupt"]
     #[inline(always)]
     pub const fn set_intg_flt(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
@@ -744,14 +576,14 @@ impl IntStatus {
     #[doc = "Entropy Valid."]
     #[must_use]
     #[inline(always)]
-    pub const fn ent_val(&self) -> IntStatusEntVal {
+    pub const fn ent_val(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
-        IntStatusEntVal::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Entropy Valid."]
     #[inline(always)]
-    pub const fn set_ent_val(&mut self, val: IntStatusEntVal) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    pub const fn set_ent_val(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
     #[doc = "Frequency Count Fail."]
     #[must_use]
@@ -799,7 +631,7 @@ impl defmt::Format for IntStatus {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "IntStatus {{ hw_err: {=bool:?}, ent_val: {:?}, frq_ct_fail: {=bool:?}, intg_flt: {=bool:?} }}",
+            "IntStatus {{ hw_err: {=bool:?}, ent_val: {=bool:?}, frq_ct_fail: {=bool:?}, intg_flt: {=bool:?} }}",
             self.hw_err(),
             self.ent_val(),
             self.frq_ct_fail(),
@@ -812,6 +644,18 @@ impl defmt::Format for IntStatus {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mctl(pub u32);
 impl Mctl {
+    #[doc = "Sample Mode."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn samp_mode(&self) -> SampMode {
+        let val = (self.0 >> 0usize) & 0x03;
+        SampMode::from_bits(val as u8)
+    }
+    #[doc = "Sample Mode."]
+    #[inline(always)]
+    pub const fn set_samp_mode(&mut self, val: SampMode) {
+        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
+    }
     #[doc = "Oscillator1 Divide."]
     #[must_use]
     #[inline(always)]
@@ -859,6 +703,18 @@ impl Mctl {
     #[inline(always)]
     pub const fn set_rst_def(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
+    }
+    #[doc = "Force System Clock."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn for_sclk(&self) -> bool {
+        let val = (self.0 >> 7usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Force System Clock."]
+    #[inline(always)]
+    pub const fn set_for_sclk(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
     #[doc = "Frequency Count Fail."]
     #[must_use]
@@ -944,18 +800,6 @@ impl Mctl {
     pub const fn set_prgm(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Integrity Error."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn intg_err(&self) -> bool {
-        let val = (self.0 >> 31usize) & 0x01;
-        val != 0
-    }
-    #[doc = "Integrity Error."]
-    #[inline(always)]
-    pub const fn set_intg_err(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
-    }
 }
 impl Default for Mctl {
     #[inline(always)]
@@ -966,10 +810,12 @@ impl Default for Mctl {
 impl core::fmt::Debug for Mctl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mctl")
+            .field("samp_mode", &self.samp_mode())
             .field("osc_div", &self.osc_div())
             .field("dis_slf_tst", &self.dis_slf_tst())
             .field("trng_acc", &self.trng_acc())
             .field("rst_def", &self.rst_def())
+            .field("for_sclk", &self.for_sclk())
             .field("fct_fail", &self.fct_fail())
             .field("fct_val", &self.fct_val())
             .field("ent_val", &self.ent_val())
@@ -977,7 +823,6 @@ impl core::fmt::Debug for Mctl {
             .field("tstop_ok", &self.tstop_ok())
             .field("osc2_fail", &self.osc2_fail())
             .field("prgm", &self.prgm())
-            .field("intg_err", &self.intg_err())
             .finish()
     }
 }
@@ -986,27 +831,28 @@ impl defmt::Format for Mctl {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Mctl {{ osc_div: {:?}, dis_slf_tst: {=bool:?}, trng_acc: {=bool:?}, rst_def: {=bool:?}, fct_fail: {=bool:?}, fct_val: {=bool:?}, ent_val: {=bool:?}, err: {=bool:?}, tstop_ok: {=bool:?}, osc2_fail: {=bool:?}, prgm: {=bool:?}, intg_err: {=bool:?} }}",
+            "Mctl {{ samp_mode: {:?}, osc_div: {:?}, dis_slf_tst: {=bool:?}, trng_acc: {=bool:?}, rst_def: {=bool:?}, for_sclk: {=bool:?}, fct_fail: {=bool:?}, fct_val: {=bool:?}, ent_val: {=bool:?}, err: {=bool:?}, tstop_ok: {=bool:?}, osc2_fail: {=bool:?}, prgm: {=bool:?} }}",
+            self.samp_mode(),
             self.osc_div(),
             self.dis_slf_tst(),
             self.trng_acc(),
             self.rst_def(),
+            self.for_sclk(),
             self.fct_fail(),
             self.fct_val(),
             self.ent_val(),
             self.err(),
             self.tstop_ok(),
             self.osc2_fail(),
-            self.prgm(),
-            self.intg_err()
+            self.prgm()
         )
     }
 }
 #[doc = "TRNG Oscillator 2 Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Osc2ctl(pub u32);
-impl Osc2ctl {
+pub struct Osc2Ctl(pub u32);
+impl Osc2Ctl {
     #[doc = "TRNG entropy generation control."]
     #[must_use]
     #[inline(always)]
@@ -1022,25 +868,25 @@ impl Osc2ctl {
     #[doc = "Oscillator 2 Divide."]
     #[must_use]
     #[inline(always)]
-    pub const fn osc2_div(&self) -> Osc2div {
+    pub const fn osc2_div(&self) -> Osc2Div {
         let val = (self.0 >> 2usize) & 0x03;
-        Osc2div::from_bits(val as u8)
+        Osc2Div::from_bits(val as u8)
     }
     #[doc = "Oscillator 2 Divide."]
     #[inline(always)]
-    pub const fn set_osc2_div(&mut self, val: Osc2div) {
+    pub const fn set_osc2_div(&mut self, val: Osc2Div) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
     #[doc = "Oscillator 2 Clock Output Enable."]
     #[must_use]
     #[inline(always)]
-    pub const fn osc2_out_en(&self) -> Osc2outEn {
+    pub const fn osc2_out_en(&self) -> Osc2OutEn {
         let val = (self.0 >> 4usize) & 0x01;
-        Osc2outEn::from_bits(val as u8)
+        Osc2OutEn::from_bits(val as u8)
     }
     #[doc = "Oscillator 2 Clock Output Enable."]
     #[inline(always)]
-    pub const fn set_osc2_out_en(&mut self, val: Osc2outEn) {
+    pub const fn set_osc2_out_en(&mut self, val: Osc2OutEn) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
     #[doc = "TRNG Oscillator 2 Frequency Count Valid."]
@@ -1080,15 +926,15 @@ impl Osc2ctl {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
 }
-impl Default for Osc2ctl {
+impl Default for Osc2Ctl {
     #[inline(always)]
-    fn default() -> Osc2ctl {
-        Osc2ctl(0)
+    fn default() -> Osc2Ctl {
+        Osc2Ctl(0)
     }
 }
-impl core::fmt::Debug for Osc2ctl {
+impl core::fmt::Debug for Osc2Ctl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Osc2ctl")
+        f.debug_struct("Osc2Ctl")
             .field("trng_ent_ctl", &self.trng_ent_ctl())
             .field("osc2_div", &self.osc2_div())
             .field("osc2_out_en", &self.osc2_out_en())
@@ -1099,11 +945,11 @@ impl core::fmt::Debug for Osc2ctl {
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for Osc2ctl {
+impl defmt::Format for Osc2Ctl {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Osc2ctl {{ trng_ent_ctl: {:?}, osc2_div: {:?}, osc2_out_en: {:?}, osc2_fct_val: {=bool:?}, osc_failsafe_lmt: {:?}, osc_failsafe_test: {=bool:?} }}",
+            "Osc2Ctl {{ trng_ent_ctl: {:?}, osc2_div: {:?}, osc2_out_en: {:?}, osc2_fct_val: {=bool:?}, osc_failsafe_lmt: {:?}, osc_failsafe_test: {=bool:?} }}",
             self.trng_ent_ctl(),
             self.osc2_div(),
             self.osc2_out_en(),
@@ -1116,8 +962,8 @@ impl defmt::Format for Osc2ctl {
 #[doc = "Oscillator-2 Frequency Count Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Osc2frqcnt(pub u32);
-impl Osc2frqcnt {
+pub struct Osc2Frqcnt(pub u32);
+impl Osc2Frqcnt {
     #[doc = "Frequency Count."]
     #[must_use]
     #[inline(always)]
@@ -1131,26 +977,81 @@ impl Osc2frqcnt {
         self.0 = (self.0 & !(0x003f_ffff << 0usize)) | (((val as u32) & 0x003f_ffff) << 0usize);
     }
 }
-impl Default for Osc2frqcnt {
+impl Default for Osc2Frqcnt {
     #[inline(always)]
-    fn default() -> Osc2frqcnt {
-        Osc2frqcnt(0)
+    fn default() -> Osc2Frqcnt {
+        Osc2Frqcnt(0)
     }
 }
-impl core::fmt::Debug for Osc2frqcnt {
+impl core::fmt::Debug for Osc2Frqcnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Osc2frqcnt")
+        f.debug_struct("Osc2Frqcnt")
             .field("osc2_frq_ct", &self.osc2_frq_ct())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for Osc2frqcnt {
+impl defmt::Format for Osc2Frqcnt {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Osc2frqcnt {{ osc2_frq_ct: {=u32:?} }}",
+            "Osc2Frqcnt {{ osc2_frq_ct: {=u32:?} }}",
             self.osc2_frq_ct()
+        )
+    }
+}
+#[doc = "Oscillator Inverter Chain Length Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct OscInvChainLen(pub u32);
+impl OscInvChainLen {
+    #[doc = "Shows the even number of inverters set/chosen for the oscillator 1."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn osc1_inv_chain_len(&self) -> Osc1InvChainLen {
+        let val = (self.0 >> 0usize) & 0xff;
+        Osc1InvChainLen::from_bits(val as u8)
+    }
+    #[doc = "Shows the even number of inverters set/chosen for the oscillator 1."]
+    #[inline(always)]
+    pub const fn set_osc1_inv_chain_len(&mut self, val: Osc1InvChainLen) {
+        self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
+    }
+    #[doc = "Shows the even number of inverters set/chosen for the oscillator 2."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn osc2_inv_chain_len(&self) -> Osc2InvChainLen {
+        let val = (self.0 >> 8usize) & 0xff;
+        Osc2InvChainLen::from_bits(val as u8)
+    }
+    #[doc = "Shows the even number of inverters set/chosen for the oscillator 2."]
+    #[inline(always)]
+    pub const fn set_osc2_inv_chain_len(&mut self, val: Osc2InvChainLen) {
+        self.0 = (self.0 & !(0xff << 8usize)) | (((val.to_bits() as u32) & 0xff) << 8usize);
+    }
+}
+impl Default for OscInvChainLen {
+    #[inline(always)]
+    fn default() -> OscInvChainLen {
+        OscInvChainLen(0)
+    }
+}
+impl core::fmt::Debug for OscInvChainLen {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("OscInvChainLen")
+            .field("osc1_inv_chain_len", &self.osc1_inv_chain_len())
+            .field("osc2_inv_chain_len", &self.osc2_inv_chain_len())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for OscInvChainLen {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "OscInvChainLen {{ osc1_inv_chain_len: {:?}, osc2_inv_chain_len: {:?} }}",
+            self.osc1_inv_chain_len(),
+            self.osc2_inv_chain_len()
         )
     }
 }
@@ -2609,14 +2510,14 @@ impl defmt::Format for Sdctl {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SecCfg(pub u32);
 impl SecCfg {
-    #[doc = "If set, below mentioned TRNG configuration registers cannot be programmed: Oscillator 2 Control Register (OSC2_CTL): TRNG Entropy Generation Control \\[1:0\\] Oscillator 2 Divider \\[3:2\\] Oscillator Fail Safe Limit \\[13:12\\] Oscillator Fail Safe Test \\[14\\] TRNG Seed Control Register (SDCTL) TRNG Frequency Count Minimum Limit Register (FRQMIN) TRNG Frequency Count Maximum Limit Register (FRQMAX) TRNG Statistical Check Monobit Limit Register (SCML) TRNG Statistical Check Run Length 1 Limit Register (SCR1L) TRNG Statistical Check Run Length 2 Limit Register (SCR2L) TRNG Statistical Check Run Length 3 Limit Register (SCR3L) TRNG Miscellaneous Control Register (MCTL): Sample Mode \\[1:0\\] Oscillator Divider \\[3:2\\] Reset Defaults \\[6\\] Force System Clock \\[7\\] Long Runs Continuation Mode \\[14\\] After this bit has been written to a 1, it cannot be changed."]
+    #[doc = "If set, below mentioned TRNG configuration registers cannot be programmed: Oscillator 2 Control Register (OSC2_CTL): TRNG Entropy Generation Control \\[1:0\\] Oscillator 2 Divider \\[3:2\\] Oscillator Fail Safe Limit \\[13:12\\] Oscillator Fail Safe Test \\[14\\] TRNG Seed Control Register (SDCTL) TRNG Frequency Count Minimum Limit Register (FRQMIN) TRNG Frequency Count Maximum Limit Register (FRQMAX) TRNG Poker Range Register (PKRRNG) TRNG Poker Maximum Limit Register (PKRMAX) TRNG Statistical Check Monobit Limit Register (SCML) TRNG Statistical Check Run Length 1 Limit Register (SCR1L) TRNG Statistical Check Run Length 2 Limit Register (SCR2L) TRNG Statistical Check Run Length 3 Limit Register (SCR3L) TRNG Statistical Check Run Length 4 Limit Register (SCR4L) TRNG Statistical Check Run Length 5 Limit Register (SCR5L) TRNG Statistical Check Run Length 6 Limit Register (SCR6PL) TRNG Sparse Bit Limit Register (SBLIM) TRNG Miscellaneous Control Register (MCTL): Sample Mode \\[1:0\\] Oscillator Divider \\[3:2\\] Reset Defaults \\[6\\] Force System Clock \\[7\\] Long Runs Continuation Mode \\[14\\] After this bit has been written to a 1, it cannot be changed."]
     #[must_use]
     #[inline(always)]
     pub const fn no_prgm(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "If set, below mentioned TRNG configuration registers cannot be programmed: Oscillator 2 Control Register (OSC2_CTL): TRNG Entropy Generation Control \\[1:0\\] Oscillator 2 Divider \\[3:2\\] Oscillator Fail Safe Limit \\[13:12\\] Oscillator Fail Safe Test \\[14\\] TRNG Seed Control Register (SDCTL) TRNG Frequency Count Minimum Limit Register (FRQMIN) TRNG Frequency Count Maximum Limit Register (FRQMAX) TRNG Statistical Check Monobit Limit Register (SCML) TRNG Statistical Check Run Length 1 Limit Register (SCR1L) TRNG Statistical Check Run Length 2 Limit Register (SCR2L) TRNG Statistical Check Run Length 3 Limit Register (SCR3L) TRNG Miscellaneous Control Register (MCTL): Sample Mode \\[1:0\\] Oscillator Divider \\[3:2\\] Reset Defaults \\[6\\] Force System Clock \\[7\\] Long Runs Continuation Mode \\[14\\] After this bit has been written to a 1, it cannot be changed."]
+    #[doc = "If set, below mentioned TRNG configuration registers cannot be programmed: Oscillator 2 Control Register (OSC2_CTL): TRNG Entropy Generation Control \\[1:0\\] Oscillator 2 Divider \\[3:2\\] Oscillator Fail Safe Limit \\[13:12\\] Oscillator Fail Safe Test \\[14\\] TRNG Seed Control Register (SDCTL) TRNG Frequency Count Minimum Limit Register (FRQMIN) TRNG Frequency Count Maximum Limit Register (FRQMAX) TRNG Poker Range Register (PKRRNG) TRNG Poker Maximum Limit Register (PKRMAX) TRNG Statistical Check Monobit Limit Register (SCML) TRNG Statistical Check Run Length 1 Limit Register (SCR1L) TRNG Statistical Check Run Length 2 Limit Register (SCR2L) TRNG Statistical Check Run Length 3 Limit Register (SCR3L) TRNG Statistical Check Run Length 4 Limit Register (SCR4L) TRNG Statistical Check Run Length 5 Limit Register (SCR5L) TRNG Statistical Check Run Length 6 Limit Register (SCR6PL) TRNG Sparse Bit Limit Register (SBLIM) TRNG Miscellaneous Control Register (MCTL): Sample Mode \\[1:0\\] Oscillator Divider \\[3:2\\] Reset Defaults \\[6\\] Force System Clock \\[7\\] Long Runs Continuation Mode \\[14\\] After this bit has been written to a 1, it cannot be changed."]
     #[inline(always)]
     pub const fn set_no_prgm(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
@@ -3041,14 +2942,14 @@ impl Vid2 {
     pub const fn set_eco_rev(&mut self, val: EcoRev) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val.to_bits() as u32) & 0xff) << 8usize);
     }
-    #[doc = "Shows the integration options for the TRNG."]
+    #[doc = "Shows the integration options for the TRNG. (For 2019 or newer SoCs)."]
     #[must_use]
     #[inline(always)]
     pub const fn intg_opt(&self) -> IntgOpt {
         let val = (self.0 >> 16usize) & 0xff;
         IntgOpt::from_bits(val as u8)
     }
-    #[doc = "Shows the integration options for the TRNG."]
+    #[doc = "Shows the integration options for the TRNG. (For 2019 or newer SoCs)."]
     #[inline(always)]
     pub const fn set_intg_opt(&mut self, val: IntgOpt) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val.to_bits() as u32) & 0xff) << 16usize);
@@ -3095,74 +2996,12 @@ impl defmt::Format for Vid2 {
         )
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum BusEdc {
-    #[doc = "No Bus-EDC error/fault detected."]
-    BUS_EDC_NOERR = 0x0,
-    #[doc = "Bus-EDC error/fault detected."]
-    BUS_EDC_ERR = 0x01,
-}
-impl BusEdc {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> BusEdc {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for BusEdc {
-    #[inline(always)]
-    fn from(val: u8) -> BusEdc {
-        BusEdc::from_bits(val)
-    }
-}
-impl From<BusEdc> for u8 {
-    #[inline(always)]
-    fn from(val: BusEdc) -> u8 {
-        BusEdc::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum BusEdcClr {
-    #[doc = "No effect, ignored."]
-    BUS_EDC_NOEFFECT = 0x0,
-    #[doc = "Clears the CSER\\[BUS_EDC\\] bit."]
-    BUS_EDC_CLEAR = 0x01,
-}
-impl BusEdcClr {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> BusEdcClr {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for BusEdcClr {
-    #[inline(always)]
-    fn from(val: u8) -> BusEdcClr {
-        BusEdcClr::from_bits(val)
-    }
-}
-impl From<BusEdcClr> for u8 {
-    #[inline(always)]
-    fn from(val: BusEdcClr) -> u8 {
-        BusEdcClr::to_bits(val)
-    }
-}
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct ConfigOpt(u8);
 impl ConfigOpt {
     #[doc = "TRNG_CONFIG_OPT for TRNG."]
-    pub const CONFIG_OPT_VAL: Self = Self(0x0);
+    pub const ConfigOptVal: Self = Self(0x0);
 }
 impl ConfigOpt {
     pub const fn from_bits(val: u8) -> ConfigOpt {
@@ -3175,7 +3014,7 @@ impl ConfigOpt {
 impl core::fmt::Debug for ConfigOpt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
-            0x0 => f.write_str("CONFIG_OPT_VAL"),
+            0x0 => f.write_str("ConfigOptVal"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -3184,7 +3023,7 @@ impl core::fmt::Debug for ConfigOpt {
 impl defmt::Format for ConfigOpt {
     fn format(&self, f: defmt::Formatter) {
         match self.0 {
-            0x0 => defmt::write!(f, "CONFIG_OPT_VAL"),
+            0x0 => defmt::write!(f, "ConfigOptVal"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }
@@ -3206,7 +3045,7 @@ impl From<ConfigOpt> for u8 {
 pub struct EcoRev(u8);
 impl EcoRev {
     #[doc = "TRNG_ECO_REV for TRNG."]
-    pub const ECO_REV_VAL: Self = Self(0x0);
+    pub const EcoRevVal: Self = Self(0x0);
 }
 impl EcoRev {
     pub const fn from_bits(val: u8) -> EcoRev {
@@ -3219,7 +3058,7 @@ impl EcoRev {
 impl core::fmt::Debug for EcoRev {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
-            0x0 => f.write_str("ECO_REV_VAL"),
+            0x0 => f.write_str("EcoRevVal"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -3228,7 +3067,7 @@ impl core::fmt::Debug for EcoRev {
 impl defmt::Format for EcoRev {
     fn format(&self, f: defmt::Formatter) {
         match self.0 {
-            0x0 => defmt::write!(f, "ECO_REV_VAL"),
+            0x0 => defmt::write!(f, "EcoRevVal"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }
@@ -3250,7 +3089,7 @@ impl From<EcoRev> for u8 {
 pub struct Era(u8);
 impl Era {
     #[doc = "ERA of the TRNG."]
-    pub const ERA_VAL: Self = Self(0x0c);
+    pub const EraVal: Self = Self(0x0c);
 }
 impl Era {
     pub const fn from_bits(val: u8) -> Era {
@@ -3263,7 +3102,7 @@ impl Era {
 impl core::fmt::Debug for Era {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
-            0x0c => f.write_str("ERA_VAL"),
+            0x0c => f.write_str("EraVal"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -3272,7 +3111,7 @@ impl core::fmt::Debug for Era {
 impl defmt::Format for Era {
     fn format(&self, f: defmt::Formatter) {
         match self.0 {
-            0x0c => defmt::write!(f, "ERA_VAL"),
+            0x0c => defmt::write!(f, "EraVal"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }
@@ -3289,43 +3128,12 @@ impl From<Era> for u8 {
         Era::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum IntStatusEntVal {
-    #[doc = "Busy generating entropy. Any value read from the Entropy registers is invalid."]
-    ENT_VAL_INVALID = 0x0,
-    #[doc = "Values read from the Entropy registers are valid."]
-    ENT_VAL_VALID = 0x01,
-}
-impl IntStatusEntVal {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> IntStatusEntVal {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for IntStatusEntVal {
-    #[inline(always)]
-    fn from(val: u8) -> IntStatusEntVal {
-        IntStatusEntVal::from_bits(val)
-    }
-}
-impl From<IntStatusEntVal> for u8 {
-    #[inline(always)]
-    fn from(val: IntStatusEntVal) -> u8 {
-        IntStatusEntVal::to_bits(val)
-    }
-}
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct IntgOpt(u8);
 impl IntgOpt {
     #[doc = "INTG_OPT for TRNG."]
-    pub const INTG_OPT_VAL: Self = Self(0x0a);
+    pub const IntgOptVal: Self = Self(0x0a);
 }
 impl IntgOpt {
     pub const fn from_bits(val: u8) -> IntgOpt {
@@ -3338,7 +3146,7 @@ impl IntgOpt {
 impl core::fmt::Debug for IntgOpt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
-            0x0a => f.write_str("INTG_OPT_VAL"),
+            0x0a => f.write_str("IntgOptVal"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -3347,7 +3155,7 @@ impl core::fmt::Debug for IntgOpt {
 impl defmt::Format for IntgOpt {
     fn format(&self, f: defmt::Formatter) {
         match self.0 {
-            0x0a => defmt::write!(f, "INTG_OPT_VAL"),
+            0x0a => defmt::write!(f, "IntgOptVal"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }
@@ -3369,7 +3177,7 @@ impl From<IntgOpt> for u8 {
 pub struct IpId(u16);
 impl IpId {
     #[doc = "ID for TRNG."]
-    pub const IP_ID_VAL: Self = Self(0x30);
+    pub const IpIdVal: Self = Self(0x30);
 }
 impl IpId {
     pub const fn from_bits(val: u16) -> IpId {
@@ -3382,7 +3190,7 @@ impl IpId {
 impl core::fmt::Debug for IpId {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
-            0x30 => f.write_str("IP_ID_VAL"),
+            0x30 => f.write_str("IpIdVal"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -3391,7 +3199,7 @@ impl core::fmt::Debug for IpId {
 impl defmt::Format for IpId {
     fn format(&self, f: defmt::Formatter) {
         match self.0 {
-            0x30 => defmt::write!(f, "IP_ID_VAL"),
+            0x30 => defmt::write!(f, "IpIdVal"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }
@@ -3408,74 +3216,12 @@ impl From<IpId> for u16 {
         IpId::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum LocalEdc {
-    #[doc = "No Local-EDC error/fault detected."]
-    LOCAL_EDC_NOERR = 0x0,
-    #[doc = "Local-EDC error/fault detected."]
-    LOCAL_EDC_ERR = 0x01,
-}
-impl LocalEdc {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> LocalEdc {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for LocalEdc {
-    #[inline(always)]
-    fn from(val: u8) -> LocalEdc {
-        LocalEdc::from_bits(val)
-    }
-}
-impl From<LocalEdc> for u8 {
-    #[inline(always)]
-    fn from(val: LocalEdc) -> u8 {
-        LocalEdc::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum LocalEdcClr {
-    #[doc = "No effect, ignored."]
-    LOCAL_EDC_NOEFFECT = 0x0,
-    #[doc = "Clears the CSER\\[LOCAL_EDC\\] bit."]
-    LOCAL_EDC_CLEAR = 0x01,
-}
-impl LocalEdcClr {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> LocalEdcClr {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for LocalEdcClr {
-    #[inline(always)]
-    fn from(val: u8) -> LocalEdcClr {
-        LocalEdcClr::from_bits(val)
-    }
-}
-impl From<LocalEdcClr> for u8 {
-    #[inline(always)]
-    fn from(val: LocalEdcClr) -> u8 {
-        LocalEdcClr::to_bits(val)
-    }
-}
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct MajRev(u8);
 impl MajRev {
     #[doc = "Major revision number for TRNG."]
-    pub const MAJ_REV_VAL: Self = Self(0x14);
+    pub const MajRevVal: Self = Self(0x11);
 }
 impl MajRev {
     pub const fn from_bits(val: u8) -> MajRev {
@@ -3488,7 +3234,7 @@ impl MajRev {
 impl core::fmt::Debug for MajRev {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
-            0x14 => f.write_str("MAJ_REV_VAL"),
+            0x11 => f.write_str("MajRevVal"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -3497,7 +3243,7 @@ impl core::fmt::Debug for MajRev {
 impl defmt::Format for MajRev {
     fn format(&self, f: defmt::Formatter) {
         match self.0 {
-            0x14 => defmt::write!(f, "MAJ_REV_VAL"),
+            0x11 => defmt::write!(f, "MajRevVal"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }
@@ -3519,7 +3265,7 @@ impl From<MajRev> for u8 {
 pub struct MinRev(u8);
 impl MinRev {
     #[doc = "Minor revision number for TRNG."]
-    pub const MIN_REV_VAL: Self = Self(0x0c);
+    pub const MinRevVal: Self = Self(0x0c);
 }
 impl MinRev {
     pub const fn from_bits(val: u8) -> MinRev {
@@ -3532,7 +3278,7 @@ impl MinRev {
 impl core::fmt::Debug for MinRev {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
-            0x0c => f.write_str("MIN_REV_VAL"),
+            0x0c => f.write_str("MinRevVal"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -3541,7 +3287,7 @@ impl core::fmt::Debug for MinRev {
 impl defmt::Format for MinRev {
     fn format(&self, f: defmt::Formatter) {
         match self.0 {
-            0x0c => defmt::write!(f, "MIN_REV_VAL"),
+            0x0c => defmt::write!(f, "MinRevVal"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }
@@ -3558,22 +3304,66 @@ impl From<MinRev> for u8 {
         MinRev::to_bits(val)
     }
 }
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Osc1InvChainLen(u8);
+impl Osc1InvChainLen {
+    #[doc = "Adding 1 to this count are the total number of inversions occurring in ring oscillator 1."]
+    pub const Osc1InvLen: Self = Self(0x28);
+}
+impl Osc1InvChainLen {
+    pub const fn from_bits(val: u8) -> Osc1InvChainLen {
+        Self(val & 0xff)
+    }
+    pub const fn to_bits(self) -> u8 {
+        self.0
+    }
+}
+impl core::fmt::Debug for Osc1InvChainLen {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x28 => f.write_str("Osc1InvLen"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Osc1InvChainLen {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x28 => defmt::write!(f, "Osc1InvLen"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+impl From<u8> for Osc1InvChainLen {
+    #[inline(always)]
+    fn from(val: u8) -> Osc1InvChainLen {
+        Osc1InvChainLen::from_bits(val)
+    }
+}
+impl From<Osc1InvChainLen> for u8 {
+    #[inline(always)]
+    fn from(val: Osc1InvChainLen) -> u8 {
+        Osc1InvChainLen::to_bits(val)
+    }
+}
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Osc2div {
+pub enum Osc2Div {
     #[doc = "Use ring oscillator 2 with no divide."]
-    OSC2_DIV_DIV1 = 0x0,
+    Osc2DivDiv1 = 0x0,
     #[doc = "Use ring oscillator 2 divided-by-2."]
-    OSC2_DIV_DIV2 = 0x01,
+    Osc2DivDiv2 = 0x01,
     #[doc = "Use ring oscillator 2 divided-by-4."]
-    OSC2_DIV_DIV4 = 0x02,
+    Osc2DivDiv4 = 0x02,
     #[doc = "Use ring oscillator 2 divided-by-8."]
-    OSC2_DIV_DIV8 = 0x03,
+    Osc2DivDiv8 = 0x03,
 }
-impl Osc2div {
+impl Osc2Div {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Osc2div {
+    pub const fn from_bits(val: u8) -> Osc2Div {
         unsafe { core::mem::transmute(val & 0x03) }
     }
     #[inline(always)]
@@ -3581,30 +3371,74 @@ impl Osc2div {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Osc2div {
+impl From<u8> for Osc2Div {
     #[inline(always)]
-    fn from(val: u8) -> Osc2div {
-        Osc2div::from_bits(val)
+    fn from(val: u8) -> Osc2Div {
+        Osc2Div::from_bits(val)
     }
 }
-impl From<Osc2div> for u8 {
+impl From<Osc2Div> for u8 {
     #[inline(always)]
-    fn from(val: Osc2div) -> u8 {
-        Osc2div::to_bits(val)
+    fn from(val: Osc2Div) -> u8 {
+        Osc2Div::to_bits(val)
+    }
+}
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Osc2InvChainLen(u8);
+impl Osc2InvChainLen {
+    #[doc = "Adding 1 to this count are the total number of inversions occurring in ring oscillator 2."]
+    pub const Osc2InvLen: Self = Self(0x36);
+}
+impl Osc2InvChainLen {
+    pub const fn from_bits(val: u8) -> Osc2InvChainLen {
+        Self(val & 0xff)
+    }
+    pub const fn to_bits(self) -> u8 {
+        self.0
+    }
+}
+impl core::fmt::Debug for Osc2InvChainLen {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x36 => f.write_str("Osc2InvLen"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Osc2InvChainLen {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x36 => defmt::write!(f, "Osc2InvLen"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+impl From<u8> for Osc2InvChainLen {
+    #[inline(always)]
+    fn from(val: u8) -> Osc2InvChainLen {
+        Osc2InvChainLen::from_bits(val)
+    }
+}
+impl From<Osc2InvChainLen> for u8 {
+    #[inline(always)]
+    fn from(val: Osc2InvChainLen) -> u8 {
+        Osc2InvChainLen::to_bits(val)
     }
 }
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Osc2outEn {
+pub enum Osc2OutEn {
     #[doc = "Ring oscillator 2 output is gated to an output pad."]
-    OSC2_OUT_EN_0 = 0x0,
+    Osc2OutEn0 = 0x0,
     #[doc = "Allows external viewing of divided-by-2 ring oscillator 2 if MCTL\\[PRGM\\] = 1 mode is also selected, else ring oscillator 2 output is gated to an output pad."]
-    OSC2_OUT_EN_1 = 0x01,
+    Osc2OutEn1 = 0x01,
 }
-impl Osc2outEn {
+impl Osc2OutEn {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Osc2outEn {
+    pub const fn from_bits(val: u8) -> Osc2OutEn {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -3612,16 +3446,16 @@ impl Osc2outEn {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Osc2outEn {
+impl From<u8> for Osc2OutEn {
     #[inline(always)]
-    fn from(val: u8) -> Osc2outEn {
-        Osc2outEn::from_bits(val)
+    fn from(val: u8) -> Osc2OutEn {
+        Osc2OutEn::from_bits(val)
     }
 }
-impl From<Osc2outEn> for u8 {
+impl From<Osc2OutEn> for u8 {
     #[inline(always)]
-    fn from(val: Osc2outEn) -> u8 {
-        Osc2outEn::to_bits(val)
+    fn from(val: Osc2OutEn) -> u8 {
+        Osc2OutEn::to_bits(val)
     }
 }
 #[repr(u8)]
@@ -3629,13 +3463,13 @@ impl From<Osc2outEn> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OscDiv {
     #[doc = "use ring oscillator with no divide."]
-    OSC_DIV_DIV1 = 0x0,
+    OscDivDiv1 = 0x0,
     #[doc = "use ring oscillator divided-by-2."]
-    OSC_DIV_DIV2 = 0x01,
+    OscDivDiv2 = 0x01,
     #[doc = "use ring oscillator divided-by-4."]
-    OSC_DIV_DIV4 = 0x02,
+    OscDivDiv4 = 0x02,
     #[doc = "use ring oscillator divided-by-8."]
-    OSC_DIV_DIV8 = 0x03,
+    OscDivDiv8 = 0x03,
 }
 impl OscDiv {
     #[inline(always)]
@@ -3664,13 +3498,13 @@ impl From<OscDiv> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OscFailsafeLmt {
     #[doc = "The limit N is 4096 (2^12) system clocks."]
-    OSC_FAILSAFE_LMT_4K = 0x0,
+    OscFailsafeLmt4k = 0x0,
     #[doc = "The limit N is 65536 (2^16) system clocks. (default)."]
-    OSC_FAILSAFE_LMT_64K = 0x01,
+    OscFailsafeLmt64k = 0x01,
     #[doc = "N is 2^20 system clocks."]
-    OSC_FAILSAFE_LMT_1M = 0x02,
+    OscFailsafeLmt1m = 0x02,
     #[doc = "N is 2^22 system clocks (full range of the counter being used)."]
-    OSC_FAILSAFE_LMT_4M = 0x03,
+    OscFailsafeLmt4m = 0x03,
 }
 impl OscFailsafeLmt {
     #[inline(always)]
@@ -3697,125 +3531,36 @@ impl From<OscFailsafeLmt> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum RedFsm {
-    #[doc = "No redundant FSM error/fault."]
-    RED_FSM_NOERR = 0x0,
-    #[doc = "Redundant FSM error/fault detected."]
-    RED_FSM_ERR = 0x01,
+pub enum SampMode {
+    #[doc = "undefined/reserved."]
+    SampModeVonBoth = 0x0,
+    #[doc = "use raw data into both Entropy shifter and Statistical Checker."]
+    SampModeRawBoth = 0x01,
+    #[doc = "undefined/reserved."]
+    SampModeVonEnt = 0x02,
+    #[doc = "undefined/reserved."]
+    SampModeUndef = 0x03,
 }
-impl RedFsm {
+impl SampMode {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> RedFsm {
-        unsafe { core::mem::transmute(val & 0x01) }
+    pub const fn from_bits(val: u8) -> SampMode {
+        unsafe { core::mem::transmute(val & 0x03) }
     }
     #[inline(always)]
     pub const fn to_bits(self) -> u8 {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for RedFsm {
+impl From<u8> for SampMode {
     #[inline(always)]
-    fn from(val: u8) -> RedFsm {
-        RedFsm::from_bits(val)
+    fn from(val: u8) -> SampMode {
+        SampMode::from_bits(val)
     }
 }
-impl From<RedFsm> for u8 {
+impl From<SampMode> for u8 {
     #[inline(always)]
-    fn from(val: RedFsm) -> u8 {
-        RedFsm::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum RedFsmClr {
-    #[doc = "No effect, ignored."]
-    RED_FSM_NOEFFECT = 0x0,
-    #[doc = "Clears the CSER\\[RED_FSM\\] bit."]
-    RED_FSM_CLEAR = 0x01,
-}
-impl RedFsmClr {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> RedFsmClr {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for RedFsmClr {
-    #[inline(always)]
-    fn from(val: u8) -> RedFsmClr {
-        RedFsmClr::from_bits(val)
-    }
-}
-impl From<RedFsmClr> for u8 {
-    #[inline(always)]
-    fn from(val: RedFsmClr) -> u8 {
-        RedFsmClr::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum RedSigs {
-    #[doc = "No redundant signal error/fault."]
-    RED_SIGS_NOERR = 0x0,
-    #[doc = "Redundant signal error/fault detected."]
-    RED_SIGS_ERR = 0x01,
-}
-impl RedSigs {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> RedSigs {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for RedSigs {
-    #[inline(always)]
-    fn from(val: u8) -> RedSigs {
-        RedSigs::from_bits(val)
-    }
-}
-impl From<RedSigs> for u8 {
-    #[inline(always)]
-    fn from(val: RedSigs) -> u8 {
-        RedSigs::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum RedSigsClr {
-    #[doc = "No effect, ignored."]
-    RED_SIGS_NOEFFECT = 0x0,
-    #[doc = "Clears the CSER\\[RED_SIGS\\] bit."]
-    RED_SIGS_CLEAR = 0x01,
-}
-impl RedSigsClr {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> RedSigsClr {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for RedSigsClr {
-    #[inline(always)]
-    fn from(val: u8) -> RedSigsClr {
-        RedSigsClr::from_bits(val)
-    }
-}
-impl From<RedSigsClr> for u8 {
-    #[inline(always)]
-    fn from(val: RedSigsClr) -> u8 {
-        RedSigsClr::to_bits(val)
+    fn from(val: SampMode) -> u8 {
+        SampMode::to_bits(val)
     }
 }
 #[repr(u8)]
@@ -3823,13 +3568,13 @@ impl From<RedSigsClr> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TrngEntCtl {
     #[doc = "Single oscillator mode, using OSC1 (default)."]
-    TRNG_ENT_CTL_SINGLE_OSC1 = 0x0,
+    TrngEntCtlSingleOsc1 = 0x0,
     #[doc = "Dual oscillator mode."]
-    TRNG_ENT_CTL_DUAL_OSCS = 0x01,
+    TrngEntCtlDualOscs = 0x01,
     #[doc = "Single oscillator mode, using OSC2."]
-    TRNG_ENT_CTL_SINGLE_OSC2 = 0x02,
+    TrngEntCtlSingleOsc2 = 0x02,
     #[doc = "Unused, (bit field cannot be written to this value)."]
-    OSC2_DIV_DIV8 = 0x03,
+    Osc2DivDiv8 = 0x03,
 }
 impl TrngEntCtl {
     #[inline(always)]
