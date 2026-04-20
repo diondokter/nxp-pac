@@ -13,12 +13,9 @@ transforms:
         items:
         - name: word
           byte_offset: 0
+          bit_size: 32
           array:
             offsets: [96, 64, 32, 0] # Cursed ordering
-          fieldset: sgi::DataWord
-      fieldset/sgi::DataWord:
-        bit_size: 32
-        fields: # No fields
 
   - !AddRegisters
     block: sgi0::Sgi0

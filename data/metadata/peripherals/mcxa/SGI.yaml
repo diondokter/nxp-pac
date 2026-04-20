@@ -8,7 +8,6 @@ block/Data:
       - 32
       - 0
     byte_offset: 0
-    fieldset: DataWord
 block/Sgi:
   description: no description available.
   items:
@@ -129,8 +128,6 @@ block/Sgi:
     byte_offset: 4092
     access: Read
     fieldset: SgiModuleId
-fieldset/DataWord:
-  fields: []
 fieldset/SgiAccessErr:
   description: Access Error.
   fields:

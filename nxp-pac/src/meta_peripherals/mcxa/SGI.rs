@@ -18,7 +18,7 @@ impl Data {
         self.ptr as _
     }
     #[inline(always)]
-    pub const fn word(self, n: usize) -> crate::pac::common::Reg<DataWord, crate::pac::common::RW> {
+    pub const fn word(self, n: usize) -> crate::pac::common::Reg<u32, crate::pac::common::RW> {
         assert!(n < 4usize);
         unsafe {
             crate::pac::common::Reg::from_ptr(
@@ -202,27 +202,6 @@ impl Sgi {
         self,
     ) -> crate::pac::common::Reg<SgiModuleId, crate::pac::common::R> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0ffcusize) as _) }
-    }
-}
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct DataWord(pub u32);
-impl DataWord {}
-impl Default for DataWord {
-    #[inline(always)]
-    fn default() -> DataWord {
-        DataWord(0)
-    }
-}
-impl core::fmt::Debug for DataWord {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("DataWord").finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for DataWord {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "DataWord {{ }}",)
     }
 }
 #[doc = "Access Error."]
