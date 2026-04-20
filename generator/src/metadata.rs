@@ -31,6 +31,12 @@ pub struct Pin {
 
     /// IOMUXC information for this pin. Only applicable on RT1xxx chips.
     pub iomuxc: Option<PinIomuxc>,
+
+    /// Rust Feature required to "unlock" the pin.
+    ///
+    /// An example of this is when a pin is used for SWD communication by default,
+    /// and it would be dangerous to unlock unless explicitly designed around it.
+    pub feature: Option<String>,
 }
 
 #[derive(Debug, Clone, Deserialize)]
@@ -150,11 +156,17 @@ fn generate_metadata(name: &str, metadata: &Metadata) -> TokenStream {
                 }
             })
             .unwrap_or_else(|| quote! { None });
+        let feature = pin
+            .feature
+            .as_ref()
+            .map(|feature| quote! { Some(#feature) })
+            .unwrap_or_else(|| quote! { None });
 
         quote! {
             Pin {
                 name: #name,
                 iomuxc: #iomuxc,
+                feature: #feature
             }
         }
     });

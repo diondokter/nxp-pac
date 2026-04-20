@@ -18,6 +18,9 @@
 )]
 mod _generated;
 
+#[path = "./meta_peripherals/_peripherals.rs"]
+mod meta_peripherals;
+
 #[derive(Debug)]
 pub struct Metadata {
     pub name: &'static str,
@@ -30,6 +33,7 @@ pub struct Metadata {
 pub struct Pin {
     pub name: &'static str,
     pub iomuxc: Option<PinIomuxc>,
+    pub feature: Option<&'static str>,
 }
 
 #[derive(Debug)]
@@ -70,3 +74,4 @@ pub struct DmaMux {
 }
 
 pub use _generated::*;
+pub use meta_peripherals::META_PERIPHERALS;

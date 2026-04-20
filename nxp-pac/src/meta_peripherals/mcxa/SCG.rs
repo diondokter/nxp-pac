@@ -1422,13 +1422,13 @@ impl Firccfg {
     #[must_use]
     #[inline(always)]
     pub const fn freq_sel(&self) -> FreqSel {
-        let val = (self.0 >> 0usize) & 0x01;
+        let val = (self.0 >> 0usize) & 0x0f;
         FreqSel::from_bits(val as u8)
     }
     #[doc = "Frequency Range."]
     #[inline(always)]
     pub const fn set_freq_sel(&mut self, val: FreqSel) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+        self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
 }
 impl Default for Firccfg {
@@ -5135,44 +5135,35 @@ impl From<FlipBufIn> for u8 {
         FlipBufIn::to_bits(val)
     }
 }
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
-pub struct FreqSel(u8);
-impl FreqSel {
-    pub const Firc45_48mhz: Self = Self(0x01);
-    pub const Firc60_64mhz: Self = Self(0x03);
-    pub const Firc90_96mhz: Self = Self(0x05);
-    pub const Firc180_192mhz: Self = Self(0x07);
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum FreqSel {
+    _RESERVED_0 = 0x0,
+    Firc45_48mhz = 0x01,
+    _RESERVED_2 = 0x02,
+    Firc60_64mhz = 0x03,
+    _RESERVED_4 = 0x04,
+    Firc90_96mhz = 0x05,
+    _RESERVED_6 = 0x06,
+    Firc180_192mhz = 0x07,
+    _RESERVED_8 = 0x08,
+    _RESERVED_9 = 0x09,
+    _RESERVED_a = 0x0a,
+    _RESERVED_b = 0x0b,
+    _RESERVED_c = 0x0c,
+    _RESERVED_d = 0x0d,
+    _RESERVED_e = 0x0e,
+    _RESERVED_f = 0x0f,
 }
 impl FreqSel {
+    #[inline(always)]
     pub const fn from_bits(val: u8) -> FreqSel {
-        Self(val & 0x01)
+        unsafe { core::mem::transmute(val & 0x0f) }
     }
+    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        self.0
-    }
-}
-impl core::fmt::Debug for FreqSel {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        match self.0 {
-            0x01 => f.write_str("Firc45_48mhz"),
-            0x03 => f.write_str("Firc60_64mhz"),
-            0x05 => f.write_str("Firc90_96mhz"),
-            0x07 => f.write_str("Firc180_192mhz"),
-            other => core::write!(f, "0x{:02X}", other),
-        }
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for FreqSel {
-    fn format(&self, f: defmt::Formatter) {
-        match self.0 {
-            0x01 => defmt::write!(f, "Firc45_48mhz"),
-            0x03 => defmt::write!(f, "Firc60_64mhz"),
-            0x05 => defmt::write!(f, "Firc90_96mhz"),
-            0x07 => defmt::write!(f, "Firc180_192mhz"),
-            other => defmt::write!(f, "0x{:02X}", other),
-        }
+        unsafe { core::mem::transmute(self) }
     }
 }
 impl From<u8> for FreqSel {
