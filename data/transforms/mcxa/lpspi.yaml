@@ -1,0 +1,5 @@
+transforms:
+  - !RenameEnumVariants
+    enum: lpspi::Prescale
+    from: Divideby(\d+)
+    to: DivideBy$1
