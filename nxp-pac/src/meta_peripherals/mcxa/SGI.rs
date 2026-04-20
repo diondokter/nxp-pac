@@ -1,6 +1,6 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (2fd28c582599 2026-04-02))"]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (2fd28c5 2026-04-02))"]
 #[doc = "no description available."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sgi {

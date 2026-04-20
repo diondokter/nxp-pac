@@ -357,26 +357,6 @@ pub const PINS: &[Pin] = &[
         feature: None,
     },
     Pin {
-        name: "P3_31",
-        iomuxc: None,
-        feature: None,
-    },
-    Pin {
-        name: "P3_30",
-        iomuxc: None,
-        feature: None,
-    },
-    Pin {
-        name: "P3_29",
-        iomuxc: None,
-        feature: None,
-    },
-    Pin {
-        name: "P3_28",
-        iomuxc: None,
-        feature: None,
-    },
-    Pin {
         name: "P3_27",
         iomuxc: None,
         feature: None,
@@ -6639,42 +6619,6 @@ pub const PERIPHERALS: &[Peripheral] = &[
                 name: "27",
                 pins: &[SignalPin {
                     pin: "P3_27",
-                    alt: 0u8,
-                    iomuxc_daisy: None,
-                }],
-                iomuxc_daisy: None,
-            },
-            Signal {
-                name: "28",
-                pins: &[SignalPin {
-                    pin: "P3_28",
-                    alt: 0u8,
-                    iomuxc_daisy: None,
-                }],
-                iomuxc_daisy: None,
-            },
-            Signal {
-                name: "27",
-                pins: &[SignalPin {
-                    pin: "P3_29",
-                    alt: 0u8,
-                    iomuxc_daisy: None,
-                }],
-                iomuxc_daisy: None,
-            },
-            Signal {
-                name: "30",
-                pins: &[SignalPin {
-                    pin: "P3_30",
-                    alt: 0u8,
-                    iomuxc_daisy: None,
-                }],
-                iomuxc_daisy: None,
-            },
-            Signal {
-                name: "31",
-                pins: &[SignalPin {
-                    pin: "P3_31",
                     alt: 0u8,
                     iomuxc_daisy: None,
                 }],

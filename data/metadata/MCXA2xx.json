@@ -581,7 +581,7 @@
     "EQDC1_HOME": 86,
     "EQDC1_WATCHDOG": 87,
     "EQDC1_INDEX": 88,
-    "RESERVED111": 95,
+    "LPUART5": 95,
     "MAU": 107,
     "SMARTDMA": 108,
     "CDOG1": 109,
@@ -7211,6 +7211,8 @@
     },
     {
       "name": "LPUART5",
+      "address": "0x400DA000",
+      "block": "mcxa/LPUART",
       "signals": [
         {
           "name": "CTS_B",
