@@ -2411,21 +2411,21 @@ impl From<Pincfg> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prescale {
     #[doc = "Divide by 1."]
-    Divideby1 = 0x0,
+    DivideBy1 = 0x0,
     #[doc = "Divide by 2."]
-    Divideby2 = 0x01,
+    DivideBy2 = 0x01,
     #[doc = "Divide by 4."]
-    Divideby4 = 0x02,
+    DivideBy4 = 0x02,
     #[doc = "Divide by 8."]
-    Divideby8 = 0x03,
+    DivideBy8 = 0x03,
     #[doc = "Divide by 16."]
-    Divideby16 = 0x04,
+    DivideBy16 = 0x04,
     #[doc = "Divide by 32."]
-    Divideby32 = 0x05,
+    DivideBy32 = 0x05,
     #[doc = "Divide by 64."]
-    Divideby64 = 0x06,
+    DivideBy64 = 0x06,
     #[doc = "Divide by 128."]
-    Divideby128 = 0x07,
+    DivideBy128 = 0x07,
 }
 impl Prescale {
     #[inline(always)]
