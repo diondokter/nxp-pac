@@ -24,6 +24,7 @@ includes:
   - mcxa/port.yaml
   - mcxa/rtc.yaml
   - mcxa/scg.yaml
+  - mcxa/sgi.yaml
   - mcxa/spc.yaml
   - mcxa/trng.yaml
   - mcxa/wwdt.yaml
