@@ -1,11 +1,12 @@
 block/Data:
   items:
   - name: word
+    description: The nth word in the data register. Note that Word 0 maps to register D and Word 3 maps to register A.
     array:
       offsets:
-      - 96
-      - 64
-      - 32
+      - 12
+      - 8
+      - 4
       - 0
     byte_offset: 0
 block/Sgi:

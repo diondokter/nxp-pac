@@ -17,13 +17,14 @@ impl Data {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
+    #[doc = "The nth word in the data register. Note that Word 0 maps to register D and Word 3 maps to register A."]
     #[inline(always)]
     pub const fn word(self, n: usize) -> crate::pac::common::Reg<u32, crate::pac::common::RW> {
         assert!(n < 4usize);
         unsafe {
             crate::pac::common::Reg::from_ptr(
                 self.ptr
-                    .wrapping_add(0x0usize + ([96usize, 64usize, 32usize, 0usize][n] as usize))
+                    .wrapping_add(0x0usize + ([12usize, 8usize, 4usize, 0usize][n] as usize))
                     as _,
             )
         }
